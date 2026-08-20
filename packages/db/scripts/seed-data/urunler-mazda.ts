@@ -1,0 +1,920 @@
+/**
+ * ════════════════════════════════════════════════════════════════════════════
+ *  MAZDA ÜRÜN VERİSİ — KAYNAK TRANSKRİPSİYONU (TARAYICIDAN)
+ * ════════════════════════════════════════════════════════════════════════════
+ *
+ *  Kurallar `urunler-alfa-romeo.ts` ile aynıdır: fiyatlar KDV DAHİL vitrin
+ *  fiyatıdır, OEM ve teknik ölçü yoktur, parça kodu görünmeyen ürün İÇE
+ *  AKTARILMAZ. Yalnızca STOKTAKİ ürünler alındı (?stoktakiler=1).
+ *
+ *  Bu partide üç KORUMA çalıştı (ayrıntı: veri/BEKLEYEN-IS.md):
+ *   • Her sayfanın kendi "Toplam N ürün" sayacı kart sayısıyla karşılaştırıldı;
+ *     tutmayan sayfa kaydedilmedi, yeniden çekildi.
+ *   • Sayfalanmış motor sayfaları (Iveco Daily) tüm sayfalarıyla toplandı.
+ *   • Kategori yazımı çelişen ürünlerde ÇOĞUNLUK, berabere kalırsa üretici kod
+ *     ailesi karar verdi.
+ */
+import type { SourceProduct } from './urunler-alfa-romeo'
+
+export const MAZDA_PRODUCTS: Record<string, SourceProduct> = {
+  'FILTRON:AK372/1': {
+    brand: 'FILTRON',
+    code: 'AK372/1',
+    category: 'HAVA_FILTRESI',
+    priceGross: 451.24,
+  },
+  'FILTRON:AP074/5': {
+    brand: 'FILTRON',
+    code: 'AP074/5',
+    category: 'HAVA_FILTRESI',
+    priceGross: 299.38,
+  },
+  'FILTRON:AP110/1': {
+    brand: 'FILTRON',
+    code: 'AP110/1',
+    category: 'HAVA_FILTRESI',
+    priceGross: 292.87,
+  },
+  'FILTRON:AP113': {
+    brand: 'FILTRON',
+    code: 'AP113',
+    category: 'HAVA_FILTRESI',
+    priceGross: 308.06,
+  },
+  'FILTRON:AP113/1': {
+    brand: 'FILTRON',
+    code: 'AP113/1',
+    category: 'HAVA_FILTRESI',
+    priceGross: 405.68,
+  },
+  'FILTRON:AP113/3': {
+    brand: 'FILTRON',
+    code: 'AP113/3',
+    category: 'HAVA_FILTRESI',
+    priceGross: 355.79,
+  },
+  'FILTRON:AP113/6': {
+    brand: 'FILTRON',
+    code: 'AP113/6',
+    category: 'HAVA_FILTRESI',
+    priceGross: 362.29,
+  },
+  'FILTRON:AP113/8': {
+    brand: 'FILTRON',
+    code: 'AP113/8',
+    category: 'HAVA_FILTRESI',
+    priceGross: 431.71,
+  },
+  'FILTRON:AP168': {
+    brand: 'FILTRON',
+    code: 'AP168',
+    category: 'HAVA_FILTRESI',
+    priceGross: 299.38,
+  },
+  'FILTRON:K1112-2x': {
+    brand: 'FILTRON',
+    code: 'K1112-2x',
+    category: 'POLEN_FILTRESI',
+    priceGross: 739.77,
+  },
+  'FILTRON:K1161': {
+    brand: 'FILTRON',
+    code: 'K1161',
+    category: 'POLEN_FILTRESI',
+    priceGross: 251.65,
+  },
+  'FILTRON:K1212-2x': {
+    brand: 'FILTRON',
+    code: 'K1212-2x',
+    category: 'POLEN_FILTRESI',
+    priceGross: 568.39,
+  },
+  'FILTRON:K1312-2x': {
+    brand: 'FILTRON',
+    code: 'K1312-2x',
+    category: 'POLEN_FILTRESI',
+    priceGross: 709.4,
+  },
+  'FILTRON:K1316': {
+    brand: 'FILTRON',
+    code: 'K1316',
+    category: 'POLEN_FILTRESI',
+    priceGross: 531.51,
+  },
+  'FILTRON:K1362': {
+    brand: 'FILTRON',
+    code: 'K1362',
+    category: 'POLEN_FILTRESI',
+    priceGross: 770.14,
+  },
+  'FILTRON:OE665': {
+    brand: 'FILTRON',
+    code: 'OE665',
+    category: 'YAG_FILTRESI',
+    priceGross: 199.59,
+  },
+  'FILTRON:OE667/1': {
+    brand: 'FILTRON',
+    code: 'OE667/1',
+    category: 'YAG_FILTRESI',
+    priceGross: 223.45,
+  },
+  'FILTRON:OP532/2': {
+    brand: 'FILTRON',
+    code: 'OP532/2',
+    category: 'YAG_FILTRESI',
+    priceGross: 238.64,
+  },
+  'FILTRON:OP595': {
+    brand: 'FILTRON',
+    code: 'OP595',
+    category: 'YAG_FILTRESI',
+    priceGross: 203.92,
+  },
+  'FILTRON:OP595/1': {
+    brand: 'FILTRON',
+    code: 'OP595/1',
+    category: 'YAG_FILTRESI',
+    priceGross: 238.64,
+  },
+  'FILTRON:PP838/8': {
+    brand: 'FILTRON',
+    code: 'PP838/8',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 2692.25,
+  },
+  'FILTRON:PP838/9': {
+    brand: 'FILTRON',
+    code: 'PP838/9',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1835.33,
+  },
+  'FILTRON:PP865/5': {
+    brand: 'FILTRON',
+    code: 'PP865/5',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 375.31,
+  },
+  'FILTRON:PP950': {
+    brand: 'FILTRON',
+    code: 'PP950',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 498.97,
+  },
+  'MANN:C16134/2': {
+    brand: 'MANN-FILTER',
+    code: 'C16134/2',
+    category: 'HAVA_FILTRESI',
+    priceGross: 637.85,
+  },
+  'MANN:C23018': {
+    brand: 'MANN-FILTER',
+    code: 'C23018',
+    category: 'HAVA_FILTRESI',
+    priceGross: 733.96,
+  },
+  'MANN:C2463': {
+    brand: 'MANN-FILTER',
+    code: 'C2463',
+    category: 'HAVA_FILTRESI',
+    priceGross: 495.14,
+  },
+  'MANN:C2564': {
+    brand: 'MANN-FILTER',
+    code: 'C2564',
+    category: 'HAVA_FILTRESI',
+    priceGross: 557.03,
+  },
+  'MANN:C27105': {
+    brand: 'MANN-FILTER',
+    code: 'C27105',
+    category: 'HAVA_FILTRESI',
+    priceGross: 498.05,
+  },
+  'MANN:C2966': {
+    brand: 'MANN-FILTER',
+    code: 'C2966',
+    category: 'HAVA_FILTRESI',
+    priceGross: 626.93,
+  },
+  'MANN:C30020': {
+    brand: 'MANN-FILTER',
+    code: 'C30020',
+    category: 'HAVA_FILTRESI',
+    priceGross: 736.15,
+  },
+  'MANN:C31012': {
+    brand: 'MANN-FILTER',
+    code: 'C31012',
+    category: 'HAVA_FILTRESI',
+    priceGross: 455.1,
+  },
+  'MANN:C3220': {
+    brand: 'MANN-FILTER',
+    code: 'C3220',
+    category: 'HAVA_FILTRESI',
+    priceGross: 502.42,
+  },
+  'MANN:CU20018': {
+    brand: 'MANN-FILTER',
+    code: 'CU20018',
+    category: 'POLEN_FILTRESI',
+    priceGross: 902.17,
+  },
+  'MANN:CU2033-2': {
+    brand: 'MANN-FILTER',
+    code: 'CU2033-2',
+    category: 'POLEN_FILTRESI',
+    priceGross: 972.07,
+  },
+  'MANN:CU2043': {
+    brand: 'MANN-FILTER',
+    code: 'CU2043',
+    category: 'POLEN_FILTRESI',
+    priceGross: 489.68,
+  },
+  'MANN:CU22001-2': {
+    brand: 'MANN-FILTER',
+    code: 'CU22001-2',
+    category: 'POLEN_FILTRESI',
+    priceGross: 996.09,
+  },
+  'MANN:CU24009': {
+    brand: 'MANN-FILTER',
+    code: 'CU24009',
+    category: 'POLEN_FILTRESI',
+    priceGross: 642.22,
+  },
+  'MANN:CU26008-2': {
+    brand: 'MANN-FILTER',
+    code: 'CU26008-2',
+    category: 'POLEN_FILTRESI',
+    priceGross: 969.88,
+  },
+  'MANN:CUK2033-2': {
+    brand: 'MANN-FILTER',
+    code: 'CUK2033-2',
+    category: 'POLEN_FILTRESI',
+    priceGross: 1177.4,
+  },
+  'MANN:CUK2043': {
+    brand: 'MANN-FILTER',
+    code: 'CUK2043',
+    category: 'POLEN_FILTRESI',
+    priceGross: 921.82,
+  },
+  'MANN:FP2043': {
+    brand: 'MANN-FILTER',
+    code: 'FP2043',
+    category: 'POLEN_FILTRESI',
+    priceGross: 1157.74,
+  },
+  'MANN:HU711/2x': {
+    brand: 'MANN-FILTER',
+    code: 'HU711/2x',
+    category: 'YAG_FILTRESI',
+    priceGross: 475.11,
+  },
+  'MANN:HU711x': {
+    brand: 'MANN-FILTER',
+    code: 'HU711x',
+    category: 'YAG_FILTRESI',
+    priceGross: 424.15,
+  },
+  'MANN:HU716/2x': {
+    brand: 'MANN-FILTER',
+    code: 'HU716/2x',
+    category: 'YAG_FILTRESI',
+    priceGross: 325.85,
+  },
+  'MANN:W6018': {
+    brand: 'MANN-FILTER',
+    code: 'W6018',
+    category: 'YAG_FILTRESI',
+    priceGross: 418.69,
+  },
+  'MANN:W67/1': {
+    brand: 'MANN-FILTER',
+    code: 'W67/1',
+    category: 'YAG_FILTRESI',
+    priceGross: 256.67,
+  },
+  'MANN:W7061': {
+    brand: 'MANN-FILTER',
+    code: 'W7061',
+    category: 'YAG_FILTRESI',
+    priceGross: 385.92,
+  },
+  'MANN:W712/73': {
+    brand: 'MANN-FILTER',
+    code: 'W712/73',
+    category: 'YAG_FILTRESI',
+    priceGross: 389.57,
+  },
+  'MANN:W811/80': {
+    brand: 'MANN-FILTER',
+    code: 'W811/80',
+    category: 'YAG_FILTRESI',
+    priceGross: 226.26,
+  },
+  'MANN:WK614/45': {
+    brand: 'MANN-FILTER',
+    code: 'WK614/45',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1347.79,
+  },
+  'MANN:WK614/46': {
+    brand: 'MANN-FILTER',
+    code: 'WK614/46',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 561.4,
+  },
+  'MANN:WK720/2x': {
+    brand: 'MANN-FILTER',
+    code: 'WK720/2x',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1098.76,
+  },
+  'MANN:WK8052z': {
+    brand: 'MANN-FILTER',
+    code: 'WK8052z',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1221.09,
+  },
+  'MANN:WK9046z': {
+    brand: 'MANN-FILTER',
+    code: 'WK9046z',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1561.86,
+  },
+  'MANN:WK939/13': {
+    brand: 'MANN-FILTER',
+    code: 'WK939/13',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 3069.11,
+  },
+  'MANN:WK939/2': {
+    brand: 'MANN-FILTER',
+    code: 'WK939/2',
+    category: 'YAKIT_FILTRESI',
+    priceGross: 1108.81,
+  },
+}
+
+const M1 = '3'
+const M2 = '323 VI'
+const M3 = '6'
+const M4 = '626'
+const M5 = 'CX-3'
+const M6 = 'CX-5'
+const M7 = 'MX-5'
+
+export const MAZDA_FITMENT: Array<{ model: string; engine: string; products: string[] }> = [
+  {
+    model: M2,
+    engine: '1.4 53kw 72hp',
+    products: [
+      'FILTRON:AP110/1',
+      'FILTRON:K1112-2x',
+      'FILTRON:OP595',
+      'MANN:C2463',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M2,
+    engine: '1.6 70kw 95hp',
+    products: [
+      'FILTRON:AP168',
+      'FILTRON:K1112-2x',
+      'FILTRON:OP595',
+      'MANN:C2564',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M2,
+    engine: '1.6 72kw 98hp',
+    products: [
+      'FILTRON:AP168',
+      'FILTRON:K1112-2x',
+      'FILTRON:OP595',
+      'MANN:C2564',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M2,
+    engine: '2.0 16V 96kw 130hp',
+    products: [
+      'FILTRON:AP168',
+      'FILTRON:K1112-2x',
+      'FILTRON:OP595',
+      'MANN:C2564',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M2,
+    engine: '2.0 TD 74kw 100hp',
+    products: [
+      'FILTRON:K1112-2x',
+      'FILTRON:PP950',
+      'MANN:C2966',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W811/80',
+      'MANN:WK720/2x',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.4 59kw 80hp',
+    products: [
+      'FILTRON:AP113/3',
+      'FILTRON:K1212-2x',
+      'FILTRON:OP595',
+      'FILTRON:PP865/5',
+      'MANN:C3220',
+      'MANN:CU22001-2',
+      'MANN:W67/1',
+      'MANN:WK614/46',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.4 62kw 85hp',
+    products: [
+      'FILTRON:AP113/3',
+      'FILTRON:K1212-2x',
+      'FILTRON:OP595',
+      'FILTRON:PP865/5',
+      'MANN:C3220',
+      'MANN:CU22001-2',
+      'MANN:W67/1',
+      'MANN:WK614/46',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.5 Skyactiv-D 105 77kw 105hp',
+    products: ['FILTRON:AP113/8', 'FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M1,
+    engine: '1.5 Skyactiv-G 100 74kw 101hp',
+    products: [
+      'FILTRON:AP113/8',
+      'FILTRON:K1316',
+      'FILTRON:OP595',
+      'MANN:C23018',
+      'MANN:CU24009',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.5 Skyactiv-G 120 88kw 120hp',
+    products: ['FILTRON:AP113/8', 'FILTRON:K1316', 'FILTRON:OP595', 'MANN:CU24009', 'MANN:W67/1'],
+  },
+  {
+    model: M1,
+    engine: '1.6 77kw 105hp',
+    products: [
+      'FILTRON:AP113/3',
+      'FILTRON:K1212-2x',
+      'FILTRON:K1312-2x',
+      'FILTRON:OP595',
+      'FILTRON:PP865/5',
+      'MANN:C3220',
+      'MANN:CU22001-2',
+      'MANN:CU26008-2',
+      'MANN:W67/1',
+      'MANN:WK614/46',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.6 CD 80kw 109hp',
+    products: [
+      'FILTRON:AK372/1',
+      'FILTRON:K1312-2x',
+      'FILTRON:OE667/1',
+      'FILTRON:PP838/8',
+      'MANN:C16134/2',
+      'MANN:CU26008-2',
+      'MANN:HU716/2x',
+      'MANN:WK939/13',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.6 CD Turbodiesel 80kw 109hp',
+    products: [
+      'FILTRON:AP074/5',
+      'FILTRON:K1212-2x',
+      'FILTRON:OE667/1',
+      'FILTRON:PP838/8',
+      'MANN:C27105',
+      'MANN:CU22001-2',
+      'MANN:HU716/2x',
+      'MANN:WK939/13',
+      'MANN:WK939/2',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.6 MZ-CD 85kw 115hp',
+    products: [
+      'FILTRON:AK372/1',
+      'FILTRON:K1312-2x',
+      'FILTRON:OE667/1',
+      'FILTRON:PP838/9',
+      'MANN:C16134/2',
+      'MANN:CU26008-2',
+      'MANN:HU716/2x',
+      'MANN:WK9046z',
+    ],
+  },
+  {
+    model: M1,
+    engine: '1.6 Skyactiv-G 105 77kw 105hp',
+    products: ['FILTRON:K1316', 'FILTRON:OP595', 'MANN:CU24009', 'MANN:W67/1'],
+  },
+  {
+    model: M4,
+    engine: '1.9 74kw 100hp',
+    products: [
+      'FILTRON:AP113',
+      'FILTRON:K1112-2x',
+      'FILTRON:OP595',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W67/1',
+    ],
+  },
+  {
+    model: M4,
+    engine: '2.0 TDi 66kw 90hp',
+    products: [
+      'FILTRON:K1112-2x',
+      'FILTRON:PP950',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W811/80',
+      'MANN:WK720/2x',
+    ],
+  },
+  {
+    model: M4,
+    engine: '2.0 TDi 81kw 110hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1112-2x',
+      'FILTRON:PP950',
+      'MANN:CU2033-2',
+      'MANN:CUK2033-2',
+      'MANN:W811/80',
+      'MANN:WK720/2x',
+    ],
+  },
+  {
+    model: M3,
+    engine: '1.8 88kw 120hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:OE665',
+      'FILTRON:OP532/2',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711x',
+      'MANN:W712/73',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 104kw 141hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:OE665',
+      'FILTRON:OP532/2',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711x',
+      'MANN:W712/73',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 108kw 147hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:OP532/2',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W712/73',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 CD 100kw 136hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:PP950',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK720/2x',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 CD 103kw 140hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 CD 105kw 143hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.0 CD 89kw 121hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:PP950',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK720/2x',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 CD 120kw 163hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 CD 132kw 180hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 CD 136kw 185hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 CD 92kw 125hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 CD 95kw 129hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:W811/80',
+      'MANN:WK8052z',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.2 D 135kw 184hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M3,
+    engine: '2.2 Skyactiv-D 110kw 150hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M3,
+    engine: '2.2 Skyactiv-D 129kw 175hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M3,
+    engine: '2.3 122kw 166hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711/2x',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.3 AWD 119kw 162hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711/2x',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.3 DISI Turbo MPS 191kw 260hp',
+    products: [
+      'FILTRON:K1161',
+      'MANN:C31012',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711/2x',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.5 125kw 170hp',
+    products: [
+      'FILTRON:AP113/1',
+      'FILTRON:K1161',
+      'FILTRON:OP532/2',
+      'MANN:CU2043',
+      'MANN:CUK2043',
+      'MANN:FP2043',
+      'MANN:HU711/2x',
+      'MANN:W712/73',
+    ],
+  },
+  {
+    model: M3,
+    engine: '2.5 Skyactiv-G 141kw 192hp',
+    products: ['FILTRON:AP113/6', 'FILTRON:K1316', 'FILTRON:OP595/1', 'MANN:CU24009', 'MANN:W6018'],
+  },
+  {
+    model: M5,
+    engine: '1.5 Skyactiv-D 105 77kw 105hp',
+    products: ['FILTRON:AP113/8', 'FILTRON:K1362', 'MANN:C23018', 'MANN:CU20018'],
+  },
+  {
+    model: M5,
+    engine: '2.0 Skyactiv-G 120 88kw 120hp',
+    products: ['FILTRON:K1362', 'FILTRON:OP595/1', 'MANN:CU20018', 'MANN:W6018'],
+  },
+  {
+    model: M5,
+    engine: '2.0 Skyactiv-G 150 110kw 150hp',
+    products: ['FILTRON:K1362', 'FILTRON:OP595/1', 'MANN:CU20018', 'MANN:W6018'],
+  },
+  {
+    model: M6,
+    engine: '2.0 Skyactiv-G 118kw 160hp',
+    products: ['FILTRON:AP113/6', 'FILTRON:K1316', 'FILTRON:OP595/1', 'MANN:CU24009', 'MANN:W6018'],
+  },
+  {
+    model: M6,
+    engine: '2.0 Skyactiv-G 121kw 165hp',
+    products: ['FILTRON:AP113/6', 'FILTRON:K1316', 'FILTRON:OP595/1', 'MANN:CU24009', 'MANN:W6018'],
+  },
+  {
+    model: M6,
+    engine: '2.2 Skyactiv-D 110kw 150hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M6,
+    engine: '2.2 Skyactiv-D 129kw 175hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:WK8052z'],
+  },
+  {
+    model: M6,
+    engine: '2.2 Skyactiv-D 135kw 184hp',
+    products: ['FILTRON:K1316', 'MANN:CU24009', 'MANN:W7061', 'MANN:WK8052z'],
+  },
+  {
+    model: M6,
+    engine: '2.5 Skyactiv-G 141kw 192hp',
+    products: ['FILTRON:AP113/6', 'FILTRON:K1316', 'FILTRON:OP595/1', 'MANN:CU24009', 'MANN:W6018'],
+  },
+  {
+    model: M6,
+    engine: '2.5 Skyactiv-G 143kw 194hp',
+    products: ['FILTRON:AP113/6', 'FILTRON:K1316', 'FILTRON:OP595/1', 'MANN:CU24009', 'MANN:W6018'],
+  },
+  {
+    model: M7,
+    engine: '1.5 97kw 132hp',
+    products: ['FILTRON:OP595/1', 'MANN:W6018'],
+  },
+  {
+    model: M7,
+    engine: '1.5 Skyactiv-G 131 96kw 131hp',
+    products: ['FILTRON:OP595/1', 'MANN:W6018'],
+  },
+  {
+    model: M7,
+    engine: '1.8 16V 102kw 139hp',
+    products: ['FILTRON:AP113', 'FILTRON:OP595', 'MANN:W67/1', 'MANN:WK614/45'],
+  },
+  {
+    model: M7,
+    engine: '1.8 16V 107kw 146hp',
+    products: ['FILTRON:AP113', 'FILTRON:OP595', 'MANN:W67/1', 'MANN:WK614/45'],
+  },
+  {
+    model: M7,
+    engine: '1.8 93kw 126hp',
+    products: ['FILTRON:OP532/2', 'MANN:C30020', 'MANN:W712/73'],
+  },
+  {
+    model: M7,
+    engine: '2.0 118kw 160hp',
+    products: ['FILTRON:OP532/2', 'MANN:C30020', 'MANN:W712/73'],
+  },
+  {
+    model: M7,
+    engine: '2.0 135kw 184hp',
+    products: ['FILTRON:OP595/1', 'MANN:W6018'],
+  },
+  {
+    model: M7,
+    engine: '2.0 Skyactiv-G 160 118kw 160hp',
+    products: ['FILTRON:OP595/1', 'MANN:W6018'],
+  },
+]
+
+/** Parça kodu görünmeyen ürün YOK. */
+export const MAZDA_MISSING_CODE: Array<{
+  brand: string
+  label: string
+  priceGross: number
+  models: string[]
+}> = []

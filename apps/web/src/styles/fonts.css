@@ -1,0 +1,26 @@
+/* ============================================================================
+   SELF-HOSTED FONTLAR
+   @fontsource paketleri üzerinden gelir; derleme sırasında ağ erişimi
+   GEREKTİRMEZ ve dosyalar kendi origin'imizden sunulur.
+
+   Yalnızca ihtiyaç duyulan alt kümeler yüklenir:
+     · latin      → temel karakterler
+     · latin-ext  → Türkçe ş, ğ, ı, İ (ç/ö/ü zaten latin'de)
+   Tarayıcı unicode-range sayesinde yalnızca gerekli dosyayı indirir.
+   ========================================================================= */
+
+/* Inter — arayüz */
+@import '@fontsource/inter/latin-400.css';
+@import '@fontsource/inter/latin-ext-400.css';
+@import '@fontsource/inter/latin-500.css';
+@import '@fontsource/inter/latin-ext-500.css';
+@import '@fontsource/inter/latin-600.css';
+@import '@fontsource/inter/latin-ext-600.css';
+@import '@fontsource/inter/latin-700.css';
+@import '@fontsource/inter/latin-ext-700.css';
+
+/* JetBrains Mono — ürün kodu / OEM numarası */
+@import '@fontsource/jetbrains-mono/latin-400.css';
+@import '@fontsource/jetbrains-mono/latin-ext-400.css';
+@import '@fontsource/jetbrains-mono/latin-500.css';
+@import '@fontsource/jetbrains-mono/latin-ext-500.css';

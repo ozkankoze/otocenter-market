@@ -1,0 +1,25 @@
+node_modules/
+.next/
+out/
+build/
+dist/
+*.tsbuildinfo
+
+.env
+.env.local
+.env.*.local
+!.env.example
+
+.DS_Store
+*.log
+npm-debug.log*
+
+coverage/
+.playwright/
+test-results/
+
+# Prisma
+packages/db/generated/
+
+# Betiklerin ürettiği ara dosyalar (kaynak değil, yeniden üretilir)
+veri/*.xlsx

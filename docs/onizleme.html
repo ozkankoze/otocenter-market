@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oto Center Market — Ana Sayfa Önizlemesi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand-900:#08203C;--brand-800:#0B315B;--brand-700:#0F4179;--brand-600:#14549A;
+  --brand-500:#2569B4;--brand-300:#8FBCE4;--brand-100:#D5E6F5;--brand-50:#EAF3FB;
+  --accent-700:#177247;--accent-600:#1E9159;--accent-100:#DEF3E8;
+  --n-0:#FFF;--n-25:#F6F8FB;--n-50:#F1F4F8;--n-100:#E6EBF1;--n-200:#D3DAE3;
+  --n-400:#97A3B2;--n-600:#5B6675;--n-800:#2C3340;--n-900:#171C24;
+  --success:#1E9159;--warning:#B7791F;--danger:#C0392B;
+  --r-sm:4px;--r-md:6px;--r-lg:8px;--r-xl:12px;--r-full:999px;
+  --sh-xs:0 1px 2px rgba(11,49,91,.05);--sh-sm:0 2px 6px rgba(11,49,91,.06);
+  --sh-md:0 6px 16px rgba(11,49,91,.08);--sh-lg:0 14px 34px rgba(11,49,91,.10);
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --e-out:cubic-bezier(.16,1,.3,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);background:var(--n-25);color:var(--n-800);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{max-width:1320px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+@media(prefers-reduced-motion:reduce){*{transition-duration:0ms!important}}
+
+/* ══ DEMO ŞERİDİ ══ */
+.demobar{background:var(--n-900);color:rgba(255,255,255,.72);font-size:12px;padding:9px 24px;text-align:center}
+.demobar b{color:#fff;font-weight:600}
+
+/* ══ HEADER ══ */
+header{background:#fff;position:relative;z-index:60}
+.util{background:var(--brand-800);color:rgba(255,255,255,.85);font-size:12px}
+.util .wrap{height:34px;display:flex;align-items:center;gap:22px}
+.util a:hover{color:#fff}
+.util .tel{margin-left:auto;color:#fff;font-weight:500;display:flex;align-items:center;gap:7px}
+.main{border-bottom:1px solid var(--n-100)}
+.main .wrap{height:82px;display:flex;align-items:center;gap:30px}
+.logo{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.logo .mark{width:42px;height:42px;border-radius:var(--r-full);background:linear-gradient(140deg,var(--brand-500),var(--brand-800));position:relative;flex:0 0 auto}
+.logo .mark::after{content:"";position:absolute;inset:3px;border-radius:var(--r-full);border:2px solid var(--accent-600);border-left-color:transparent;border-bottom-color:transparent;transform:rotate(-20deg)}
+.logo .mark::before{content:"";position:absolute;left:10px;top:21px;width:22px;height:9px;background:rgba(255,255,255,.9);border-radius:0 0 11px 11px;transform:rotate(-14deg)}
+.logo .t b{display:block;font-size:20px;font-weight:700;color:var(--brand-600);letter-spacing:-.02em;line-height:1}
+.logo .t span{font-size:11.5px;font-weight:600;color:var(--brand-800);letter-spacing:.03em}
+.hsearch{flex:1;max-width:560px;position:relative}
+.hsearch input{width:100%;height:46px;padding:0 16px 0 46px;font-family:var(--font);font-size:14.5px;background:var(--n-25);border:1px solid var(--n-100);border-radius:var(--r-md);color:var(--n-900);transition:border-color .15s,background .15s,box-shadow .15s}
+.hsearch input::placeholder{color:var(--n-400)}
+.hsearch input:focus{outline:none;background:#fff;border-color:var(--brand-600);box-shadow:0 0 0 3px rgba(20,84,154,.12)}
+.hsearch svg{position:absolute;left:15px;top:14px;color:var(--n-400)}
+.hacts{display:flex;gap:24px;margin-left:auto}
+.hact{display:flex;align-items:center;gap:9px;color:var(--n-800)}
+.hact:hover{color:var(--brand-600)}
+.hact b{display:block;font-size:12.5px;font-weight:600;line-height:1.25}
+.hact em{font-style:normal;font-size:11px;color:var(--n-400)}
+.hact .c{position:relative;display:inline-flex;margin-right:11px}
+.hact .c i{position:absolute;top:-7px;right:-10px;background:var(--brand-600);color:#fff;font-style:normal;font-size:10px;font-weight:600;min-width:17px;height:17px;border-radius:var(--r-full);display:flex;align-items:center;justify-content:center;padding:0 4px}
+nav.mainnav{border-bottom:1px solid var(--n-100);position:relative}
+nav.mainnav>.wrap{height:50px;display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
+.catbtn{display:flex;align-items:center;gap:9px;background:var(--brand-600);color:#fff;height:34px;padding:0 15px;border-radius:var(--r-md);font-weight:600;font-size:13px;transition:background .15s}
+.catbtn:hover,.catbtn.on{background:var(--brand-700)}
+nav.mainnav a:hover{color:var(--brand-600)}
+.vchip{margin-left:auto;display:none;align-items:center;gap:9px;background:var(--accent-100);color:var(--accent-700);height:32px;padding:0 8px 0 11px;border-radius:var(--r-sm);font-size:12.5px;font-weight:600}
+.vchip.show{display:flex}
+.vchip button{color:var(--accent-700);opacity:.6;font-size:15px;line-height:1;padding:0 3px}
+.vchip button:hover{opacity:1}
+
+/* Mega menü */
+.mega{position:absolute;top:100%;left:0;right:0;background:#fff;border-top:1px solid var(--n-100);box-shadow:var(--sh-lg);opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .18s var(--e-out);z-index:70}
+.mega.open{opacity:1;visibility:visible;transform:translateY(0)}
+.mega .wrap{display:grid;grid-template-columns:1fr 1fr 1fr 280px;gap:36px;padding:30px 24px 34px}
+.mega h5{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-600);font-weight:700;margin-bottom:13px;padding-bottom:9px;border-bottom:1px solid var(--n-100)}
+.mega li{list-style:none;padding:4.5px 0}
+.mega li a{font-size:13.5px;color:var(--n-600)}
+.mega li a:hover{color:var(--brand-600)}
+.mega li.more a{color:var(--brand-600);font-weight:600}
+.mega .promo{background:linear-gradient(150deg,var(--brand-800),var(--brand-900));border-radius:var(--r-lg);padding:24px;color:#fff}
+.mega .promo b{display:block;font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.3}
+.mega .promo p{font-size:12.5px;color:rgba(255,255,255,.72);margin-bottom:18px}
+.mega .promo .brands{margin-top:22px;padding-top:17px;border-top:1px solid rgba(255,255,255,.12)}
+.mega .promo .brands span{font-size:10.5px;letter-spacing:.08em;color:rgba(255,255,255,.5);display:block;margin-bottom:10px}
+.mega .promo .brands div{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;font-size:11px;color:rgba(255,255,255,.8)}
+
+/* ══ BUTON ══ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border-radius:var(--r-md);border:1px solid transparent;transition:background-color .15s,border-color .15s,color .15s;white-space:nowrap}
+.btn-lg{height:52px;padding:0 26px;font-size:14.5px}
+.btn-md{height:44px;padding:0 20px;font-size:14px}
+.btn-sm{height:34px;padding:0 13px;font-size:12.5px}
+.btn-primary{background:var(--brand-600);color:#fff}
+.btn-primary:hover{background:var(--brand-700)}
+.btn-white{background:#fff;color:var(--brand-700)}
+.btn-white:hover{background:var(--brand-50)}
+.btn-secondary{background:#fff;color:var(--brand-600);border-color:var(--brand-300)}
+.btn-secondary:hover{background:var(--brand-50);border-color:var(--brand-600)}
+.btn-ghost{color:var(--n-600)}
+.btn-ghost:hover{background:var(--n-50);color:var(--n-900)}
+.btn[disabled]{background:var(--n-100);color:var(--n-400);border-color:var(--n-100);cursor:not-allowed}
+.btn-block{width:100%}
+.btn:focus-visible{outline:2px solid var(--brand-600);outline-offset:2px}
+
+/* ══ MOBİL DRAWER ══ */
+.hamb{display:none;color:var(--n-800);padding:6px;margin-right:-4px}
+.scrim{position:fixed;inset:0;background:rgba(8,32,60,.45);opacity:0;visibility:hidden;transition:opacity .22s;z-index:90}
+.scrim.on{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;left:0;bottom:0;width:308px;max-width:86vw;background:#fff;z-index:100;
+  transform:translateX(-100%);transition:transform .22s var(--e-out);overflow-y:auto;box-shadow:var(--sh-lg)}
+.drawer.on{transform:translateX(0)}
+.dhead{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--n-100)}
+.dhead button{font-size:18px;color:var(--n-400);padding:4px 8px}
+.dveh{margin:16px 18px;padding:16px;background:var(--brand-50);border:1px solid var(--brand-100);border-radius:var(--r-lg)}
+.dveh b{display:block;font-size:14px;color:var(--n-900);font-weight:600}
+.dveh span{display:block;font-size:12.5px;color:var(--n-600);margin:3px 0 13px}
+.dsec{padding:6px 18px 14px;border-bottom:1px solid var(--n-50)}
+.dsec h6{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-600);font-weight:700;margin:12px 0 6px}
+.dsec a{display:block;padding:10px 0;font-size:14px;color:var(--n-800);border-bottom:1px solid var(--n-50)}
+.dsec a:last-child{border-bottom:none}
+
+/* ══ HERO ══ */
+.hero{position:relative;background:linear-gradient(120deg,var(--brand-800) 0%,var(--brand-900) 62%,#061a30 100%);color:#fff;padding:66px 0 104px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;-webkit-mask-image:radial-gradient(ellipse 75% 75% at 72% 30%,#000,transparent);mask-image:radial-gradient(ellipse 75% 75% at 72% 30%,#000,transparent)}
+.hero .ring{position:absolute;right:-120px;top:-90px;width:520px;height:520px;border-radius:var(--r-full);border:1px solid rgba(143,188,228,.16);box-shadow:inset 0 0 0 54px rgba(143,188,228,.045),inset 0 0 0 55px rgba(143,188,228,.13),inset 0 0 0 118px rgba(143,188,228,.045),inset 0 0 0 119px rgba(143,188,228,.10)}
+.hero .ring2{position:absolute;right:60px;bottom:-160px;width:300px;height:300px;border-radius:var(--r-full);border:1px solid rgba(30,145,89,.16)}
+.hero .heroin{position:relative;z-index:2;max-width:620px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(30,145,89,.16);border:1px solid rgba(30,145,89,.34);color:#8FE0B4;font-size:12px;font-weight:600;padding:6px 13px;border-radius:var(--r-sm);margin-bottom:22px}
+.hero h1{font-size:46px;line-height:1.12;font-weight:700;letter-spacing:-.026em;margin-bottom:16px}
+.hero p.lead{font-size:17px;line-height:1.6;color:rgba(255,255,255,.76);margin-bottom:30px;max-width:530px}
+.herosearch{display:flex;gap:12px;max-width:620px}
+.herosearch .f{flex:1;position:relative}
+.herosearch input{width:100%;height:52px;padding:0 18px 0 48px;font-family:var(--font);font-size:14.5px;border:none;border-radius:var(--r-md);color:var(--n-900)}
+.herosearch input:focus{outline:none;box-shadow:0 0 0 3px rgba(143,188,228,.4)}
+.herosearch svg{position:absolute;left:17px;top:17px;color:var(--n-400)}
+.pop{margin-top:20px;font-size:13px;color:rgba(255,255,255,.55)}
+.pop a{color:rgba(255,255,255,.86);border-bottom:1px solid rgba(255,255,255,.22)}
+.pop a:hover{color:#fff;border-color:#fff}
+
+/* ══ ARAÇ SEÇİCİ ══ */
+.selwrap{margin-top:-62px;position:relative;z-index:20}
+.vsel{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-xl);padding:28px 30px;box-shadow:var(--sh-lg)}
+.vsel h2{font-size:22px;font-weight:600;letter-spacing:-.012em;color:var(--n-900)}
+.vsel .sub{color:var(--n-600);font-size:14px;margin:5px 0 22px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
+.vstep label{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--n-800);margin-bottom:7px}
+.stepno{width:18px;height:18px;border-radius:var(--r-full);background:var(--brand-600);color:#fff;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-weight:600;flex:0 0 auto;transition:background .15s}
+.vstep.locked .stepno{background:var(--n-200)}
+.vstep.done .stepno{background:var(--accent-600)}
+select.sel{width:100%;height:46px;padding:0 36px 0 13px;font-family:var(--font);font-size:13.5px;color:var(--n-900);background:#fff;border:1px solid var(--n-200);border-radius:var(--r-md);appearance:none;transition:border-color .15s,box-shadow .15s;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235B6675' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center}
+select.sel:focus{outline:none;border-color:var(--brand-600);box-shadow:0 0 0 3px rgba(20,84,154,.12)}
+select.sel:disabled{background-color:var(--n-50);color:var(--n-400);cursor:not-allowed;border-color:var(--n-100)}
+.vsel .foot{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:17px;border-top:1px solid var(--n-50);font-size:13px;color:var(--n-600)}
+.vsel .foot a{color:var(--brand-600);font-weight:500}
+.vsel .foot a:hover{text-decoration:underline}
+.vsel .foot .g{display:flex;align-items:center;gap:7px}
+
+/* Seçili araç şeridi */
+.vbar{display:none;align-items:center;gap:15px;background:var(--accent-100);border:1px solid #BFE5D1;border-radius:var(--r-lg);padding:15px 19px;margin-top:18px}
+.vbar.show{display:flex}
+.vbar .ic{width:40px;height:40px;border-radius:var(--r-md);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--accent-700);flex:0 0 auto}
+.vbar .t b{display:block;font-size:12.5px;color:var(--accent-700);font-weight:600}
+.vbar .t span{font-size:14.5px;color:var(--n-900);font-weight:500}
+.vbar .acts{margin-left:auto;display:flex;gap:9px}
+
+/* ══ BÖLÜM ══ */
+section.blk{padding:66px 0}
+section.blk.tight{padding:44px 0 66px}
+.shead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:24px;gap:20px}
+.shead h2{font-size:25px;font-weight:600;letter-spacing:-.014em;color:var(--n-900)}
+.shead p{color:var(--n-600);font-size:14px;margin-top:5px}
+.shead a.more{font-size:13.5px;font-weight:600;color:var(--brand-600);white-space:nowrap}
+.shead a.more:hover{text-decoration:underline}
+
+/* Kategori kartları */
+.cgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ccard{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:22px 18px;text-align:center;transition:box-shadow .2s,border-color .2s;display:block}
+.ccard:hover{box-shadow:var(--sh-md);border-color:var(--brand-300)}
+.cicon{width:54px;height:54px;margin:0 auto 14px;border-radius:var(--r-md);background:var(--brand-50);display:flex;align-items:center;justify-content:center;color:var(--brand-600)}
+.ccard b{display:block;font-size:14px;font-weight:600;color:var(--n-900);margin-bottom:4px}
+.ccard em{font-style:normal;font-size:12.5px;color:var(--n-400)}
+.ccard .fit{display:none;margin-top:8px;font-size:11.5px;font-weight:600;color:var(--accent-700)}
+.ccard .fit.none{color:var(--n-400);font-weight:500}
+body.hasveh .ccard .fit{display:block}
+
+/* Ürün kartları */
+.tabs{display:flex;gap:7px;margin-bottom:20px;flex-wrap:wrap}
+.tab{height:34px;padding:0 14px;border-radius:var(--r-md);font-size:13px;font-weight:500;color:var(--n-600);background:#fff;border:1px solid var(--n-100);transition:all .15s}
+.tab:hover{border-color:var(--brand-300);color:var(--brand-600)}
+.tab.on{background:var(--brand-600);border-color:var(--brand-600);color:#fff;font-weight:600}
+.pgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.pcard{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:17px;display:flex;flex-direction:column;transition:box-shadow .2s,border-color .2s}
+.pcard:hover{box-shadow:var(--sh-md);border-color:var(--brand-300)}
+.pcard:hover .pimg i{transform:scale(1.04)}
+.pbrand{font-size:10.5px;font-weight:700;letter-spacing:.07em;color:var(--n-600);text-transform:uppercase;margin-bottom:11px}
+.pimg{aspect-ratio:1;background:var(--n-25);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:14px;overflow:hidden;position:relative}
+.pimg i{font-style:normal;transition:transform .2s var(--e-out);opacity:.5}
+.pimg .tag{position:absolute;top:9px;left:9px}
+.pname{font-size:14px;font-weight:500;color:var(--n-900);line-height:1.4;margin-bottom:6px;min-height:39px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pcode{font-family:var(--mono);font-size:12px;color:var(--n-600);margin-bottom:11px;letter-spacing:-.01em}
+.badge{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:var(--r-sm);font-size:11.5px;font-weight:500;line-height:1}
+.b-fit{background:var(--accent-100);color:var(--accent-700)}
+.b-unk{background:var(--n-50);color:var(--n-600)}
+.b-no{background:#FBEAE8;color:var(--danger)}
+.b-sale{background:#FDF3E2;color:var(--warning)}
+.pprice{font-size:19px;font-weight:700;color:var(--n-900);letter-spacing:-.012em;margin:12px 0 3px}
+.pold{font-size:12.5px;color:var(--n-400);text-decoration:line-through;font-weight:400;margin-left:7px}
+.pkdv{font-size:11px;color:var(--n-400);margin-bottom:9px}
+.stock{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--n-600);margin-bottom:14px}
+.dot{width:7px;height:7px;border-radius:var(--r-full);display:inline-block}
+.pcard .btn{margin-top:auto}
+
+/* Sonuç özeti */
+.resbar{display:none;background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:18px 20px;margin-bottom:22px;align-items:center;gap:22px;flex-wrap:wrap}
+.resbar.show{display:flex}
+.resbar .lbl{font-size:13px;color:var(--n-600)}
+.resbar .lbl b{color:var(--n-900);font-weight:600}
+.rescounts{display:flex;gap:8px;flex-wrap:wrap;margin-left:auto}
+.rescount{background:var(--brand-50);color:var(--brand-700);border-radius:var(--r-sm);padding:5px 11px;font-size:12.5px;font-weight:500}
+.rescount b{font-weight:700}
+
+/* Markalar */
+.bgrid{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.blogo{height:72px;border:1px solid var(--n-100);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;background:#fff;font-size:11.5px;font-weight:700;letter-spacing:.03em;color:var(--n-400);transition:color .2s,border-color .2s;text-align:center;padding:0 8px}
+.blogo:hover{color:var(--brand-600);border-color:var(--brand-300)}
+
+/* Güven */
+.trustsec{background:#fff;border-top:1px solid var(--n-100);border-bottom:1px solid var(--n-100)}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 44px}
+.tr{display:flex;gap:15px}
+.tr .ic{width:36px;height:36px;border-radius:var(--r-md);background:var(--brand-50);color:var(--brand-600);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.tr b{display:block;font-size:14px;font-weight:600;color:var(--n-900);margin-bottom:4px}
+.tr p{font-size:13px;color:var(--n-600);line-height:1.55}
+
+/* Kurumsal şerit */
+.corp{background:var(--brand-50)}
+.corp .corpin{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+.corp .txt{flex:1;min-width:280px}
+.corp h3{font-size:19px;font-weight:600;color:var(--n-900);margin-bottom:9px}
+.corp p{font-size:14px;color:var(--n-600);max-width:620px}
+.stats{display:flex;gap:38px;flex-wrap:wrap}
+.stat b{display:block;font-size:26px;font-weight:700;color:var(--brand-600);letter-spacing:-.02em;line-height:1.15}
+.stat span{font-size:12.5px;color:var(--n-600)}
+
+/* Footer */
+footer{background:var(--brand-900);color:rgba(255,255,255,.65)}
+.fmain{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1.2fr;gap:34px;padding:52px 0 42px}
+footer h5{color:#fff;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:15px}
+footer li{list-style:none;padding:3.5px 0;font-size:13px}
+footer a:hover{color:#fff}
+footer .about p{font-size:13px;line-height:1.65;margin:15px 0 19px}
+footer .social{display:flex;gap:8px}
+footer .social i{width:33px;height:33px;border-radius:var(--r-md);background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.08);padding:17px 0;display:flex;align-items:center;gap:20px;font-size:12.5px;flex-wrap:wrap}
+.fbot .cards{margin-left:auto;display:flex;gap:6px}
+.fbot .cards span{width:38px;height:24px;border-radius:3px;background:rgba(255,255,255,.12)}
+.note{background:#fff;border:1px dashed var(--n-200);border-radius:var(--r-md);padding:12px 16px;font-size:12.5px;color:var(--n-600);margin-top:26px}
+
+@media(max-width:860px){
+  .hamb{display:flex;align-items:center}
+  .util .wrap a{display:none}
+  .util .tel{margin-left:0}
+  .main .wrap{height:auto;padding-top:12px;padding-bottom:12px;gap:12px;flex-wrap:wrap}
+  .logo .t b{font-size:18px}.logo .t span{font-size:10.5px}
+  .hacts{gap:0}
+  .hacts .hact:not(:last-child){display:none}
+  .hact em,.hact b{font-size:11px}
+  .hsearch{order:3;flex-basis:100%;max-width:none}
+  .hsearch input{height:44px}
+  nav.mainnav>.wrap{overflow-x:auto;white-space:nowrap;gap:18px;scrollbar-width:none}
+  nav.mainnav>.wrap::-webkit-scrollbar{display:none}
+  .mega{display:none}
+  .vchip{margin-left:12px}
+  .hero{padding:36px 0 84px}
+  .hero h1{font-size:29px}
+  .hero p.lead{font-size:15px}
+  .herosearch{flex-direction:column}
+  .herosearch .btn{width:100%}
+  .vsel{padding:20px 18px}
+  .vgrid{grid-template-columns:1fr;gap:10px}
+  .vgrid .btn{grid-column:auto;width:100%}
+  .vsel .foot{flex-direction:column;align-items:flex-start;gap:10px}
+  .vbar{flex-wrap:wrap}
+  .vbar .acts{margin-left:0;width:100%}
+  section.blk{padding:44px 0}
+  .shead h2{font-size:21px}
+  .cgrid,.pgrid,.bgrid{grid-template-columns:repeat(2,1fr)}
+  .resbar{flex-direction:column;align-items:flex-start;gap:12px}
+  .rescounts{margin-left:0}
+  .corp .corpin{gap:24px}
+  .stats{gap:24px}
+}
+@media(max-width:1100px){
+  .cgrid,.pgrid,.bgrid{grid-template-columns:repeat(2,1fr)}
+  .vgrid{grid-template-columns:1fr 1fr}
+  .vgrid .btn{grid-column:span 2}
+  .trust,.fmain{grid-template-columns:1fr}
+  .mega .wrap{grid-template-columns:1fr 1fr}
+  .hero h1{font-size:32px}.hero{padding:44px 0 90px}
+  .main .wrap{height:auto;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+  .hsearch{order:3;flex-basis:100%;max-width:none}
+}
+</style>
+</head>
+<body>
+
+<div class="demobar">
+  <b>ÖNİZLEME</b> · Oto Center Market ana sayfa tasarımı — araç seçici ve mega menü çalışır durumda. Ürün, fiyat ve uyumluluk verileri örnek amaçlıdır.
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="util">
+    <div class="wrap">
+      <a href="#">Kurumsal &amp; Bayilik</a>
+      <a href="#">Sipariş Takip</a>
+      <a href="#">Kargo &amp; Teslimat</a>
+      <a href="#">Yardım</a>
+      <span class="tel">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"/></svg>
+        0850 XXX XX XX
+      </span>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="wrap">
+      <button class="hamb" id="hambBtn" aria-label="Menü" onclick="openDrawer()">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="logo" href="#">
+        <span class="mark"></span>
+        <span class="t"><b>Oto</b><span>CENTER MARKET</span></span>
+      </a>
+      <div class="hsearch">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Ürün, OEM numarası veya parça kodu ara..." aria-label="Ürün ara">
+      </div>
+      <div class="hacts">
+        <a class="hact" href="#">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span><b>Hesabım</b><em>Giriş yap</em></span>
+        </a>
+        <a class="hact" href="#">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          <span><b>Siparişlerim</b><em>Takip et</em></span>
+        </a>
+        <a class="hact" href="#">
+          <span class="c">
+            <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <i id="cartCount">0</i>
+          </span>
+          <span><b>Sepetim</b><em id="cartTotal">0,00 ₺</em></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="mainnav">
+    <div class="wrap">
+      <button class="catbtn" id="catBtn" aria-expanded="false">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        Kategoriler
+      </button>
+      <a href="#">Otomobil &amp; Hafif Ticari</a>
+      <a href="#">Ağır Vasıta</a>
+      <a href="#">Filtreler</a>
+      <a href="#">Yağlar &amp; Sıvılar</a>
+      <a href="#">Markalar</a>
+      <a href="#">Kampanyalar</a>
+      <span class="vchip" id="vChip">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg>
+        <span id="vChipText">—</span>
+        <button title="Aracı kaldır" onclick="clearVehicle()">✕</button>
+      </span>
+    </div>
+
+    <div class="mega" id="mega">
+      <div class="wrap">
+        <div>
+          <h5>Filtreler</h5>
+          <ul>
+            <li><a href="#">Hava Filtreleri</a></li>
+            <li><a href="#">Yağ Filtreleri</a></li>
+            <li><a href="#">Yakıt Filtreleri</a></li>
+            <li><a href="#">Polen / Kabin Filtreleri</a></li>
+            <li><a href="#">Şanzıman Filtreleri</a></li>
+            <li><a href="#">Hidrolik Filtreler</a></li>
+            <li><a href="#">Kurutucu Filtreler</a></li>
+            <li><a href="#">AdBlue Filtreleri</a></li>
+            <li><a href="#">Filtre Setleri</a></li>
+            <li class="more"><a href="#">Tüm filtreler →</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Yağlar &amp; Sıvılar</h5>
+          <ul>
+            <li><a href="#">Motor Yağları</a></li>
+            <li><a href="#">Şanzıman Yağları</a></li>
+            <li><a href="#">Diferansiyel Yağları</a></li>
+            <li><a href="#">Hidrolik Yağlar</a></li>
+            <li><a href="#">Antifriz &amp; Soğutma</a></li>
+            <li><a href="#">Fren Hidroliği</a></li>
+            <li><a href="#">AdBlue</a></li>
+            <li><a href="#">Cam Suyu &amp; Katkılar</a></li>
+            <li><a href="#">Gres &amp; Yağlayıcılar</a></li>
+            <li class="more"><a href="#">Tüm yağlar →</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Araç Grupları</h5>
+          <ul>
+            <li><a href="#">Otomobil</a></li>
+            <li><a href="#">Hafif Ticari</a></li>
+            <li><a href="#">Ağır Vasıta</a></li>
+            <li><a href="#">Otobüs</a></li>
+            <li><a href="#">Kamyon &amp; Çekici</a></li>
+            <li><a href="#">İş Makineleri</a></li>
+            <li><a href="#">Traktör</a></li>
+            <li><a href="#">Jeneratör</a></li>
+            <li class="more"><a href="#">Tüm gruplar →</a></li>
+          </ul>
+        </div>
+        <div class="promo">
+          <b>Aracınıza göre parça bulun</b>
+          <p>Marka, model ve motoru seçin; yalnızca uyumlu ürünleri görün.</p>
+          <button class="btn btn-white btn-md btn-block" onclick="closeMega();document.getElementById('vsel').scrollIntoView({behavior:'smooth',block:'center'})">Aracımı Seç</button>
+          <div class="brands">
+            <span>POPÜLER MARKALAR</span>
+            <div><span>AUDI</span><span>VW</span><span>FORD</span><span>RENAULT</span><span>FIAT</span><span>MERCEDES</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobil drawer -->
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer">
+  <div class="dhead">
+    <span class="logo"><span class="mark"></span><span class="t"><b>Oto</b><span>CENTER MARKET</span></span></span>
+    <button aria-label="Kapat" onclick="closeDrawer()">✕</button>
+  </div>
+  <div class="dveh" id="dveh">
+    <b>Aracınızı seçin</b>
+    <span>Yalnızca uyumlu ürünleri görün</span>
+    <button class="btn btn-primary btn-md btn-block" onclick="closeDrawer();document.getElementById('vsel').scrollIntoView({behavior:'smooth',block:'center'})">Aracımı Seç</button>
+  </div>
+  <div class="dsec"><h6>Kategoriler</h6>
+    <a href="#">Hava Filtreleri</a><a href="#">Yağ Filtreleri</a><a href="#">Yakıt Filtreleri</a>
+    <a href="#">Polen / Kabin Filtreleri</a><a href="#">Motor Yağları</a><a href="#">Antifriz &amp; Sıvılar</a>
+    <a href="#">Tüm kategoriler →</a></div>
+  <div class="dsec"><h6>Araç Grupları</h6>
+    <a href="#">Otomobil</a><a href="#">Hafif Ticari</a><a href="#">Ağır Vasıta</a><a href="#">İş Makineleri</a></div>
+  <div class="dsec"><h6>Hesap</h6>
+    <a href="#">Giriş Yap / Üye Ol</a><a href="#">Siparişlerim</a><a href="#">Garajım</a>
+    <a href="#">Markalar</a><a href="#">Kampanyalar</a><a href="#">İletişim</a></div>
+</aside>
+
+<!-- ══════════ HERO ══════════ -->
+<div class="hero">
+  <span class="ring"></span><span class="ring2"></span>
+  <div class="wrap"><div class="heroin">
+    <span class="eyebrow">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      12.000+ ürün · 80+ araç markası · Motor seviyesinde uyumluluk
+    </span>
+    <h1>Aracınız İçin Doğru Parçayı Bulun</h1>
+    <p class="lead">Binlerce ürün arasından aracınıza uyumlu filtre, yağ ve bakım ürünlerini kolayca keşfedin.</p>
+    <div class="herosearch">
+      <div class="f">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="text" placeholder="Ürün, OEM numarası veya parça kodu ara..." aria-label="Ürün ara">
+      </div>
+      <button class="btn btn-white btn-lg">Ürünleri Keşfet</button>
+    </div>
+    <div class="pop">Popüler: <a href="#">Hava Filtresi</a> · <a href="#">Yağ Filtresi</a> · <a href="#">Polen Filtresi</a> · <a href="#">Motor Yağı</a> · <a href="#">Antifriz</a></div>
+  </div></div>
+</div>
+
+<!-- ══════════ ARAÇ SEÇİCİ ══════════ -->
+<div class="wrap selwrap">
+  <div class="vsel" id="vsel">
+    <h2>Aracınıza Göre Parça Bulun</h2>
+    <p class="sub">Aracınızı seçin, yalnızca uyumlu ürünleri görüntüleyin.</p>
+    <div class="vgrid">
+      <div class="vstep" id="st1">
+        <label><span class="stepno">1</span> Araç Tipi</label>
+        <select class="sel" id="selType" onchange="onType()"><option value="">Seçiniz</option></select>
+      </div>
+      <div class="vstep locked" id="st2">
+        <label><span class="stepno">2</span> Marka</label>
+        <select class="sel" id="selBrand" disabled onchange="onBrand()"><option value="">Önce araç tipi seçiniz</option></select>
+      </div>
+      <div class="vstep locked" id="st3">
+        <label><span class="stepno">3</span> Model</label>
+        <select class="sel" id="selModel" disabled onchange="onModel()"><option value="">Önce marka seçiniz</option></select>
+      </div>
+      <div class="vstep locked" id="st4">
+        <label><span class="stepno">4</span> Motor</label>
+        <select class="sel" id="selEngine" disabled onchange="onEngine()"><option value="">Önce model seçiniz</option></select>
+      </div>
+      <button class="btn btn-primary btn-lg" id="btnGo" disabled onclick="applyVehicle()">UYUMLU ÜRÜNLERİ GÖSTER</button>
+    </div>
+    <div class="foot">
+      <span class="g">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg>
+        <span id="garageText">Kayıtlı aracınız yok</span>
+      </span>
+      <a href="#">Aracımı bilmiyorum, koda göre arayayım →</a>
+    </div>
+
+    <div class="vbar" id="vBar">
+      <span class="ic">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".9" fill="currentColor"/><circle cx="16.2" cy="15" r=".9" fill="currentColor"/></svg>
+      </span>
+      <span class="t"><b>Aracınız seçildi ✓</b><span id="vBarText"></span></span>
+      <span class="acts">
+        <button class="btn btn-secondary btn-sm" onclick="changeVehicle()">Aracı Değiştir</button>
+        <button class="btn btn-ghost btn-sm" onclick="clearVehicle()">Kaldır ✕</button>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ KATEGORİLER ══════════ -->
+<section class="blk tight">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <h2>Kategoriler</h2>
+        <p>Aradığınız ürün grubunu seçin</p>
+      </div>
+      <a class="more" href="#">Tüm kategoriler →</a>
+    </div>
+    <div class="cgrid" id="catGrid"></div>
+  </div>
+</section>
+
+<!-- ══════════ ÜRÜNLER ══════════ -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead">
+      <div>
+        <h2 id="prodTitle">Öne Çıkan Ürünler</h2>
+        <p id="prodSub">Çok tercih edilen filtre ve yağ ürünleri</p>
+      </div>
+      <a class="more" href="#">Tümünü gör →</a>
+    </div>
+
+    <div class="resbar" id="resBar">
+      <span class="lbl">Aracınıza uygun <b id="resTotal">0</b> ürün bulundu</span>
+      <span class="rescounts" id="resCounts"></span>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div class="pgrid" id="prodGrid"></div>
+    <div class="note">
+      <b>Not:</b> Bu önizlemedeki ürün kodları, OEM numaraları, fiyatlar ve uyumluluk verileri
+      formatı göstermek için hazırlanmış örnek verilerdir. Gerçek katalog verisiyle doğrulanmadan kullanılmamalıdır.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MARKALAR ══════════ -->
+<section class="blk" style="padding-top:0">
+  <div class="wrap">
+    <div class="shead">
+      <div><h2>Öne Çıkan Markalar</h2><p>Yetkili distribütör kanalından tedarik edilen ürün markaları</p></div>
+      <a class="more" href="#">Tüm markalar →</a>
+    </div>
+    <div class="bgrid">
+      <a class="blogo" href="#">MANN-FILTER</a><a class="blogo" href="#">FILTRON</a>
+      <a class="blogo" href="#">BOSCH</a><a class="blogo" href="#">MAHLE</a>
+      <a class="blogo" href="#">PURFLUX</a><a class="blogo" href="#">HENGST</a>
+      <a class="blogo" href="#">LIQUI MOLY</a><a class="blogo" href="#">FEBI BILSTEIN</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GÜVEN ══════════ -->
+<section class="blk trustsec">
+  <div class="wrap">
+    <div class="shead"><div><h2>Neden Oto Center Market?</h2></div></div>
+    <div class="trust">
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span>
+        <div><b>Geniş Ürün Yelpazesi</b><p>Otomobil, hafif ticari ve ağır vasıta için filtre, yağ ve bakım ürünleri tek katalogda.</p></div></div>
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+        <div><b>Güvenilir Markalar</b><p>Yalnızca yetkili distribütör kanalından tedarik edilen orijinal ve muadil ürünler.</p></div></div>
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+        <div><b>Doğru Araç Uyumluluğu</b><p>Her ürün motor seviyesinde eşleştirilir. Uyumluluk doğrulanmadıysa açıkça belirtilir.</p></div></div>
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        <div><b>Güvenli Ödeme</b><p>3D Secure destekli sanal POS, kredi kartına taksit ve havale seçenekleri.</p></div></div>
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V9h11l3 3h6v4"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="18" cy="17.5" r="1.8"/></svg></span>
+        <div><b>Hızlı Kargo</b><p>Saat 16:00'ya kadar verilen stoklu siparişler aynı gün kargoya teslim edilir.</p></div></div>
+      <div class="tr"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></span>
+        <div><b>Profesyonel Destek</b><p>Parça seçiminde tereddüt ederseniz teknik ekibimiz şasi numarasıyla doğrulama yapar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ KURUMSAL ══════════ -->
+<section class="blk corp">
+  <div class="wrap corpin">
+    <div class="txt">
+      <h3>Oto Center Market</h3>
+      <p>Otomobil, hafif ticari ve ağır vasıta araçlar için filtre, yağ ve bakım ürünleri tedarik ediyoruz. Ürünlerimiz araç motor kodu seviyesinde eşleştirilir; böylece yanlış parça riski en aza iner. Bayilik ve toptan satış için bizimle iletişime geçebilirsiniz.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>12.000+</b><span>Ürün</span></div>
+      <div class="stat"><b>80+</b><span>Araç markası</span></div>
+      <div class="stat"><b>40+</b><span>Ürün markası</span></div>
+      <div class="stat"><b>4.000+</b><span>Motor eşleştirmesi</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="fmain">
+      <div class="about">
+        <span class="logo"><span class="mark"></span><span class="t"><b style="color:#fff">Oto</b><span style="color:var(--brand-300)">CENTER MARKET</span></span></span>
+        <p>Otomobil, hafif ticari ve ağır vasıta araçlar için filtre, yağ ve bakım ürünleri tedarik eden profesyonel e-ticaret platformu.</p>
+        <div class="social"><i>f</i><i>in</i><i>ig</i><i>yt</i></div>
+      </div>
+      <div><h5>Kurumsal</h5><ul><li><a href="#">Hakkımızda</a></li><li><a href="#">İletişim</a></li><li><a href="#">Bayilik &amp; Toptan</a></li><li><a href="#">Kampanyalar</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h5>Ürünler</h5><ul><li><a href="#">Filtreler</a></li><li><a href="#">Yağlar &amp; Sıvılar</a></li><li><a href="#">Otomobil</a></li><li><a href="#">Hafif Ticari</a></li><li><a href="#">Ağır Vasıta</a></li></ul></div>
+      <div><h5>Müşteri Hizmetleri</h5><ul><li><a href="#">Siparişlerim</a></li><li><a href="#">Kargo &amp; Teslimat</a></li><li><a href="#">İade &amp; Değişim</a></li><li><a href="#">Sıkça Sorulan Sorular</a></li><li><a href="#">Sipariş Takip</a></li></ul></div>
+      <div><h5>İletişim</h5><ul><li>Adres satırı, İlçe / İl</li><li>0850 XXX XX XX</li><li>info@otocentermarket.com</li><li>Hafta içi 09:00 – 18:00</li><li>Cumartesi 09:00 – 14:00</li></ul></div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Oto Center Market</span>
+      <a href="#">KVKK</a><a href="#">Gizlilik Politikası</a><a href="#">Mesafeli Satış Sözleşmesi</a><a href="#">Çerez Politikası</a>
+      <span class="cards"><span></span><span></span><span></span><span></span></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════ ÖRNEK VERİ (ornek-veri/ CSV dosyalarıyla aynı) ═══════════════ */
+const TYPES=[{id:'OTOMOBIL',n:'Otomobil & Hafif Ticari'},{id:'AGIR_VASITA',n:'Ağır Vasıta'},
+             {id:'OTOBUS',n:'Otobüs'},{id:'IS_MAKINESI',n:'İş Makinesi'},{id:'TRAKTOR',n:'Traktör'}];
+
+const BRANDS={OTOMOBIL:['AUDI','VOLKSWAGEN','SEAT','SKODA','FORD','RENAULT','MERCEDES-BENZ'],
+              AGIR_VASITA:['MERCEDES-BENZ','MAN'],OTOBUS:[],IS_MAKINESI:[],TRAKTOR:[]};
+
+const MODELS={
+ 'OTOMOBIL|AUDI':[{id:'a1-gb',n:'A1 (GB) · 2018→'},{id:'a3-8y',n:'A3 (8Y) · 2020→'}],
+ 'OTOMOBIL|VOLKSWAGEN':[{id:'polo-vi',n:'POLO VI (AW) · 2017→'},{id:'golf-viii',n:'GOLF VIII (CD) · 2019→'}],
+ 'OTOMOBIL|SEAT':[{id:'ibiza-v',n:'IBIZA V (KJ) · 2017→'}],
+ 'OTOMOBIL|SKODA':[{id:'fabia-iv',n:'FABIA IV (PJ) · 2021→'}],
+ 'OTOMOBIL|FORD':[{id:'focus-iv',n:'FOCUS IV (HN) · 2018→'},{id:'transit-custom',n:'TRANSIT CUSTOM · 2016→'}],
+ 'OTOMOBIL|RENAULT':[{id:'clio-v',n:'CLIO V (BJA) · 2019→'}],
+ 'OTOMOBIL|MERCEDES-BENZ':[{id:'sprinter-907',n:'SPRINTER (907) · 2018→'}],
+ 'AGIR_VASITA|MERCEDES-BENZ':[{id:'actros-mp4',n:'ACTROS MP4 · 2011–2018'}],
+ 'AGIR_VASITA|MAN':[{id:'tgx',n:'TGX · 2012–2020'}]
+};
+
+const ENGINES={
+ 'a1-gb':[{id:'CHZB',n:'30 TFSI 1.0 81 kW 110 HP',y:'2018–2024'},
+          {id:'DKRF',n:'25 TFSI 1.0 70 kW 95 HP',y:'2018–2024'},
+          {id:'DADA',n:'40 TFSI 2.0 152 kW 207 HP',y:'2019–2024'}],
+ 'a3-8y':[{id:'DLAA',n:'35 TFSI 1.5 110 kW 150 HP',y:'2020–2025'},
+          {id:'DTTA',n:'30 TDI 2.0 85 kW 116 HP',y:'2020–2025'}],
+ 'polo-vi':[{id:'CHZB',n:'1.0 TSI 81 kW 110 HP',y:'2017–2023'},
+            {id:'CHYB',n:'1.0 MPI 48 kW 65 HP',y:'2017–2021'}],
+ 'golf-viii':[{id:'DLAA',n:'1.5 TSI 110 kW 150 HP',y:'2019–2025'},
+              {id:'DTTB',n:'2.0 TDI 110 kW 150 HP',y:'2019–2025'}],
+ 'ibiza-v':[{id:'CHZB',n:'1.0 TSI 81 kW 110 HP',y:'2017–2024'}],
+ 'fabia-iv':[{id:'DKRF',n:'1.0 TSI 70 kW 95 HP',y:'2021–2025'}],
+ 'focus-iv':[{id:'M8DA',n:'1.5 EcoBoost 110 kW 150 HP',y:'2018–2025'},
+             {id:'XWDA',n:'1.5 EcoBlue 88 kW 120 HP',y:'2018–2025'}],
+ 'transit-custom':[{id:'YMF6',n:'2.0 EcoBlue 96 kW 130 HP',y:'2016–2023'}],
+ 'clio-v':[{id:'H4D',n:'1.0 TCe 67 kW 91 HP',y:'2019–2025'}],
+ 'sprinter-907':[{id:'OM651',n:'314 CDI 105 kW 143 HP',y:'2018–2025'}],
+ 'actros-mp4':[{id:'OM471',n:'1845 LS 330 kW 449 HP',y:'2011–2018'}],
+ 'tgx':[{id:'D2676',n:'18.500 368 kW 500 HP',y:'2012–2020'}]
+};
+
+const CATS=[
+ {id:'HAVA_FILTRESI',n:'Hava Filtreleri',c:1240,ic:'<path d="M3 6h18M3 12h18M3 18h18"/><path d="M7 3v18M12 3v18M17 3v18" opacity=".45"/>'},
+ {id:'YAG_FILTRESI',n:'Yağ Filtreleri',c:980,ic:'<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 4v3.5M12 16.5V20M4 12h3.5M16.5 12H20"/>'},
+ {id:'YAKIT_FILTRESI',n:'Yakıt Filtreleri',c:640,ic:'<path d="M7 3h7l3 4v14H7z"/><path d="M7 9h10"/><path d="M10 13h4"/>'},
+ {id:'POLEN_FILTRESI',n:'Polen / Kabin',c:720,ic:'<rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M7 6v12M11 6v12M15 6v12"/>'},
+ {id:'MOTOR_YAGI',n:'Motor Yağları',c:1480,ic:'<path d="M12 3s5 5.4 5 9a5 5 0 0 1-10 0c0-3.6 5-9 5-9z"/>'},
+ {id:'SANZIMAN_YAGI',n:'Şanzıman Yağları',c:310,ic:'<circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5h6M9 14.5h6"/>'},
+ {id:'ANTIFRIZ',n:'Antifriz & Sıvılar',c:420,ic:'<path d="M12 3v18M5 8l7 4 7-4M5 16l7-4 7 4"/>'},
+ {id:'AGIR_VASITA',n:'Ağır Vasıta',c:2100,ic:'<path d="M2 16V9h11l3 3h6v4"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="18" cy="17.5" r="1.8"/>'}
+];
+
+const PRODUCTS=[
+ {sku:'MANN-C35154',b:'MANN-FILTER',n:'Hava Filtresi',code:'C 35 154',cat:'HAVA_FILTRESI',price:1249.90,old:1499.90,stock:12,feat:true},
+ {sku:'FILTRON-AP1822',b:'FILTRON',n:'Hava Filtresi',code:'AP 182/2',cat:'HAVA_FILTRESI',price:849.90,old:899.90,stock:48,feat:true},
+ {sku:'BOSCH-F026400220',b:'BOSCH',n:'Hava Filtresi',code:'F 026 400 220',cat:'HAVA_FILTRESI',price:989.90,old:null,stock:7,feat:true},
+ {sku:'MAHLE-LX3005',b:'MAHLE',n:'Hava Filtresi',code:'LX 3005',cat:'HAVA_FILTRESI',price:909.90,old:null,stock:15},
+ {sku:'PURFLUX-A1382',b:'PURFLUX',n:'Hava Filtresi',code:'A 1382',cat:'HAVA_FILTRESI',price:799.90,old:null,stock:9},
+ {sku:'MANN-W71241',b:'MANN-FILTER',n:'Yağ Filtresi',code:'W 712/41',cat:'YAG_FILTRESI',price:449.90,old:null,stock:34,feat:true},
+ {sku:'FILTRON-OP5701',b:'FILTRON',n:'Yağ Filtresi',code:'OP 570/1',cat:'YAG_FILTRESI',price:289.90,old:null,stock:63},
+ {sku:'BOSCH-F026407160',b:'BOSCH',n:'Yağ Filtresi',code:'F 026 407 160',cat:'YAG_FILTRESI',price:359.90,old:null,stock:29},
+ {sku:'MANN-CU29001',b:'MANN-FILTER',n:'Polen / Kabin Filtresi',code:'CU 29 001',cat:'POLEN_FILTRESI',price:349.90,old:null,stock:21},
+ {sku:'FILTRON-K1152A',b:'FILTRON',n:'Polen Filtresi Aktif Karbonlu',code:'K 1152A',cat:'POLEN_FILTRESI',price:399.90,old:null,stock:0},
+ {sku:'MAHLE-KL145',b:'MAHLE',n:'Yakıt Filtresi (Su Ayırıcılı)',code:'KL 145',cat:'YAKIT_FILTRESI',price:609.90,old:null,stock:11},
+ {sku:'LIQUIMOLY-3707',b:'LIQUI MOLY',n:'Top Tec 4200 5W-30 Motor Yağı · 5 L',code:'3707',cat:'MOTOR_YAGI',price:2089.90,old:2199.90,stock:18,feat:true}
+];
+
+/* motor kodu + model → uyumluluk durumu   (VERIFIED/SOURCED = uygun · INCOMPATIBLE = uygun değil) */
+const COMPAT={
+ 'a1-gb|CHZB':{ok:['MANN-C35154','FILTRON-AP1822','BOSCH-F026400220','MAHLE-LX3005','MANN-W71241','FILTRON-OP5701','BOSCH-F026407160','MANN-CU29001','FILTRON-K1152A','LIQUIMOLY-3707'],no:[]},
+ 'a1-gb|DKRF':{ok:['MANN-C35154','FILTRON-AP1822','MANN-W71241','MANN-CU29001'],no:[]},
+ 'a1-gb|DADA':{ok:['FILTRON-AP1822','MANN-CU29001'],no:['MANN-C35154']},
+ 'a3-8y|DLAA':{ok:['MANN-W71241','BOSCH-F026407160','LIQUIMOLY-3707'],no:[]},
+ 'a3-8y|DTTA':{ok:[],no:[]},
+ 'polo-vi|CHZB':{ok:['MANN-C35154','FILTRON-AP1822','BOSCH-F026400220','MANN-W71241','FILTRON-OP5701','MANN-CU29001'],no:[]},
+ 'polo-vi|CHYB':{ok:['MANN-C35154'],no:[]},
+ 'golf-viii|DLAA':{ok:['MANN-W71241','FILTRON-OP5701'],no:[]},
+ 'golf-viii|DTTB':{ok:['LIQUIMOLY-3707'],no:[]},
+ 'ibiza-v|CHZB':{ok:['MANN-C35154','FILTRON-AP1822','MAHLE-LX3005','MANN-W71241','FILTRON-K1152A'],no:[]},
+ 'fabia-iv|DKRF':{ok:['MANN-C35154','BOSCH-F026400220','MANN-W71241'],no:[]},
+ 'focus-iv|M8DA':{ok:['PURFLUX-A1382'],no:[]},
+ 'focus-iv|XWDA':{ok:['PURFLUX-A1382','MAHLE-KL145'],no:[]},
+ 'transit-custom|YMF6':{ok:['PURFLUX-A1382'],no:[]},
+ 'clio-v|H4D':{ok:[],no:[]},
+ 'sprinter-907|OM651':{ok:['MAHLE-KL145'],no:[]},
+ 'actros-mp4|OM471':{ok:[],no:[]},
+ 'tgx|D2676':{ok:[],no:[]}
+};
+
+/* kısıt notu olan uyumluluklar */
+const RESTRICT={'fabia-iv|DKRF|MANN-C35154':'Klimalı araçlar için',
+                'golf-viii|DTTB|LIQUIMOLY-3707':'VW 504 00/507 00 onayı gerekli'};
+
+/* ═══════════════ DURUM ═══════════════ */
+let V=null;                    // seçili araç
+let activeTab='ALL';
+
+const $=id=>document.getElementById(id);
+const money=v=>v.toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2})+' ₺';
+
+/* ═══════════════ MEGA MENÜ ═══════════════ */
+const mega=$('mega'),catBtn=$('catBtn');
+let megaTimer;
+function openMega(){mega.classList.add('open');catBtn.classList.add('on');catBtn.setAttribute('aria-expanded','true')}
+function closeMega(){mega.classList.remove('open');catBtn.classList.remove('on');catBtn.setAttribute('aria-expanded','false')}
+catBtn.addEventListener('click',e=>{e.stopPropagation();mega.classList.contains('open')?closeMega():openMega()});
+catBtn.addEventListener('mouseenter',()=>{clearTimeout(megaTimer);megaTimer=setTimeout(openMega,120)});
+catBtn.addEventListener('mouseleave',()=>{clearTimeout(megaTimer);megaTimer=setTimeout(closeMega,260)});
+mega.addEventListener('mouseenter',()=>clearTimeout(megaTimer));
+mega.addEventListener('mouseleave',()=>{megaTimer=setTimeout(closeMega,180)});
+document.addEventListener('click',e=>{if(!mega.contains(e.target))closeMega()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMega()});
+
+/* ═══════════════ ARAÇ SEÇİCİ ═══════════════ */
+function fill(sel,items,placeholder){
+  sel.innerHTML='<option value="">'+placeholder+'</option>';
+  items.forEach(it=>{const o=document.createElement('option');o.value=it.id;o.textContent=it.n;sel.appendChild(o)});
+}
+function lock(step,sel,msg){
+  $(step).classList.add('locked');$(step).classList.remove('done');
+  sel.disabled=true;sel.innerHTML='<option value="">'+msg+'</option>';
+}
+function unlock(step){$(step).classList.remove('locked')}
+function done(step){$(step).classList.add('done')}
+
+fill($('selType'),TYPES.map(t=>({id:t.id,n:t.n})),'Seçiniz');
+
+function onType(){
+  const t=$('selType').value;
+  lock('st3',$('selModel'),'Önce marka seçiniz');
+  lock('st4',$('selEngine'),'Önce model seçiniz');
+  $('btnGo').disabled=true;
+  if(!t){lock('st2',$('selBrand'),'Önce araç tipi seçiniz');$('st1').classList.remove('done');return}
+  done('st1');unlock('st2');
+  const bs=(BRANDS[t]||[]);
+  $('selBrand').disabled=false;
+  fill($('selBrand'),bs.map(b=>({id:b,n:b})), bs.length?'Marka seçiniz':'Bu tipte marka yok');
+}
+function onBrand(){
+  const t=$('selType').value,b=$('selBrand').value;
+  lock('st4',$('selEngine'),'Önce model seçiniz');
+  $('btnGo').disabled=true;
+  if(!b){lock('st3',$('selModel'),'Önce marka seçiniz');$('st2').classList.remove('done');return}
+  done('st2');unlock('st3');
+  const ms=MODELS[t+'|'+b]||[];
+  $('selModel').disabled=false;
+  fill($('selModel'),ms,ms.length?'Model seçiniz':'Model bulunamadı');
+}
+function onModel(){
+  const m=$('selModel').value;
+  $('btnGo').disabled=true;
+  if(!m){lock('st4',$('selEngine'),'Önce model seçiniz');$('st3').classList.remove('done');return}
+  done('st3');unlock('st4');
+  const es=ENGINES[m]||[];
+  $('selEngine').disabled=false;
+  fill($('selEngine'),es.map(e=>({id:e.id,n:e.n})),'Motor seçiniz');
+}
+function onEngine(){
+  const e=$('selEngine').value;
+  if(!e){$('btnGo').disabled=true;$('st4').classList.remove('done');return}
+  done('st4');$('btnGo').disabled=false;
+}
+
+function applyVehicle(){
+  const t=$('selType'),b=$('selBrand'),m=$('selModel'),e=$('selEngine');
+  const eng=(ENGINES[m.value]||[]).find(x=>x.id===e.value);
+  V={typeId:t.value,brand:b.value,modelId:m.value,
+     modelName:m.options[m.selectedIndex].text.split(' · ')[0],
+     engineId:e.value,engineName:eng?eng.n:'',years:eng?eng.y:''};
+  const label=V.brand+' '+V.modelName+' · '+V.engineName;
+  $('vBarText').textContent=label+(V.years?' · '+V.years:'');
+  $('vBar').classList.add('show');
+  $('vChipText').textContent=V.brand+' '+V.modelName.split(' (')[0]+' '+V.engineId;
+  $('vChip').classList.add('show');
+  $('garageText').innerHTML='Kayıtlı aracınız: <b style="color:var(--n-800)">'+V.brand+' '+V.modelName+'</b>';
+  document.body.classList.add('hasveh');
+  render();
+  $('resBar').scrollIntoView({behavior:'smooth',block:'center'});
+}
+function clearVehicle(){
+  V=null;
+  $('vBar').classList.remove('show');
+  $('vChip').classList.remove('show');
+  $('garageText').textContent='Kayıtlı aracınız yok';
+  document.body.classList.remove('hasveh');
+  ['selType','selBrand','selModel','selEngine'].forEach(id=>$(id).value='');
+  onType();
+  render();
+}
+function changeVehicle(){
+  $('vBar').classList.remove('show');
+  $('vsel').scrollIntoView({behavior:'smooth',block:'center'});
+  $('selBrand').focus();
+}
+
+/* ═══════════════ UYUMLULUK ═══════════════ */
+function compatOf(sku){
+  if(!V) return null;
+  const key=V.modelId+'|'+V.engineId, c=COMPAT[key]||{ok:[],no:[]};
+  if(c.no.includes(sku)) return {s:'no'};
+  if(c.ok.includes(sku)) return {s:'ok',r:RESTRICT[key+'|'+sku]||null};
+  return {s:'unk'};
+}
+
+/* ═══════════════ RENDER ═══════════════ */
+function renderCats(){
+  const key=V?V.modelId+'|'+V.engineId:null;
+  const ok=key?(COMPAT[key]||{ok:[]}).ok:[];
+  $('catGrid').innerHTML=CATS.map(c=>{
+    const n=ok.filter(s=>{const p=PRODUCTS.find(x=>x.sku===s);return p&&p.cat===c.id}).length;
+    return `<a class="ccard" href="#">
+      <span class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">${c.ic}</svg></span>
+      <b>${c.n}</b><em>${c.c.toLocaleString('tr-TR')} ürün</em>
+      <span class="fit${n>0?'':' none'}">${n>0?'✓ Aracınıza uygun '+n+' ürün':'Bu araç için ürün yok'}</span>
+    </a>`}).join('');
+}
+
+function renderTabs(){
+  let pool=PRODUCTS;
+  if(V){const k=V.modelId+'|'+V.engineId,c=COMPAT[k]||{ok:[]};
+        const inScope=PRODUCTS.filter(p=>c.ok.includes(p.sku));
+        if(inScope.length) pool=inScope;}
+  const cats=[...new Set(pool.map(p=>p.cat))];
+  const list=[{id:'ALL',n:'Tümü'}].concat(cats.map(c=>({id:c,n:(CATS.find(x=>x.id===c)||{n:c}).n})));
+  $('tabs').innerHTML=list.map(t=>`<button class="tab${activeTab===t.id?' on':''}" onclick="setTab('${t.id}')">${t.n}</button>`).join('');
+}
+function setTab(id){activeTab=id;renderTabs();renderProducts()}
+
+function renderProducts(){
+  let list=PRODUCTS.slice();
+  if(V){
+    const key=V.modelId+'|'+V.engineId,c=COMPAT[key]||{ok:[],no:[]};
+    // uyumlular önce, uyumsuzlar en sonda
+    list.sort((a,b)=>{
+      const sa=c.no.includes(a.sku)?2:(c.ok.includes(a.sku)?0:1);
+      const sb=c.no.includes(b.sku)?2:(c.ok.includes(b.sku)?0:1);
+      return sa-sb;
+    });
+  }else{
+    list=list.filter(p=>p.feat).concat(list.filter(p=>!p.feat));
+  }
+  if(activeTab!=='ALL') list=list.filter(p=>p.cat===activeTab);
+  list=list.slice(0,8);
+
+  $('prodGrid').innerHTML=list.map(p=>{
+    const co=compatOf(p.sku);
+    let badge='';
+    if(co&&co.s==='ok') badge=`<span class="badge b-fit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aracınıza uygun${co.r?' <span title="'+co.r+'" style="opacity:.75">ⓘ</span>':''}</span>`;
+    else if(co&&co.s==='no') badge='<span class="badge b-no">Bu araca uygun değil</span>';
+    else if(co) badge='<span class="badge b-unk">Uyumluluk teyit edilmedi</span>';
+    else badge='<span class="badge b-unk" style="visibility:hidden">—</span>';
+
+    const stock=p.stock===0
+      ? '<span class="stock"><span class="dot" style="background:var(--n-200)"></span> Stokta yok</span>'
+      : (p.stock<=8
+        ? '<span class="stock"><span class="dot" style="background:var(--warning)"></span> Son '+p.stock+' adet</span>'
+        : '<span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta ('+p.stock+' adet)</span>');
+    const btn=p.stock===0
+      ? '<button class="btn btn-secondary btn-md btn-block">Gelince Haber Ver</button>'
+      : '<button class="btn btn-primary btn-md btn-block" onclick="addCart('+p.price+')">Sepete Ekle</button>';
+    const sale=p.old?`<span class="badge b-sale tag">%${Math.round((1-p.price/p.old)*100)} indirim</span>`:'';
+
+    return `<article class="pcard">
+      <div class="pbrand">${p.b}</div>
+      <div class="pimg">${sale}<i>
+        <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="var(--n-200)" stroke-width="1.2"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M7 6v12M11 6v12M15 6v12"/></svg>
+      </i></div>
+      <div class="pname">${p.n}</div>
+      <div class="pcode">${p.code}</div>
+      ${badge}
+      <div class="pprice">${money(p.price)}${p.old?'<span class="pold">'+money(p.old)+'</span>':''}</div>
+      <div class="pkdv">KDV dahil</div>
+      ${stock}
+      ${btn}
+    </article>`}).join('');
+}
+
+function renderResBar(){
+  if(!V){$('resBar').classList.remove('show');
+    $('prodTitle').textContent='Öne Çıkan Ürünler';
+    $('prodSub').textContent='Çok tercih edilen filtre ve yağ ürünleri';return}
+  const key=V.modelId+'|'+V.engineId,c=COMPAT[key]||{ok:[],no:[]};
+  $('prodTitle').textContent=V.brand+' '+V.modelName+' için uyumlu ürünler';
+  $('prodSub').textContent=V.engineName+(V.years?' · '+V.years:'');
+  $('resTotal').textContent=c.ok.length;
+  const byCat={};
+  c.ok.forEach(s=>{const p=PRODUCTS.find(x=>x.sku===s);if(p)byCat[p.cat]=(byCat[p.cat]||0)+1});
+  $('resCounts').innerHTML=Object.keys(byCat).length
+    ? Object.entries(byCat).map(([k,v])=>`<span class="rescount">${(CATS.find(x=>x.id===k)||{n:k}).n} <b>${v}</b></span>`).join('')
+    : '<span class="rescount" style="background:var(--n-50);color:var(--n-600)">Bu araç için henüz ürün eklenmedi</span>';
+  $('resBar').classList.add('show');
+}
+
+function render(){renderCats();renderTabs();renderProducts();renderResBar()}
+
+/* sepet (demo) */
+let cartN=0,cartT=0;
+function addCart(p){cartN++;cartT+=p;$('cartCount').textContent=cartN;$('cartTotal').textContent=money(cartT)}
+
+function openDrawer(){document.getElementById('drawer').classList.add('on');document.getElementById('scrim').classList.add('on');document.body.style.overflow='hidden'}
+function closeDrawer(){document.getElementById('drawer').classList.remove('on');document.getElementById('scrim').classList.remove('on');document.body.style.overflow=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});
+
+render();
+</script>
+</body>
+</html>

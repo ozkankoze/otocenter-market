@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oto Center Market — Design System & Görsel Önizleme</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   OTO CENTER MARKET — DESIGN TOKENS
+   ============================================================ */
+:root{
+  /* Marka — logodan türetilmiş */
+  --brand-900:#08203C; --brand-800:#0B315B; --brand-700:#0F4179;
+  --brand-600:#14549A; --brand-500:#2569B4; --brand-300:#8FBCE4;
+  --brand-100:#D5E6F5; --brand-50:#EAF3FB;
+  /* Accent — yalnızca uyumluluk / başarı */
+  --accent-700:#177247; --accent-600:#1E9159; --accent-100:#DEF3E8;
+  /* Nötr */
+  --n-0:#FFFFFF; --n-25:#F6F8FB; --n-50:#F1F4F8; --n-100:#E6EBF1;
+  --n-200:#D3DAE3; --n-400:#97A3B2; --n-600:#5B6675; --n-800:#2C3340; --n-900:#171C24;
+  /* Durum */
+  --success:#1E9159; --warning:#B7791F; --danger:#C0392B; --info:#14549A;
+  /* Radius */
+  --r-sm:4px; --r-md:6px; --r-lg:8px; --r-xl:12px; --r-full:999px;
+  /* Gölge */
+  --sh-xs:0 1px 2px rgba(11,49,91,.05);
+  --sh-sm:0 2px 6px rgba(11,49,91,.06);
+  --sh-md:0 6px 16px rgba(11,49,91,.08);
+  --sh-lg:0 14px 34px rgba(11,49,91,.10);
+  /* Tipografi */
+  --font:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--n-25);color:var(--n-800);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brand-600);text-decoration:none}
+.mono{font-family:var(--mono)}
+
+/* ---------- Doküman kabuğu ---------- */
+.doc{display:grid;grid-template-columns:248px 1fr;min-height:100vh}
+.docnav{position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--brand-900);padding:24px 0}
+.docnav h4{color:var(--brand-300);font-size:11px;letter-spacing:.09em;text-transform:uppercase;font-weight:600;padding:16px 24px 8px}
+.docnav .brandmark{padding:0 24px 20px;border-bottom:1px solid rgba(255,255,255,.09);margin-bottom:8px}
+.docnav .brandmark strong{color:#fff;font-size:15px;font-weight:700;letter-spacing:-.01em;display:block}
+.docnav .brandmark span{color:var(--brand-300);font-size:12px}
+.docnav a{display:block;color:rgba(255,255,255,.72);font-size:13.5px;padding:7px 24px;border-left:2px solid transparent}
+.docnav a:hover{color:#fff;background:rgba(255,255,255,.06);border-left-color:var(--brand-500)}
+.docmain{padding:0 0 96px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+
+.docheader{background:linear-gradient(135deg,var(--brand-800) 0%,var(--brand-900) 100%);color:#fff;padding:56px 0 48px;margin-bottom:48px}
+.docheader h1{font-size:38px;line-height:1.15;font-weight:700;letter-spacing:-.02em;margin-bottom:12px}
+.docheader p{color:rgba(255,255,255,.75);max-width:640px;font-size:16px}
+.docheader .tagrow{margin-top:24px;display:flex;gap:8px;flex-wrap:wrap}
+.docheader .tagrow span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px 12px;border-radius:var(--r-sm);font-size:12px;font-weight:500}
+
+section{margin-bottom:72px;scroll-margin-top:24px}
+.sechead{margin-bottom:24px;padding-bottom:14px;border-bottom:1px solid var(--n-100)}
+.sechead .num{font-family:var(--mono);font-size:12px;color:var(--brand-600);font-weight:500;display:block;margin-bottom:4px}
+.sechead h2{font-size:24px;font-weight:600;letter-spacing:-.01em;color:var(--n-900)}
+.sechead p{color:var(--n-600);font-size:14px;margin-top:6px;max-width:720px}
+h3.sub{font-size:15px;font-weight:600;color:var(--n-900);margin:32px 0 14px}
+.note{background:var(--brand-50);border-left:3px solid var(--brand-600);padding:12px 16px;border-radius:0 var(--r-md) var(--r-md) 0;font-size:13.5px;color:var(--n-600);margin:16px 0}
+.note strong{color:var(--brand-700)}
+
+/* ---------- Renk ---------- */
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(148px,1fr));gap:12px}
+.sw{border:1px solid var(--n-100);border-radius:var(--r-lg);overflow:hidden;background:#fff}
+.sw .chip{height:66px}
+.sw .meta{padding:9px 11px}
+.sw .meta b{display:block;font-size:12.5px;font-weight:600;color:var(--n-900)}
+.sw .meta code{font-family:var(--mono);font-size:11px;color:var(--n-400)}
+.sw .meta em{display:block;font-style:normal;font-size:11px;color:var(--n-600);margin-top:3px}
+
+/* ---------- Tipografi ---------- */
+.typerow{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:14px 0;border-bottom:1px solid var(--n-100);align-items:baseline}
+.typerow .lbl{font-family:var(--mono);font-size:11.5px;color:var(--n-400)}
+
+/* ---------- Butonlar ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font);font-weight:600;border:1px solid transparent;border-radius:var(--r-md);cursor:pointer;transition:background-color .15s ease,border-color .15s ease,color .15s ease;white-space:nowrap}
+.btn:focus-visible{outline:2px solid var(--brand-600);outline-offset:2px}
+.btn-lg{height:52px;padding:0 28px;font-size:15px}
+.btn-md{height:44px;padding:0 20px;font-size:14px}
+.btn-sm{height:36px;padding:0 14px;font-size:13px}
+.btn-primary{background:var(--brand-600);color:#fff}
+.btn-primary:hover{background:var(--brand-700)}
+.btn-secondary{background:#fff;color:var(--brand-600);border-color:var(--brand-300)}
+.btn-secondary:hover{background:var(--brand-50);border-color:var(--brand-600)}
+.btn-ghost{background:transparent;color:var(--n-600)}
+.btn-ghost:hover{background:var(--n-50);color:var(--n-900)}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-danger:hover{background:#a53225}
+.btn:disabled,.btn-disabled{background:var(--n-100);color:var(--n-400);border-color:var(--n-100);cursor:not-allowed}
+.btn-block{width:100%}
+.row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* ---------- Form ---------- */
+.field{margin-bottom:16px;max-width:380px}
+.field label{display:block;font-size:12.5px;font-weight:600;color:var(--n-800);margin-bottom:6px}
+.input,.select{width:100%;height:44px;padding:0 14px;font-family:var(--font);font-size:14.5px;color:var(--n-900);background:#fff;border:1px solid var(--n-200);border-radius:var(--r-md);transition:border-color .15s,box-shadow .15s}
+.input::placeholder{color:var(--n-400)}
+.input:focus,.select:focus{outline:none;border-color:var(--brand-600);box-shadow:0 0 0 3px rgba(20,84,154,.12)}
+.input.err{border-color:var(--danger)}
+.err-msg{color:var(--danger);font-size:12px;margin-top:5px}
+.select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235B6675' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:38px}
+.select:disabled{background-color:var(--n-50);color:var(--n-400);cursor:not-allowed;border-color:var(--n-100)}
+
+/* ---------- Rozet ---------- */
+.badge{display:inline-flex;align-items:center;gap:5px;height:24px;padding:0 9px;border-radius:var(--r-sm);font-size:12px;font-weight:500;line-height:1}
+.badge-fit{background:var(--accent-100);color:var(--accent-700)}
+.badge-unknown{background:var(--n-50);color:var(--n-600)}
+.badge-nofit{background:#FBEAE8;color:var(--danger)}
+.badge-new{background:var(--brand-50);color:var(--brand-700)}
+.badge-sale{background:#FDF3E2;color:var(--warning)}
+.dot{width:7px;height:7px;border-radius:var(--r-full);display:inline-block}
+.stock{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--n-600)}
+
+/* ---------- Kartlar ---------- */
+.card{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+
+/* Ürün kartı */
+.pcard{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:16px;display:flex;flex-direction:column;transition:box-shadow .2s ease,border-color .2s ease}
+.pcard:hover{box-shadow:var(--sh-md);border-color:var(--brand-300)}
+.pcard:hover .pimg span{transform:scale(1.03)}
+.pbrand{font-size:11px;font-weight:700;letter-spacing:.06em;color:var(--n-600);text-transform:uppercase;margin-bottom:10px}
+.pimg{aspect-ratio:1;background:var(--n-25);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:14px;overflow:hidden}
+.pimg span{color:var(--n-200);font-size:11px;transition:transform .2s ease}
+.pname{font-size:14px;font-weight:500;color:var(--n-900);line-height:1.4;margin-bottom:6px;min-height:39px}
+.pcode{font-family:var(--mono);font-size:12px;color:var(--n-600);margin-bottom:10px}
+.pprice{font-size:19px;font-weight:700;color:var(--n-900);letter-spacing:-.01em;margin:12px 0 4px}
+.pold{font-size:12.5px;color:var(--n-400);text-decoration:line-through;margin-left:6px;font-weight:400}
+.pcard .stock{margin-bottom:14px}
+.pcard .btn{margin-top:auto}
+
+/* Kategori kartı */
+.ccard{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);padding:22px 18px;text-align:center;transition:box-shadow .2s,border-color .2s,transform .2s;cursor:pointer}
+.ccard:hover{box-shadow:var(--sh-md);border-color:var(--brand-300)}
+.cicon{width:52px;height:52px;margin:0 auto 14px;border-radius:var(--r-md);background:var(--brand-50);display:flex;align-items:center;justify-content:center;color:var(--brand-600)}
+.ccard b{display:block;font-size:14px;font-weight:600;color:var(--n-900);margin-bottom:3px}
+.ccard em{font-style:normal;font-size:12.5px;color:var(--n-400)}
+
+/* ---------- Araç seçici ---------- */
+.vsel{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-xl);padding:28px;box-shadow:var(--sh-lg)}
+.vsel h3{font-size:21px;font-weight:600;color:var(--n-900);letter-spacing:-.01em}
+.vsel .sub2{color:var(--n-600);font-size:14px;margin:4px 0 20px}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;align-items:end}
+.vstep .select{font-size:13.5px;padding:0 34px 0 11px}
+.vstep label{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--n-800);margin-bottom:6px}
+.vstep .stepno{width:17px;height:17px;border-radius:var(--r-full);background:var(--brand-600);color:#fff;font-size:10px;display:inline-flex;align-items:center;justify-content:center;font-weight:600}
+.vstep.locked .stepno{background:var(--n-200)}
+.vsel .foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;padding-top:16px;border-top:1px solid var(--n-50);font-size:13px;color:var(--n-600)}
+
+/* Seçili araç şeridi */
+.vbar{display:flex;align-items:center;gap:14px;background:var(--accent-100);border:1px solid #BFE5D1;border-radius:var(--r-lg);padding:14px 18px}
+.vbar .ic{width:38px;height:38px;border-radius:var(--r-md);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--accent-700);flex:0 0 auto}
+.vbar .txt b{display:block;font-size:13px;color:var(--accent-700);font-weight:600}
+.vbar .txt span{font-size:14px;color:var(--n-900);font-weight:500}
+.vbar .acts{margin-left:auto;display:flex;gap:8px}
+
+/* ---------- Header önizleme ---------- */
+.hdr{border:1px solid var(--n-100);border-radius:var(--r-lg);overflow:hidden;background:#fff;box-shadow:var(--sh-sm)}
+.hdr-util{background:var(--brand-800);color:rgba(255,255,255,.85);font-size:12px;padding:0 22px;height:34px;display:flex;align-items:center;gap:20px}
+.hdr-util .sp{margin-left:auto;color:#fff;font-weight:500}
+.hdr-main{height:80px;display:flex;align-items:center;gap:28px;padding:0 22px}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo .mark{width:40px;height:40px;border-radius:var(--r-full);background:linear-gradient(135deg,var(--brand-500),var(--brand-800));position:relative;overflow:hidden;flex:0 0 auto}
+.logo .mark::after{content:"";position:absolute;inset:3px;border-radius:var(--r-full);border:2px solid var(--accent-600);border-left-color:transparent;border-bottom-color:transparent}
+.logo .txt{line-height:1.05}
+.logo .txt b{display:block;font-size:19px;font-weight:700;color:var(--brand-600);letter-spacing:-.02em}
+.logo .txt span{font-size:11.5px;font-weight:600;color:var(--brand-800);letter-spacing:.02em}
+.hdr-search{flex:1;position:relative;max-width:520px}
+.hdr-search .input{padding-left:42px;background:var(--n-25);border-color:var(--n-100)}
+.hdr-search .input:focus{background:#fff}
+.hdr-search svg{position:absolute;left:14px;top:14px;color:var(--n-400)}
+.hdr-acts{display:flex;gap:22px;margin-left:auto;flex:0 0 auto}
+.hact{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--n-800);cursor:pointer}
+.hact:hover{color:var(--brand-600)}
+.hact b{display:block;font-weight:600;font-size:12.5px}
+.hact em{font-style:normal;font-size:11px;color:var(--n-400)}
+.hact .cnt{position:relative}
+.hact .cnt i{position:absolute;top:-6px;right:-8px;background:var(--brand-600);color:#fff;font-style:normal;font-size:10px;font-weight:600;width:16px;height:16px;border-radius:var(--r-full);display:flex;align-items:center;justify-content:center}
+.hdr-nav{height:48px;border-top:1px solid var(--n-100);display:flex;align-items:center;gap:26px;padding:0 22px;font-size:13.5px;font-weight:500;color:var(--n-800)}
+.hdr-nav .cats{display:flex;align-items:center;gap:8px;background:var(--brand-600);color:#fff;height:32px;padding:0 14px;border-radius:var(--r-md);font-weight:600;font-size:13px}
+.hdr-nav a{color:var(--n-800)}
+.hdr-nav a:hover{color:var(--brand-600)}
+.hdr-nav .vchip{margin-left:auto;display:flex;align-items:center;gap:8px;background:var(--accent-100);color:var(--accent-700);height:30px;padding:0 10px;border-radius:var(--r-sm);font-size:12.5px;font-weight:600}
+
+/* Mega menü */
+.mega{border:1px solid var(--n-100);border-top:none;background:#fff;padding:26px 22px;display:grid;grid-template-columns:1fr 1fr 1fr 260px;gap:32px;box-shadow:var(--sh-md)}
+.mega h5{font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--brand-600);font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--n-100)}
+.mega ul{list-style:none}
+.mega li{padding:4px 0}
+.mega li a{font-size:13.5px;color:var(--n-600)}
+.mega li a:hover{color:var(--brand-600)}
+.mega li.more a{color:var(--brand-600);font-weight:600}
+.mega .promo{background:linear-gradient(150deg,var(--brand-800),var(--brand-900));border-radius:var(--r-lg);padding:22px;color:#fff}
+.mega .promo b{display:block;font-size:16px;font-weight:600;margin-bottom:8px;line-height:1.3}
+.mega .promo p{font-size:12.5px;color:rgba(255,255,255,.7);margin-bottom:16px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;background:linear-gradient(120deg,var(--brand-800) 0%,var(--brand-900) 62%,#061a30 100%);border-radius:var(--r-lg) var(--r-lg) 0 0;padding:64px 48px 96px;overflow:hidden;color:#fff}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:46px 46px;mask-image:radial-gradient(ellipse 80% 70% at 70% 30%,#000,transparent)}
+.hero::after{content:"";position:absolute;right:-90px;top:-70px;width:420px;height:420px;border-radius:var(--r-full);border:1px solid rgba(143,188,228,.18);box-shadow:inset 0 0 0 44px rgba(143,188,228,.05),inset 0 0 0 45px rgba(143,188,228,.14),inset 0 0 0 96px rgba(143,188,228,.05)}
+.hero .in{position:relative;z-index:2;max-width:600px}
+.hero .eyebrow{display:inline-flex;align-items:center;gap:7px;background:rgba(30,145,89,.16);border:1px solid rgba(30,145,89,.35);color:#8FE0B4;font-size:12px;font-weight:600;padding:5px 12px;border-radius:var(--r-sm);margin-bottom:20px}
+.hero h1{font-size:44px;line-height:1.13;font-weight:700;letter-spacing:-.025em;margin-bottom:16px}
+.hero p{font-size:17px;line-height:1.6;color:rgba(255,255,255,.76);margin-bottom:28px;max-width:520px}
+.hero .searchrow{display:flex;gap:12px;max-width:600px}
+.hero .searchrow .sw2{flex:1;position:relative}
+.hero .searchrow .input{height:52px;padding-left:46px;border:none}
+.hero .searchrow svg{position:absolute;left:16px;top:16px;color:var(--n-400)}
+.hero .pop{margin-top:18px;font-size:13px;color:rgba(255,255,255,.55)}
+.hero .pop a{color:rgba(255,255,255,.85)}
+
+.heroSelWrap{margin-top:-58px;position:relative;z-index:3;padding:0 32px 0}
+
+/* Trust */
+.trust{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 40px}
+.tr{display:flex;gap:14px}
+.tr .ic{width:34px;height:34px;border-radius:var(--r-md);background:var(--brand-50);color:var(--brand-600);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.tr b{display:block;font-size:14px;font-weight:600;color:var(--n-900);margin-bottom:3px}
+.tr p{font-size:13px;color:var(--n-600);line-height:1.55}
+
+/* Marka logoları */
+.brands{display:grid;grid-template-columns:repeat(8,1fr);gap:12px}
+.blogo{height:66px;border:1px solid var(--n-100);border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;background:#fff;font-size:11.5px;font-weight:700;letter-spacing:.03em;color:var(--n-400);transition:color .2s,border-color .2s}
+.blogo:hover{color:var(--brand-600);border-color:var(--brand-300)}
+
+/* Footer */
+.ftr{background:var(--brand-900);color:rgba(255,255,255,.65);border-radius:var(--r-lg);overflow:hidden}
+.ftr-main{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:32px;padding:42px 32px}
+.ftr h5{color:#fff;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.ftr ul{list-style:none}
+.ftr li{padding:3.5px 0;font-size:13px}
+.ftr a{color:rgba(255,255,255,.65)}
+.ftr a:hover{color:#fff}
+.ftr .about p{font-size:13px;line-height:1.65;margin:14px 0 18px}
+.ftr .social{display:flex;gap:8px}
+.ftr .social i{width:32px;height:32px;border-radius:var(--r-md);background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-style:normal;font-size:12px;color:#fff}
+.ftr-bot{border-top:1px solid rgba(255,255,255,.08);padding:16px 32px;display:flex;align-items:center;gap:18px;font-size:12.5px}
+.ftr-bot .lg{margin-left:auto;display:flex;gap:6px}
+.ftr-bot .lg span{width:36px;height:23px;border-radius:3px;background:rgba(255,255,255,.12)}
+
+/* Spacing / radius görselleştirme */
+.spacers{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.spacers div{background:var(--brand-100);border:1px solid var(--brand-300);border-radius:2px;position:relative}
+.spacers div::after{content:attr(data-v);position:absolute;bottom:-19px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10px;color:var(--n-400)}
+.radii{display:flex;gap:16px;flex-wrap:wrap}
+.radii div{width:78px;height:78px;background:var(--brand-50);border:1px solid var(--brand-300);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--brand-700)}
+.shadows{display:flex;gap:20px;flex-wrap:wrap}
+.shadows div{width:130px;height:78px;background:#fff;border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;color:var(--n-600)}
+
+/* Tablo */
+table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;border:1px solid var(--n-100);border-radius:var(--r-lg);overflow:hidden}
+th{background:var(--n-25);text-align:left;padding:11px 14px;font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--n-600);font-weight:600;border-bottom:1px solid var(--n-100)}
+td{padding:11px 14px;border-bottom:1px solid var(--n-50);color:var(--n-800)}
+tr:last-child td{border-bottom:none}
+
+/* Mobil önizleme */
+.phones{display:flex;gap:28px;flex-wrap:wrap}
+.phone{width:280px;border:9px solid var(--n-900);border-radius:26px;overflow:hidden;background:#fff;box-shadow:var(--sh-lg)}
+.phone .ptop{height:46px;display:flex;align-items:center;gap:12px;padding:0 12px;border-bottom:1px solid var(--n-100)}
+.phone .pbody{padding:14px;min-height:300px;background:var(--n-25)}
+.phone .pbar{position:sticky;bottom:0;height:52px;background:#fff;border-top:1px solid var(--n-100);display:flex;align-items:center;justify-content:space-around;font-size:10px;color:var(--n-400)}
+.phone .plabel{text-align:center;font-size:12px;color:var(--n-600);padding:8px}
+.sheet-step{background:#fff;border:1px solid var(--n-100);border-radius:var(--r-md);padding:11px 13px;margin-bottom:9px;font-size:13px;display:flex;align-items:center;justify-content:space-between}
+.sheet-step.done{border-color:var(--accent-600);background:var(--accent-100);color:var(--accent-700);font-weight:500}
+.sheet-step.locked{color:var(--n-400);background:var(--n-50)}
+.progress{height:3px;background:var(--n-100);border-radius:var(--r-full);overflow:hidden;margin-bottom:14px}
+.progress i{display:block;height:100%;width:50%;background:var(--brand-600)}
+
+.dontdo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dd{border-radius:var(--r-lg);padding:18px 20px;font-size:13.5px}
+.dd.no{background:#FDF1EF;border:1px solid #F3D4CF}
+.dd.yes{background:var(--accent-100);border:1px solid #BFE5D1}
+.dd h5{font-size:13px;font-weight:700;margin-bottom:10px}
+.dd.no h5{color:var(--danger)} .dd.yes h5{color:var(--accent-700)}
+.dd ul{list-style:none} .dd li{padding:3px 0;color:var(--n-600)}
+.dd li::before{content:"✕  ";font-weight:700} .dd.yes li::before{content:"✓  "}
+
+@media(max-width:1100px){
+  .doc{grid-template-columns:1fr}.docnav{display:none}
+  .grid4,.brands{grid-template-columns:repeat(2,1fr)}
+  .vgrid,.mega,.ftr-main,.trust,.grid3,.dontdo{grid-template-columns:1fr}
+  .wrap{padding:0 20px}.hero{padding:44px 24px 80px}.hero h1{font-size:32px}
+}
+</style>
+</head>
+<body>
+<div class="doc">
+
+<!-- ============ SOL NAV ============ -->
+<nav class="docnav">
+  <div class="brandmark">
+    <strong>Oto Center Market</strong>
+    <span>Design System v1.0</span>
+  </div>
+  <h4>Temel</h4>
+  <a href="#renk">01 · Renk Sistemi</a>
+  <a href="#tipografi">02 · Tipografi</a>
+  <a href="#spacing">03 · Spacing & Radius</a>
+  <h4>Bileşenler</h4>
+  <a href="#buton">04 · Butonlar</a>
+  <a href="#form">05 · Form Öğeleri</a>
+  <a href="#rozet">06 · Rozet & Durum</a>
+  <a href="#urunkart">07 · Ürün Kartı</a>
+  <a href="#kategori">08 · Kategori Kartı</a>
+  <h4>Modüller</h4>
+  <a href="#header">09 · Header & Mega Menü</a>
+  <a href="#aracsecici">10 · Araç Seçici</a>
+  <a href="#anasayfa">11 · Ana Sayfa Taslağı</a>
+  <a href="#marka">12 · Marka & Güven</a>
+  <a href="#footer">13 · Footer</a>
+  <h4>Kurallar</h4>
+  <a href="#mobil">14 · Mobil Önizleme</a>
+  <a href="#kurallar">15 · Yapma / Yap</a>
+</nav>
+
+<!-- ============ İÇERİK ============ -->
+<main class="docmain">
+
+<header class="docheader">
+  <div class="wrap">
+    <h1>Oto Center Market<br>Design System &amp; Görsel Önizleme</h1>
+    <p>Onay için hazırlanan görsel referans. Tüm renkler, tipografi ve bileşenler logodan türetilmiş marka sisteminden gelir. Bu sayfa üretim kodu değildir — tasarım dilinin gerçek arayüzde nasıl göründüğünü gösterir.</p>
+    <div class="tagrow">
+      <span>Premium &amp; Kurumsal</span><span>Mavi ağırlıklı marka sistemi</span>
+      <span>WCAG 2.1 AA</span><span>Minimal animasyon</span><span>Mobil öncelikli</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- 01 RENK -->
+<section id="renk">
+  <div class="sechead"><span class="num">01</span><h2>Renk Sistemi</h2>
+  <p>Ana palet logodaki mavilerden türetildi. Yeşil yalnızca uyumluluk ve başarı durumlarında kullanılır — buton, banner veya başlıkta asla. Sarı marka rengi değildir.</p></div>
+
+  <h3 class="sub">Marka — Mavi</h3>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#08203C"></div><div class="meta"><b>brand-900</b><code>#08203C</code><em>Footer zemini</em></div></div>
+    <div class="sw"><div class="chip" style="background:#0B315B"></div><div class="meta"><b>brand-800</b><code>#0B315B</code><em>Dark Blue · utility bar</em></div></div>
+    <div class="sw"><div class="chip" style="background:#0F4179"></div><div class="meta"><b>brand-700</b><code>#0F4179</code><em>Buton hover</em></div></div>
+    <div class="sw"><div class="chip" style="background:#14549A"></div><div class="meta"><b>brand-600</b><code>#14549A</code><em>Primary · ana eylem</em></div></div>
+    <div class="sw"><div class="chip" style="background:#2569B4"></div><div class="meta"><b>brand-500</b><code>#2569B4</code><em>Açık vurgu</em></div></div>
+    <div class="sw"><div class="chip" style="background:#8FBCE4"></div><div class="meta"><b>brand-300</b><code>#8FBCE4</code><em>Border · pasif ikon</em></div></div>
+    <div class="sw"><div class="chip" style="background:#D5E6F5"></div><div class="meta"><b>brand-100</b><code>#D5E6F5</code><em>Vurgu zemin</em></div></div>
+    <div class="sw"><div class="chip" style="background:#EAF3FB;border-bottom:1px solid #E6EBF1"></div><div class="meta"><b>brand-50</b><code>#EAF3FB</code><em>Light Blue · bölüm</em></div></div>
+  </div>
+
+  <h3 class="sub">Accent — Yeşil (yalnızca uyumluluk &amp; başarı)</h3>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#177247"></div><div class="meta"><b>accent-700</b><code>#177247</code><em>Uyumluluk metni</em></div></div>
+    <div class="sw"><div class="chip" style="background:#1E9159"></div><div class="meta"><b>accent-600</b><code>#1E9159</code><em>✓ rozet · stok noktası</em></div></div>
+    <div class="sw"><div class="chip" style="background:#DEF3E8;border-bottom:1px solid #E6EBF1"></div><div class="meta"><b>accent-100</b><code>#DEF3E8</code><em>Rozet zemini</em></div></div>
+  </div>
+
+  <h3 class="sub">Nötr</h3>
+  <div class="swatches">
+    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid #E6EBF1"></div><div class="meta"><b>n-0</b><code>#FFFFFF</code><em>Kart zemini</em></div></div>
+    <div class="sw"><div class="chip" style="background:#F6F8FB;border-bottom:1px solid #E6EBF1"></div><div class="meta"><b>n-25</b><code>#F6F8FB</code><em>Sayfa zemini</em></div></div>
+    <div class="sw"><div class="chip" style="background:#F1F4F8;border-bottom:1px solid #E6EBF1"></div><div class="meta"><b>n-50</b><code>#F1F4F8</code></div></div>
+    <div class="sw"><div class="chip" style="background:#E6EBF1"></div><div class="meta"><b>n-100</b><code>#E6EBF1</code><em>Kart border</em></div></div>
+    <div class="sw"><div class="chip" style="background:#D3DAE3"></div><div class="meta"><b>n-200</b><code>#D3DAE3</code><em>Input border</em></div></div>
+    <div class="sw"><div class="chip" style="background:#97A3B2"></div><div class="meta"><b>n-400</b><code>#97A3B2</code><em>Placeholder</em></div></div>
+    <div class="sw"><div class="chip" style="background:#5B6675"></div><div class="meta"><b>n-600</b><code>#5B6675</code><em>İkincil metin</em></div></div>
+    <div class="sw"><div class="chip" style="background:#2C3340"></div><div class="meta"><b>n-800</b><code>#2C3340</code><em>Gövde metni</em></div></div>
+    <div class="sw"><div class="chip" style="background:#171C24"></div><div class="meta"><b>n-900</b><code>#171C24</code><em>Başlık</em></div></div>
+  </div>
+
+  <div class="note"><strong>Kullanım disiplini:</strong> Sayfadaki renkli alan hedefi ≈ %90 nötr/beyaz · %8 mavi · %2 yeşil. Bu oran, "premium ve kurumsal" hissin teknik karşılığıdır. Gradient yalnızca hero arka planında kullanılır.</div>
+</section>
+
+<!-- 02 TİPOGRAFİ -->
+<section id="tipografi">
+  <div class="sechead"><span class="num">02</span><h2>Tipografi</h2>
+  <p><b>Inter</b> arayüzün tamamında; <b>JetBrains Mono</b> yalnızca ürün kodu, OEM ve SKU için — rakam/harf karışıklığını (0/O, 1/l) önler.</p></div>
+
+  <div class="typerow"><div class="lbl">Display · 44/52 · 700</div><div style="font-size:44px;line-height:1.15;font-weight:700;letter-spacing:-.025em;color:var(--n-900)">Aracınız İçin Doğru Parçayı Bulun</div></div>
+  <div class="typerow"><div class="lbl">H1 · 32/40 · 700</div><div style="font-size:32px;font-weight:700;letter-spacing:-.02em;color:var(--n-900)">Hava Filtreleri</div></div>
+  <div class="typerow"><div class="lbl">H2 · 24/32 · 600</div><div style="font-size:24px;font-weight:600;letter-spacing:-.01em;color:var(--n-900)">Aracınıza Göre Parça Bulun</div></div>
+  <div class="typerow"><div class="lbl">H3 · 20/28 · 600</div><div style="font-size:20px;font-weight:600;color:var(--n-900)">Öne Çıkan Markalar</div></div>
+  <div class="typerow"><div class="lbl">Body-lg · 17/26 · 400</div><div style="font-size:17px;color:var(--n-600)">Binlerce ürün arasından aracınıza uyumlu filtre, yağ ve bakım ürünlerini kolayca keşfedin.</div></div>
+  <div class="typerow"><div class="lbl">Body · 15/24 · 400</div><div style="color:var(--n-800)">MANN-FILTER C 35 154 hava filtresi, Audi A1 (GB) 30 TFSI motorlar için uyumludur.</div></div>
+  <div class="typerow"><div class="lbl">Body-sm · 13/20 · 400</div><div style="font-size:13px;color:var(--n-600)">KDV dahil fiyattır. 500 ₺ üzeri siparişlerde kargo ücretsizdir.</div></div>
+  <div class="typerow"><div class="lbl">Caption · 12/16 · 500</div><div style="font-size:12px;font-weight:500;color:var(--n-600);letter-spacing:.02em">ÜRÜN KODU</div></div>
+  <div class="typerow"><div class="lbl">Mono · 14/20 · 500</div><div class="mono" style="font-size:14px;font-weight:500;color:var(--n-900)">C 35 154 &nbsp;·&nbsp; 04E 129 620 A &nbsp;·&nbsp; AP 182/2</div></div>
+</section>
+
+<!-- 03 SPACING -->
+<section id="spacing">
+  <div class="sechead"><span class="num">03</span><h2>Spacing, Radius &amp; Gölge</h2>
+  <p>4px tabanlı skala. Radius kontrollü tutulur — "aşırı yuvarlak kart" görünümünden kaçınmak marka talebidir.</p></div>
+
+  <h3 class="sub">Spacing skalası</h3>
+  <div class="spacers" style="margin-bottom:32px">
+    <div data-v="4" style="width:4px;height:34px"></div><div data-v="8" style="width:8px;height:40px"></div>
+    <div data-v="12" style="width:12px;height:46px"></div><div data-v="16" style="width:16px;height:52px"></div>
+    <div data-v="24" style="width:24px;height:60px"></div><div data-v="32" style="width:32px;height:68px"></div>
+    <div data-v="48" style="width:48px;height:78px"></div><div data-v="64" style="width:64px;height:88px"></div>
+    <div data-v="80" style="width:80px;height:98px"></div>
+  </div>
+
+  <h3 class="sub">Radius</h3>
+  <div class="radii">
+    <div style="border-radius:4px">sm · 4</div><div style="border-radius:6px">md · 6</div>
+    <div style="border-radius:8px">lg · 8</div><div style="border-radius:12px">xl · 12</div>
+    <div style="border-radius:999px">full</div>
+  </div>
+  <div class="note">sm → rozet/chip · md → buton/input · lg → kart/panel · xl → modal · full → yalnızca avatar ve sayaç noktası.</div>
+
+  <h3 class="sub">Gölge</h3>
+  <div class="shadows">
+    <div style="box-shadow:var(--sh-xs)">shadow-xs</div><div style="box-shadow:var(--sh-sm)">shadow-sm</div>
+    <div style="box-shadow:var(--sh-md)">shadow-md</div><div style="box-shadow:var(--sh-lg)">shadow-lg</div>
+  </div>
+  <div class="note">Kartlar varsayılan olarak <strong>border</strong> ile tanımlanır; gölge yalnızca hover ve overlay durumlarında devreye girer. Bu, sayfanın "hafif ve temiz" kalmasını sağlar.</div>
+</section>
+
+<!-- 04 BUTON -->
+<section id="buton">
+  <div class="sechead"><span class="num">04</span><h2>Butonlar</h2>
+  <p>Üç yükseklik (36 / 44 / 52px). Geçiş yalnızca renk üzerinden, 150ms. Ölçek veya zıplama animasyonu yok.</p></div>
+  <div class="card">
+    <h3 class="sub" style="margin-top:0">Varyantlar</h3>
+    <div class="row">
+      <button class="btn btn-primary btn-md">Sepete Ekle</button>
+      <button class="btn btn-secondary btn-md">Aracı Değiştir</button>
+      <button class="btn btn-ghost btn-md">Tümünü Gör</button>
+      <button class="btn btn-danger btn-md">Sil</button>
+      <button class="btn btn-md btn-disabled" disabled>Kilitli</button>
+    </div>
+    <h3 class="sub">Boyutlar</h3>
+    <div class="row">
+      <button class="btn btn-primary btn-lg">UYUMLU ÜRÜNLERİ GÖSTER</button>
+      <button class="btn btn-primary btn-md">Sepete Ekle</button>
+      <button class="btn btn-primary btn-sm">Detay</button>
+    </div>
+    <h3 class="sub">Bağlamsal örnek</h3>
+    <div class="row">
+      <button class="btn btn-primary btn-md" style="width:220px">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        Sepete Ekle</button>
+      <button class="btn btn-secondary btn-md">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+        Gelince Haber Ver</button>
+    </div>
+  </div>
+</section>
+
+<!-- 05 FORM -->
+<section id="form">
+  <div class="sechead"><span class="num">05</span><h2>Form Öğeleri</h2>
+  <p>44px yükseklik, 3px odak halkası. Mobilde 16px minimum font (iOS otomatik zoom engellenir).</p></div>
+  <div class="card">
+    <div class="grid3" style="gap:32px">
+      <div>
+        <div class="field"><label>Normal</label><input class="input" placeholder="Ürün, OEM numarası veya parça kodu ara..."></div>
+        <div class="field"><label>Odaklanmış</label><input class="input" value="C 35 154" style="border-color:var(--brand-600);box-shadow:0 0 0 3px rgba(20,84,154,.12)"></div>
+      </div>
+      <div>
+        <div class="field"><label>Hatalı</label><input class="input err" value="ab"><div class="err-msg">En az 3 karakter giriniz.</div></div>
+        <div class="field"><label>Seçim (aktif)</label><select class="select"><option>Otomobil &amp; Hafif Ticari</option></select></div>
+      </div>
+      <div>
+        <div class="field"><label>Seçim (kilitli)</label><select class="select" disabled><option>Önce marka seçiniz</option></select></div>
+        <div class="field"><label>Arama kutusu</label>
+          <div style="position:relative">
+            <svg style="position:absolute;left:14px;top:14px;color:var(--n-400)" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input class="input" style="padding-left:42px" placeholder="Marka ara...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 ROZET -->
+<section id="rozet">
+  <div class="sechead"><span class="num">06</span><h2>Rozet &amp; Durum Göstergeleri</h2>
+  <p>Uyumluluk rozeti sitenin güven vaadinin görsel karşılığıdır. Veri yoksa asla yeşil gösterilmez.</p></div>
+  <div class="card">
+    <h3 class="sub" style="margin-top:0">Uyumluluk durumları</h3>
+    <div class="row">
+      <span class="badge badge-fit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aracınıza uygun</span>
+      <span class="badge badge-unknown">Uyumluluk teyit edilmedi</span>
+      <span class="badge badge-nofit">Bu araca uygun değil</span>
+    </div>
+    <h3 class="sub">Stok durumu</h3>
+    <div class="row">
+      <span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta (12 adet)</span>
+      <span class="stock"><span class="dot" style="background:var(--warning)"></span> Son 3 adet</span>
+      <span class="stock"><span class="dot" style="background:var(--n-200)"></span> Stokta yok</span>
+      <span class="stock"><span class="dot" style="background:var(--brand-600)"></span> 2–3 iş gününde tedarik</span>
+    </div>
+    <h3 class="sub">Diğer etiketler</h3>
+    <div class="row">
+      <span class="badge badge-new">Yeni</span>
+      <span class="badge badge-sale">%17 indirim</span>
+      <span class="badge badge-unknown">Orijinal muadil</span>
+    </div>
+    <div class="note"><strong>Rozet disiplini:</strong> Bir ürün kartında en fazla <strong>2</strong> rozet gösterilir (uyumluluk + stok ya da indirim). "Her yere badge koymak" bilinçli olarak engellenmiştir.</div>
+  </div>
+</section>
+
+<!-- 07 ÜRÜN KARTI -->
+<section id="urunkart">
+  <div class="sechead"><span class="num">07</span><h2>Ürün Kartı</h2>
+  <p>Marka → görsel → ad → kod → uyumluluk → fiyat → stok → eylem. Bilgi hiyerarşisi, ustanın kod ile aradığı senaryoya göre kurgulandı: kod her zaman monospace ve görünür.</p></div>
+  <div class="grid4">
+    <article class="pcard">
+      <div class="pbrand">MANN-FILTER</div>
+      <div class="pimg"><span>ürün görseli</span></div>
+      <div class="pname">Hava Filtresi</div>
+      <div class="pcode">C 35 154</div>
+      <span class="badge badge-fit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aracınıza uygun</span>
+      <div class="pprice">1.249,90 ₺ <span class="pold">1.499,90 ₺</span></div>
+      <span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta</span>
+      <button class="btn btn-primary btn-md btn-block">Sepete Ekle</button>
+    </article>
+
+    <article class="pcard">
+      <div class="pbrand">FILTRON</div>
+      <div class="pimg"><span>ürün görseli</span></div>
+      <div class="pname">Yağ Filtresi</div>
+      <div class="pcode">OP 570</div>
+      <span class="badge badge-fit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aracınıza uygun</span>
+      <div class="pprice">489,90 ₺</div>
+      <span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta</span>
+      <button class="btn btn-primary btn-md btn-block">Sepete Ekle</button>
+    </article>
+
+    <article class="pcard">
+      <div class="pbrand">BOSCH</div>
+      <div class="pimg"><span>ürün görseli</span></div>
+      <div class="pname">Polen / Kabin Filtresi Aktif Karbonlu</div>
+      <div class="pcode">1 987 432 397</div>
+      <span class="badge badge-unknown">Uyumluluk teyit edilmedi</span>
+      <div class="pprice">329,90 ₺</div>
+      <span class="stock"><span class="dot" style="background:var(--warning)"></span> Son 3 adet</span>
+      <button class="btn btn-primary btn-md btn-block">Sepete Ekle</button>
+    </article>
+
+    <article class="pcard">
+      <div class="pbrand">LIQUI MOLY</div>
+      <div class="pimg"><span>ürün görseli</span></div>
+      <div class="pname">Top Tec 4200 5W-30 Motor Yağı · 5 L</div>
+      <div class="pcode">3707</div>
+      <span class="badge badge-fit"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Aracınıza uygun</span>
+      <div class="pprice">2.190,00 ₺</div>
+      <span class="stock"><span class="dot" style="background:var(--n-200)"></span> Stokta yok</span>
+      <button class="btn btn-secondary btn-md btn-block">Gelince Haber Ver</button>
+    </article>
+  </div>
+</section>
+
+<!-- 08 KATEGORİ -->
+<section id="kategori">
+  <div class="sechead"><span class="num">08</span><h2>Kategori Kartı</h2>
+  <p>Çizgi stili ikon, tek renk. Ürün sayısı güven verir ve katalog derinliğini gösterir.</p></div>
+  <div class="grid4">
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M7 3v18M12 3v18M17 3v18" opacity=".45"/></svg></div><b>Hava Filtreleri</b><em>1.240 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/><path d="M12 4v3.5M12 16.5V20M4 12h3.5M16.5 12H20"/></svg></div><b>Yağ Filtreleri</b><em>980 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l3 4v14H7z"/><path d="M7 9h10"/><path d="M10 13h4"/></svg></div><b>Yakıt Filtreleri</b><em>640 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M7 6v12M11 6v12M15 6v12"/></svg></div><b>Polen / Kabin</b><em>720 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s5 5.4 5 9a5 5 0 0 1-10 0c0-3.6 5-9 5-9z"/></svg></div><b>Motor Yağları</b><em>1.480 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9 9.5h6M9 14.5h6"/></svg></div><b>Şanzıman Yağları</b><em>310 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 8l7 4 7-4M5 16l7-4 7 4"/></svg></div><b>Antifriz &amp; Sıvılar</b><em>420 ürün</em></div>
+    <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V9h11l3 3h6v4"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="18" cy="17.5" r="1.8"/></svg></div><b>Ağır Vasıta</b><em>2.100 ürün</em></div>
+  </div>
+</section>
+
+<!-- 09 HEADER -->
+<section id="header">
+  <div class="sechead"><span class="num">09</span><h2>Header &amp; Mega Menü</h2>
+  <p>Üç katman: utility bar (32px) → ana bar (80px) → navigasyon (48px). Sağdaki araç çipi, seçili aracın her sayfada görünür çapasıdır.</p></div>
+
+  <div class="hdr">
+    <div class="hdr-util">
+      <span>Kurumsal &amp; Bayilik</span><span>Sipariş Takip</span><span>Yardım</span>
+      <span class="sp">☎ 0850 XXX XX XX</span>
+    </div>
+    <div class="hdr-main">
+      <div class="logo"><div class="mark"></div><div class="txt"><b>Oto</b><span>CENTER MARKET</span></div></div>
+      <div class="hdr-search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="input" placeholder="Ürün, OEM numarası veya parça kodu ara...">
+      </div>
+      <div class="hdr-acts">
+        <div class="hact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><div><b>Hesabım</b><em>Giriş yap</em></div></div>
+        <div class="hact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg><div><b>Siparişlerim</b><em>Takip et</em></div></div>
+        <div class="hact"><span class="cnt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><i>2</i></span><div><b>Sepetim</b><em>1.739,80 ₺</em></div></div>
+      </div>
+    </div>
+    <div class="hdr-nav">
+      <span class="cats"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg> Kategoriler</span>
+      <a href="#">Otomobil &amp; Hafif Ticari</a><a href="#">Ağır Vasıta</a><a href="#">Filtreler</a>
+      <a href="#">Yağlar &amp; Sıvılar</a><a href="#">Markalar</a><a href="#">Kampanyalar</a>
+      <span class="vchip">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg>
+        AUDI A1 30 TFSI &nbsp;✕</span>
+    </div>
+    <div class="mega">
+      <div>
+        <h5>Filtreler</h5>
+        <ul>
+          <li><a href="#">Hava Filtreleri</a></li><li><a href="#">Yağ Filtreleri</a></li>
+          <li><a href="#">Yakıt Filtreleri</a></li><li><a href="#">Polen / Kabin Filtreleri</a></li>
+          <li><a href="#">Şanzıman Filtreleri</a></li><li><a href="#">Hidrolik Filtreler</a></li>
+          <li><a href="#">Kurutucu Filtreler</a></li><li><a href="#">AdBlue Filtreleri</a></li>
+          <li class="more"><a href="#">Tüm filtreler →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Yağlar &amp; Sıvılar</h5>
+        <ul>
+          <li><a href="#">Motor Yağları</a></li><li><a href="#">Şanzıman Yağları</a></li>
+          <li><a href="#">Diferansiyel Yağları</a></li><li><a href="#">Hidrolik Yağlar</a></li>
+          <li><a href="#">Antifriz</a></li><li><a href="#">Fren Hidroliği</a></li>
+          <li><a href="#">AdBlue</a></li><li><a href="#">Gres &amp; Yağlayıcılar</a></li>
+          <li class="more"><a href="#">Tüm yağlar →</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Araç Grupları</h5>
+        <ul>
+          <li><a href="#">Otomobil</a></li><li><a href="#">Hafif Ticari</a></li>
+          <li><a href="#">Ağır Vasıta</a></li><li><a href="#">Otobüs</a></li>
+          <li><a href="#">Kamyon &amp; Çekici</a></li><li><a href="#">İş Makineleri</a></li>
+          <li><a href="#">Traktör</a></li><li><a href="#">Jeneratör</a></li>
+          <li class="more"><a href="#">Tüm gruplar →</a></li>
+        </ul>
+      </div>
+      <div class="promo">
+        <b>Aracınıza göre parça bulun</b>
+        <p>Marka, model ve motor seçin; yalnızca uyumlu ürünleri görün.</p>
+        <button class="btn btn-sm" style="background:#fff;color:var(--brand-700);width:100%">Aracımı Seç</button>
+        <div style="margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12)">
+          <div style="font-size:10.5px;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:10px">POPÜLER MARKALAR</div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:11px;color:rgba(255,255,255,.8)">
+            <span>AUDI</span><span>VW</span><span>FORD</span><span>RENAULT</span><span>FIAT</span><span>MERCEDES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 ARAÇ SEÇİCİ -->
+<section id="aracsecici">
+  <div class="sechead"><span class="num">10</span><h2>Araç Seçici — Projenin Kalbi</h2>
+  <p>Kademeli 4 adım. Önceki adım seçilmeden sonraki adım kilitlidir; üst seviye değişince alt seviyeler temizlenir.</p></div>
+
+  <h3 class="sub">Boş durum (yalnızca 1. adım aktif)</h3>
+  <div class="vsel">
+    <h3>Aracınıza Göre Parça Bulun</h3>
+    <div class="sub2">Aracınızı seçin, yalnızca uyumlu ürünleri görüntüleyin.</div>
+    <div class="vgrid">
+      <div class="vstep"><label><span class="stepno">1</span> Araç Tipi</label><select class="select"><option>Seçiniz</option><option>Otomobil &amp; Hafif Ticari</option><option>Ağır Vasıta</option><option>İş Makinesi</option></select></div>
+      <div class="vstep locked"><label><span class="stepno">2</span> Marka</label><select class="select" disabled><option>Önce araç tipi seçiniz</option></select></div>
+      <div class="vstep locked"><label><span class="stepno">3</span> Model</label><select class="select" disabled><option>Önce marka seçiniz</option></select></div>
+      <div class="vstep locked"><label><span class="stepno">4</span> Motor</label><select class="select" disabled><option>Önce model seçiniz</option></select></div>
+      <button class="btn btn-primary btn-lg btn-disabled" disabled>UYUMLU ÜRÜNLERİ GÖSTER</button>
+    </div>
+    <div class="foot"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg> Kayıtlı aracınız yok</span><a href="#">Aracımı bilmiyorum, koda göre arayayım →</a></div>
+  </div>
+
+  <h3 class="sub">Dolu durum (tüm adımlar seçili)</h3>
+  <div class="vsel">
+    <h3>Aracınıza Göre Parça Bulun</h3>
+    <div class="sub2">Aracınızı seçin, yalnızca uyumlu ürünleri görüntüleyin.</div>
+    <div class="vgrid">
+      <div class="vstep"><label><span class="stepno">1</span> Araç Tipi</label><select class="select"><option>Otomobil &amp; Hafif Ticari</option></select></div>
+      <div class="vstep"><label><span class="stepno">2</span> Marka</label><select class="select"><option>AUDI</option></select></div>
+      <div class="vstep"><label><span class="stepno">3</span> Model</label><select class="select"><option>A1 (GB) 2018→</option></select></div>
+      <div class="vstep"><label><span class="stepno">4</span> Motor</label><select class="select"><option>30 TFSI 1.0 81kW 110HP</option></select></div>
+      <button class="btn btn-primary btn-lg">UYUMLU ÜRÜNLERİ GÖSTER</button>
+    </div>
+    <div class="foot"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg> Kayıtlı aracınız: <b style="color:var(--n-800)">Audi A1 · 30 TFSI</b></span><a href="#">Garajıma kaydet →</a></div>
+  </div>
+
+  <h3 class="sub">Seçili araç şeridi (liste ve ürün sayfalarında)</h3>
+  <div class="vbar">
+    <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".9" fill="currentColor"/><circle cx="16.2" cy="15" r=".9" fill="currentColor"/></svg></div>
+    <div class="txt"><b>Aracınız seçildi ✓</b><span>AUDI A1 (GB) · 30 TFSI 1.0 81 kW 110 HP · 2018→</span></div>
+    <div class="acts"><button class="btn btn-secondary btn-sm">Aracı Değiştir</button><button class="btn btn-ghost btn-sm">Kaldır ✕</button></div>
+  </div>
+
+  <div class="note"><strong>Nesil katmanı:</strong> Veri modelinde model ile motor arasında <code class="mono">VehicleGeneration</code> vardır, ancak kullanıcıya ayrı adım olarak gösterilmez — model etiketine gömülür (<code class="mono">A1 (GB) 2018→</code>). Kullanıcı 4 adım görür, sistem 5 seviye tutar.</div>
+</section>
+
+<!-- 11 ANA SAYFA -->
+<section id="anasayfa">
+  <div class="sechead"><span class="num">11</span><h2>Ana Sayfa — Hero &amp; Araç Seçici Yerleşimi</h2>
+  <p>Stok araç fotoğrafı yok. Arka plan: koyu mavi degrade + ince teknik grid + soyut filtre kesiti geometrisi. Araç seçici kartı hero'nun üzerine biner — sayfanın en önemli eylemi ilk ekranda.</p></div>
+
+  <div style="border:1px solid var(--n-100);border-radius:var(--r-lg);overflow:hidden;background:#fff">
+    <div class="hero">
+      <div class="in">
+        <span class="eyebrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> 12.000+ ürün · 80+ araç markası</span>
+        <h1>Aracınız İçin Doğru Parçayı Bulun</h1>
+        <p>Binlerce ürün arasından aracınıza uyumlu filtre, yağ ve bakım ürünlerini kolayca keşfedin.</p>
+        <div class="searchrow">
+          <div class="sw2">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input class="input" placeholder="Ürün, OEM numarası veya parça kodu ara...">
+          </div>
+          <button class="btn btn-primary btn-lg" style="background:#fff;color:var(--brand-700)">Ürünleri Keşfet</button>
+        </div>
+        <div class="pop">Popüler: <a href="#">Hava Filtresi</a> · <a href="#">Yağ Filtresi</a> · <a href="#">Polen Filtresi</a> · <a href="#">Motor Yağı</a></div>
+      </div>
+    </div>
+
+    <div class="heroSelWrap">
+      <div class="vsel">
+        <h3>Aracınıza Göre Parça Bulun</h3>
+        <div class="sub2">Aracınızı seçin, yalnızca uyumlu ürünleri görüntüleyin.</div>
+        <div class="vgrid">
+          <div class="vstep"><label><span class="stepno">1</span> Araç Tipi</label><select class="select"><option>Otomobil &amp; Hafif Ticari</option></select></div>
+          <div class="vstep"><label><span class="stepno">2</span> Marka</label><select class="select"><option>Seçiniz</option></select></div>
+          <div class="vstep locked"><label><span class="stepno">3</span> Model</label><select class="select" disabled><option>Önce marka seçiniz</option></select></div>
+          <div class="vstep locked"><label><span class="stepno">4</span> Motor</label><select class="select" disabled><option>Önce model seçiniz</option></select></div>
+          <button class="btn btn-primary btn-lg btn-disabled" disabled>UYUMLU ÜRÜNLERİ GÖSTER</button>
+        </div>
+        <div class="foot"><span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:5px"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2.5v-1.5h-9V18H5z"/><circle cx="7.8" cy="15" r=".8" fill="currentColor"/><circle cx="16.2" cy="15" r=".8" fill="currentColor"/></svg> Kayıtlı aracınız yok</span><a href="#">Aracımı bilmiyorum, koda göre arayayım →</a></div>
+      </div>
+    </div>
+
+    <div style="padding:56px 32px 40px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+        <div><h2 style="font-size:24px;font-weight:600;letter-spacing:-.01em;color:var(--n-900)">Kategoriler</h2>
+        <p style="color:var(--n-600);font-size:14px;margin-top:4px">Aradığınız ürün grubunu seçin</p></div>
+        <a href="#" style="font-size:13.5px;font-weight:600">Tümünü gör →</a>
+      </div>
+      <div class="grid4" style="gap:16px">
+        <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/><path d="M7 3v18M12 3v18M17 3v18" opacity=".45"/></svg></div><b>Hava Filtreleri</b><em>1.240 ürün</em></div>
+        <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.4"/></svg></div><b>Yağ Filtreleri</b><em>980 ürün</em></div>
+        <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><path d="M7 3h7l3 4v14H7z"/><path d="M7 9h10"/></svg></div><b>Yakıt Filtreleri</b><em>640 ürün</em></div>
+        <div class="ccard"><div class="cicon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="6" width="18" height="12" rx="1.5"/><path d="M7 6v12M11 6v12M15 6v12"/></svg></div><b>Polen / Kabin</b><em>720 ürün</em></div>
+      </div>
+    </div>
+
+    <div style="padding:0 32px 48px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:20px">
+        <h2 style="font-size:24px;font-weight:600;letter-spacing:-.01em;color:var(--n-900)">Öne Çıkan Ürünler</h2>
+        <a href="#" style="font-size:13.5px;font-weight:600">Tümünü gör →</a>
+      </div>
+      <div class="grid4" style="gap:16px">
+        <article class="pcard"><div class="pbrand">MANN-FILTER</div><div class="pimg"><span>görsel</span></div><div class="pname">Hava Filtresi</div><div class="pcode">C 35 154</div><span class="badge badge-fit">✓ Aracınıza uygun</span><div class="pprice">1.249,90 ₺</div><span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta</span><button class="btn btn-primary btn-md btn-block">Sepete Ekle</button></article>
+        <article class="pcard"><div class="pbrand">FILTRON</div><div class="pimg"><span>görsel</span></div><div class="pname">Yağ Filtresi</div><div class="pcode">OP 570</div><span class="badge badge-fit">✓ Aracınıza uygun</span><div class="pprice">489,90 ₺</div><span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta</span><button class="btn btn-primary btn-md btn-block">Sepete Ekle</button></article>
+        <article class="pcard"><div class="pbrand">MAHLE</div><div class="pimg"><span>görsel</span></div><div class="pname">Yakıt Filtresi</div><div class="pcode">KL 145</div><span class="badge badge-unknown">Uyumluluk teyit edilmedi</span><div class="pprice">610,00 ₺</div><span class="stock"><span class="dot" style="background:var(--success)"></span> Stokta</span><button class="btn btn-primary btn-md btn-block">Sepete Ekle</button></article>
+        <article class="pcard"><div class="pbrand">PURFLUX</div><div class="pimg"><span>görsel</span></div><div class="pname">Polen Filtresi Aktif Karbonlu</div><div class="pcode">AHA 189</div><span class="badge badge-fit">✓ Aracınıza uygun</span><div class="pprice">399,90 ₺</div><span class="stock"><span class="dot" style="background:var(--warning)"></span> Son 3 adet</span><button class="btn btn-primary btn-md btn-block">Sepete Ekle</button></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 MARKA & GÜVEN -->
+<section id="marka">
+  <div class="sechead"><span class="num">12</span><h2>Marka Grid &amp; Güven Bölümü</h2>
+  <p>Marka logoları gri tonlu, hover'da renklenir — sakin ve kurumsal. Güven maddeleri pazarlama dili yerine bilgi verir.</p></div>
+
+  <h3 class="sub">Öne çıkan markalar</h3>
+  <div class="brands">
+    <div class="blogo">MANN-FILTER</div><div class="blogo">FILTRON</div><div class="blogo">BOSCH</div><div class="blogo">MAHLE</div>
+    <div class="blogo">PURFLUX</div><div class="blogo">FEBI</div><div class="blogo">LIQUI MOLY</div><div class="blogo">HENGST</div>
+  </div>
+
+  <h3 class="sub">Neden Oto Center Market?</h3>
+  <div class="card">
+    <div class="trust">
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><div><b>Geniş Ürün Yelpazesi</b><p>Otomobil, hafif ticari ve ağır vasıta için filtre, yağ ve bakım ürünleri tek katalogda.</p></div></div>
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><b>Güvenilir Markalar</b><p>Yalnızca yetkili distribütör kanalından tedarik edilen orijinal ve muadil ürünler.</p></div></div>
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div><b>Doğru Araç Uyumluluğu</b><p>Her ürün motor seviyesinde eşleştirilir; uyumluluk doğrulanmadıysa açıkça belirtilir.</p></div></div>
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><div><b>Güvenli Ödeme</b><p>3D Secure destekli sanal POS, kredi kartına taksit ve havale seçenekleri.</p></div></div>
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16V9h11l3 3h6v4"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="18" cy="17.5" r="1.8"/></svg></div><div><b>Hızlı Kargo</b><p>Saat 16:00'ya kadar verilen stoklu siparişler aynı gün kargoya teslim edilir.</p></div></div>
+      <div class="tr"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg></div><div><b>Profesyonel Destek</b><p>Parça seçiminde tereddüt ederseniz teknik ekibimiz şasi numarasıyla doğrulama yapar.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 13 FOOTER -->
+<section id="footer">
+  <div class="sechead"><span class="num">13</span><h2>Footer</h2>
+  <p>Beş kolon, koyu marka zemini. Yasal bağlantılar alt şeritte ayrılır.</p></div>
+  <div class="ftr">
+    <div class="ftr-main">
+      <div class="about">
+        <div class="logo"><div class="mark"></div><div class="txt"><b style="color:#fff">Oto</b><span style="color:var(--brand-300)">CENTER MARKET</span></div></div>
+        <p>Otomobil, hafif ticari ve ağır vasıta araçlar için filtre, yağ ve bakım ürünleri tedarik eden profesyonel e-ticaret platformu.</p>
+        <div class="social"><i>f</i><i>in</i><i>ig</i><i>yt</i></div>
+      </div>
+      <div><h5>Kurumsal</h5><ul><li><a href="#">Hakkımızda</a></li><li><a href="#">İletişim</a></li><li><a href="#">Bayilik &amp; Toptan</a></li><li><a href="#">Kampanyalar</a></li><li><a href="#">Blog</a></li></ul></div>
+      <div><h5>Ürünler</h5><ul><li><a href="#">Filtreler</a></li><li><a href="#">Yağlar &amp; Sıvılar</a></li><li><a href="#">Otomobil</a></li><li><a href="#">Ağır Vasıta</a></li><li><a href="#">Markalar</a></li></ul></div>
+      <div><h5>Müşteri Hizmetleri</h5><ul><li><a href="#">Siparişlerim</a></li><li><a href="#">Kargo &amp; Teslimat</a></li><li><a href="#">İade &amp; Değişim</a></li><li><a href="#">Sıkça Sorulan Sorular</a></li><li><a href="#">Sipariş Takip</a></li></ul></div>
+      <div><h5>İletişim</h5><ul>
+        <li>Adres satırı, İlçe / İl</li><li>☎ 0850 XXX XX XX</li>
+        <li>✉ info@otocentermarket.com</li><li>Hafta içi 09:00 – 18:00</li><li>Cumartesi 09:00 – 14:00</li></ul></div>
+    </div>
+    <div class="ftr-bot">
+      <span>© 2026 Oto Center Market</span>
+      <a href="#">KVKK</a><a href="#">Gizlilik Politikası</a><a href="#">Mesafeli Satış Sözleşmesi</a><a href="#">Çerez Politikası</a>
+      <div class="lg"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 14 MOBİL -->
+<section id="mobil">
+  <div class="sechead"><span class="num">14</span><h2>Mobil Önizleme</h2>
+  <p>Araç seçici mobilde dropdown değil, adım adım bottom sheet olarak çalışır. Ürün detayda fiyat ve sepete ekle sabit alt barda kalır.</p></div>
+  <div class="phones">
+    <div>
+      <div class="phone">
+        <div class="ptop">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="var(--n-800)" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <div class="logo" style="gap:6px"><div class="mark" style="width:26px;height:26px"></div><div class="txt"><b style="font-size:13px">Oto</b><span style="font-size:8px">CENTER MARKET</span></div></div>
+          <svg style="margin-left:auto" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--n-800)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--n-800)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+        </div>
+        <div class="pbody" style="background:linear-gradient(135deg,var(--brand-800),var(--brand-900));color:#fff;min-height:170px;padding-bottom:46px">
+          <div style="font-size:20px;font-weight:700;line-height:1.2;letter-spacing:-.02em;margin-bottom:8px">Aracınız İçin Doğru Parçayı Bulun</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.72);margin-bottom:14px">Aracınıza uyumlu filtre, yağ ve bakım ürünlerini keşfedin.</div>
+          <input class="input" style="height:42px;font-size:12.5px;border:none" placeholder="Ürün, OEM veya kod ara...">
+        </div>
+        <div style="padding:14px;background:var(--n-25)">
+          <div class="card" style="padding:14px;margin-top:-32px;box-shadow:var(--sh-lg)">
+            <b style="font-size:14px;display:block;margin-bottom:2px">Aracınıza Göre Parça Bulun</b>
+            <span style="font-size:11.5px;color:var(--n-600);display:block;margin-bottom:12px">Yalnızca uyumlu ürünleri görün.</span>
+            <select class="select" style="height:40px;font-size:13px;margin-bottom:8px"><option>Araç Tipi</option></select>
+            <select class="select" style="height:40px;font-size:13px;margin-bottom:12px" disabled><option>Marka</option></select>
+            <button class="btn btn-primary btn-md btn-block" style="font-size:12.5px">UYUMLU ÜRÜNLERİ GÖSTER</button>
+          </div>
+        </div>
+        <div class="pbar"><span>Ana Sayfa</span><span>Kategori</span><span style="color:var(--brand-600);font-weight:600">Aracım</span><span>Sepet</span><span>Hesap</span></div>
+      </div>
+      <div class="plabel">Ana sayfa + sabit alt bar</div>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="ptop" style="justify-content:space-between"><b style="font-size:13px">Aracınızı Seçin</b><span style="font-size:16px;color:var(--n-400)">✕</span></div>
+        <div class="pbody" style="background:#fff">
+          <div style="font-size:11px;color:var(--n-400);margin-bottom:6px">Adım 2 / 4</div>
+          <div class="progress"><i></i></div>
+          <div class="sheet-step done">Otomobil &amp; Hafif Ticari <span>✓</span></div>
+          <div style="font-size:11.5px;font-weight:600;color:var(--n-800);margin:14px 0 8px">MARKA SEÇİN</div>
+          <div style="position:relative;margin-bottom:10px">
+            <svg style="position:absolute;left:11px;top:11px;color:var(--n-400)" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <input class="input" style="height:38px;padding-left:34px;font-size:12.5px" placeholder="Marka ara...">
+          </div>
+          <div class="sheet-step done">AUDI <span>✓</span></div>
+          <div class="sheet-step">BMW</div>
+          <div class="sheet-step">FIAT</div>
+          <div class="sheet-step">FORD</div>
+          <div class="sheet-step">MERCEDES-BENZ</div>
+          <div class="sheet-step">OPEL</div>
+        </div>
+        <div style="padding:12px;border-top:1px solid var(--n-100)"><button class="btn btn-primary btn-md btn-block" style="font-size:13px">Devam Et</button></div>
+      </div>
+      <div class="plabel">Araç seçici bottom sheet</div>
+    </div>
+
+    <div>
+      <div class="phone">
+        <div class="ptop"><span style="font-size:16px;color:var(--n-600)">‹</span><span style="font-size:11.5px;color:var(--n-600)">Hava Filtreleri</span></div>
+        <div class="pbody" style="background:#fff;padding:0">
+          <div style="aspect-ratio:1;background:var(--n-25);display:flex;align-items:center;justify-content:center;color:var(--n-200);font-size:11px">ürün görseli · swipe galeri</div>
+          <div style="padding:14px">
+            <div class="pbrand" style="margin-bottom:6px">MANN-FILTER</div>
+            <div style="font-size:16px;font-weight:600;color:var(--n-900);line-height:1.35;margin-bottom:5px">MANN-FILTER C 35 154 Hava Filtresi</div>
+            <div class="pcode" style="margin-bottom:12px">Ürün kodu: C 35 154</div>
+            <div style="background:var(--accent-100);border:1px solid #BFE5D1;border-radius:var(--r-md);padding:10px 12px;margin-bottom:12px">
+              <b style="display:block;font-size:12px;color:var(--accent-700)">✓ Aracınıza uygun</b>
+              <span style="font-size:11.5px;color:var(--n-800)">AUDI A1 (GB) 30 TFSI · 2018–2024</span>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:var(--n-800);padding:9px 0;border-top:1px solid var(--n-50)">Teknik Özellikler <span style="float:right;color:var(--n-400)">▾</span></div>
+            <div style="font-size:11px;font-weight:600;color:var(--n-800);padding:9px 0;border-top:1px solid var(--n-50)">Uyumlu Araçlar (312) <span style="float:right;color:var(--n-400)">▾</span></div>
+            <div style="font-size:11px;font-weight:600;color:var(--n-800);padding:9px 0;border-top:1px solid var(--n-50)">OEM Numaraları (7) <span style="float:right;color:var(--n-400)">▾</span></div>
+          </div>
+        </div>
+        <div style="position:sticky;bottom:0;background:#fff;border-top:1px solid var(--n-100);padding:10px 12px;display:flex;align-items:center;gap:10px">
+          <div><div style="font-size:15px;font-weight:700;color:var(--n-900)">1.249,90 ₺</div><div style="font-size:10px;color:var(--n-400)">KDV dahil</div></div>
+          <button class="btn btn-primary btn-md" style="flex:1;font-size:12.5px">SEPETE EKLE</button>
+        </div>
+      </div>
+      <div class="plabel">Ürün detay + sabit satın alma barı</div>
+    </div>
+  </div>
+</section>
+
+<!-- 15 KURALLAR -->
+<section id="kurallar">
+  <div class="sechead"><span class="num">15</span><h2>Tasarım Kuralları — Yapma / Yap</h2>
+  <p>Brief'te belirtilen kaçınılacaklar, uygulanabilir kurallara çevrildi.</p></div>
+  <div class="dontdo">
+    <div class="dd no">
+      <h5>YAPMA</h5>
+      <ul>
+        <li>Sarı/yeşil ağırlıklı görünüm (referans siteyi kopyalamak)</li>
+        <li>Yeşili buton, banner veya başlıkta kullanmak</li>
+        <li>Çoklu gradient, renkli bölüm zeminleri</li>
+        <li>12px'ten büyük radius'lu "yumuşak" kartlar</li>
+        <li>Kart başına 3+ rozet</li>
+        <li>Ucuz stok araç fotoğrafları</li>
+        <li>Otomatik carousel, parallax, scroll-jack</li>
+        <li>Popup, çıkış niyeti (exit intent) katmanları</li>
+        <li>Display dışında 32px+ font kullanımı</li>
+        <li>İkon setini karıştırmak, arayüzde emoji</li>
+      </ul>
+    </div>
+    <div class="dd yes">
+      <h5>YAP</h5>
+      <ul>
+        <li>Beyaz zemin + ince nötr border ile alan tanımla</li>
+        <li>Yeşili yalnızca uyumluluk ve başarı için sakla</li>
+        <li>Tek gradient: hero arka planı</li>
+        <li>Radius'u 4–8px aralığında tut</li>
+        <li>Kart başına en fazla 2 rozet göster</li>
+        <li>Soyut teknik geometri ve ürün fotoğrafı kullan</li>
+        <li>Etkileşimi kullanıcı başlatsın</li>
+        <li>Bilgiyi sayfanın içinde ver</li>
+        <li>Hiyerarşiyi ağırlık ve boşlukla kur, boyutla değil</li>
+        <li>Tek ikon seti (Lucide, 1.75px stroke)</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="sub">Erişilebilirlik kabul kriterleri</h3>
+  <table>
+    <tr><th>Kriter</th><th>Hedef</th><th>Nasıl doğrulanır</th></tr>
+    <tr><td>Metin kontrastı</td><td>≥ 4.5:1 (büyük metin ≥ 3:1)</td><td>Otomatik kontrast denetimi + manuel kontrol</td></tr>
+    <tr><td>Klavye erişimi</td><td>Tüm etkileşimli öğeler</td><td>Fare olmadan sipariş tamamlama testi</td></tr>
+    <tr><td>Odak göstergesi</td><td>2px marka rengi halka, 2px offset</td><td>Görsel denetim</td></tr>
+    <tr><td>Renk tek başına bilgi taşımaz</td><td>Rozetlerde renk + ikon + metin</td><td>Gri tonlu ekran görüntüsü testi</td></tr>
+    <tr><td>Hareket tercihi</td><td><code class="mono">prefers-reduced-motion</code> desteklenir</td><td>OS ayarı ile test</td></tr>
+    <tr><td>Dokunma hedefi</td><td>min 44×44 px</td><td>Mobil cihaz denetimi</td></tr>
+  </table>
+</section>
+
+<div style="text-align:center;padding:40px 0 0;border-top:1px solid var(--n-100);color:var(--n-400);font-size:13px">
+  Oto Center Market — Design System v1.0 · Onay için hazırlandı · Üretim kodu değildir
+</div>
+
+</div><!-- /wrap -->
+</main>
+</div><!-- /doc -->
+</body>
+</html>

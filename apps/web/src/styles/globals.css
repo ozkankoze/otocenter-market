@@ -1,0 +1,203 @@
+@import './fonts.css';
+@import 'tailwindcss';
+
+/* ============================================================================
+   OTO CENTER MARKET — DESIGN TOKENS
+   Kaynak: 03-FINAL-MIMARI.md §12 · design-system.html
+   Kullanım oranı hedefi: %90 nötr/beyaz · %8 mavi · %2 yeşil
+   Yeşil YALNIZCA uyumluluk ve başarı durumlarında kullanılır.
+   ========================================================================= */
+
+@theme {
+  /* ── Marka (logodan türetilmiş) ── */
+  --color-brand-900: #08203c;
+  --color-brand-800: #0b315b;
+  --color-brand-700: #0f4179;
+  --color-brand-600: #14549a;
+  --color-brand-500: #2569b4;
+  --color-brand-300: #8fbce4;
+  --color-brand-100: #d5e6f5;
+  --color-brand-50: #eaf3fb;
+
+  /* ── Accent — yalnızca uyumluluk / başarı ── */
+  --color-accent-700: #177247;
+  --color-accent-600: #1e9159;
+  --color-accent-100: #def3e8;
+
+  /* ── Nötr ── */
+  --color-ink-0: #ffffff;
+  --color-ink-25: #f6f8fb;
+  --color-ink-50: #f1f4f8;
+  --color-ink-100: #e6ebf1;
+  --color-ink-200: #d3dae3;
+  --color-ink-400: #97a3b2;
+  --color-ink-600: #5b6675;
+  --color-ink-800: #2c3340;
+  --color-ink-900: #171c24;
+
+  /* ── Durum ── */
+  --color-success: #1e9159;
+  --color-warning: #b7791f;
+  --color-danger: #c0392b;
+
+  /* ── Tipografi ──
+     Faz 1'de Inter self-host edilecek (next/font/local ile, build sırasında
+     ağ erişimi gerektirmeden). Şimdilik sistem yığını kullanılıyor. */
+  --font-sans:
+    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ── Radius (kontrollü — "aşırı yuvarlak" yasağı) ── */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+
+  /* ── Gölge (yumuşak, düşük opaklık) ── */
+  --shadow-xs: 0 1px 2px rgba(11, 49, 91, 0.05);
+  --shadow-sm: 0 2px 6px rgba(11, 49, 91, 0.06);
+  --shadow-md: 0 6px 16px rgba(11, 49, 91, 0.08);
+  --shadow-lg: 0 14px 34px rgba(11, 49, 91, 0.1);
+
+  /* ── Hareket ── */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ── Konteyner ── */
+  --spacing-container: 1320px;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-ink-25);
+    color: var(--color-ink-800);
+    font-family: var(--font-sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Başlık rengi bilinçli olarak `inherit`: koyu zeminli bölümlerde
+     (hero, footer) ayrıca renk sınıfı yazmak gerekmesin. Gövde rengi
+     zaten ink-800; açık zeminde başlıklar ink-900'e sınıfla çekilir. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: -0.01em;
+    color: inherit;
+  }
+
+  /* Odak halkası — WCAG 2.1 AA */
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+
+  /* Mobilde iOS otomatik zoom'unu engelle */
+  @media (max-width: 767px) {
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Sayfa konteyneri */
+  .ocm-container {
+    width: 100%;
+    max-width: var(--spacing-container);
+    margin-inline: auto;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 768px) {
+    .ocm-container {
+      padding-inline: 1.5rem;
+    }
+  }
+
+  /* Ürün kodu / OEM — okunabilirlik kritik */
+  .ocm-code {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    letter-spacing: -0.01em;
+    color: var(--color-ink-600);
+  }
+
+  /* ── MARKA İMZASI ─────────────────────────────────────────────────────────
+     Bölüm başlığı üstündeki küçük etiket. Kurumsal doküman hissi verir ve
+     Filtre Marketim'in "renkli şerit + büyük başlık" düzeninden ayrışır. */
+  .ocm-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--color-brand-600);
+  }
+  .ocm-eyebrow::before {
+    content: '';
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--color-brand-600);
+  }
+
+  /* Teknik veri şeridi — ürün kartında ölçü/spesifikasyon gösterimi.
+     Otomotiv katalog dilinden geliyor; rakiplerde karşılığı yok. */
+  .ocm-specstrip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.75rem;
+    border-top: 1px dashed var(--color-ink-100);
+    padding-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--color-ink-400);
+  }
+  .ocm-specstrip b {
+    font-weight: 500;
+    color: var(--color-ink-600);
+  }
+
+  /* Koyu zeminlerde ince teknik grid — hero ve kurumsal bloklarda */
+  .ocm-grid-pattern {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Kaydırma çubuğu gizleme (yatay nav şeritleri) */
+  .ocm-noscrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .ocm-noscrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
