@@ -43,11 +43,11 @@ böyle kalmalı.
 
 PostgreSQL 16 gerekiyor. Vercel ile en az sürtünmeli üç seçenek:
 
-| Servis | Not |
-|---|---|
-| **Neon** | Vercel'in kendi entegrasyonu var; ücretsiz katman yeterli başlar |
-| **Supabase** | Yönetim paneli daha zengin; connection pooler'ı ayrıca açılır |
-| **Vercel Postgres** | Altında zaten Neon çalışıyor |
+| Servis              | Not                                                              |
+| ------------------- | ---------------------------------------------------------------- |
+| **Neon**            | Vercel'in kendi entegrasyonu var; ücretsiz katman yeterli başlar |
+| **Supabase**        | Yönetim paneli daha zengin; connection pooler'ı ayrıca açılır    |
+| **Vercel Postgres** | Altında zaten Neon çalışıyor                                     |
 
 Hangisini seçerseniz seçin **iki ayrı bağlantı adresi** alacaksınız:
 
@@ -74,8 +74,41 @@ npm run db:seed        # araç ağacı + 2.677 ürün + 60.599 uyumluluk
 npm run db:reindex     # arama ve uyumluluk indekslerini kurar
 ```
 
-`db:seed` yerelde ~2,5 dakika sürüyor. Ağ üzerinden 10–20 dakika sürebilir;
-kesilirse baştan çalıştırmak güvenlidir (seed önce mevcut veriyi temizler).
+`db:seed` yerelde ~2,5 dakika sürüyor. Uzak veritabanında araç ağacı adımı
+birkaç saniye, ürün yükleme birkaç dakika sürer. Kesilirse baştan çalıştırmak
+güvenlidir: seed önce mevcut veriyi temizler, araç ağacı ise tek işlemde
+yazıldığı için yarıda kalırsa hiçbir şey yazmaz.
+
+> **Not (2026-08).** Araç ağacı senkronizasyonu eskiden satır satır sorgu
+> atıyordu — bir çalıştırma 29.951 SQL sorgusu demekti. Yerelde 8 saniye
+> süren bu iş, Neon gibi uzak bir veritabanında (~45 ms gidiş-dönüş)
+> 20 dakikayı aşıyor ve ekrana hiçbir çıktı vermiyordu. Artık toplu okuma /
+> toplu yazma kullanılıyor: **125 sorgu**, uzakta birkaç saniye. Her aşama
+> geçen süreyle birlikte ekrana yazılıyor.
+
+### Takılırsa: `npm run db:doctor`
+
+Bir veritabanı komutu beklemeye girerse **beklemeyin**, teşhisi çalıştırın:
+
+```bash
+npm run db:doctor
+```
+
+En geç 90 saniyede biter ve bağlantıyı katman katman ölçer:
+DNS → TCP → SSLRequest → TLS → kimlik doğrulama → `SELECT 1` → gerçek
+tablolar → işlem turu. Takılan katmanı adıyla söyler; ayrıca **açık
+oturumları ve kilitleri** listeler.
+
+En sık sebep budur: `Ctrl+C` ile yarıda kesilen bir çalıştırma sunucuda açık
+bir işlem bırakır, o işlem araç ağacı satırlarının kilidini tutar ve sonraki
+her çalıştırma hiçbir çıktı vermeden sonsuza kadar bekler. Teşhis bunu
+`⚠ KİLİTLİ TABLO(LAR)` başlığıyla gösterir ve sonlandırılacak `pid`'i yazar.
+
+Artık böyle bir bekleme mümkün değil: her bağlantıda `lock_timeout = 15s` ve
+`statement_timeout = 900s` ayarlanıyor (bkz. `packages/db/src/client.ts`),
+`vehicle-tree-sync` her sorgunun başladığını/bittiğini ekrana yazıyor ve
+betiğin tamamı 10 dakikada kendini durdurup **takıldığı aşamanın adını**
+basıyor.
 
 Bittiğinde doğrulayın:
 
@@ -104,14 +137,14 @@ psql "$DATABASE_URL" -c "select count(*) from data_conflict;"    # 0
 Vercel → Project → Settings → **Environment Variables**. Hepsini
 **Production** ve **Preview** için ekleyin.
 
-| Değişken | Değer | Zorunlu |
-|---|---|---|
-| `DATABASE_URL` | **pooled** bağlantı adresi, `?sslmode=require` ile | ✅ |
-| `DB_POOL_MAX` | `3` | ✅ |
-| `NEXT_PUBLIC_SITE_URL` | `https://alan-adiniz.com` | ✅ |
-| `NEXT_PUBLIC_SITE_NAME` | `Oto Center Market` | — |
-| `ADMIN_PASSWORD` | uzun, rastgele bir parola | ✅ |
-| `ADMIN_SESSION_SECRET` | 32+ karakter rastgele dizi | ✅ |
+| Değişken                | Değer                                              | Zorunlu |
+| ----------------------- | -------------------------------------------------- | ------- |
+| `DATABASE_URL`          | **pooled** bağlantı adresi, `?sslmode=require` ile | ✅      |
+| `DB_POOL_MAX`           | `3`                                                | ✅      |
+| `NEXT_PUBLIC_SITE_URL`  | `https://alan-adiniz.com`                          | ✅      |
+| `NEXT_PUBLIC_SITE_NAME` | `Oto Center Market`                                | —       |
+| `ADMIN_PASSWORD`        | uzun, rastgele bir parola                          | ✅      |
+| `ADMIN_SESSION_SECRET`  | 32+ karakter rastgele dizi                         | ✅      |
 
 ### ⚠ `ADMIN_PASSWORD` ve `ADMIN_SESSION_SECRET` mutlaka verilmeli
 

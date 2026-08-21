@@ -27,9 +27,32 @@
 import { loadEnv } from './env'
 loadEnv()
 
+import { sql } from 'kysely'
+import type { Kysely, Transaction } from 'kysely'
 import { db, closeDb, slugify } from '../src/index'
+import type { Database } from '../src/types'
 import { REAL_VEHICLE_TYPES, REAL_BRANDS, REAL_MODELS } from './seed-data/arac-agaci'
 import { REAL_ENGINES, deriveFuel } from './seed-data/arac-motorlari'
+
+/**
+ * TÜM SENKRONİZASYON TEK İŞLEMDE (transaction) ÇALIŞIR.
+ *
+ * Eskiden her ekleme anında commit ediliyordu ve fonksiyonlar ortada hata
+ * fırlatabiliyordu (ör. ikiz motor koruması). Sonuç: ağaç YARIM kalıyordu —
+ * hatanın öncesindeki markaların motorları vardı, sonrasındakiler hiç yoktu.
+ * Bunu hiçbir şey söylemiyordu; sorun ancak ürün içe aktarmasında binlerce
+ * E_ENGINE_NOT_FOUND olarak ortaya çıkıyordu.
+ *
+ * Daha kötüsü, yarım ağaç sonraki çalıştırmaları da bozuyordu: motor slug'ları
+ * model içindeki SIRAYA göre `-2`, `-3` ekiyle çakışma çözüyor; yarım kalmış
+ * bir modelde sıra kaydığı için arama ıskalıyor ve ikiz koruması bu kez BAŞKA
+ * bir yerde tetikleniyordu. Her deneme ağacı biraz daha bozuyordu.
+ *
+ * Artık ya hepsi yazılır ya hiçbiri. `tx`, main() içinde işlem tutamacıyla
+ * değiştirilir; sync fonksiyonları doğrudan `db` yerine bunu kullanır.
+ */
+type Yazici = Kysely<Database> | Transaction<Database>
+let tx: Yazici = db
 
 /** Kaynak listesinin ilk N markası "popüler" kabul edilir (marka çipleri için). */
 const POPULAR_COUNT = 12
@@ -56,6 +79,7 @@ const stats = {
   engineUpdated: 0,
   engineModelMissing: [] as string[],
   slugCollisions: [] as string[],
+  twinEngines: [] as string[],
   twinModels: [] as string[],
   similarModels: [] as string[],
 }
@@ -153,243 +177,458 @@ function modelSlugs(names: string[]): Array<{ slug: string; collided: boolean }>
   })
 }
 
-async function syncTypes(): Promise<Map<string, number>> {
-  const ids = new Map<string, number>()
-  for (const t of REAL_VEHICLE_TYPES) {
-    const existing = await db
-      .selectFrom('vehicle_type')
-      .select(['id', 'name', 'icon', 'sort_order', 'is_active'])
-      .where('slug', '=', t.slug)
-      .executeTakeFirst()
+/**
+ * ════════════════════════════════════════════════════════════════════════════
+ *  TOPLU OKUMA / TOPLU YAZMA
+ * ════════════════════════════════════════════════════════════════════════════
+ *
+ *  Eskiden her satır için ayrı SELECT + ayrı INSERT yapılıyordu. Ölçüldü:
+ *  bir senkronizasyon **29.951 SQL sorgusu** üretiyordu (motor başına üç
+ *  sorgu: slug ile arama, ikiz denetimi için neslin TÜM motorları, ekleme).
+ *
+ *  Yerelde gidiş-dönüş ~0,2 ms olduğu için bu 8 saniye sürüyor ve göze
+ *  batmıyordu. Uzak bir veritabanında (Neon) gidiş-dönüş ~45 ms; aynı iş
+ *  29.951 × 45 ms ≈ 22 DAKİKA sürüyor. Üstelik tüm çıktı main()'in sonunda
+ *  basıldığı için ekranda hiçbir şey görünmüyor: kullanıcı donmuş sanıyor.
+ *
+ *  Artık her aşama üç adımdır: (1) ilgili tablonun tamamı TEK sorguyla
+ *  belleğe alınır, (2) fark bellekte hesaplanır, (3) eklenecekler tek çok
+ *  satırlı INSERT ile yazılır. Sorgu sayısı üç haneye iner.
+ */
 
-    if (!existing) {
-      const row = await db
-        .insertInto('vehicle_type')
-        .values({ name: t.name, slug: t.slug, icon: t.icon, sort_order: t.sortOrder })
-        .returning('id')
-        .executeTakeFirstOrThrow()
-      ids.set(t.slug, row.id)
-      stats.typeInserted++
-      continue
-    }
-
-    ids.set(t.slug, existing.id)
-    const needsUpdate =
-      existing.name !== t.name ||
-      existing.icon !== t.icon ||
-      existing.sort_order !== t.sortOrder ||
-      existing.is_active !== true
-    if (needsUpdate) {
-      await db
-        .updateTable('vehicle_type')
-        .set({ name: t.name, icon: t.icon, sort_order: t.sortOrder, is_active: true })
-        .where('id', '=', existing.id)
-        .execute()
-      stats.typeUpdated++
-    }
+/** Kysely boş dizide hata verir; her toplu eklemede bu koruma kullanılır. */
+async function topluEkle<T>(
+  satirlar: T[],
+  parca: number,
+  ad: string,
+  yaz: (dilim: T[]) => Promise<void>,
+): Promise<void> {
+  if (!satirlar.length) return
+  const toplamDilim = Math.ceil(satirlar.length / parca)
+  let no = 0
+  for (let i = 0; i < satirlar.length; i += parca) {
+    const dilim = satirlar.slice(i, i + parca)
+    if (!dilim.length) continue
+    no++
+    await olc(`${ad} INSERT ${no}/${toplamDilim} (${dilim.length} satır)`, () => yaz(dilim))
   }
+}
+
+/* ══════════════════════════════════════════════════════════════════════════
+ *  AŞAMA GÜNLÜĞÜ VE ZAMAN SINIRLARI
+ * ══════════════════════════════════════════════════════════════════════════
+ *
+ *  Bu betik daha önce Neon üzerinde 30 dakika HİÇBİR ÇIKTI VERMEDEN bekledi.
+ *  Sebebini kimse göremedi, çünkü ekranda tek bir satır bile yoktu: bütün
+ *  çıktı en sonda basılıyordu ve takılan sorgunun adı hiçbir yerde geçmiyordu.
+ *
+ *  Artık her sorgu BAŞLARKEN ve BİTERKEN satır basar, her sorgunun kendi süre
+ *  sınırı vardır ve betiğin tamamının bir üst sınırı vardır. Takılma artık
+ *  sessizlik olarak değil, takılan aşamanın ADIYLA birlikte hata olarak görünür.
+ *
+ *  Ayarlar (ortam değişkeni):
+ *    OCM_SORGU_SINIRI   tek sorgu sınırı, ms   (öntanımlı 60000)
+ *    OCM_TOPLAM_SINIRI  betik sınırı, ms       (öntanımlı 600000 = 10 dk)
+ */
+const SORGU_SINIRI = Number(process.env.OCM_SORGU_SINIRI ?? 60_000)
+const TOPLAM_SINIRI = Number(process.env.OCM_TOPLAM_SINIRI ?? 600_000)
+
+const t0 = Date.now()
+let sonAsama = '(başlamadı)'
+
+function sure(): string {
+  return ((Date.now() - t0) / 1000).toFixed(1).padStart(6)
+}
+
+function adim(mesaj: string): void {
+  console.log(`  [${sure()} sn] ${mesaj}`)
+}
+
+/**
+ * Bir sorguyu adıyla birlikte çalıştırır: başlarken satır basar, bitince
+ * süresini yazar, sınırı aşarsa AÇIKÇA hata verir.
+ *
+ * Not: zaman aşımı sorguyu iptal etmez — sunucu tarafında `lock_timeout` ve
+ * `statement_timeout` bunu zaten yapıyor (bkz. packages/db/src/client.ts).
+ * Buradaki sınır, ağ tamamen sessizleştiğinde (paket gitmiyor, hata da
+ * dönmüyor) beklemeyi kesmek içindir.
+ */
+async function olc<T>(ad: string, is: () => Promise<T>): Promise<T> {
+  sonAsama = ad
+  process.stdout.write(`  [${sure()} sn] → ${ad}\n`)
+  const bas = Date.now()
+  let zaman: NodeJS.Timeout | undefined
+  try {
+    const sonuc = await Promise.race([
+      is(),
+      new Promise<never>((_, red) => {
+        zaman = setTimeout(
+          () => red(new Error(`ZAMAN AŞIMI (${SORGU_SINIRI} ms) — takılan aşama: ${ad}`)),
+          SORGU_SINIRI,
+        )
+      }),
+    ])
+    console.log(`  [${sure()} sn] ✓ ${ad} · ${Date.now() - bas} ms`)
+    return sonuc
+  } finally {
+    if (zaman) clearTimeout(zaman)
+  }
+}
+
+async function syncTypes(): Promise<Map<string, number>> {
+  const mevcut = await olc('3. vehicle_type SELECT', () =>
+    tx
+      .selectFrom('vehicle_type')
+      .select(['id', 'name', 'slug', 'icon', 'sort_order', 'is_active'])
+      .execute(),
+  )
+  const bySlug = new Map(mevcut.map((r) => [r.slug, r]))
+  const ids = new Map<string, number>()
+
+  const eklenecek = REAL_VEHICLE_TYPES.filter((t) => !bySlug.has(t.slug))
+  for (const t of REAL_VEHICLE_TYPES) {
+    const v = bySlug.get(t.slug)
+    if (v) ids.set(t.slug, v.id)
+  }
+  if (eklenecek.length) {
+    const yeni = await olc(`vehicle_type INSERT (${eklenecek.length} satır)`, () =>
+      tx
+        .insertInto('vehicle_type')
+        .values(
+          eklenecek.map((t) => ({
+            name: t.name,
+            slug: t.slug,
+            icon: t.icon,
+            sort_order: t.sortOrder,
+          })),
+        )
+        .returning(['id', 'slug'])
+        .execute(),
+    )
+    for (const r of yeni) ids.set(r.slug, r.id)
+    stats.typeInserted += yeni.length
+  }
+
+  const guncellenecek = REAL_VEHICLE_TYPES.filter((t) => {
+    const v = bySlug.get(t.slug)
+    return (
+      v && (v.name !== t.name || v.icon !== t.icon || v.sort_order !== t.sortOrder || !v.is_active)
+    )
+  })
+  if (guncellenecek.length) {
+    // İlk YAZMA işlemi burasıdır: takılırsa neredeyse kesinlikle SATIR KİLİDİ
+    // vardır (yarıda kesilmiş bir çalıştırmadan kalan açık işlem).
+    await olc(`vehicle_type UPDATE (${guncellenecek.length} satır)`, async () => {
+      for (const t of guncellenecek) {
+        const v = bySlug.get(t.slug)!
+        await tx
+          .updateTable('vehicle_type')
+          .set({ name: t.name, icon: t.icon, sort_order: t.sortOrder, is_active: true })
+          .where('id', '=', v.id)
+          .execute()
+        stats.typeUpdated++
+      }
+    })
+  }
+  adim(`tür: ${ids.size}`)
   return ids
 }
 
 async function syncBrands(typeIds: Map<string, number>): Promise<Map<string, number>> {
-  const brandIds = new Map<string, number>()
-
-  for (const [index, brand] of REAL_BRANDS.entries()) {
-    const slug = brand.slug ?? slugify(brand.name)
-    const isPopular = index < POPULAR_COUNT
-    const sortOrder = index * 10
-
-    // 1) Kanonik slug · 2) eski (bozuk) slug · 3) ad eşleşmesi
-    let existing = await db
+  const mevcut = await olc('4. vehicle_brand SELECT', () =>
+    tx
       .selectFrom('vehicle_brand')
       .select(['id', 'name', 'slug', 'country', 'is_popular', 'sort_order', 'is_active'])
-      .where('slug', '=', slug)
-      .executeTakeFirst()
+      .execute(),
+  )
+  const bySlug = new Map(mevcut.map((r) => [r.slug, r]))
+  const brandIds = new Map<string, number>()
 
-    if (!existing && brand.aliasSlugs?.length) {
-      existing = await db
-        .selectFrom('vehicle_brand')
-        .select(['id', 'name', 'slug', 'country', 'is_popular', 'sort_order', 'is_active'])
-        .where('slug', 'in', brand.aliasSlugs)
-        .executeTakeFirst()
-      if (existing) stats.brandRenamed.push(`${existing.slug} → ${slug}`)
-    }
+  type Hedef = { slug: string; name: string; country: string | null; pop: boolean; sira: number }
+  const hedefler: Hedef[] = REAL_BRANDS.map((brand, index) => ({
+    slug: brand.slug ?? slugify(brand.name),
+    name: brand.name,
+    country: brand.country ?? null,
+    pop: index < POPULAR_COUNT,
+    sira: index * 10,
+  }))
 
-    if (!existing) {
-      const row = await db
-        .insertInto('vehicle_brand')
-        .values({
-          name: brand.name,
-          slug,
-          country: brand.country ?? null,
-          is_popular: isPopular,
-          sort_order: sortOrder,
-        })
-        .returning('id')
-        .executeTakeFirstOrThrow()
-      brandIds.set(slug, row.id)
-      stats.brandInserted++
-    } else {
-      brandIds.set(slug, existing.id)
-      const needsUpdate =
-        existing.name !== brand.name ||
-        existing.slug !== slug ||
-        existing.country !== (brand.country ?? null) ||
-        existing.is_popular !== isPopular ||
-        existing.sort_order !== sortOrder ||
-        existing.is_active !== true
-      if (needsUpdate) {
-        await db
-          .updateTable('vehicle_brand')
-          .set({
-            name: brand.name,
-            slug,
-            country: brand.country ?? null,
-            is_popular: isPopular,
-            sort_order: sortOrder,
-            is_active: true,
-          })
-          .where('id', '=', existing.id)
-          .execute()
-        stats.brandUpdated++
+  const eklenecek: Hedef[] = []
+  const guncellenecek: Array<{ id: number; h: Hedef }> = []
+  for (const [index, brand] of REAL_BRANDS.entries()) {
+    const h = hedefler[index]!
+    let v = bySlug.get(h.slug)
+    if (!v && brand.aliasSlugs?.length) {
+      for (const alias of brand.aliasSlugs) {
+        const a = bySlug.get(alias)
+        if (a) {
+          v = a
+          stats.brandRenamed.push(`${a.slug} → ${h.slug}`)
+          break
+        }
       }
     }
-
-    // Marka ↔ tür bağları (bir marka birden çok türde olabilir: Ford, Iveco…)
-    const brandId = brandIds.get(slug)
-    if (brandId === undefined) continue
-    for (const typeSlug of brand.types) {
-      const typeId = typeIds.get(typeSlug)
-      if (typeId === undefined) continue
-      const link = await db
-        .selectFrom('vehicle_brand_type')
-        .select('brand_id')
-        .where('brand_id', '=', brandId)
-        .where('type_id', '=', typeId)
-        .executeTakeFirst()
-      if (!link) {
-        await db
-          .insertInto('vehicle_brand_type')
-          .values({ brand_id: brandId, type_id: typeId })
-          .execute()
-        stats.linkInserted++
+    if (!v) eklenecek.push(h)
+    else {
+      brandIds.set(h.slug, v.id)
+      if (
+        v.name !== h.name ||
+        v.slug !== h.slug ||
+        v.country !== h.country ||
+        v.is_popular !== h.pop ||
+        v.sort_order !== h.sira ||
+        !v.is_active
+      ) {
+        guncellenecek.push({ id: v.id, h })
       }
     }
   }
 
+  if (eklenecek.length) {
+    const yeni = await olc(`vehicle_brand INSERT (${eklenecek.length} satır)`, () =>
+      tx
+        .insertInto('vehicle_brand')
+        .values(
+          eklenecek.map((h) => ({
+            name: h.name,
+            slug: h.slug,
+            country: h.country,
+            is_popular: h.pop,
+            sort_order: h.sira,
+          })),
+        )
+        .returning(['id', 'slug'])
+        .execute(),
+    )
+    for (const r of yeni) brandIds.set(r.slug, r.id)
+    stats.brandInserted += yeni.length
+  }
+  if (guncellenecek.length) {
+    await olc(`vehicle_brand UPDATE (${guncellenecek.length} satır)`, async () => {
+      for (const { id, h } of guncellenecek) {
+        await tx
+          .updateTable('vehicle_brand')
+          .set({
+            name: h.name,
+            slug: h.slug,
+            country: h.country,
+            is_popular: h.pop,
+            sort_order: h.sira,
+            is_active: true,
+          })
+          .where('id', '=', id)
+          .execute()
+        stats.brandUpdated++
+      }
+    })
+  }
+
+  // Marka ↔ tür bağları — mevcut bağların tamamı tek sorguyla
+  const baglar = await olc('5. vehicle_brand_type SELECT', () =>
+    tx.selectFrom('vehicle_brand_type').select(['brand_id', 'type_id']).execute(),
+  )
+  const varOlan = new Set(baglar.map((b) => `${b.brand_id}:${b.type_id}`))
+  const yeniBaglar: Array<{ brand_id: number; type_id: number }> = []
+  for (const [index, brand] of REAL_BRANDS.entries()) {
+    const brandId = brandIds.get(hedefler[index]!.slug)
+    if (brandId === undefined) continue
+    for (const typeSlug of brand.types) {
+      const typeId = typeIds.get(typeSlug)
+      if (typeId === undefined) continue
+      const anahtar = `${brandId}:${typeId}`
+      if (varOlan.has(anahtar)) continue
+      varOlan.add(anahtar)
+      yeniBaglar.push({ brand_id: brandId, type_id: typeId })
+    }
+  }
+  await topluEkle(yeniBaglar, 500, 'vehicle_brand_type', async (dilim) => {
+    await tx.insertInto('vehicle_brand_type').values(dilim).execute()
+    stats.linkInserted += dilim.length
+  })
+
+  adim(`marka: ${brandIds.size} · tür bağı +${stats.linkInserted}`)
   return brandIds
 }
 
-async function syncModels(brandIds: Map<string, number>): Promise<void> {
+/** Model anahtarı: `${brandId}|${slug}` */
+type ModelBilgi = { id: number; genId: number | null }
+
+async function syncModels(brandIds: Map<string, number>): Promise<Map<string, ModelBilgi>> {
+  const ilgili = [...brandIds.values()]
+  const mevcut = ilgili.length
+    ? await olc(`6. vehicle_model SELECT (${ilgili.length} marka)`, () =>
+        tx
+          .selectFrom('vehicle_model')
+          .select(['id', 'brand_id', 'name', 'slug', 'code', 'sort_order', 'is_active'])
+          .where('brand_id', 'in', ilgili)
+          .execute(),
+      )
+    : []
+
+  const byKey = new Map(mevcut.map((m) => [`${m.brand_id}|${m.slug}`, m]))
+  // İkiz denetimi marka içindeki TÜM adlara bakar; bu listeye bu çalıştırmada
+  // eklenenler de katılır ki aynı koşuda iki kez eklenen ikizler yakalansın.
+  const adlarByBrand = new Map<number, string[]>()
+  for (const m of mevcut) {
+    const l = adlarByBrand.get(m.brand_id) ?? []
+    l.push(m.name)
+    adlarByBrand.set(m.brand_id, l)
+  }
+
+  type YeniModel = {
+    brand_id: number
+    name: string
+    slug: string
+    code: string | null
+    sort_order: number
+  }
+  const eklenecek: YeniModel[] = []
+  const guncellenecek: Array<{ id: number; name: string; code: string | null; sira: number }> = []
+
   for (const [brandSlug, modelNames] of Object.entries(REAL_MODELS)) {
     const brandId = brandIds.get(brandSlug)
     if (brandId === undefined) {
       console.warn(`  ! '${brandSlug}' markası REAL_BRANDS içinde yok — modelleri atlandı`)
       continue
     }
-
     const slugs = modelSlugs(modelNames)
     for (const [order, name] of modelNames.entries()) {
       const resolved = slugs[order]
       if (resolved === undefined) continue
       const slug = resolved.slug
-      if (resolved.collided) {
-        stats.slugCollisions.push(`${brandSlug}/${slug} ← "${name}"`)
-      }
+      if (resolved.collided) stats.slugCollisions.push(`${brandSlug}/${slug} ← "${name}"`)
 
       const code = extractCode(name)
-      const existing = await db
-        .selectFrom('vehicle_model')
-        .select(['id', 'name', 'code', 'sort_order', 'is_active'])
-        .where('brand_id', '=', brandId)
-        .where('slug', '=', slug)
-        .executeTakeFirst()
-
-      let modelId: number
-      if (!existing) {
-        /*
-         * İKİZ MODEL KORUMASI
-         *
-         * Slug ile arama, aynı aracın FARKLI yazımlarını yakalayamıyor:
-         * "3 (G20)", "3 SERİSİ (G20)" ve "3 (G20, G21, G80, G81)" üç ayrı
-         * slug üretir; üçü de kaydedilince katalogda aynı araç üç kez
-         * görünüyordu (biri motorlu, ikisi boş).
-         *
-         * Kural: seri adı (SERİSİ sözcüğü atılarak) aynıysa ve parantez
-         * içindeki nesil kodlarından EN AZ BİRİ ortaksa, bu aynı araçtır.
-         * Kod listesi kesişmiyorsa ayrı nesildir — "X5 (E53)" ile
-         * "X5 (E70)" birbirine karışmaz.
-         */
-        const mevcutlar = await db
-          .selectFrom('vehicle_model')
-          .select(['name'])
-          .where('brand_id', '=', brandId)
-          .execute()
-        const twin = mevcutlar.find((m) => sameVehicle(m.name, name))
-        /*
-         * Burada HATA VERİLMEZ, RAPOR EDİLİR. Sebep: ikizin bir ucu bu
-         * betiğin oluşturduğu KAYNAK adı, öteki ucu `vehicles.ts`'den gelen
-         * eski addır. Hata verilirse kaynak adı hiç oluşmaz ve ona bağlanacak
-         * ürünler yersiz kalır — yani ilacı hastalıktan beter olur.
-         *
-         * Rapor her çalıştırmada listeyi yüzümüze vurur; birleştirme kararı
-         * marka marka verilir (BEKLEYEN-IS.md'ye bakınız).
-         */
-        if (twin) stats.twinModels.push(`${brandSlug}: "${twin.name}" ↔ "${name}"`)
-        else {
-          const benzer = mevcutlar.find((m) => similarVehicle(m.name, name))
-          if (benzer) stats.similarModels.push(`${brandSlug}: "${benzer.name}" ↔ "${name}"`)
+      const v = byKey.get(`${brandId}|${slug}`)
+      if (v) {
+        if (v.name !== name || v.code !== code || v.sort_order !== order * 10 || !v.is_active) {
+          guncellenecek.push({ id: v.id, name, code, sira: order * 10 })
+          /*
+           * İKİZ LİSTESİ HEDEF ADI TAŞIR.
+           *
+           * Bu model yeniden adlandırılıyor (ör. vehicles.ts'deki "MEGANE IV",
+           * kaynak yazımı "Mégane IV" olarak güncelleniyor). İkiz denetimi
+           * veritabanının senkronizasyon SONRASI hâline bakmalı; listede eski
+           * adı bırakırsak var olmayan bir satırı ikiz diye bildiririz.
+           */
+          const l = adlarByBrand.get(brandId)
+          if (l) {
+            const i = l.indexOf(v.name)
+            if (i >= 0) l[i] = name
+          }
         }
-
-        const row = await db
-          .insertInto('vehicle_model')
-          .values({
-            brand_id: brandId,
-            name,
-            slug,
-            code,
-            // Yıl aralığı kaynak ekranlarda yok — bilinmiyor olarak bırakılır.
-            year_from: null,
-            year_to: null,
-            body_type: null,
-            sort_order: order * 10,
-          })
-          .returning('id')
-          .executeTakeFirstOrThrow()
-        modelId = row.id
-        stats.modelInserted++
-      } else {
-        modelId = existing.id
-        if (
-          existing.name !== name ||
-          existing.code !== code ||
-          existing.sort_order !== order * 10 ||
-          existing.is_active !== true
-        ) {
-          await db
-            .updateTable('vehicle_model')
-            .set({ name, code, sort_order: order * 10, is_active: true })
-            .where('id', '=', modelId)
-            .execute()
-          stats.modelUpdated++
-        }
+        continue
       }
 
-      // Motorların bağlanabilmesi için model başına tek nesil
-      const gen = await db
-        .selectFrom('vehicle_generation')
-        .select('id')
-        .where('model_id', '=', modelId)
-        .executeTakeFirst()
-      if (!gen) {
-        await db
-          .insertInto('vehicle_generation')
-          .values({ model_id: modelId, name, code, year_from: null, year_to: null })
-          .execute()
-        stats.generationInserted++
+      /*
+       * İKİZ MODEL KORUMASI — ayrıntı için aşağıdaki nota bakınız.
+       * Artık marka adlarının tamamı bellekte; her model için ayrı SELECT yok.
+       */
+      const adlar = adlarByBrand.get(brandId) ?? []
+      const twin = adlar.find((n) => sameVehicle(n, name))
+      /*
+       * Burada HATA VERİLMEZ, RAPOR EDİLİR. Sebep: ikizin bir ucu bu
+       * betiğin oluşturduğu KAYNAK adı, öteki ucu `vehicles.ts`'den gelen
+       * eski addır. Hata verilirse kaynak adı hiç oluşmaz ve ona bağlanacak
+       * ürünler yersiz kalır — yani ilacı hastalıktan beter olur.
+       */
+      if (twin) stats.twinModels.push(`${brandSlug}: "${twin}" ↔ "${name}"`)
+      else {
+        const benzer = adlar.find((n) => similarVehicle(n, name))
+        if (benzer) stats.similarModels.push(`${brandSlug}: "${benzer}" ↔ "${name}"`)
       }
+      adlar.push(name)
+      adlarByBrand.set(brandId, adlar)
+
+      eklenecek.push({ brand_id: brandId, name, slug, code, sort_order: order * 10 })
     }
   }
+
+  if (guncellenecek.length) {
+    await olc(`vehicle_model UPDATE (${guncellenecek.length} satır)`, async () => {
+      for (const g of guncellenecek) {
+        await tx
+          .updateTable('vehicle_model')
+          .set({ name: g.name, code: g.code, sort_order: g.sira, is_active: true })
+          .where('id', '=', g.id)
+          .execute()
+        stats.modelUpdated++
+      }
+    })
+  }
+
+  const modelMap = new Map<string, ModelBilgi>()
+  for (const m of mevcut) modelMap.set(`${m.brand_id}|${m.slug}`, { id: m.id, genId: null })
+
+  await topluEkle(eklenecek, 500, 'vehicle_model', async (dilim) => {
+    const yeni = await tx
+      .insertInto('vehicle_model')
+      .values(
+        dilim.map((m) => ({
+          brand_id: m.brand_id,
+          name: m.name,
+          slug: m.slug,
+          code: m.code,
+          // Yıl aralığı kaynak ekranlarda yok — bilinmiyor olarak bırakılır.
+          year_from: null,
+          year_to: null,
+          body_type: null,
+          sort_order: m.sort_order,
+        })),
+      )
+      .returning(['id', 'brand_id', 'slug'])
+      .execute()
+    for (const r of yeni) modelMap.set(`${r.brand_id}|${r.slug}`, { id: r.id, genId: null })
+    stats.modelInserted += yeni.length
+  })
+
+  // Motorların bağlanabilmesi için model başına tek nesil — hepsi tek sorguyla
+  const modelIds = [...modelMap.values()].map((m) => m.id)
+  const nesiller = modelIds.length
+    ? await olc(`7. vehicle_generation SELECT (${modelIds.length} model)`, () =>
+        tx
+          .selectFrom('vehicle_generation')
+          .select(['id', 'model_id'])
+          .where('model_id', 'in', modelIds)
+          .orderBy('id')
+          .execute(),
+      )
+    : []
+  const genByModel = new Map<number, number>()
+  for (const g of nesiller) if (!genByModel.has(g.model_id)) genByModel.set(g.model_id, g.id)
+
+  const adByModelId = new Map<number, { name: string; code: string | null }>()
+  for (const [key, bilgi] of modelMap) {
+    if (genByModel.has(bilgi.id)) continue
+    const slug = key.split('|')[1] ?? ''
+    const kaynak =
+      eklenecek.find((e) => `${e.brand_id}|${e.slug}` === key) ??
+      mevcut.find((m) => `${m.brand_id}|${m.slug}` === key)
+    adByModelId.set(bilgi.id, { name: kaynak?.name ?? slug, code: kaynak?.code ?? null })
+  }
+  const yeniNesiller = [...adByModelId.entries()].map(([model_id, a]) => ({
+    model_id,
+    name: a.name,
+    code: a.code,
+    year_from: null,
+    year_to: null,
+  }))
+  await topluEkle(yeniNesiller, 500, 'vehicle_generation', async (dilim) => {
+    const yeni = await tx
+      .insertInto('vehicle_generation')
+      .values(dilim)
+      .returning(['id', 'model_id'])
+      .execute()
+    for (const r of yeni) genByModel.set(r.model_id, r.id)
+    stats.generationInserted += yeni.length
+  })
+
+  for (const [key, bilgi] of modelMap) {
+    modelMap.set(key, { id: bilgi.id, genId: genByModel.get(bilgi.id) ?? null })
+  }
+
+  adim(`model: ${modelMap.size} (+${stats.modelInserted}) · nesil +${stats.generationInserted}`)
+  return modelMap
 }
 
 /**
@@ -423,12 +662,15 @@ function parseEngineSpecs(name: string): {
  *   (marka + model + normalize motor adı) buna dayanır.
  * • Yakıt tipi belirlenemezse betik DURUR. Sessiz varsayım yok.
  */
-async function syncEngines(brandIds: Map<string, number>): Promise<void> {
-  // ── ÖN KONTROL: yazmadan ÖNCE bütün yakıt tiplerini çöz ──────────────────
-  // Önceden bu kontrol yazma döngüsünün içindeydi ve hata en sonda atılıyordu:
-  // 300 motor yazıldıktan sonra "yakıt belirlenemedi" hatası geliyor, kullanıcı
-  // hiçbir şey yazılmadığını sanıyordu. Artık tek bir sorunlu ad varsa
-  // veritabanına HİÇ dokunulmuyor.
+async function syncEngines(
+  brandIds: Map<string, number>,
+  modelMap: Map<string, ModelBilgi>,
+): Promise<void> {
+  /*
+   * ÖN KONTROL — yakıt tipi.
+   * Tek bir motorun yakıtı belirlenemiyorsa hiçbir şey yazılmaz. (İşlem
+   * içinde olduğumuz için fırlatmak zaten her şeyi geri alır.)
+   */
   const unknownFuel: string[] = []
   for (const [brandSlug, byModel] of Object.entries(REAL_ENGINES)) {
     for (const [modelName, engines] of Object.entries(byModel)) {
@@ -446,6 +688,57 @@ async function syncEngines(brandIds: Map<string, number>): Promise<void> {
         unknownFuel.join('\n  '),
     )
   }
+
+  // İlgili nesillerin TÜM motorları tek sorguyla belleğe alınır.
+  const genIds = [...modelMap.values()].map((m) => m.genId).filter((g): g is number => g !== null)
+  const mevcutMotorlar = genIds.length
+    ? await olc(`8. vehicle_engine SELECT (${genIds.length} nesil — en büyük sorgu)`, () =>
+        tx
+          .selectFrom('vehicle_engine')
+          .select([
+            'id',
+            'generation_id',
+            'name',
+            'slug',
+            'displacement_cc',
+            'power_kw',
+            'power_hp',
+            'fuel_type',
+            'sort_order',
+            'is_active',
+          ])
+          .where('generation_id', 'in', genIds)
+          .execute(),
+      )
+    : []
+
+  const bySlug = new Map(mevcutMotorlar.map((e) => [`${e.generation_id}|${e.slug}`, e]))
+  /*
+   * İKİZ MOTOR DENETİMİ — artık sorgu değil, bellekte arama.
+   * Eskiden her motor eklemesinden önce neslin tüm motorları SELECT
+   * ediliyordu; tek başına 7.674 fazladan gidiş-dönüş demekti.
+   */
+  const norm = (x: string) => x.toLowerCase().replace(/[^a-z0-9]/g, '')
+  const adlarByGen = new Map<number, Map<string, string>>()
+  for (const e of mevcutMotorlar) {
+    const m = adlarByGen.get(e.generation_id) ?? new Map<string, string>()
+    m.set(norm(e.name), e.name)
+    adlarByGen.set(e.generation_id, m)
+  }
+
+  type YeniMotor = {
+    generation_id: number
+    model_id: number
+    name: string
+    slug: string
+    displacement_cc: number | null
+    power_kw: number | null
+    power_hp: number | null
+    fuel_type: ReturnType<typeof deriveFuel>
+    sort_order: number
+  }
+  const eklenecek: YeniMotor[] = []
+  const guncellenecek: Array<{ id: number; m: YeniMotor }> = []
 
   for (const [brandSlug, byModel] of Object.entries(REAL_ENGINES)) {
     const brandId = brandIds.get(brandSlug)
@@ -465,28 +758,16 @@ async function syncEngines(brandIds: Map<string, number>): Promise<void> {
         stats.engineModelMissing.push(`${brandSlug}/"${modelName}"`)
         continue
       }
-
-      const model = await db
-        .selectFrom('vehicle_model')
-        .select('id')
-        .where('brand_id', '=', brandId)
-        .where('slug', '=', modelSlug)
-        .executeTakeFirst()
-      if (!model) {
+      const bilgi = modelMap.get(`${brandId}|${modelSlug}`)
+      if (!bilgi) {
         stats.engineModelMissing.push(`${brandSlug}/${modelSlug} (veritabanında yok)`)
         continue
       }
-
-      const gen = await db
-        .selectFrom('vehicle_generation')
-        .select('id')
-        .where('model_id', '=', model.id)
-        .orderBy('id')
-        .executeTakeFirst()
-      if (!gen) {
+      if (bilgi.genId === null) {
         stats.engineModelMissing.push(`${brandSlug}/${modelSlug} (nesil yok)`)
         continue
       }
+      const genId = bilgi.genId
 
       const usedSlugs = new Set<string>()
       for (const [order, entry] of engines.entries()) {
@@ -500,99 +781,99 @@ async function syncEngines(brandIds: Map<string, number>): Promise<void> {
         usedSlugs.add(slug)
 
         const { cc, kw, hp } = parseEngineSpecs(name)
-        const existing = await db
-          .selectFrom('vehicle_engine')
-          .select([
-            'id',
-            'name',
-            'displacement_cc',
-            'power_kw',
-            'power_hp',
-            'fuel_type',
-            'sort_order',
-            'is_active',
-          ])
-          .where('generation_id', '=', gen.id)
-          .where('slug', '=', slug)
-          .executeTakeFirst()
+        const hedef: YeniMotor = {
+          generation_id: genId,
+          model_id: bilgi.id,
+          name,
+          slug,
+          displacement_cc: cc,
+          power_kw: kw,
+          power_hp: hp,
+          fuel_type: fuel,
+          sort_order: order * 10,
+        }
 
-        if (!existing) {
-          /*
-           * İKİZ MOTOR KORUMASI
-           *
-           * Arama `slug` ile yapılıyor; "30 TFSI 1.0 81 kW 110 HP" ile
-           * "30 TFSI 1.0 81kw 110hp" FARKLI slug üretiyor ve aynı motor
-           * katalogda iki kez çıkıyordu (biri ürünlü, biri bomboş). Yazım
-           * farkını yok sayan bir karşılaştırma ile önce ikizi arıyoruz.
-           */
-          const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '')
-          const twin = (
-            await db
-              .selectFrom('vehicle_engine')
-              .select(['name'])
-              .where('generation_id', '=', gen.id)
-              .execute()
-          ).find((e) => norm(e.name) === norm(name))
+        const v = bySlug.get(`${genId}|${slug}`)
+        if (!v) {
+          const adlar = adlarByGen.get(genId) ?? new Map<string, string>()
+          const twin = adlar.get(norm(name))
           if (twin) {
-            throw new Error(
-              `İKİZ MOTOR: "${model.name}" nesli altında "${twin.name}" zaten var; ` +
-                `"${name}" onun başka yazımı. arac-motorlari.ts'den bu satırı kaldırın ` +
-                `ve ürün eşlemelerinde "${twin.name}" yazımını kullanın.`,
-            )
+            /*
+             * FIRLATMA YOK — TOPLA.
+             *
+             * Eskiden ilk ikizde `throw` ediliyordu; o ana kadar yazılanlar
+             * commit olmuş, sonrası hiç çalışmamış oluyordu. Artık hepsi
+             * toplanıyor, işlemin sonunda tek seferde bildiriliyor ve işlem
+             * geri alınıyor — ağaç ya bütün yazılır ya hiç.
+             */
+            const modelAdi = modelName
+            stats.twinEngines.push(`${brandSlug}/"${modelAdi}": "${twin}" ↔ "${name}"`)
+            continue
           }
+          adlar.set(norm(name), name)
+          adlarByGen.set(genId, adlar)
+          eklenecek.push(hedef)
+          continue
+        }
 
-          await db
-            .insertInto('vehicle_engine')
-            .values({
-              generation_id: gen.id,
-              model_id: model.id,
-              name,
-              slug,
-              // Motor kodu kaynakta yok — boş bırakılır, uydurulmaz.
-              engine_codes: [],
-              displacement_cc: cc,
-              power_kw: kw,
-              power_hp: hp,
-              fuel_type: fuel,
-              year_from: null,
-              year_to: null,
-              sort_order: order * 10,
-            })
-            .execute()
-          stats.engineInserted++
-        } else if (
-          existing.name !== name ||
-          existing.displacement_cc !== cc ||
-          existing.power_kw !== kw ||
-          existing.power_hp !== hp ||
-          existing.fuel_type !== fuel ||
-          existing.sort_order !== order * 10 ||
-          existing.is_active !== true
+        if (
+          v.name !== name ||
+          v.displacement_cc !== cc ||
+          v.power_kw !== kw ||
+          v.power_hp !== hp ||
+          v.fuel_type !== fuel ||
+          v.sort_order !== order * 10 ||
+          !v.is_active
         ) {
-          await db
-            .updateTable('vehicle_engine')
-            .set({
-              name,
-              displacement_cc: cc,
-              power_kw: kw,
-              power_hp: hp,
-              fuel_type: fuel,
-              sort_order: order * 10,
-              is_active: true,
-            })
-            .where('id', '=', existing.id)
-            .execute()
-          stats.engineUpdated++
+          guncellenecek.push({ id: v.id, m: hedef })
         }
       }
     }
   }
+
+  await topluEkle(eklenecek, 1000, 'vehicle_engine', async (dilim) => {
+    await tx
+      .insertInto('vehicle_engine')
+      .values(
+        dilim.map((m) => ({
+          ...m,
+          // Motor kodu kaynakta yok — boş bırakılır, uydurulmaz.
+          engine_codes: [],
+          year_from: null,
+          year_to: null,
+        })),
+      )
+      .execute()
+    stats.engineInserted += dilim.length
+  })
+  if (guncellenecek.length) {
+    await olc(`vehicle_engine UPDATE (${guncellenecek.length} satır)`, async () => {
+      for (const { id, m } of guncellenecek) {
+        await tx
+          .updateTable('vehicle_engine')
+          .set({
+            name: m.name,
+            displacement_cc: m.displacement_cc,
+            power_kw: m.power_kw,
+            power_hp: m.power_hp,
+            fuel_type: m.fuel_type,
+            sort_order: m.sort_order,
+            is_active: true,
+          })
+          .where('id', '=', id)
+          .execute()
+        stats.engineUpdated++
+      }
+    })
+  }
+
+  adim(`motor: +${stats.engineInserted} yeni · ${stats.engineUpdated} güncellendi`)
 }
 
 /** Gerçek listede yer almayan mevcut kayıtlar — silinmez, yalnızca listelenir. */
 async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
   const realBrandIds = new Set(brandIds.values())
-  const allBrands = await db
+  const allBrands = await tx
     .selectFrom('vehicle_brand')
     .select(['id', 'name', 'slug'])
     .orderBy('name')
@@ -604,7 +885,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
     const brandId = brandIds.get(brandSlug)
     if (brandId === undefined) continue
     const realSlugs = new Set(modelSlugs(modelNames).map((r) => r.slug))
-    const rows = await db
+    const rows = await tx
       .selectFrom('vehicle_model')
       .select(['slug', 'name'])
       .where('brand_id', '=', brandId)
@@ -615,7 +896,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
   }
 
   // Motoru olmayan model sayısı — araç seçicide motor adımı boş kalır
-  const [engineless] = await db
+  const [engineless] = await tx
     .selectFrom('vehicle_model as m')
     .leftJoin('vehicle_engine as e', 'e.model_id', 'm.id')
     .select(({ fn }) => fn.count<string>('m.id').distinct().as('n'))
@@ -623,7 +904,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
     .execute()
 
   const realTypeSlugs = REAL_VEHICLE_TYPES.map((t) => t.slug)
-  const extraTypes = await db
+  const extraTypes = await tx
     .selectFrom('vehicle_type')
     .select(['id', 'slug'])
     .where('slug', 'not in', realTypeSlugs)
@@ -654,7 +935,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
 
   // ── --temizle: yalnızca is_active=false. DELETE YOK. ────────────────────────
   if (extraTypes.length) {
-    await db
+    await tx
       .updateTable('vehicle_type')
       .set({ is_active: false })
       .where(
@@ -665,7 +946,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
       .execute()
   }
   if (extraBrands.length) {
-    await db
+    await tx
       .updateTable('vehicle_brand')
       .set({ is_active: false })
       .where(
@@ -679,7 +960,7 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
     const brandId = brandIds.get(brandSlug)
     if (brandId === undefined) continue
     const realSlugs = modelSlugs(modelNames).map((r) => r.slug)
-    await db
+    await tx
       .updateTable('vehicle_model')
       .set({ is_active: false })
       .where('brand_id', '=', brandId)
@@ -695,10 +976,83 @@ async function reportLeftovers(brandIds: Map<string, number>): Promise<void> {
 async function main(): Promise<void> {
   console.log('\nARAÇ AĞACI SENKRONİZASYONU (tür · marka · model)\n')
 
-  const typeIds = await syncTypes()
-  const brandIds = await syncBrands(typeIds)
-  await syncModels(brandIds)
-  await syncEngines(brandIds)
+  const adres = process.env.DATABASE_URL ?? ''
+  let sunucu = '(çözümlenemedi)'
+  try {
+    const u = new URL(adres)
+    sunucu = `${u.hostname}:${u.port || 5432}/${u.pathname.replace(/^\//, '')}`
+  } catch {
+    /* yut */
+  }
+  console.log(`  sunucu: ${sunucu}`)
+  console.log(
+    `  sınırlar: sorgu ${SORGU_SINIRI} ms · toplam ${TOPLAM_SINIRI} ms ` +
+      `(OCM_SORGU_SINIRI / OCM_TOPLAM_SINIRI ile değiştirilir)\n`,
+  )
+
+  // ── 1-2. BAĞLANTI ─────────────────────────────────────────────────────────
+  // Havuz TEMBEL kurulur; ilk sorgu bağlantıyı da kurar. Bunu ayrı ölçüyoruz ki
+  // "bağlanamıyor" ile "sorgu yavaş" birbirine karışmasın.
+  await olc('1-2. veritabanı bağlantısı (SELECT 1)', () => sql`select 1`.execute(db))
+
+  // ── 9. KAYNAK VERİSİ ──────────────────────────────────────────────────────
+  // Dosyadan gelir, veritabanına dokunmaz; yine de sayıları görmek işe yarar.
+  const motorSayisi = Object.values(REAL_ENGINES).reduce(
+    (a, m) => a + Object.values(m).reduce((b, l) => b + l.length, 0),
+    0,
+  )
+  adim(
+    `kaynak verisi: ${REAL_BRANDS.length} marka · ` +
+      `${Object.values(REAL_MODELS).reduce((a, v) => a + v.length, 0)} model · ` +
+      `${motorSayisi} motor`,
+  )
+
+  /*
+   * HEPSİ YA DA HİÇBİRİ.
+   *
+   * Tür → marka → model → motor tek işlemde yazılır. Ortada bir hata çıkarsa
+   * veritabanı senkronizasyondan ÖNCEKİ hâline döner. Yarım ağaç bırakmak,
+   * ürün içe aktarmasında binlerce E_ENGINE_NOT_FOUND üreten asıl sebepti.
+   */
+  let brandIds!: Map<string, number>
+  adim('10. işlem (transaction) açılıyor — BEGIN')
+  await db.transaction().execute(async (trx) => {
+    tx = trx
+    try {
+      /*
+       * İŞLEM İÇİ ZAMAN SINIRLARI.
+       *
+       * Asıl koruma packages/db/src/client.ts içindeki havuz ayarlarıdır; bu
+       * satır betiği havuzdan bağımsız olarak da güvene alır. `lock_timeout`
+       * kritik: yarıda kesilmiş bir çalıştırmadan kalan açık işlem satır
+       * kilidini tutuyorsa, buradaki UPDATE sonsuza kadar beklemek yerine
+       * saniyeler içinde açık bir hata verir.
+       */
+      await olc('işlem zaman sınırları (SET LOCAL)', () =>
+        sql`set local lock_timeout = '15s'`.execute(trx),
+      )
+
+      const typeIds = await syncTypes()
+      brandIds = await syncBrands(typeIds)
+      const modelMap = await syncModels(brandIds)
+      await syncEngines(brandIds, modelMap)
+
+      if (stats.twinEngines.length) {
+        throw new Error(
+          `İKİZ MOTOR — ${stats.twinEngines.length} çift. Aynı motor, iki farklı ` +
+            `yazımla girilmiş. HİÇBİR ŞEY YAZILMADI (işlem geri alındı).\n\n` +
+            stats.twinEngines.map((t) => '  ' + t).join('\n') +
+            `\n\nDüzeltme: arac-motorlari.ts'den ikinci yazımı kaldırın ve ürün ` +
+            `eşlemelerinde ilk yazımı kullanın.`,
+        )
+      }
+      sonAsama = '11. COMMIT'
+      adim('11. işlem kapanıyor — COMMIT')
+    } finally {
+      tx = db
+    }
+  })
+  adim('11. COMMIT tamam — yazılanlar kalıcı')
 
   const modelTotal = Object.values(REAL_MODELS).reduce((a, v) => a + v.length, 0)
   const withModels = Object.keys(REAL_MODELS).length
@@ -750,9 +1104,30 @@ async function main(): Promise<void> {
   console.log('')
 }
 
+/*
+ * SON KORUMA.
+ *
+ * Yukarıdaki sorgu sınırları her aşamayı ayrı ayrı korur. Bu ise betiğin
+ * tamamını korur: ne olursa olsun 10 dakikadan fazla beklemez ve çıkarken
+ * TAKILDIĞI AŞAMANIN ADINI yazar. Kimse bir daha ekrana bakarak beklemez.
+ */
+const kalkan = setTimeout(() => {
+  console.error(
+    `\n✗ TOPLAM ZAMAN AŞIMI (${TOPLAM_SINIRI} ms).\n` +
+      `  Takılan aşama: ${sonAsama}\n` +
+      `  İşlem geri alındı; veritabanına hiçbir şey yazılmadı.\n` +
+      `  Teşhis için:  npm run db:doctor\n`,
+  )
+  process.exit(2)
+}, TOPLAM_SINIRI)
+
 main()
   .catch((e) => {
+    console.error(`\n✗ HATA — takılan/başarısız aşama: ${sonAsama}\n`)
     console.error(e)
     process.exitCode = 1
   })
-  .finally(closeDb)
+  .finally(() => {
+    clearTimeout(kalkan)
+    return closeDb()
+  })

@@ -20,6 +20,7 @@
     "db:reset": "npm run reset --workspace=@ocm/db",
     "db:migrate:status": "npm run migrate:status --workspace=@ocm/db",
     "db:reindex": "npm run reindex --workspace=@ocm/db",
+    "db:doctor": "npm run doctor --workspace=@ocm/db",
     "db:vehicle-tree": "npm run vehicle-tree --workspace=@ocm/db",
     "db:vehicle-tree:export": "npm run vehicle-tree:export --workspace=@ocm/db",
     "test": "npm run test --workspace=@ocm/db",

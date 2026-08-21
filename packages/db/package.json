@@ -13,6 +13,7 @@
     "reset": "tsx scripts/migrate.ts reset",
     "seed": "tsx scripts/seed.ts && tsx scripts/vehicle-tree-sync.ts && tsx scripts/urun-yukle.ts",
     "seed:demo-only": "tsx scripts/seed.ts",
+    "doctor": "tsx scripts/db-doctor.ts",
     "vehicle-tree": "tsx scripts/vehicle-tree-sync.ts",
     "vehicle-tree:export": "tsx scripts/vehicle-tree-export.ts",
     "reindex": "tsx scripts/reindex.ts",
