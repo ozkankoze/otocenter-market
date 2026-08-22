@@ -45,7 +45,37 @@ async function main(): Promise<void> {
     console.log(`  Diskte olmayan ${silinecek.length} görsel satırı silindi.`)
   }
 
-  let linked = 0
+  /*
+   * TOPLU EŞLEME.
+   *
+   * Eskiden dosya başına iki sorgu atılıyordu (ürünü bul + kaydı var mı bak),
+   * artı her yeni bağ için bir INSERT: 2.677 görselde ~5.400 sorgu. Yerelde
+   * saniyeler, ama uzak bir veritabanında (Neon, 89 ms gidiş-dönüş) sekiz
+   * dakika ve ekranda tek satır çıktı yok. Artık ürünler ve mevcut bağlar tek
+   * seferde okunuyor, eşleme bellekte yapılıyor, ekleme parçalar hâlinde.
+   */
+  const urunler = await db
+    .selectFrom('product as p')
+    .innerJoin('product_brand as b', 'b.id', 'p.brand_id')
+    .select([
+      'p.id as id',
+      'p.sku as sku',
+      // alt metni marka + parça kodu + ürün tipi olarak kurulur; ürün adının
+      // kendisi yalnızca tiptir ("Yağ Filtresi") ve tek başına ayırt etmez.
+      sql<string>`concat_ws(' ', b.name, p.product_code, p.name)`.as('name'),
+    ])
+    .execute()
+  const urunBySku = new Map(urunler.map((u) => [u.sku, u]))
+
+  const varOlanBaglar = new Set(mevcutSatirlar.map((r) => `${r.url}`))
+
+  const eklenecek: Array<{
+    product_id: number
+    url: string
+    alt: string
+    sort_order: number
+    is_primary: boolean
+  }> = []
   let already = 0
   const orphans: string[] = []
 
@@ -53,45 +83,29 @@ async function main(): Promise<void> {
     const sku = file.replace(/\.[^.]+$/, '')
     const url = `/urun/${file}`
 
-    // alt metni marka + parça kodu + ürün tipi olarak kurulur; ürün adının
-    // kendisi yalnızca tiptir ("Yağ Filtresi") ve tek başına ayırt etmez.
-    const product = await db
-      .selectFrom('product as p')
-      .innerJoin('product_brand as b', 'b.id', 'p.brand_id')
-      .select([
-        'p.id as id',
-        sql<string>`concat_ws(' ', b.name, p.product_code, p.name)`.as('name'),
-      ])
-      .where('p.sku', '=', sku)
-      .executeTakeFirst()
+    const product = urunBySku.get(sku)
     if (!product) {
       orphans.push(file)
       continue
     }
-
-    const existing = await db
-      .selectFrom('product_image')
-      .select('id')
-      .where('product_id', '=', product.id)
-      .where('url', '=', url)
-      .executeTakeFirst()
-    if (existing) {
+    if (varOlanBaglar.has(url)) {
       already++
       continue
     }
-
-    await db
-      .insertInto('product_image')
-      .values({
-        product_id: product.id,
-        url,
-        alt: product.name.slice(0, 200),
-        sort_order: 0,
-        is_primary: true,
-      })
-      .execute()
-    linked++
+    eklenecek.push({
+      product_id: product.id,
+      url,
+      alt: product.name.slice(0, 200),
+      sort_order: 0,
+      is_primary: true,
+    })
   }
+
+  for (let i = 0; i < eklenecek.length; i += 1000) {
+    const dilim = eklenecek.slice(i, i + 1000)
+    if (dilim.length) await db.insertInto('product_image').values(dilim).execute()
+  }
+  const linked = eklenecek.length
 
   const withImage = await db
     .selectFrom('product_image')

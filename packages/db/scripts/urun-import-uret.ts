@@ -35,6 +35,7 @@ import { dirname, resolve } from 'node:path'
 import { ARTIFACTS_DIR } from './paths'
 import * as XLSX from 'xlsx'
 import { slugify } from '../src/index'
+import { ONE_CIKAN_SKULAR } from './seed-data/one-cikanlar'
 import {
   PRODUCTS,
   FITMENT,
@@ -215,6 +216,22 @@ function main(): void {
   }
 
   // ── URUNLER ───────────────────────────────────────────────────────────────
+  /*
+   * Öne çıkanlar: liste `seed-data/one-cikanlar.ts` içinde, seçim gerekçesiyle
+   * birlikte duruyor. Burada yalnızca uygulanıyor.
+   *
+   * Listede olup katalogda olmayan bir SKU sessizce yok sayılmaz: vitrinin
+   * eksik çıkması, kurulumun durmasından daha kötüdür — çünkü fark edilmez.
+   */
+  const oneCikan = new Set(ONE_CIKAN_SKULAR)
+  const tumSkular = new Set(Object.values(PRODUCTS).map((p) => skuOf(p)))
+  const bulunmayan = [...oneCikan].filter((s) => !tumSkular.has(s))
+  if (bulunmayan.length) {
+    throw new Error(
+      `ÖNE ÇIKANLAR listesinde katalogda olmayan SKU var:\n  ${bulunmayan.join('\n  ')}`,
+    )
+  }
+
   const productRows = Object.values(PRODUCTS).map((p) => {
     const name = productName(p)
     return {
@@ -227,7 +244,7 @@ function main(): void {
       kisa_aciklama: SHORT[p.category],
       aciklama: description(p),
       durum: 'AKTIF',
-      one_cikan: 'HAYIR',
+      one_cikan: oneCikan.has(skuOf(p)) ? 'EVET' : 'HAYIR',
       // Site adı EKLENMEZ: layout'taki başlık şablonu (`%s | Oto Center Market`)
       // onu zaten ekliyor. Burada da eklenince sekmede iki kez yazıyordu.
       seo_baslik: `${p.brand} ${p.code} ${CATEGORY_LABEL[p.category]}`.slice(0, 160),

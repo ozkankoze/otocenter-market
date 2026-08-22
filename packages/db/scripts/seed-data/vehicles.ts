@@ -35,14 +35,31 @@ export type BrandSeed = {
   models: ModelSeed[]
 }
 
+/**
+ * ARAÇ TİPLERİ — YALNIZCA İKİ TANE.
+ *
+ * Katalogda gerçekten ürün olan iki tip var. Önceden burada yedi tip vardı ve
+ * hepsi araç seçim menüsünde görünüyordu; beşi ya boştu ya da demo verisiydi:
+ *
+ *   Otobüs        → markalarının (MAN, Mercedes-Benz, Otokar, Temsa) TAMAMI
+ *                   zaten "Ağır Vasıta" altında. Ayrı bir tip olarak durması
+ *                   aynı araçları menüde iki kez gösteriyordu.
+ *   İş Makinesi   → CATERPILLAR / JCB / HİDROMEK — marka başına 1 model,
+ *                   1 motor, **0 uyumluluk kaydı**. Demo verisi.
+ *   Traktör       → NEW HOLLAND / MASSEY FERGUSON — aynı şekilde, 0 uyumluluk.
+ *   Motosiklet    → hiç marka yok.
+ *   Jeneratör     → hiç marka yok.
+ *
+ * Menüde seçilebilen ama arkasında ürün olmayan bir tip, kullanıcıyı boş
+ * sayfaya götürür. `seed.ts` bu listede olmayan tip etiketlerini sessizce
+ * atlar (`if (!typeId) continue`), o yüzden yukarıdaki demo markalar artık
+ * hiçbir tipe bağlanmaz ve arayüzde görünmez — kayıtları silinmez.
+ *
+ * Mevcut (kurulu) veritabanları için aynı temizlik `0004` migration'ında.
+ */
 export const VEHICLE_TYPES = [
   { name: 'Otomobil & Hafif Ticari', slug: 'otomobil', icon: 'car', sortOrder: 10 },
   { name: 'Ağır Vasıta', slug: 'agir-vasita', icon: 'truck', sortOrder: 20 },
-  { name: 'Otobüs', slug: 'otobus', icon: 'bus', sortOrder: 30 },
-  { name: 'İş Makinesi', slug: 'is-makinesi', icon: 'digger', sortOrder: 40 },
-  { name: 'Traktör', slug: 'traktor', icon: 'tractor', sortOrder: 50 },
-  { name: 'Motosiklet', slug: 'motosiklet', icon: 'bike', sortOrder: 60 },
-  { name: 'Jeneratör & Deniz', slug: 'jenerator', icon: 'engine', sortOrder: 70 },
 ] as const
 
 // Sık kullanılan motor grupları — tekrarı azaltmak için
