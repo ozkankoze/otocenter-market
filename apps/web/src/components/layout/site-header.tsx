@@ -23,14 +23,25 @@ import { SITE } from '@/lib/site'
 import type { MegaMenuData } from '@/server/catalog-queries'
 import type { VehicleSelection } from '@/features/vehicle/types'
 
-const NAV_LINKS = [
-  { label: 'Otomobil & Hafif Ticari', href: '/otomobil' },
-  { label: 'Ağır Vasıta', href: '/agir-vasita' },
-  { label: 'Filtreler', href: '/filtreler' },
-  { label: 'Yağlar & Sıvılar', href: '/yaglar-sivilar' },
-  { label: 'Markalar', href: '/markalar' },
-  { label: 'Kampanyalar', href: '/kampanyalar' },
-]
+/**
+ * Ana menü — kategori bağlantıları SABİT DEĞİL.
+ *
+ * Önceden "Filtreler" ve "Yağlar & Sıvılar" burada elle yazılıydı. Ürünü
+ * olmayan bir grup (bugün Yağlar & Sıvılar) menüde kalıyor ve kullanıcıyı boş
+ * bir sayfaya götürüyordu. Artık kategori bağlantıları mega menü verisinden
+ * geliyor; o veri de yalnızca ürünü olan grupları içeriyor. Ürün girildiği
+ * gün başlık kendiliğinden geri gelir.
+ */
+function navLinks(menu: MegaMenuData): Array<{ label: string; href: string }> {
+  return [
+    ...menu.vehicleTypes
+      .filter((t) => t.brandCount > 0)
+      .map((t) => ({ label: t.name, href: `/${t.slug}` })),
+    ...menu.groups.map((g) => ({ label: g.name, href: `/${g.slug}` })),
+    { label: 'Markalar', href: '/markalar' },
+    { label: 'Kampanyalar', href: '/kampanyalar' },
+  ]
+}
 
 /** Üst şerit — hepsi gerçek sayfalara gider. */
 const UTILITY_LINKS = [
@@ -40,14 +51,21 @@ const UTILITY_LINKS = [
   { label: 'Yardım', href: '/sikca-sorulan-sorular' },
 ]
 
-/** Mobil arama katmanındaki popüler aramalar — kategori sayfalarına gider. */
-const POPULAR_SEARCHES = [
-  { label: 'Hava Filtresi', href: '/filtreler/hava-filtreleri' },
-  { label: 'Yağ Filtresi', href: '/filtreler/yag-filtreleri' },
-  { label: 'Polen Filtresi', href: '/filtreler/polen-kabin-filtreleri' },
-  { label: 'Yakıt Filtresi', href: '/filtreler/yakit-filtreleri' },
-  { label: 'Motor Yağı', href: '/yaglar-sivilar/motor-yaglari' },
-]
+/**
+ * Mobil arama katmanındaki popüler aramalar.
+ *
+ * Sabit liste tutulmuyor: en çok ürünü olan beş kategori kullanılıyor. Elle
+ * yazıldığında ürünü olmayan kategoriler (Motor Yağı gibi) listede kalıyor ve
+ * tıklayan kullanıcı boş bir sayfaya düşüyordu. Mega menü verisi zaten boş
+ * kategorileri elemiş hâlde geliyor.
+ */
+function popularSearches(menu: MegaMenuData): Array<{ label: string; href: string }> {
+  return menu.groups
+    .flatMap((g) => g.children.map((c) => ({ ...c, groupSlug: g.slug })))
+    .sort((a, b) => b.productCount - a.productCount)
+    .slice(0, 5)
+    .map((c) => ({ label: c.name, href: `/${c.groupSlug}/${c.slug}` }))
+}
 
 /** Mobil menünün alt bölümü — “Hesap” yerine gerçekten var olan sayfalar. */
 const DRAWER_SERVICE_LINKS = [
@@ -220,7 +238,7 @@ export function SiteHeader({
               </button>
 
               <ul className="flex items-center gap-6 text-[13.5px] font-medium">
-                {NAV_LINKS.map((link) => (
+                {navLinks(menu).map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
@@ -446,7 +464,7 @@ export function SiteHeader({
         <div className="px-4 py-5">
           <span className="ocm-eyebrow">Popüler aramalar</span>
           <div className="mt-3 flex flex-wrap gap-2">
-            {POPULAR_SEARCHES.map((t) => (
+            {popularSearches(menu).map((t) => (
               <Link
                 key={t.href}
                 href={t.href}

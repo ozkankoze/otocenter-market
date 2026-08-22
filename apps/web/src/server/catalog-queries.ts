@@ -18,6 +18,25 @@ export type CategoryCard = {
 
 export type { ProductCardData }
 
+/**
+ * ══════════════════════════════════════════════════════════════════════════
+ *  BOŞ KATEGORİ GÖSTERİLMEZ
+ * ══════════════════════════════════════════════════════════════════════════
+ *  Katalogda henüz ürünü olmayan kategoriler var (Hidrolik Filtreler ve
+ *  "Yağlar & Sıvılar" grubunun tamamı: Motor Yağları, Antifriz, Fren
+ *  Hidroliği, AdBlue). Bunlar menüde, ana sayfa kartlarında ve alt bilgide
+ *  görünüyor, tıklayan kullanıcıyı "bu kategoriye henüz ürün eklenmemiştir"
+ *  diyen boş bir sayfaya götürüyordu.
+ *
+ *  Kural: bir kategori, KENDİSİNDE ya da ALT KATEGORİLERİNDE en az bir aktif
+ *  ürün varsa gösterilir. Alt ağaç sayımı şart — "Filtreler" kök kategorisinin
+ *  doğrudan hiç ürünü yok, 2.677 ürünün tamamı alt kategorilerinde.
+ *
+ *  Kategori kaydı SİLİNMEZ, pasife de çekilmez: ürün girildiği anda
+ *  kendiliğinden geri gelir. Adrese doğrudan gidilirse sayfa yine açılır;
+ *  yalnızca navigasyonda görünmez.
+ */
+
 /** Ana sayfa kategori kartları. Araç seçiliyse uyumlu ürün sayısı da gelir. */
 export async function getCategoryCards(engineId: number | null): Promise<CategoryCard[]> {
   const categories = await db
@@ -51,16 +70,20 @@ export async function getCategoryCards(engineId: number | null): Promise<Categor
     compatible = new Map(rows.map((r) => [r.category_id, r.product_count]))
   }
 
-  return categories.map((c) => ({
-    id: c.id,
-    code: c.code,
-    name: c.name,
-    slug: c.slug,
-    href: c.parent_slug ? `/${c.parent_slug}/${c.slug}` : `/${c.slug}`,
-    icon: c.icon,
-    productCount: Number(c.product_count),
-    compatibleCount: engineId ? (compatible.get(c.id) ?? 0) : null,
-  }))
+  return categories
+    .map((c) => ({
+      id: c.id,
+      code: c.code,
+      name: c.name,
+      slug: c.slug,
+      href: c.parent_slug ? `/${c.parent_slug}/${c.slug}` : `/${c.slug}`,
+      icon: c.icon,
+      productCount: Number(c.product_count),
+      compatibleCount: engineId ? (compatible.get(c.id) ?? 0) : null,
+    }))
+    // Boş kategori kartı gösterilmez (bkz. yukarıdaki not). Burada alt ağaç
+    // sayımına gerek yok: sorgu zaten yalnızca alt kategorileri getiriyor.
+    .filter((c) => c.productCount > 0)
 }
 
 /**
@@ -247,21 +270,35 @@ export async function getMegaMenuData(): Promise<MegaMenuData> {
 
   const countMap = new Map(counts.map((c) => [c.category_id, Number(c.count)]))
 
+  const groups = categories
+    .filter((c) => c.parent_id === null)
+    .map((root) => ({
+      code: root.code,
+      name: root.name,
+      slug: root.slug,
+      /** Kökün kendi doğrudan ürünü — grup boş mu kararında kullanılır. */
+      ownCount: countMap.get(root.id) ?? 0,
+      children: categories
+        .filter((c) => c.parent_id === root.id)
+        .map((c) => ({
+          name: c.name,
+          slug: c.slug,
+          productCount: countMap.get(c.id) ?? 0,
+        }))
+        // Ürünü olmayan alt kategori menüde görünmez.
+        .filter((c) => c.productCount > 0),
+    }))
+    /*
+     * Alt kategorisi kalmayan ve kendi ürünü de olmayan grup tamamen düşer.
+     * "Yağlar & Sıvılar" bugün böyle: dört alt kategorisinin dördü de boş,
+     * grubun kendisinin de doğrudan ürünü yok. Grubu menüde bırakmak,
+     * kullanıcıyı boş bir sayfaya götüren bir başlık bırakmak demekti.
+     */
+    .filter((g) => g.children.length > 0 || g.ownCount > 0)
+    .map((g) => ({ code: g.code, name: g.name, slug: g.slug, children: g.children }))
+
   return {
-    groups: categories
-      .filter((c) => c.parent_id === null)
-      .map((root) => ({
-        code: root.code,
-        name: root.name,
-        slug: root.slug,
-        children: categories
-          .filter((c) => c.parent_id === root.id)
-          .map((c) => ({
-            name: c.name,
-            slug: c.slug,
-            productCount: countMap.get(c.id) ?? 0,
-          })),
-      })),
+    groups,
     vehicleTypes: types.map((t) => ({
       name: t.name,
       slug: t.slug,

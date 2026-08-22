@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Logo, LOGO_HEIGHTS } from './logo'
 import { SITE } from '@/lib/site'
+import type { MegaMenuData } from '@/server/catalog-queries'
 
 /**
  * FOOTER.
@@ -27,16 +28,6 @@ const COLUMNS: Array<{ title: string; links: FooterLink[] }> = [
     ],
   },
   {
-    title: 'Ürünler',
-    links: [
-      { label: 'Filtreler', href: '/filtreler' },
-      { label: 'Yağlar & Sıvılar', href: '/yaglar-sivilar' },
-      { label: 'Markalar', href: '/markalar' },
-      { label: 'Otomobil & Hafif Ticari', href: '/otomobil' },
-      { label: 'Ağır Vasıta', href: '/agir-vasita' },
-    ],
-  },
-  {
     title: 'Müşteri Hizmetleri',
     links: [
       { label: 'Sipariş Takip', href: '/siparis-takip' },
@@ -54,7 +45,30 @@ const LEGAL: FooterLink[] = [
   { label: 'Çerez Politikası', href: '/cerez-politikasi' },
 ]
 
-export function Footer() {
+/**
+ * "Ürünler" sütunu SABİT DEĞİL — mega menü verisinden geliyor.
+ *
+ * Elle yazıldığında ürünü olmayan bir grup (bugün "Yağlar & Sıvılar")
+ * alt bilgide kalıyor ve kullanıcıyı boş bir sayfaya götürüyordu. Araç
+ * grupları da aynı veriden, markası olanlarla sınırlı geliyor.
+ */
+function urunLinkleri(menu: MegaMenuData): FooterLink[] {
+  return [
+    ...menu.groups.map((g) => ({ label: g.name, href: `/${g.slug}` })),
+    { label: 'Markalar', href: '/markalar' },
+    ...menu.vehicleTypes
+      .filter((t) => t.brandCount > 0)
+      .map((t) => ({ label: t.name, href: `/${t.slug}` })),
+  ]
+}
+
+export function Footer({ menu }: { menu: MegaMenuData }) {
+  const columns: Array<{ title: string; links: FooterLink[] }> = [
+    COLUMNS[0]!,
+    { title: 'Ürünler', links: urunLinkleri(menu) },
+    COLUMNS[1]!,
+  ]
+
   return (
     <footer className="bg-brand-900 text-white/65">
       <div className="ocm-container grid gap-8 py-12 md:grid-cols-2 xl:grid-cols-[1.5fr_1fr_1fr_1fr_1.2fr]">
@@ -74,7 +88,7 @@ export function Footer() {
           </a>
         </div>
 
-        {COLUMNS.map((col) => (
+        {columns.map((col) => (
           <div key={col.title}>
             <h3 className="mb-3.5 text-[11.5px] font-semibold tracking-wider text-white uppercase">
               {col.title}

@@ -3,14 +3,7 @@ import { Check } from 'lucide-react'
 import { SiteSearchForm } from '@/components/layout/site-search-form'
 import { formatCount } from '@/lib/utils'
 
-/** Popüler aramalar — gerçek kategori sayfalarına gider. */
-const POPULAR = [
-  { label: 'Hava Filtresi', href: '/filtreler/hava-filtreleri' },
-  { label: 'Yağ Filtresi', href: '/filtreler/yag-filtreleri' },
-  { label: 'Polen Filtresi', href: '/filtreler/polen-kabin-filtreleri' },
-  { label: 'Motor Yağı', href: '/yaglar-sivilar/motor-yaglari' },
-  { label: 'Antifriz', href: '/yaglar-sivilar/antifriz' },
-]
+export type PopulerBaglanti = { label: string; href: string }
 
 /**
  * Hero — stok araç fotoğrafı YOK.
@@ -18,8 +11,15 @@ const POPULAR = [
  */
 export function Hero({
   stats,
+  popular,
 }: {
   stats: { products: number; vehicleBrands: number; compatibilities: number }
+  /**
+   * "Popüler" satırı — SABİT DEĞİL, en çok ürünü olan kategorilerden gelir.
+   * Elle yazıldığında listede ürünü olmayan kategoriler (Motor Yağı, Antifriz)
+   * kalıyor ve tıklayan kullanıcı boş bir sayfaya düşüyordu.
+   */
+  popular: PopulerBaglanti[]
 }) {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-brand-800 via-brand-900 to-[#061a30] pt-12 pb-24 text-white md:pt-16 md:pb-28">
@@ -69,9 +69,10 @@ export function Hero({
             submitLabel="Ürünleri Keşfet"
           />
 
+          {popular.length > 0 ? (
           <p className="mt-5 text-[13px] text-white/55">
             Popüler:{' '}
-            {POPULAR.map((p, i) => (
+            {popular.map((p, i) => (
               <span key={p.href}>
                 {i > 0 ? ' · ' : ''}
                 <Link
@@ -84,6 +85,7 @@ export function Hero({
               </span>
             ))}
           </p>
+          ) : null}
         </div>
       </div>
     </section>

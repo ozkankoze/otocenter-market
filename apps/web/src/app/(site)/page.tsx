@@ -35,7 +35,18 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero stats={stats} />
+      {/*
+        Hero'nun "Popüler" satırı en çok ürünü olan beş kategoriden kurulur.
+        `categories` zaten boş kategorileri elemiş durumda, dolayısıyla burada
+        ürünü olmayan bir bağlantı oluşamaz.
+      */}
+      <Hero
+        stats={stats}
+        popular={[...categories]
+          .sort((a, b) => b.productCount - a.productCount)
+          .slice(0, 5)
+          .map((c) => ({ label: c.name, href: c.href }))}
+      />
 
       {/* Araç seçici — hero'nun üzerine binen kart */}
       <div className="ocm-container relative z-20 -mt-14 md:-mt-16">

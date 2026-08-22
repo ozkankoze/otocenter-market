@@ -24,7 +24,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <main id="icerik" className="pb-14 lg:pb-0">
         {children}
       </main>
-      <Footer />
+      <Footer menu={menu} />
       <WhatsAppButton />
     </VehicleUiProvider>
   )

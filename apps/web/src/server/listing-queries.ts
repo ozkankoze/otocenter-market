@@ -93,12 +93,16 @@ export async function getCategoryBySlug(slug: string): Promise<CategoryNode | nu
     seoTitle: row.seo_title,
     seoDescription: row.seo_description,
     seoIntro: row.seo_intro,
-    children: children.map((c) => ({
-      id: c.id,
-      name: c.name,
-      slug: c.slug,
-      productCount: Number(c.product_count),
-    })),
+    // Boş alt kategori, kategori sayfasındaki gezinme şeridinde gösterilmez —
+    // tıklayan kullanıcıyı boş listeye götürüyordu.
+    children: children
+      .map((c) => ({
+        id: c.id,
+        name: c.name,
+        slug: c.slug,
+        productCount: Number(c.product_count),
+      }))
+      .filter((c) => c.productCount > 0),
   }
 }
 
