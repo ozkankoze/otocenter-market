@@ -54,7 +54,11 @@ export async function rollbackImport(
   jobId: number,
   options: { userId?: number | null } = {},
 ): Promise<RollbackResult> {
-  const job = await db.selectFrom('import_job').selectAll().where('id', '=', jobId).executeTakeFirst()
+  const job = await db
+    .selectFrom('import_job')
+    .selectAll()
+    .where('id', '=', jobId)
+    .executeTakeFirst()
   if (!job) throw new Error(`Import #${jobId} bulunamadı`)
   if (job.status !== 'COMPLETED') {
     throw new Error(
@@ -150,10 +154,48 @@ export async function rollbackImport(
     }
 
     // Silmeleri bağımlılık sırasına göre yap
-    toDelete.sort(
-      (a, b) => DELETE_ORDER.indexOf(a.entityType) - DELETE_ORDER.indexOf(b.entityType),
-    )
-    for (const [i, d] of toDelete.entries()) {
+    toDelete.sort((a, b) => DELETE_ORDER.indexOf(a.entityType) - DELETE_ORDER.indexOf(b.entityType))
+
+    /*
+     * ÖNCE TOPLU DENE.
+     *
+     * Bir içe aktarmanın geri alınması 71.309 kayda kadar çıkabiliyor. Her biri
+     * için ayrı DELETE atmak uzak bir veritabanında (89 ms gidiş-dönüş) saatler
+     * demek — uygulamanın kendisindeki hatanın aynısı. Tablo tablo tek DELETE
+     * atıyoruz; yalnızca yabancı anahtar yüzünden düşen tablolarda satır satır
+     * yönteme (savepoint'li) geri dönülüyor, çünkü hangi satırın kullanımda
+     * olduğunu ancak o zaman ayırt edebiliyoruz.
+     */
+    const kalanSilme: typeof toDelete = []
+    const gruplar = new Map<string, typeof toDelete>()
+    for (const d of toDelete) {
+      const l = gruplar.get(d.entityType) ?? []
+      l.push(d)
+      gruplar.set(d.entityType, l)
+    }
+    for (const [tip, grup] of gruplar) {
+      for (let i = 0; i < grup.length; i += 1000) {
+        const dilim = grup.slice(i, i + 1000)
+        const sp = `ocm_rb_toplu_${tip}_${i}`
+        await sql.raw(`SAVEPOINT ${sp}`).execute(trx)
+        try {
+          await sql`DELETE FROM ${sql.table(tip)} WHERE id = any(${dilim.map((d) => String(d.entityId))}::bigint[])`.execute(
+            trx,
+          )
+          await sql.raw(`RELEASE SAVEPOINT ${sp}`).execute(trx)
+          result.deleted += dilim.length
+          result.reverted += dilim.length
+          for (const d of dilim) revertedIds.push(d.changeId)
+        } catch {
+          // Bu parçada en az bir satır hâlâ kullanımda. Hangisi olduğunu
+          // ancak tek tek deneyerek ayırt edebiliriz.
+          await sql.raw(`ROLLBACK TO SAVEPOINT ${sp}`).execute(trx)
+          kalanSilme.push(...dilim)
+        }
+      }
+    }
+
+    for (const [i, d] of kalanSilme.entries()) {
       // Kayıt hâlâ başka bir veri tarafından kullanılıyorsa (yabancı anahtar)
       // silme BAŞARISIZ olur. Bu bir hata değil, beklenen bir durumdur:
       // örneğin bu import'un oluşturduğu marka, geri alınmayan (sonraki bir

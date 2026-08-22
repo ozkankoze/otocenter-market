@@ -1,5 +1,13 @@
-import { sql, type Kysely } from 'kysely'
+import { sql, type Kysely, type Transaction } from 'kysely'
 import type { Database } from './types'
+
+/**
+ * Çözümleme hem normal bağlantıyla hem de açık bir işlem (transaction) içinde
+ * çalışabilir. İşlem desteği KURU ÇALIŞMA (dry-run) için gerekli: ölçüm modunda
+ * içe aktarma ve çözümleme aynı işlemde çalıştırılıp sonunda geri alınır, böylece
+ * gerçek süre ölçülürken veritabanına tek satır yazılmaz.
+ */
+export type Baglanti = Kysely<Database> | Transaction<Database>
 
 /**
  * ÇÖZÜMLEME MOTORU — Katman 2 (assertion) → Katman 3 (product_compatibility)
@@ -14,7 +22,7 @@ import type { Database } from './types'
  *
  * KRİTİK: CONFLICTED durumu arayüzde ASLA "uyumlu" gösterilmez.
  */
-export async function resolveCompatibility(db: Kysely<Database>): Promise<{
+export async function resolveCompatibility(db: Baglanti): Promise<{
   resolved: number
   conflicts: number
   removed: number
@@ -181,7 +189,7 @@ export async function resolveCompatibility(db: Kysely<Database>): Promise<{
  *
  * Yalnızca VERIFIED ve SOURCED sayılır — CONFLICTED sayfayı doğurmaz.
  */
-export async function rebuildEngineCategoryIndex(db: Kysely<Database>): Promise<number> {
+export async function rebuildEngineCategoryIndex(db: Baglanti): Promise<number> {
   await sql`TRUNCATE engine_category_index`.execute(db)
 
   const res = await sql<{ count: string }>`

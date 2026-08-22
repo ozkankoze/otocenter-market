@@ -24,6 +24,7 @@
     "urun-import-uret": "tsx scripts/urun-import-uret.ts",
     "urun-import-onizle": "tsx scripts/urun-import-onizle.ts",
     "urun-import-onayla": "tsx scripts/urun-import-onayla.ts",
+    "urun-import-geri-al": "tsx scripts/urun-import-geri-al.ts",
     "urun-gorsel-cikar": "tsx scripts/urun-gorsel-cikar.ts",
     "urun-gorsel-bagla": "tsx scripts/urun-gorsel-bagla.ts",
     "urun-yukle": "tsx scripts/urun-yukle.ts",

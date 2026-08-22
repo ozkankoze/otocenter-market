@@ -13,7 +13,7 @@ export {
   type ImportPreview,
   type CreateImportOptions,
 } from './pipeline'
-export { commitImport, type CommitResult } from './commit'
+export { commitImport, kurtarAsiliIs, type CommitResult, type CommitOptions } from './commit'
 export { rollbackImport, type RollbackResult } from './rollback'
 export {
   SHEET_DEFS,

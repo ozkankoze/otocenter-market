@@ -110,6 +110,34 @@ Artık böyle bir bekleme mümkün değil: her bağlantıda `lock_timeout = 15s`
 betiğin tamamı 10 dakikada kendini durdurup **takıldığı aşamanın adını**
 basıyor.
 
+### Ürün içe aktarması: önce ÖLÇ, sonra uygula
+
+Dışarıdan gelen bir dosyayı uzak veritabanına uygulamadan önce kuru çalışma
+yapın. Her şeyi gerçekten çalıştırır, sonunda işlemi geri alır; veritabanına
+tek satır yazmaz:
+
+```bash
+npm run db:urun-import-onizle                     # sayaçlar ve hatalar
+npm run db:urun-import-onayla -- <isNo> --olcum   # KURU ÇALIŞMA + ölçüm
+npm run db:urun-import-onayla -- <isNo>           # gerçekten uygula
+npm run db:urun-import-geri-al -- <isNo>          # geri al
+```
+
+Kuru çalışma sonunda basılan **toplam sorgu** sayısı, uzak veritabanındaki
+süreyi tahmin etmeye değil hesaplamaya yarar: süre ≈ sorgu sayısı ×
+gidiş-dönüş. `npm run db:doctor` gidiş-dönüşü ölçer.
+
+> **Not (2026-08).** Uygulama adımı da eskiden satır satır çalışıyordu:
+> 65.953 satırlık dosya için **148.136 sorgu**. Neon'da (89 ms) bu ~3 saat
+> 40 dakika ve ekranda hiçbir çıktı yok demekti. Artık toplu okuma / toplu
+> yazma kullanılıyor: sıfırdan kurulumda **175 sorgu**, aynı dosyanın ikinci
+> kez uygulanmasında **27 sorgu**. Geri alma da toplu: 71.309 kaydın geri
+> alınması ~71.500 sorgu yerine **378 sorgu**. Her aşama ekrana yazılıyor.
+>
+> Yarıda kesilen bir uygulama işi `COMMITTING` durumunda asılı kalırsa
+> (veritabanına hiçbir şey yazılmamıştır, işlem geri alınır):
+> `npm run db:urun-import-onayla -- <isNo> --kurtar`
+
 Bittiğinde doğrulayın:
 
 ```bash

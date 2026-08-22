@@ -27,6 +27,7 @@
     "db:urun-import-uret": "npm run urun-import-uret --workspace=@ocm/db",
     "db:urun-import-onizle": "npm run urun-import-onizle --workspace=@ocm/db --",
     "db:urun-import-onayla": "npm run urun-import-onayla --workspace=@ocm/db --",
+    "db:urun-import-geri-al": "npm run urun-import-geri-al --workspace=@ocm/db --",
     "db:urun-gorsel-cikar": "npm run urun-gorsel-cikar --workspace=@ocm/db",
     "db:urun-gorsel-bagla": "npm run urun-gorsel-bagla --workspace=@ocm/db",
     "db:urun-yukle": "npm run urun-yukle --workspace=@ocm/db",

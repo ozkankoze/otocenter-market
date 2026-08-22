@@ -129,8 +129,37 @@ function createPool(): pg.Pool {
   return pool
 }
 
+/**
+ * SORGU SAYACI.
+ *
+ * "Takıldı mı, yoksa çok mu sorgu atıyor?" sorusunu tahminle değil sayıyla
+ * ayırmak için. Uzak bir veritabanında toplam süre ≈ sorgu sayısı × gidiş-dönüş
+ * olduğundan, sorgu sayısı performansın tek anlamlı ölçüsü.
+ *
+ * Maliyeti bir sayaç artırımı; her ortamda açık kalabilir.
+ */
+export const sorguSayaci: { sayi: number; toplamMs: number; sifirla(): void } = (
+  globalThis as {
+    __ocmSorgu?: { sayi: number; toplamMs: number; sifirla(): void }
+  }
+).__ocmSorgu ?? {
+  sayi: 0,
+  toplamMs: 0,
+  sifirla(): void {
+    this.sayi = 0
+    this.toplamMs = 0
+  },
+}
+;(globalThis as { __ocmSorgu?: typeof sorguSayaci }).__ocmSorgu = sorguSayaci
+
 function createDb(): Kysely<Database> {
   return new Kysely<Database>({
+    log: (olay) => {
+      if (olay.level === 'query') {
+        sorguSayaci.sayi++
+        sorguSayaci.toplamMs += olay.queryDurationMillis
+      }
+    },
     dialect: new PostgresDialect({
       // Havuz TEMBEL kurulur: ilk sorguya kadar DATABASE_URL okunmaz.
       // Böylece .env yükleyen script'ler import sırasından etkilenmez.

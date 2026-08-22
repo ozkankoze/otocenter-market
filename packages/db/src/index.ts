@@ -1,4 +1,4 @@
-export { db, closeDb } from './client'
+export { db, closeDb, sorguSayaci } from './client'
 export { normalizeCode, slugify } from './normalize'
 export { resolveCompatibility, rebuildEngineCategoryIndex } from './resolve'
 export * from './types'
