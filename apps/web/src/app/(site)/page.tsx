@@ -4,6 +4,7 @@ import { TrustFeatures } from '@/components/marketing/trust-features'
 import { VehicleSelector } from '@/components/vehicle/vehicle-selector'
 import { SelectedVehicleBar } from '@/components/vehicle/selected-vehicle-bar'
 import { CategoryCard } from '@/components/catalog/category-card'
+import { Card } from '@/components/ui/card'
 import { CompatibleResults } from '@/components/catalog/compatible-results'
 import { readSelectedVehicle } from '@/features/vehicle/cookie'
 import {
@@ -12,7 +13,8 @@ import {
   getEngineCodes,
   getVehicleTypes,
 } from '@/server/vehicle-queries'
-import { getCategoryCards, getFeaturedBrands, getProducts } from '@/server/catalog-queries'
+import { getCategoryCards, getProducts } from '@/server/catalog-queries'
+import { getSellingBrands } from '@/server/brand-queries'
 import { formatCount } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic' // araç seçimi cookie'ye bağlı
@@ -26,7 +28,7 @@ export default async function HomePage() {
     getCatalogStats(),
     getCategoryCards(engineId),
     getProducts({ engineId, limit: engineId ? 12 : 8, featuredOnly: !engineId }),
-    getFeaturedBrands(8),
+    getSellingBrands(),
     engineId ? getCompatibilitySummary(engineId) : Promise.resolve([]),
     engineId ? getEngineCodes(engineId) : Promise.resolve([]),
   ])
@@ -58,7 +60,7 @@ export default async function HomePage() {
                 ? `${selection.brandName} ${selection.modelName} için kategori bazlı uyumluluk`
                 : 'Aradığınız ürün grubunu seçin'
             }
-            href="/kategori"
+            href="/filtreler"
             linkLabel="Tüm kategoriler →"
           />
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
@@ -91,28 +93,42 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Markalar */}
-      <section className="pb-12 md:pb-16">
-        <div className="ocm-container">
-          <SectionHead
-            eyebrow="Tedarik"
-            title="Öne Çıkan Markalar"
-            subtitle="Yetkili distribütör kanalından tedarik edilen ürün markaları"
-            href="/markalar"
-            linkLabel="Tüm markalar →"
-          />
-          <div className="grid grid-cols-2 gap-3 md:grid-cols-4 xl:grid-cols-8">
-            {brands.map((b) => (
-              <span
-                key={b.id}
-                className="flex h-[72px] items-center justify-center rounded-md border border-ink-100 bg-white px-2 text-center text-[11.5px] font-bold tracking-wide text-ink-400 transition-colors hover:border-brand-300 hover:text-brand-600"
-              >
-                {b.name}
-              </span>
-            ))}
+      {/*
+        Markalar — YALNIZCA gerçekten satışta olan markalar.
+        Liste ürün verisinden türetilir; ürünü olmayan marka kaydı (BOSCH,
+        MAHLE, PURFLUX gibi kurulumdan kalan boş kayıtlar) vitrine çıkmaz,
+        çünkü tıklayan kullanıcı boş bir sayfayla karşılaşırdı.
+      */}
+      {brands.length > 0 ? (
+        <section className="pb-12 md:pb-16">
+          <div className="ocm-container">
+            <SectionHead
+              eyebrow="Tedarik"
+              title="Ürün Markaları"
+              subtitle="Yetkili distribütör kanalından tedarik edilen ürün markaları"
+              href="/markalar"
+              linkLabel="Tüm markalar →"
+            />
+            <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
+              {brands.slice(0, 8).map((b) => (
+                <Link key={b.id} href={`/markalar/${b.slug}`} prefetch={false}>
+                  <Card
+                    interactive
+                    className="flex h-[86px] flex-col items-center justify-center gap-1 px-3 text-center"
+                  >
+                    <span className="text-[13px] font-bold tracking-wide text-ink-700">
+                      {b.name}
+                    </span>
+                    <span className="text-[11.5px] text-ink-400">
+                      {formatCount(b.productCount)} ürün
+                    </span>
+                  </Card>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <TrustFeatures />
 

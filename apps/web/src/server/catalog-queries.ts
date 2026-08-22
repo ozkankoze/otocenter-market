@@ -191,18 +191,15 @@ export async function getProducts(options: {
   })
 }
 
-export async function getFeaturedBrands(
-  limit = 8,
-): Promise<Array<{ id: number; name: string; slug: string }>> {
-  return db
-    .selectFrom('product_brand')
-    .select(['id', 'name', 'slug'])
-    .where('is_active', '=', true)
-    .orderBy('is_featured', 'desc')
-    .orderBy('sort_order')
-    .limit(limit)
-    .execute()
-}
+/*
+ * `getFeaturedBrands` KALDIRILDI.
+ *
+ * Markaları `product_brand.is_featured` bayrağına göre listeliyordu; bu bayrak
+ * ürünü olmayan kayıtlarda da açık olduğu için vitrinde satılmayan markalar
+ * (BOSCH, MAHLE, PURFLUX …) görünüyor ve tıklayan kullanıcı boş sayfaya
+ * düşüyordu. Yerine `server/brand-queries.ts` içindeki `getSellingBrands()`
+ * kullanılıyor: liste doğrudan aktif ürün sayısından türetilir.
+ */
 
 /** Mega menü içeriği — gerçek kategori ağacı, ürün sayıları ve araç tipleriyle. */
 export type MegaMenuData = {

@@ -1,12 +1,33 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export type Crumb = { label: string; href?: string }
 
-export function Breadcrumb({ items }: { items: Crumb[] }) {
+/**
+ * `tone`: koyu zeminli sayfa başlıklarında (PageHero) beyaz metin gerekiyor.
+ * Ayrı bir bileşen açmak yerine ton parametresi verildi — böylece sayfa yolu
+ * mantığı (son öğe link değildir, ayraçlar, erişilebilirlik etiketi) tek yerde
+ * kalıyor.
+ */
+export function Breadcrumb({
+  items,
+  className,
+  tone = 'light',
+}: {
+  items: Crumb[]
+  className?: string
+  tone?: 'light' | 'dark'
+}) {
+  const dark = tone === 'dark'
   return (
-    <nav aria-label="Sayfa yolu" className="mb-4">
-      <ol className="flex flex-wrap items-center gap-1.5 text-[12.5px] text-ink-600">
+    <nav aria-label="Sayfa yolu" className={cn('mb-4', className)}>
+      <ol
+        className={cn(
+          'flex flex-wrap items-center gap-1.5 text-[12.5px]',
+          dark ? 'text-white/60' : 'text-ink-600',
+        )}
+      >
         {items.map((item, i) => {
           const isLast = i === items.length - 1
           return (
@@ -15,17 +36,28 @@ export function Breadcrumb({ items }: { items: Crumb[] }) {
                 <Link
                   href={item.href}
                   prefetch={false}
-                  className="transition-colors hover:text-brand-600"
+                  className={cn(
+                    'transition-colors',
+                    dark ? 'hover:text-white' : 'hover:text-brand-600',
+                  )}
                 >
                   {item.label}
                 </Link>
               ) : (
-                <span className={isLast ? 'font-medium text-ink-900' : undefined}>
+                <span
+                  className={
+                    isLast ? (dark ? 'font-medium text-white' : 'font-medium text-ink-900') : undefined
+                  }
+                >
                   {item.label}
                 </span>
               )}
               {!isLast ? (
-                <ChevronRight size={13} className="text-ink-300" aria-hidden="true" />
+                <ChevronRight
+                  size={13}
+                  className={dark ? 'text-white/35' : 'text-ink-300'}
+                  aria-hidden="true"
+                />
               ) : null}
             </li>
           )

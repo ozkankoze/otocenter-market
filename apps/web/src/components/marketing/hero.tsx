@@ -1,9 +1,16 @@
+import Link from 'next/link'
 import { Check } from 'lucide-react'
-import { SearchInput } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import { SiteSearchForm } from '@/components/layout/site-search-form'
 import { formatCount } from '@/lib/utils'
 
-const POPULAR = ['Hava Filtresi', 'Yağ Filtresi', 'Polen Filtresi', 'Motor Yağı', 'Antifriz']
+/** Popüler aramalar — gerçek kategori sayfalarına gider. */
+const POPULAR = [
+  { label: 'Hava Filtresi', href: '/filtreler/hava-filtreleri' },
+  { label: 'Yağ Filtresi', href: '/filtreler/yag-filtreleri' },
+  { label: 'Polen Filtresi', href: '/filtreler/polen-kabin-filtreleri' },
+  { label: 'Motor Yağı', href: '/yaglar-sivilar/motor-yaglari' },
+  { label: 'Antifriz', href: '/yaglar-sivilar/antifriz' },
+]
 
 /**
  * Hero — stok araç fotoğrafı YOK.
@@ -55,24 +62,25 @@ export function Hero({
             keşfedin.
           </p>
 
-          <div className="flex max-w-[620px] flex-col gap-3 sm:flex-row">
-            <SearchInput
-              className="flex-1"
-              inputClassName="h-13 border-transparent"
-              placeholder="Ürün, OEM numarası veya parça kodu ara..."
-              aria-label="Ürün, OEM numarası veya parça kodu ara"
-            />
-            <Button size="lg" variant="white">
-              Ürünleri Keşfet
-            </Button>
-          </div>
+          <SiteSearchForm
+            variant="hero"
+            className="max-w-[620px]"
+            inputClassName="h-13 border-transparent"
+            submitLabel="Ürünleri Keşfet"
+          />
 
           <p className="mt-5 text-[13px] text-white/55">
             Popüler:{' '}
             {POPULAR.map((p, i) => (
-              <span key={p}>
+              <span key={p.href}>
                 {i > 0 ? ' · ' : ''}
-                <span className="border-b border-white/22 text-white/85">{p}</span>
+                <Link
+                  href={p.href}
+                  prefetch={false}
+                  className="border-b border-white/22 text-white/85 transition-colors hover:border-white/60 hover:text-white"
+                >
+                  {p.label}
+                </Link>
               </span>
             ))}
           </p>

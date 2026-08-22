@@ -173,8 +173,30 @@ export async function getCatalogStats(): Promise<{
   }>`
     SELECT
       (SELECT count(*) FROM product WHERE status = 'ACTIVE')::text AS products,
-      (SELECT count(*) FROM vehicle_brand WHERE is_active)::text     AS vehicle_brands,
-      (SELECT count(*) FROM product_brand WHERE is_active)::text     AS product_brands,
+
+      /*
+       * Araç markası sayısı: kullanıcının GERÇEKTEN ulaşabildiği markalar.
+       * Aktif olması yetmez; aktif bir araç tipine bağlı olması da gerekir.
+       * Aksi hâlde kurulumdan kalan, hiçbir menüde görünmeyen demo markalar
+       * (CATERPILLAR, JCB, …) sayıya girip vitrinde olduğundan fazla marka
+       * varmış gibi gösteriyordu.
+       */
+      (SELECT count(DISTINCT b.id)
+         FROM vehicle_brand b
+         JOIN vehicle_brand_type bt ON bt.brand_id = b.id
+         JOIN vehicle_type t        ON t.id = bt.type_id AND t.is_active
+        WHERE b.is_active)::text AS vehicle_brands,
+
+      /*
+       * Ürün markası sayısı: SATILAN markalar. product_brand tablosunda
+       * henüz ürünü olmayan kayıtlar da var; onları saymak "10 marka" deyip
+       * vitrinde 2 marka göstermek anlamına geliyordu.
+       */
+      (SELECT count(DISTINCT b.id)
+         FROM product_brand b
+         JOIN product p ON p.brand_id = b.id AND p.status = 'ACTIVE'
+        WHERE b.is_active)::text AS product_brands,
+
       (SELECT count(*) FROM product_compatibility
         WHERE status IN ('VERIFIED','SOURCED'))::text                AS compatibilities
   `.execute(db)

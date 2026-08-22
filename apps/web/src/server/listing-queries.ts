@@ -125,6 +125,14 @@ async function categoryScope(categoryId: number, path: string): Promise<number[]
 export type ListingScope = {
   /** Kategori kapsamı (kategori sayfaları) */
   category?: { id: number; path: string }
+  /**
+   * Ürün markası kapsamı (marka sayfaları: /markalar/[slug]).
+   * Kullanıcının seçtiği marka FİLTRESİNDEN ayrıdır: bu, sayfanın kapsamıdır
+   * ve filtre panelinden kaldırılamaz.
+   */
+  brandId?: number
+  /** Serbest metin araması (arama sayfası) — ürün adı, kod, SKU ve OEM numarası. */
+  query?: string
   /** Seçili araç motoru — uyumluluk rozetleri için */
   engineId: number | null
   /**
@@ -132,6 +140,34 @@ export type ListingScope = {
    * ürünler listelenir. Araç sonuç sayfaları bunu kullanır.
    */
   engineScoped?: boolean
+}
+
+/**
+ * ARAMA KOŞULU — ürün adı, parça kodu, SKU ve OEM/çapraz numara.
+ *
+ * Üç ayrı yol denenir çünkü kullanıcı üç farklı şey yazıyor olabilir:
+ *   • "hava filtresi"  → adda/kısa açıklamada tam metin araması (search_vector)
+ *   • "AP179/2"        → parça kodu; normalleştirilerek karşılaştırılır
+ *                        (ocm_normalize_code noktalama ve boşluğu atar)
+ *   • "1F0129620"      → OEM ya da çapraz numara; product_reference üzerinden
+ *
+ * Katalog 2.677 ürün olduğu için ILIKE de yeterince hızlı; yine de kod eşleşmesi
+ * indeksli (`product_sku_norm_idx`) yoldan gider.
+ */
+function searchCondition(query: string) {
+  const q = query.trim()
+  const like = `%${q}%`
+  return sql`AND (
+        p.search_vector @@ plainto_tsquery('turkish', ${q})
+     OR p.name ILIKE ${like}
+     OR ocm_normalize_code(p.sku) = ocm_normalize_code(${q})
+     OR ocm_normalize_code(coalesce(p.product_code, '')) = ocm_normalize_code(${q})
+     OR EXISTS (
+          SELECT 1 FROM product_reference pref
+          WHERE pref.product_id = p.id
+            AND pref.normalized = ocm_normalize_code(${q})
+        )
+  )`
 }
 
 export async function getListing(options: {
@@ -172,6 +208,12 @@ export async function getListing(options: {
 
   const categoryFilter = scope ? sql`AND p.category_id = ANY(${sql.val(scope)}::int[])` : sql``
 
+  // Sayfa kapsamı: marka sayfası ve arama sayfası. Filtre değil, kapsamdır.
+  const scopeBrandFilter = listingScope.brandId
+    ? sql`AND p.brand_id = ${listingScope.brandId}::int`
+    : sql``
+  const queryFilter = listingScope.query?.trim() ? searchCondition(listingScope.query) : sql``
+
   const priceFilter = sql`
     ${filters.priceMin !== null ? sql`AND (pr.price_net * (1 + pr.tax_rate / 100.0)) >= ${filters.priceMin}` : sql``}
     ${filters.priceMax !== null ? sql`AND (pr.price_net * (1 + pr.tax_rate / 100.0)) <= ${filters.priceMax}` : sql``}
@@ -211,6 +253,8 @@ export async function getListing(options: {
            ON pc.product_id = p.id AND pc.engine_id = ${engineId}::bigint
     WHERE p.status = 'ACTIVE'
       ${categoryFilter}
+      ${scopeBrandFilter}
+      ${queryFilter}
       ${brandFilter}
       ${stockFilter}
       ${compatFilter}
@@ -308,6 +352,8 @@ export async function getListing(options: {
 
   const facets = await getListingFacets({
     scope,
+    brandId: listingScope.brandId ?? null,
+    query: listingScope.query ?? null,
     engineId,
     engineScoped: listingScope.engineScoped ?? false,
   })
@@ -322,16 +368,20 @@ export async function getListing(options: {
  */
 async function getListingFacets(options: {
   scope: number[] | null
+  brandId: number | null
+  query: string | null
   engineId: number | null
   engineScoped: boolean
 }): Promise<ListingFacets> {
-  const { scope, engineId, engineScoped } = options
+  const { scope, brandId, query, engineId, engineScoped } = options
 
-  // Facet kapsamı: kategori sayfasında kategori ağacı, araç sayfasında
-  // o motora uyumlu ürünler.
+  // Facet kapsamı: kategori sayfasında kategori ağacı, marka sayfasında o
+  // marka, arama sayfasında arama sonucu, araç sayfasında o motora uyumlular.
   const scopeSql = sql`
     p.status = 'ACTIVE'
     ${scope ? sql`AND p.category_id = ANY(${sql.val(scope)}::int[])` : sql``}
+    ${brandId ? sql`AND p.brand_id = ${brandId}::int` : sql``}
+    ${query?.trim() ? searchCondition(query) : sql``}
     ${
       engineScoped && engineId
         ? sql`AND EXISTS (

@@ -17,8 +17,9 @@ import {
 import { cn, formatCount } from '@/lib/utils'
 import { Logo, LOGO_HEIGHTS } from './logo'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { SiteSearchForm } from './site-search-form'
 import { useVehicleUi } from '@/components/vehicle/vehicle-ui-provider'
+import { SITE } from '@/lib/site'
 import type { MegaMenuData } from '@/server/catalog-queries'
 import type { VehicleSelection } from '@/features/vehicle/types'
 
@@ -31,7 +32,32 @@ const NAV_LINKS = [
   { label: 'Kampanyalar', href: '/kampanyalar' },
 ]
 
-const SEARCH_PLACEHOLDER = 'Ürün, OEM numarası veya parça kodu ara...'
+/** Üst şerit — hepsi gerçek sayfalara gider. */
+const UTILITY_LINKS = [
+  { label: 'Kurumsal & Bayilik', href: '/bayilik-toptan' },
+  { label: 'Sipariş Takip', href: '/siparis-takip' },
+  { label: 'Kargo & Teslimat', href: '/kargo-teslimat' },
+  { label: 'Yardım', href: '/sikca-sorulan-sorular' },
+]
+
+/** Mobil arama katmanındaki popüler aramalar — kategori sayfalarına gider. */
+const POPULAR_SEARCHES = [
+  { label: 'Hava Filtresi', href: '/filtreler/hava-filtreleri' },
+  { label: 'Yağ Filtresi', href: '/filtreler/yag-filtreleri' },
+  { label: 'Polen Filtresi', href: '/filtreler/polen-kabin-filtreleri' },
+  { label: 'Yakıt Filtresi', href: '/filtreler/yakit-filtreleri' },
+  { label: 'Motor Yağı', href: '/yaglar-sivilar/motor-yaglari' },
+]
+
+/** Mobil menünün alt bölümü — “Hesap” yerine gerçekten var olan sayfalar. */
+const DRAWER_SERVICE_LINKS = [
+  { label: 'Sipariş Takip', href: '/siparis-takip' },
+  { label: 'Kargo & Teslimat', href: '/kargo-teslimat' },
+  { label: 'İade & Değişim', href: '/iade-degisim' },
+  { label: 'Sıkça Sorulan Sorular', href: '/sikca-sorulan-sorular' },
+  { label: 'Hakkımızda', href: '/hakkimizda' },
+  { label: 'İletişim', href: '/iletisim' },
+]
 
 export function SiteHeader({
   menu,
@@ -101,26 +127,27 @@ export function SiteHeader({
           )}
         >
           <div className="ocm-container flex h-[34px] items-center gap-6">
-            <Link href="/" prefetch={false} className="transition-colors hover:text-white">
-              Kurumsal &amp; Bayilik
-            </Link>
-            <Link href="/" prefetch={false} className="transition-colors hover:text-white">
-              Sipariş Takip
-            </Link>
-            <Link href="/" prefetch={false} className="transition-colors hover:text-white">
-              Kargo &amp; Teslimat
-            </Link>
-            <Link href="/" prefetch={false} className="transition-colors hover:text-white">
-              Yardım
-            </Link>
+            {UTILITY_LINKS.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                prefetch={false}
+                className="transition-colors hover:text-white"
+              >
+                {l.label}
+              </Link>
+            ))}
             <span className="ml-auto inline-flex items-center gap-2">
               <Check size={12} className="text-accent-600" aria-hidden="true" />
               Motor kodu seviyesinde uyumluluk
             </span>
-            <span className="inline-flex items-center gap-2 border-l border-white/15 pl-6 font-medium text-white">
+            <a
+              href={SITE.phoneHref}
+              className="inline-flex items-center gap-2 border-l border-white/15 pl-6 font-medium text-white transition-opacity hover:opacity-80"
+            >
               <Phone size={13} aria-hidden="true" />
-              0507 891 47 28
-            </span>
+              {SITE.phoneDisplay}
+            </a>
           </div>
         </div>
 
@@ -143,24 +170,13 @@ export function SiteHeader({
               priority
             />
 
-            <div className="relative max-w-[560px] flex-1">
-              <Search
-                size={18}
-                className="pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-ink-400"
-                aria-hidden="true"
-              />
-              <Input
-                className={cn(
-                  'border-ink-100 bg-ink-25 pl-11 focus:bg-white',
-                  compact ? 'h-10' : 'h-11',
-                )}
-                placeholder={SEARCH_PLACEHOLDER}
-                aria-label={SEARCH_PLACEHOLDER}
-              />
-              <kbd className="ocm-code pointer-events-none absolute top-1/2 right-3 hidden -translate-y-1/2 rounded border border-ink-200 bg-white px-1.5 py-0.5 text-[10px] text-ink-400 xl:block">
-                OEM / KOD
-              </kbd>
-            </div>
+            <SiteSearchForm
+              className="max-w-[560px] flex-1"
+              inputClassName={cn(
+                'border-ink-100 bg-ink-25 focus:bg-white',
+                compact ? 'h-10' : 'h-11',
+              )}
+            />
 
             <div className="ml-auto flex items-center gap-6">
               <HeaderAction
@@ -172,6 +188,7 @@ export function SiteHeader({
                 icon={<Package size={20} strokeWidth={1.75} />}
                 title="Siparişlerim"
                 sub="Takip et"
+                href="/siparis-takip"
               />
               <HeaderAction
                 icon={<ShoppingCart size={20} strokeWidth={1.75} />}
@@ -420,25 +437,26 @@ export function SiteHeader({
           >
             <X size={20} />
           </button>
-          <Input
+          <SiteSearchForm
+            className="flex-1"
             autoFocus={searchOpen}
-            placeholder={SEARCH_PLACEHOLDER}
-            aria-label={SEARCH_PLACEHOLDER}
+            onNavigate={() => setSearchOpen(false)}
           />
         </div>
         <div className="px-4 py-5">
           <span className="ocm-eyebrow">Popüler aramalar</span>
           <div className="mt-3 flex flex-wrap gap-2">
-            {['Hava Filtresi', 'Yağ Filtresi', 'Polen Filtresi', 'Motor Yağı', 'Antifriz'].map(
-              (t) => (
-                <span
-                  key={t}
-                  className="rounded-sm border border-ink-100 bg-white px-3 py-1.5 text-[13px] text-ink-700"
-                >
-                  {t}
-                </span>
-              ),
-            )}
+            {POPULAR_SEARCHES.map((t) => (
+              <Link
+                key={t.href}
+                href={t.href}
+                prefetch={false}
+                onClick={() => setSearchOpen(false)}
+                className="rounded-sm border border-ink-100 bg-white px-3 py-1.5 text-[13px] text-ink-700 transition-colors hover:border-brand-300 hover:text-brand-600"
+              >
+                {t.label}
+              </Link>
+            ))}
           </div>
           <div className="mt-7 rounded-lg border border-brand-100 bg-brand-50 p-4">
             <b className="block text-sm font-semibold text-ink-900">Aracınızı bilmiyor musunuz?</b>
@@ -557,20 +575,35 @@ export function SiteHeader({
             ))}
         </div>
 
+        <div className="border-b border-ink-50 px-4 pb-3">
+          <h3 className="mt-3 mb-1 text-[10.5px] font-bold tracking-wider text-brand-600 uppercase">
+            Markalar
+          </h3>
+          <Link
+            href="/markalar"
+            prefetch={false}
+            className="block border-b border-ink-50 py-2.5 text-sm text-ink-800 last:border-0"
+            onClick={() => setDrawerOpen(false)}
+          >
+            Ürün markaları
+          </Link>
+        </div>
+
         <div className="px-4 pb-24">
           <h3 className="mt-3 mb-1 text-[10.5px] font-bold tracking-wider text-brand-600 uppercase">
-            Hesap
+            Yardım & Kurumsal
           </h3>
-          {['Giriş Yap / Üye Ol', 'Siparişlerim', 'Garajım', 'Kargo & Teslimat', 'İletişim'].map(
-            (label) => (
-              <span
-                key={label}
-                className="block border-b border-ink-50 py-2.5 text-sm text-ink-800 last:border-0"
-              >
-                {label}
-              </span>
-            ),
-          )}
+          {DRAWER_SERVICE_LINKS.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              prefetch={false}
+              className="block border-b border-ink-50 py-2.5 text-sm text-ink-800 last:border-0"
+              onClick={() => setDrawerOpen(false)}
+            >
+              {l.label}
+            </Link>
+          ))}
         </div>
       </aside>
 
@@ -582,7 +615,6 @@ export function SiteHeader({
       >
         <div className="grid h-14 grid-cols-4">
           <BottomItem
-            href="/"
             icon={<Menu size={19} />}
             label="Kategoriler"
             onClick={() => setDrawerOpen(true)}
@@ -601,19 +633,27 @@ export function SiteHeader({
   )
 }
 
+/**
+ * `href` verilirse gerçek bir bağlantı olur. Verilmeyenler (Hesabım, Sepetim)
+ * henüz sayfası olmayan, ileride açılacak akışlardır: tıklanabilir GÖRÜNMELERİ
+ * için imleç değişmez — kullanıcıyı var olmayan bir adrese göndermektense
+ * hiçbir şey yapmamak daha iyidir.
+ */
 function HeaderAction({
   icon,
   title,
   sub,
   badge,
+  href,
 }: {
   icon: React.ReactNode
   title: string
   sub: string
   badge?: number
+  href?: string
 }) {
-  return (
-    <span className="flex cursor-pointer items-center gap-2.5 text-ink-800 transition-colors hover:text-brand-600">
+  const govde = (
+    <>
       <span className="relative inline-flex">
         {icon}
         {badge !== undefined ? (
@@ -626,7 +666,17 @@ function HeaderAction({
         <b className="block text-[12.5px] leading-tight font-semibold">{title}</b>
         <em className="block text-[11px] text-ink-400 not-italic">{sub}</em>
       </span>
-    </span>
+    </>
+  )
+
+  const sinif = 'flex items-center gap-2.5 text-ink-800 transition-colors hover:text-brand-600'
+
+  return href ? (
+    <Link href={href} prefetch={false} className={sinif}>
+      {govde}
+    </Link>
+  ) : (
+    <span className={sinif}>{govde}</span>
   )
 }
 
@@ -636,7 +686,6 @@ function BottomItem({
   onClick,
   active,
 }: {
-  href?: string
   icon: React.ReactNode
   label: string
   onClick?: () => void
