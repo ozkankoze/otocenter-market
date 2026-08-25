@@ -1,4 +1,5 @@
 import 'server-only'
+import { unstable_cache } from 'next/cache'
 import { db, sql } from '@ocm/db'
 import type {
   VehicleBrandOption,
@@ -16,15 +17,28 @@ function yearLabel(from: number | null, to: number | null): string {
   return `→${to}`
 }
 
-export async function getVehicleTypes(): Promise<VehicleTypeOption[]> {
-  const rows = await db
-    .selectFrom('vehicle_type')
-    .select(['id', 'name', 'slug'])
-    .where('is_active', '=', true)
-    .orderBy('sort_order')
-    .execute()
-  return rows
-}
+/**
+ * Araç tipleri her sayfada iki kez çekiliyordu (yerleşim + ana sayfa) ve
+ * içerik kullanıcıya göre değişmiyor. Uzak veritabanında her sorgu ~89 ms;
+ * hiç değişmeyen iki satır için ödenecek bir bedel değil.
+ */
+export const getVehicleTypes = unstable_cache(
+  async (): Promise<VehicleTypeOption[]> =>
+    db
+      .selectFrom('vehicle_type')
+      .select(['id', 'name', 'slug'])
+      .where('is_active', '=', true)
+      .orderBy('sort_order')
+      .execute(),
+  ['ocm-arac-tipleri'],
+  { revalidate: 300, tags: ['katalog'] },
+)
+
+/** Ana sayfadaki sayaçlar — katalog verisiyle birlikte tazelenir. */
+export const getCatalogStatsCached = unstable_cache(getCatalogStats, ['ocm-katalog-sayaclari'], {
+  revalidate: 300,
+  tags: ['katalog'],
+})
 
 /** Yalnızca seçilen araç tipinde modeli olan markalar döner. */
 export async function getVehicleBrands(typeId: number): Promise<VehicleBrandOption[]> {

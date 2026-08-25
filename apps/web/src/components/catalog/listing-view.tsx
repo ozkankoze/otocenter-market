@@ -68,6 +68,7 @@ export function ListingView({
               key={link.href}
               href={link.href}
               prefetch={false}
+              title={link.count !== undefined ? `${link.label} — ${link.count} ürün` : link.label}
               className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-sm border border-ink-100 bg-white px-3 text-[12.5px] font-medium text-ink-700 transition-colors hover:border-brand-300 hover:text-brand-600"
             >
               {link.label}

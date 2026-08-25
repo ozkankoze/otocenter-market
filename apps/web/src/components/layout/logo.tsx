@@ -61,6 +61,17 @@ export function Logo({
         width={LOGO_WIDTH}
         height={LOGO_HEIGHT}
         priority={priority}
+        /*
+         * `sizes` OLMADAN Next.js bu görseli sayfa genişliğinde sanıyor ve
+         * tarayıcıya 1920 piksellik (2× ekranlarda 3840) bir sürüm indiriyordu.
+         * Logo hiçbir yerde 220 pikselden geniş çizilmiyor.
+         *
+         * Genişlik = yükseklik × 4.15 (oran sabit). En büyük kullanım 52 px
+         * yükseklik → ~216 px genişlik; 2× ekran için 440 px yeterli. Sabit
+         * bir `sizes` vermek, cihaz piksel oranını tarayıcının hesaplamasına
+         * bırakır ve gereksiz büyük dosyayı tamamen ortadan kaldırır.
+         */
+        sizes="220px"
         // Yükseklik sabit, genişlik otomatik → oran her zaman korunur.
         style={{ height, width: 'auto' }}
         className="max-w-full"
@@ -80,6 +91,7 @@ export function LogoMark({ size = 32, className }: { size?: number; className?: 
       alt="Oto Center Market"
       width={MARK_SIZE}
       height={MARK_SIZE}
+      sizes="64px"
       className={cn('shrink-0', className)}
       style={{ width: size, height: size }}
     />

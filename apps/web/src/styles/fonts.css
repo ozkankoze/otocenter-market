@@ -1,26 +1,155 @@
 /* ============================================================================
-   SELF-HOSTED FONTLAR
-   @fontsource paketleri üzerinden gelir; derleme sırasında ağ erişimi
-   GEREKTİRMEZ ve dosyalar kendi origin'imizden sunulur.
+   SELF-HOSTED FONTLAR — KENDİ ALT KÜMEMİZ
 
-   Yalnızca ihtiyaç duyulan alt kümeler yüklenir:
-     · latin      → temel karakterler
-     · latin-ext  → Türkçe ş, ğ, ı, İ (ç/ö/ü zaten latin'de)
-   Tarayıcı unicode-range sayesinde yalnızca gerekli dosyayı indirir.
+   ÖNCEKİ DURUM
+   @fontsource paketlerinin hazır CSS'leri `@import` ediliyordu. O dosyalarda
+   `unicode-range` YOK; bu yüzden tarayıcı her ağırlık için hem `latin` hem
+   `latin-ext` dosyasını, hangi karakterin kullanıldığına bakmaksızın
+   indiriyordu. Mobilde ölçüldü: 12 font dosyası, toplam 262 KB.
+
+   SORUN latin-ext'teydi
+   Inter'in latin-ext alt kümesi ağırlık başına ~35 KB. İçinde Orta ve Doğu
+   Avrupa dillerinin yüzlerce karakteri var. Türkçe'nin latin'de BULUNMAYAN
+   karakteri ise yalnızca altı tane: ğ Ğ ı İ ş Ş (ç ö ü zaten latin'de).
+
+   ŞİMDİ
+   latin-ext dosyaları pyftsubset ile bu altı karaktere + ₺ ve tipografik
+   işaretlere indirildi: ağırlık başına 35 KB → 1,4 KB.
+
+       latin-ext toplam: 154,7 KB → 7,8 KB   (kazanç ~147 KB)
+
+   Ayrıca `unicode-range` eklendi: tarayıcı artık bir dosyayı ancak o aralıktan
+   karakter kullanılıyorsa indiriyor.
+
+   Alt kümeyi yeniden üretmek gerekirse (yeni ağırlık, yeni karakter):
+     pyftsubset <kaynak>.woff2 --text='ğĞıİşŞ₺—–…·’‘“”"' --flavor=woff2 \
+       --layout-features= --no-hinting --desubroutinize --output-file=<hedef>
    ========================================================================= */
 
-/* Inter — arayüz */
-@import '@fontsource/inter/latin-400.css';
-@import '@fontsource/inter/latin-ext-400.css';
-@import '@fontsource/inter/latin-500.css';
-@import '@fontsource/inter/latin-ext-500.css';
-@import '@fontsource/inter/latin-600.css';
-@import '@fontsource/inter/latin-ext-600.css';
-@import '@fontsource/inter/latin-700.css';
-@import '@fontsource/inter/latin-ext-700.css';
+/* ── Türkçe aralığı ────────────────────────────────────────────────────────
+   Latin Extended-A (U+0100–017F) Türkçe harfleri kapsar; U+20BA lira işareti,
+   U+2010–2027 tipografik tire/tırnak/üç nokta. */
 
-/* JetBrains Mono — ürün kodu / OEM numarası */
-@import '@fontsource/jetbrains-mono/latin-400.css';
-@import '@fontsource/jetbrains-mono/latin-ext-400.css';
-@import '@fontsource/jetbrains-mono/latin-500.css';
-@import '@fontsource/jetbrains-mono/latin-ext-500.css';
+/* ────────────────────────────── INTER (arayüz) ───────────────────────────── */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/inter-latin-400.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/inter-tr-400.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/inter-latin-500.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/inter-tr-500.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/inter-latin-600.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('./fonts/inter-tr-600.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/inter-latin-700.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/inter-tr-700.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}
+
+/* ───────────────── JETBRAINS MONO (ürün kodu / OEM numarası) ─────────────── */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/jetbrains-mono-latin-400.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/jetbrains-mono-tr-400.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/jetbrains-mono-latin-500.woff2') format('woff2');
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('./fonts/jetbrains-mono-tr-500.woff2') format('woff2');
+  unicode-range: U+0100-017F, U+20BA;
+}

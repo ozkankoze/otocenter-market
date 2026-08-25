@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Hero } from '@/components/marketing/hero'
 import { TrustFeatures } from '@/components/marketing/trust-features'
@@ -8,7 +9,7 @@ import { Card } from '@/components/ui/card'
 import { CompatibleResults } from '@/components/catalog/compatible-results'
 import { readSelectedVehicle } from '@/features/vehicle/cookie'
 import {
-  getCatalogStats,
+  getCatalogStatsCached,
   getCompatibilitySummary,
   getEngineCodes,
   getVehicleTypes,
@@ -19,13 +20,30 @@ import { formatCount } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic' // araç seçimi cookie'ye bağlı
 
+/**
+ * Ana sayfanın kendi metadata'sı YOKTU — canonical üretmiyor, kökten gelen
+ * açıklamayı kullanıyordu. SEO denetiminde "Canonical etiketi bulunamadı"
+ * (kırmızı) ve "meta description 130 karakter, önerilen 140–160" uyarıları
+ * buradan geliyordu.
+ *
+ * Açıklama 156 karakter: önerilen 140–160 aralığında, arama sonucunda
+ * kesilme riski düşük.
+ */
+export const metadata: Metadata = {
+  title: 'Oto Center Market — Aracınız İçin Doğru Parça',
+  description:
+    'Otomobil, hafif ticari ve ağır vasıta araçlar için filtre, yağ ve bakım ürünleri. ' +
+    'Aracınızı marka, model ve motora göre seçin, uyumlu ürünleri anında görün.',
+  alternates: { canonical: '/' },
+}
+
 export default async function HomePage() {
   const selection = await readSelectedVehicle()
   const engineId = selection?.engineId ?? null
 
   const [types, stats, categories, products, brands, summary, engineCodes] = await Promise.all([
     getVehicleTypes(),
-    getCatalogStats(),
+    getCatalogStatsCached(),
     getCategoryCards(engineId),
     getProducts({ engineId, limit: engineId ? 12 : 8, featuredOnly: !engineId }),
     getSellingBrands(),

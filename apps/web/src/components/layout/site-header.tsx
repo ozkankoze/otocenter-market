@@ -305,6 +305,7 @@ export function SiteHeader({
                           <Link
                             href={`/${group.slug}/${child.slug}`}
                             prefetch={false}
+                            title={`${child.name} — ${formatCount(child.productCount)} ürün`}
                             className="flex items-baseline gap-2 py-1.5 text-[13.5px] text-ink-600 transition-colors hover:text-brand-600"
                           >
                             <span>{child.name}</span>
@@ -562,6 +563,7 @@ export function SiteHeader({
                 key={child.slug}
                 href={`/${group.slug}/${child.slug}`}
                 prefetch={false}
+                title={`${child.name} — ${formatCount(child.productCount)} ürün`}
                 className="flex items-center justify-between border-b border-ink-50 py-2.5 text-sm text-ink-800 last:border-0"
                 onClick={() => setDrawerOpen(false)}
               >

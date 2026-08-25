@@ -64,7 +64,16 @@ export function CategoryCard({ category }: { category: CategoryCardData }) {
   const compatible = category.compatibleCount ?? 0
 
   return (
-    <Link href={category.href} prefetch={false}>
+    /*
+     * `title`: SEO denetimi "title etiketi olmayan linkler" uyarısı veriyordu.
+     * Boş bir title eklemek yerine bağlantının kendisinden fazlasını söylüyor —
+     * kategorideki ürün sayısı. Fareyle üzerine gelen kullanıcı da görüyor.
+     */
+    <Link
+      href={category.href}
+      prefetch={false}
+      title={`${category.name} — ${formatCount(category.productCount)} ürün`}
+    >
       <Card interactive className="h-full px-4 py-5 text-center">
         <span className="mx-auto mb-3.5 flex h-[54px] w-[54px] items-center justify-center rounded-md bg-brand-50 text-brand-600">
           <svg

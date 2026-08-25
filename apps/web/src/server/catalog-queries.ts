@@ -1,4 +1,5 @@
 import 'server-only'
+import { unstable_cache } from 'next/cache'
 import { db, sql } from '@ocm/db'
 import type { CompatibilityState } from '@/features/vehicle/types'
 import type { ProductCardData } from '@/features/catalog/product-types'
@@ -236,7 +237,23 @@ export type MegaMenuData = {
   popularBrands: Array<{ name: string; slug: string }>
 }
 
-export async function getMegaMenuData(): Promise<MegaMenuData> {
+/**
+ * Mega menü verisi HER SAYFADA, HER İSTEKTE çekiliyordu — dört ayrı sorgu.
+ *
+ * İçeriği kullanıcıya göre değişmiyor: kategori ağacı, ürün sayıları ve araç
+ * tipleri herkes için aynı. Yerelde maliyeti görünmezdi (sorgu ~0,3 ms), ama
+ * canlıda veritabanı uzakta: her sorgu ~89 ms gidiş-dönüş. Yani her sayfa
+ * açılışı, hiç değişmeyen bir menü için yüz milisaniyelerce bekliyordu.
+ *
+ * Katalog yalnızca içe aktarma çalıştığında değişir; 5 dakikalık pencere
+ * kullanıcı için görünmez, sunucu için büyük fark.
+ */
+export const getMegaMenuData = unstable_cache(getMegaMenuDataHam, ['ocm-mega-menu'], {
+  revalidate: 300,
+  tags: ['katalog'],
+})
+
+async function getMegaMenuDataHam(): Promise<MegaMenuData> {
   const [categories, counts, types, brands] = await Promise.all([
     db
       .selectFrom('category')

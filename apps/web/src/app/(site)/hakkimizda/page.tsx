@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Check, Package, ShieldCheck, Truck } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { PageBody, PageHero, Prose, SectionTitle } from '@/components/layout/page-shell'
-import { getCatalogStats } from '@/server/vehicle-queries'
+import { getCatalogStatsCached } from '@/server/vehicle-queries'
 import { SITE } from '@/lib/site'
 import { formatCount } from '@/lib/utils'
 import type { Crumb } from '@/components/ui/breadcrumb'
@@ -39,7 +39,7 @@ const CALISMA_BICIMI = [
 ]
 
 export default async function AboutPage() {
-  const stats = await getCatalogStats()
+  const stats = await getCatalogStatsCached()
   const crumbs: Crumb[] = [{ label: 'Ana Sayfa', href: '/' }, { label: 'Hakkımızda' }]
 
   return (
