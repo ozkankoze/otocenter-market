@@ -29,8 +29,8 @@ export default function PrivacyPage() {
           <p>
             Bu politika {SITE.name} tarafından işletilen web sitesi için geçerlidir. Kişisel
             verilerin işlenmesine ilişkin yasal aydınlatma ayrıca{' '}
-            <Link href="/kvkk">KVKK Aydınlatma Metni</Link> içinde yer alır; çerezler için{' '}
-            <Link href="/cerez-politikasi">Çerez Politikası</Link> geçerlidir.
+            <Link href="/kvkk" title="KVKK Aydınlatma Metni metnini oku">KVKK Aydınlatma Metni</Link> içinde yer alır; çerezler için{' '}
+            <Link href="/cerez-politikasi" title="Çerez Politikası metnini oku">Çerez Politikası</Link> geçerlidir.
           </p>
 
           <h2>2. Hangi bilgileri topluyoruz?</h2>
@@ -103,8 +103,8 @@ export default function PrivacyPage() {
           <h2>8. Haklarınız</h2>
           <p>
             Verilerinize erişme, düzeltme, silme ve işlemeye itiraz etme haklarınız vardır.
-            Ayrıntılar ve başvuru yolu <Link href="/kvkk">KVKK Aydınlatma Metni</Link> içinde yer
-            alır. Talepleriniz için <a href={SITE.emailHref}>{SITE.email}</a>.
+            Ayrıntılar ve başvuru yolu <Link href="/kvkk" title="KVKK Aydınlatma Metni metnini oku">KVKK Aydınlatma Metni</Link> içinde yer
+            alır. Talepleriniz için <a href={SITE.emailHref} title={`${SITE.email} adresine e-posta gönder`}>{SITE.email}</a>.
           </p>
 
           <h2>9. Çocukların gizliliği</h2>
@@ -117,7 +117,7 @@ export default function PrivacyPage() {
           <p>
             Bu politika zaman zaman güncellenebilir. Esaslı bir değişiklik olduğunda site üzerinden
             duyururuz. Sorularınız için{' '}
-            <Link href="/iletisim">iletişim sayfamızdan</Link> bize ulaşabilirsiniz.
+            <Link href="/iletisim" title="İletişim sayfasına git">iletişim sayfamızdan</Link> bize ulaşabilirsiniz.
           </p>
         </Prose>
 

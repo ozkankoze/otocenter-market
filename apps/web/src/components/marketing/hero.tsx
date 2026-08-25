@@ -75,9 +75,16 @@ export function Hero({
             {popular.map((p, i) => (
               <span key={p.href}>
                 {i > 0 ? ' · ' : ''}
+                {/*
+                  `title`: SEO denetimi "title etiketi olmayan linkler"
+                  uyarısında bu satırı iki kez sayıyordu (hero + kategori
+                  kartı). Metin bağlantının kendisini tekrar etmiyor, ne
+                  bulunacağını söylüyor.
+                */}
                 <Link
                   href={p.href}
                   prefetch={false}
+                  title={`${p.label} kategorisindeki ürünleri görüntüle`}
                   className="border-b border-white/22 text-white/85 transition-colors hover:border-white/60 hover:text-white"
                 >
                   {p.label}

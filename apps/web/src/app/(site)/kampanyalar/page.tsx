@@ -6,7 +6,7 @@ import { ProductCard } from '@/components/product/product-card'
 import { PageBody, PageHero, SectionTitle } from '@/components/layout/page-shell'
 import { getProducts } from '@/server/catalog-queries'
 import { readSelectedVehicle } from '@/features/vehicle/cookie'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const dynamic = 'force-dynamic' // araç seçimi cookie'ye bağlı
@@ -89,6 +89,7 @@ export default async function CampaignsPage() {
                   <Link
                     href={href}
                     prefetch={false}
+                    title={`${hrefLabel} — ürünleri görüntüle`}
                     className="mt-2.5 inline-flex text-[13px] font-semibold text-brand-600 hover:underline"
                   >
                     {hrefLabel} →
@@ -127,7 +128,8 @@ export default async function CampaignsPage() {
           <a
             href={SITE.whatsappHref}
             target="_blank"
-            rel="noopener noreferrer"
+            rel={DIS_BAGLANTI_REL}
+            title={`WhatsApp'tan ${SITE.phoneDisplay} numarasına yazın`}
             className="inline-flex h-11 items-center rounded-md bg-brand-600 px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-700"
           >
             WhatsApp ile yazın

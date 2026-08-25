@@ -30,6 +30,45 @@
    Latin Extended-A (U+0100–017F) Türkçe harfleri kapsar; U+20BA lira işareti,
    U+2010–2027 tipografik tire/tırnak/üç nokta. */
 
+/* ── ÖLÇÜ UYUMLU YEDEK FONT — düzen kaymasını (CLS) engeller ───────────────
+   Inter `font-display: swap` ile yükleniyor: metin önce sistem fontuyla
+   çiziliyor, dosya inince Inter'e geçiyor. Arial ile Inter'in satır yüksekliği
+   ve karakter genişliği aynı olmadığı için o an bütün sayfa hafifçe kayıyordu.
+
+   Ölçüm: CLS 0,073 — kayan öğe hero'nun altındaki araç seçici kartı. Kayma
+   kartın kendinden değil, üstündeki başlığın font değişince yükseklik
+   değiştirmesinden geliyordu.
+
+   Aşağıdaki override'lar Arial'in ölçülerini Inter'inkine eşitler; iki font
+   arasındaki geçişte tek piksel oynama olmaz. Değerler Inter'in kendi font
+   metriklerinden hesaplanmıştır (next/font'un otomatik ürettiğiyle aynı).
+   ───────────────────────────────────────────────────────────────────────── */
+@font-face {
+  font-family: 'Inter Yedek';
+  /* Arial her masaüstünde/telefonda var; Liberation Sans onunla ölçü uyumlu
+     olduğu için Linux (ve Lighthouse'un çalıştığı ortam) karşılığıdır. */
+  src:
+    local('Arial'),
+    local('Liberation Sans'),
+    local('Helvetica');
+  ascent-override: 90.2%;
+  descent-override: 22.48%;
+  line-gap-override: 0%;
+  size-adjust: 107.4%;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Yedek';
+  src:
+    local('Courier New'),
+    local('Liberation Mono'),
+    local('DejaVu Sans Mono');
+  ascent-override: 84.87%;
+  descent-override: 23.13%;
+  line-gap-override: 0%;
+  size-adjust: 122.99%;
+}
+
 /* ────────────────────────────── INTER (arayüz) ───────────────────────────── */
 
 @font-face {

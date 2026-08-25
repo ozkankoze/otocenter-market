@@ -351,3 +351,30 @@ export async function getMenuTree(): Promise<
       .map((r) => ({ name: r.name, slug: r.slug })),
   }))
 }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   ANA SAYFA — ARAÇ SEÇİLMEMİŞ HÂLİ İÇİN ÖNBELLEK
+
+   Ana sayfa `force-dynamic`, çünkü araç seçimi çereze bağlı. Ama ziyaretçilerin
+   büyük çoğunluğunun çerezi YOK ve o durumda gösterilen veri herkes için aynı:
+   kategori kartları ve öne çıkan ürünler.
+
+   Önceden bu iki sorgu her ana sayfa açılışında Neon'a gidiyordu. Aşağıdaki
+   sarmalayıcılar yalnızca araç seçilmemiş hâli önbelleğe alır — araç seçili
+   kullanıcı hâlâ kendi verisini canlı sorgudan alır, yani "aracınıza uygun"
+   bilgisi asla bayatlamaz.
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/** Araç seçilmemiş ziyaretçi için kategori kartları. */
+export const getCategoryCardsCached = unstable_cache(
+  () => getCategoryCards(null),
+  ['ocm-kategori-kartlari'],
+  { revalidate: 300, tags: ['katalog'] },
+)
+
+/** Araç seçilmemiş ziyaretçi için öne çıkan ürünler. */
+export const getFeaturedProductsCached = unstable_cache(
+  (limit: number) => getProducts({ engineId: null, limit, featuredOnly: true }),
+  ['ocm-one-cikan-urunler'],
+  { revalidate: 300, tags: ['katalog'] },
+)

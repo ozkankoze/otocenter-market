@@ -14,8 +14,13 @@ import {
   getEngineCodes,
   getVehicleTypes,
 } from '@/server/vehicle-queries'
-import { getCategoryCards, getProducts } from '@/server/catalog-queries'
-import { getSellingBrands } from '@/server/brand-queries'
+import {
+  getCategoryCards,
+  getCategoryCardsCached,
+  getFeaturedProductsCached,
+  getProducts,
+} from '@/server/catalog-queries'
+import { getSellingBrandsCached } from '@/server/brand-queries'
 import { formatCount } from '@/lib/utils'
 
 export const dynamic = 'force-dynamic' // araç seçimi cookie'ye bağlı
@@ -30,10 +35,27 @@ export const dynamic = 'force-dynamic' // araç seçimi cookie'ye bağlı
  * kesilme riski düşük.
  */
 export const metadata: Metadata = {
-  title: 'Oto Center Market — Aracınız İçin Doğru Parça',
+  /*
+   * `absolute` ŞART. Kök yerleşimdeki şablon `'%s | Oto Center Market'`;
+   * düz bir string verildiğinde başlık
+   *   "Oto Center Market — Aracınız İçin Doğru Parça | Oto Center Market"
+   * oluyordu — marka adı iki kez. `absolute`, şablonu atlar.
+   */
+  title: { absolute: 'Oto Center Market — Aracınız İçin Doğru Parça' },
   description:
     'Otomobil, hafif ticari ve ağır vasıta araçlar için filtre, yağ ve bakım ürünleri. ' +
     'Aracınızı marka, model ve motora göre seçin, uyumlu ürünleri anında görün.',
+  /*
+   * Next.js bunu "https://otocentermarket.com" olarak yazar — SON EĞİK ÇİZGİ
+   * OLMADAN. `trailingSlash: false` (varsayılan) olduğu sürece mutlak URL
+   * verilse bile eğik çizgiyi kırpar; denendi.
+   *
+   * Sitemap ise aynı sayfayı "https://otocentermarket.com/" diye listeliyordu.
+   * Aynı sayfa için iki farklı dizge = denetim aracının "canonical riski /
+   * sinyal çakışması" bulgusu. Çerçeveyle güreşmek yerine sitemap bu biçime
+   * hizalandı (bkz. app/sitemap.ts). Buradaki değer DEĞİŞTİRİLİRSE oradaki
+   * normalleştirme de güncellenmeli.
+   */
   alternates: { canonical: '/' },
 }
 
@@ -44,9 +66,17 @@ export default async function HomePage() {
   const [types, stats, categories, products, brands, summary, engineCodes] = await Promise.all([
     getVehicleTypes(),
     getCatalogStatsCached(),
-    getCategoryCards(engineId),
-    getProducts({ engineId, limit: engineId ? 12 : 8, featuredOnly: !engineId }),
-    getSellingBrands(),
+    /*
+     * Araç SEÇİLİYSE canlı sorgu (uyumluluk sayıları kullanıcıya özel),
+     * seçili DEĞİLSE önbellekli sürüm. Ziyaretçilerin çoğunda çerez yok;
+     * bu iki sorgu o durumda herkes için aynı sonucu veriyor ve önceden
+     * her açılışta uzaktaki veritabanına gidiyordu.
+     */
+    engineId ? getCategoryCards(engineId) : getCategoryCardsCached(),
+    engineId
+      ? getProducts({ engineId, limit: 12, featuredOnly: false })
+      : getFeaturedProductsCached(8),
+    getSellingBrandsCached(),
     engineId ? getCompatibilitySummary(engineId) : Promise.resolve([]),
     engineId ? getEngineCodes(engineId) : Promise.resolve([]),
   ])
@@ -91,6 +121,7 @@ export default async function HomePage() {
             }
             href="/filtreler"
             linkLabel="Tüm kategoriler →"
+            linkTitle="Tüm filtre ve bakım ürünü kategorilerini görüntüle"
           />
           <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-4">
             {categories.map((c) => (
@@ -117,6 +148,11 @@ export default async function HomePage() {
             }
             href="/filtreler"
             linkLabel="Tümünü gör →"
+            linkTitle={
+              selection
+                ? `${selection.brandName} ${selection.modelName} için tüm uyumlu ürünleri görüntüle`
+                : 'Katalogdaki tüm ürünleri görüntüle'
+            }
           />
           <CompatibleResults products={products} selection={selection} summary={summary} />
         </div>
@@ -137,10 +173,16 @@ export default async function HomePage() {
               subtitle="Yetkili distribütör kanalından tedarik edilen ürün markaları"
               href="/markalar"
               linkLabel="Tüm markalar →"
+              linkTitle="Satıştaki tüm ürün markalarını görüntüle"
             />
             <div className="grid grid-cols-2 gap-3 md:grid-cols-3 xl:grid-cols-4">
               {brands.slice(0, 8).map((b) => (
-                <Link key={b.id} href={`/markalar/${b.slug}`} prefetch={false}>
+                <Link
+                  key={b.id}
+                  href={`/markalar/${b.slug}`}
+                  prefetch={false}
+                  title={`${b.name} markasının ${formatCount(b.productCount)} ürününü görüntüle`}
+                >
                   <Card
                     interactive
                     className="flex h-[86px] flex-col items-center justify-center gap-1 px-3 text-center"
@@ -188,18 +230,27 @@ export default async function HomePage() {
   )
 }
 
+/**
+ * `linkTitle` ZORUNLU. SEO denetimi "Tüm kategoriler →" ve "Tümünü gör →"
+ * bağlantılarını title etiketi olmadığı için işaretliyordu; ok işaretli kısa
+ * etiketler zaten bağlam dışında hiçbir şey anlatmıyor. Prop opsiyonel
+ * bırakılsaydı yeni bir bölüm eklendiğinde sessizce yeniden unutulurdu —
+ * zorunlu olduğu için derleyici hatırlatıyor.
+ */
 function SectionHead({
   eyebrow,
   title,
   subtitle,
   href,
   linkLabel,
+  linkTitle,
 }: {
   eyebrow?: string
   title: string
   subtitle?: string
   href: string
   linkLabel: string
+  linkTitle: string
 }) {
   return (
     <div className="mb-5 flex flex-wrap items-end justify-between gap-4">
@@ -211,6 +262,7 @@ function SectionHead({
       <Link
         href={href}
         prefetch={false}
+        title={linkTitle}
         className="text-[13.5px] font-semibold text-brand-600 hover:underline"
       >
         {linkLabel}

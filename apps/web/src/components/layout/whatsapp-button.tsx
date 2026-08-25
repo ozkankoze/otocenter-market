@@ -1,4 +1,4 @@
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 
 /**
  * WHATSAPP CANLI DESTEK — sağ altta sabit.
@@ -17,9 +17,9 @@ export function WhatsAppButton() {
     <a
       href={SITE.whatsappHref}
       target="_blank"
-      rel="noopener noreferrer"
+      rel={DIS_BAGLANTI_REL}
+      title={`WhatsApp'tan ${SITE.phoneDisplay} numarasına yazın`}
       aria-label={`WhatsApp ile canlı destek — ${SITE.phoneDisplay}`}
-      title="WhatsApp ile canlı destek"
       data-testid="whatsapp-button"
       className={[
         'group fixed right-4 bottom-[72px] z-80 inline-flex items-center gap-0 lg:right-6 lg:bottom-6',

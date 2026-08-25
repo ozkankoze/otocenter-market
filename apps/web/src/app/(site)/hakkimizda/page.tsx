@@ -79,14 +79,16 @@ export default async function AboutPage() {
               </p>
               <p>
                 Parça seçiminde tereddüt ederseniz{' '}
-                <Link href="/iletisim">bize ulaşın</Link>; şasi numarasıyla doğrulama yapıyoruz.
+                <Link href="/iletisim" title="İletişim sayfasına git">bize ulaşın</Link>; şasi numarasıyla doğrulama yapıyoruz.
               </p>
 
               <h2>Kimlere satıyoruz?</h2>
               <p>
                 Bireysel araç sahiplerinin yanı sıra servisler, filo işletmeleri ve yedek parça
                 satıcılarıyla da çalışıyoruz. Düzenli ve yüksek adetli alım yapıyorsanız{' '}
-                <Link href="/bayilik-toptan">bayilik ve toptan koşullarımıza</Link> bakabilirsiniz.
+                <Link href="/bayilik-toptan" title="Bayilik ve toptan koşulları sayfasına git">
+                  bayilik ve toptan koşullarımıza
+                </Link> bakabilirsiniz.
               </p>
             </Prose>
           </div>
@@ -107,12 +109,20 @@ export default async function AboutPage() {
               <ul className="mt-3.5 space-y-2 text-[13.5px] text-ink-600">
                 <li>{SITE.addressLines.join(', ')}</li>
                 <li>
-                  <a href={SITE.phoneHref} className="font-semibold text-ink-900 hover:text-brand-600">
+                  <a
+                    href={SITE.phoneHref}
+                    title={`${SITE.phoneDisplay} numarasını ara`}
+                    className="font-semibold text-ink-900 hover:text-brand-600"
+                  >
                     {SITE.phoneDisplay}
                   </a>
                 </li>
                 <li>
-                  <a href={SITE.emailHref} className="hover:text-brand-600">
+                  <a
+                    href={SITE.emailHref}
+                    title={`${SITE.email} adresine e-posta gönder`}
+                    className="hover:text-brand-600"
+                  >
                     {SITE.email}
                   </a>
                 </li>
@@ -121,6 +131,7 @@ export default async function AboutPage() {
               <Link
                 href="/iletisim"
                 prefetch={false}
+                title="İletişim sayfasına git"
                 className="mt-4 inline-flex text-[13.5px] font-semibold text-brand-600 hover:underline"
               >
                 İletişim sayfası →

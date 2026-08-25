@@ -26,3 +26,20 @@ export const SITE = {
   emailHref: 'mailto:info@otocentermarket.com',
   workingHours: 'Hafta içi 09:00 – 18:00',
 } as const
+
+/**
+ * Dış bağlantıların `rel` değeri.
+ *
+ * SEO denetimi "Dofollow link: 2" uyarısı veriyordu — wa.me bağlantıları
+ * (footer + sağ alttaki destek düğmesi) varsayılan olarak dofollow'du, yani
+ * sayfanın link değerini WhatsApp'a akıtıyorduk. wa.me bizim alan adımız
+ * değil ve indekslenmesini istediğimiz bir hedef de değil.
+ *
+ *   nofollow          → link değeri dışarı akmaz (denetimin istediği)
+ *   noopener          → yeni sekme `window.opener` üzerinden bu sayfaya erişemez
+ *   noreferrer        → referrer başlığı gönderilmez
+ *
+ * Sitedeki TÜM `target="_blank"` bağlantıları bunu kullanır; tek tek yazılırsa
+ * biri unutulduğunda denetim yeniden kırmızıya döner.
+ */
+export const DIS_BAGLANTI_REL = 'noopener noreferrer nofollow'

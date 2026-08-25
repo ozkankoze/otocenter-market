@@ -128,11 +128,11 @@ export default function CookiePage() {
 
           <h2>6. İlgili metinler</h2>
           <p>
-            <Link href="/kvkk">KVKK Aydınlatma Metni</Link> ·{' '}
-            <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link>
+            <Link href="/kvkk" title="KVKK Aydınlatma Metni metnini oku">KVKK Aydınlatma Metni</Link> ·{' '}
+            <Link href="/gizlilik-politikasi" title="Gizlilik Politikası metnini oku">Gizlilik Politikası</Link>
           </p>
           <p>
-            Sorularınız için: <a href={SITE.emailHref}>{SITE.email}</a>
+            Sorularınız için: <a href={SITE.emailHref} title={`${SITE.email} adresine e-posta gönder`}>{SITE.email}</a>
           </p>
         </Prose>
       </PageBody>

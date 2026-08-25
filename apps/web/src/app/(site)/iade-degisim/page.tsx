@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Card } from '@/components/ui/card'
 import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -38,7 +38,7 @@ export default function ReturnsPage() {
               Ürünü teslim aldığınız tarihten itibaren <strong>14 gün içinde</strong> hiçbir gerekçe
               göstermeden cayma hakkınızı kullanabilirsiniz. Bu, mesafeli satış mevzuatından doğan
               yasal hakkınızdır; ayrıntılar{' '}
-              <Link href="/mesafeli-satis-sozlesmesi">mesafeli satış sözleşmesinde</Link>.
+              <Link href="/mesafeli-satis-sozlesmesi" title="Mesafeli Satış Sözleşmesi metnini oku">mesafeli satış sözleşmesinde</Link>.
             </p>
 
             <h2>İade edilebilmesi için ürün nasıl olmalı?</h2>
@@ -98,20 +98,19 @@ export default function ReturnsPage() {
           <b className="block text-sm font-semibold text-ink-900">İade başlatmak için</b>
           <p className="mt-1.5 text-[13px] text-ink-600">
             Sipariş numaranızla{' '}
-            <a href={SITE.phoneHref} className="font-semibold text-brand-600 hover:underline">
+            <a href={SITE.phoneHref} title={`${SITE.phoneDisplay} numarasını ara`} className="font-semibold text-brand-600 hover:underline">
               {SITE.phoneDisplay}
             </a>
             ,{' '}
-            <a
-              href={SITE.whatsappHref}
+            <a href={SITE.whatsappHref} title={`WhatsApp'tan ${SITE.phoneDisplay} numarasına yazın`}
               target="_blank"
-              rel="noopener noreferrer"
+              rel={DIS_BAGLANTI_REL}
               className="font-semibold text-brand-600 hover:underline"
             >
               WhatsApp
             </a>{' '}
             ya da{' '}
-            <a href={SITE.emailHref} className="font-semibold text-brand-600 hover:underline">
+            <a href={SITE.emailHref} title={`${SITE.email} adresine e-posta gönder`} className="font-semibold text-brand-600 hover:underline">
               {SITE.email}
             </a>{' '}
             üzerinden ulaşın.

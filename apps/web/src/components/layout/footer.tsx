@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Logo, LOGO_HEIGHTS } from './logo'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { MegaMenuData } from '@/server/catalog-queries'
 
 /**
@@ -81,7 +81,8 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
           <a
             href={SITE.whatsappHref}
             target="_blank"
-            rel="noopener noreferrer"
+            title={`WhatsApp'tan ${SITE.phoneDisplay} numarasına yazın`}
+            rel={DIS_BAGLANTI_REL}
             className="inline-flex h-9 items-center gap-2 rounded-md bg-white/10 px-3.5 text-[12.5px] font-semibold text-white transition-colors hover:bg-white/16"
           >
             WhatsApp ile yazın
@@ -96,9 +97,16 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
             <ul>
               {col.links.map((link) => (
                 <li key={link.href} className="py-1 text-[13px]">
+                  {/*
+                    `title`: SEO denetimi "title etiketi olmayan linkler"
+                    uyarısını footer için de veriyor. Metin bağlantı etiketini
+                    tekrar etmiyor, sonuna ne olduğunu ekliyor — ekran okuyucu
+                    için gereksiz yineleme olmasın diye.
+                  */}
                   <Link
                     href={link.href}
                     prefetch={false}
+                    title={`${link.label} sayfasına git`}
                     className="transition-colors hover:text-white"
                   >
                     {link.label}
@@ -124,12 +132,20 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
               </address>
             </li>
             <li className="py-1">
-              <a href={SITE.phoneHref} className="transition-colors hover:text-white">
+              <a
+                href={SITE.phoneHref}
+                title={`${SITE.phoneDisplay} numarasını ara`}
+                className="transition-colors hover:text-white"
+              >
                 {SITE.phoneDisplay}
               </a>
             </li>
             <li className="py-1">
-              <a href={SITE.emailHref} className="transition-colors hover:text-white">
+              <a
+                href={SITE.emailHref}
+                title={`${SITE.email} adresine e-posta gönder`}
+                className="transition-colors hover:text-white"
+              >
                 {SITE.email}
               </a>
             </li>
@@ -146,6 +162,7 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
               key={l.href}
               href={l.href}
               prefetch={false}
+              title={`${l.label} metnini oku`}
               className="transition-colors hover:text-white"
             >
               {l.label}

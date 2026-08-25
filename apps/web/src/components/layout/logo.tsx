@@ -64,14 +64,15 @@ export function Logo({
         /*
          * `sizes` OLMADAN Next.js bu görseli sayfa genişliğinde sanıyor ve
          * tarayıcıya 1920 piksellik (2× ekranlarda 3840) bir sürüm indiriyordu.
-         * Logo hiçbir yerde 220 pikselden geniş çizilmiyor.
          *
-         * Genişlik = yükseklik × 4.15 (oran sabit). En büyük kullanım 52 px
-         * yükseklik → ~216 px genişlik; 2× ekran için 440 px yeterli. Sabit
-         * bir `sizes` vermek, cihaz piksel oranını tarayıcının hesaplamasına
-         * bırakır ve gereksiz büyük dosyayı tamamen ortadan kaldırır.
+         * SABİT "220px" de yeterli değildi: mobil header'daki logo 34 px
+         * yüksekliğinde, yani ~141 px genişliğinde çiziliyor — ama 220 px
+         * denildiği için tarayıcı yüksek piksel yoğunluklu telefonda 640 px'lik
+         * sürümü indiriyordu (ölçüldü: 14 KiB boşa). Genişlik yükseklikten
+         * oranla türetiliyor, böylece her kullanım kendi gerçek boyutunu
+         * bildiriyor ve tarayıcı en küçük yeterli dosyayı seçiyor.
          */
-        sizes="220px"
+        sizes={`${Math.ceil(height * (LOGO_WIDTH / LOGO_HEIGHT))}px`}
         // Yükseklik sabit, genişlik otomatik → oran her zaman korunur.
         style={{ height, width: 'auto' }}
         className="max-w-full"

@@ -1,4 +1,5 @@
 import 'server-only'
+import { unstable_cache } from 'next/cache'
 import { db } from '@ocm/db'
 
 /**
@@ -67,3 +68,19 @@ export async function getSellingBrandBySlug(slug: string): Promise<SellingBrand 
   const brands = await getSellingBrands()
   return brands.find((b) => b.slug === slug) ?? null
 }
+
+/**
+ * Önbellekli sürüm — vitrin ve /markalar sayfası için.
+ *
+ * `getSellingBrands` iki tabloyu join edip ürün sayıyor; sonuç yalnızca
+ * içe aktarma çalıştığında değişir. Canlıda veritabanı uzakta (Neon,
+ * ~89 ms gidiş-dönüş) ve ana sayfa her istekte yeniden çiziliyor —
+ * yani bu sorgu her ziyaretçi için tekrar ediyordu.
+ *
+ * Anahtar ve etiket mega menüyle aynı ailede: `db:katalog-yenile`
+ * çalıştığında `katalog` etiketi hepsini birden düşürür.
+ */
+export const getSellingBrandsCached = unstable_cache(getSellingBrands, ['ocm-satistaki-markalar'], {
+  revalidate: 300,
+  tags: ['katalog'],
+})

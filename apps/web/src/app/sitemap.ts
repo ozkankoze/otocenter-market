@@ -87,8 +87,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const doluMu = (path: string): boolean =>
     sayimlar.some((s) => s.path === path || s.path.startsWith(`${path}.`))
 
+  /*
+   * `yol === '/'` için son eğik çizgi ATILIR.
+   *
+   * Ana sayfanın canonical etiketi Next.js tarafından
+   * "https://otocentermarket.com" olarak yazılıyor (eğik çizgisiz — çerçeve
+   * `trailingSlash: false` iken kırpıyor, mutlak URL verilse bile). Sitemap
+   * burada "…/.com/" yazınca aynı sayfa iki farklı dizgeyle bildirilmiş
+   * oluyordu; denetim aracı bunu "canonical riski / sinyal çakışması" diye
+   * işaretliyordu. İki sinyal tek biçime sabitlendi.
+   */
   const u = (yol: string, priority: number, changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly') => ({
-    url: `${SITE_URL}${yol}`,
+    url: yol === '/' ? SITE_URL : `${SITE_URL}${yol}`,
     changeFrequency,
     priority,
   })

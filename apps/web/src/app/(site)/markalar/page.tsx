@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { PageBody, PageHero } from '@/components/layout/page-shell'
-import { getSellingBrands } from '@/server/brand-queries'
+import { getSellingBrandsCached } from '@/server/brand-queries'
 import { formatCount } from '@/lib/utils'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 }
 
 export default async function BrandsPage() {
-  const brands = await getSellingBrands()
+  const brands = await getSellingBrandsCached()
   const crumbs: Crumb[] = [{ label: 'Ana Sayfa', href: '/' }, { label: 'Markalar' }]
   const toplam = brands.reduce((a, b) => a + b.productCount, 0)
 
@@ -31,7 +31,12 @@ export default async function BrandsPage() {
       <PageBody>
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {brands.map((b) => (
-            <Link key={b.slug} href={`/markalar/${b.slug}`} prefetch={false}>
+            <Link
+              key={b.slug}
+              href={`/markalar/${b.slug}`}
+              prefetch={false}
+              title={`${b.name} markasının ${formatCount(b.productCount)} ürününü görüntüle`}
+            >
               <Card interactive className="flex h-full flex-col p-5">
                 <div className="flex items-start gap-3">
                   <span className="flex h-12 flex-1 items-center rounded-md border border-ink-100 bg-ink-25 px-3 text-[13px] font-bold tracking-wide text-ink-700">

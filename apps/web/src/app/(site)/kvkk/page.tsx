@@ -128,7 +128,9 @@ export default function KvkkPage() {
           <h2>8. Başvuru</h2>
           <p>
             Haklarınızı kullanmak için taleplerinizi{' '}
-            <a href={SITE.emailHref}>{SITE.email}</a> adresine e-posta ile ya da yukarıdaki adrese
+            <a href={SITE.emailHref} title={`${SITE.email} adresine e-posta gönder`}>
+              {SITE.email}
+            </a> adresine e-posta ile ya da yukarıdaki adrese
             yazılı olarak iletebilirsiniz. Başvurunuz en geç <strong>30 gün</strong> içinde
             sonuçlandırılır. Kimliğinizi doğrulayamadığımız başvurular, veri güvenliği gereği
             yanıtlanamaz.
@@ -136,9 +138,9 @@ export default function KvkkPage() {
 
           <h2>9. İlgili diğer metinler</h2>
           <p>
-            <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link> ·{' '}
-            <Link href="/cerez-politikasi">Çerez Politikası</Link> ·{' '}
-            <Link href="/mesafeli-satis-sozlesmesi">Mesafeli Satış Sözleşmesi</Link>
+            <Link href="/gizlilik-politikasi" title="Gizlilik Politikası metnini oku">Gizlilik Politikası</Link> ·{' '}
+            <Link href="/cerez-politikasi" title="Çerez Politikası metnini oku">Çerez Politikası</Link> ·{' '}
+            <Link href="/mesafeli-satis-sozlesmesi" title="Mesafeli Satış Sözleşmesi metnini oku">Mesafeli Satış Sözleşmesi</Link>
           </p>
         </Prose>
 

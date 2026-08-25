@@ -2,6 +2,25 @@
   "name": "@ocm/web",
   "version": "0.1.0",
   "private": true,
+  "//browserslist": [
+    "Hedef tarayıcılar TANIMSIZ bırakılmıştı; Next.js bu durumda çok eski",
+    "tarayıcıları varsayıp paylaşılan pakete Array.prototype.at, .flat,",
+    "Object.fromEntries, Object.hasOwn, String.prototype.trimStart/trimEnd",
+    "polyfill'lerini gömüyordu. Ölçüm: 11 KiB gereksiz kod (Lighthouse",
+    "'Eski JavaScript' sinyali). Aşağıdaki sürümlerin hepsi bu API'leri",
+    "yerel olarak destekliyor, dolayısıyla polyfill'ler tamamen düşüyor.",
+    "Eşik, Türkiye tarayıcı payının >%99'unu kapsayacak şekilde seçildi."
+  ],
+  "browserslist": [
+    "chrome >= 92",
+    "edge >= 92",
+    "firefox >= 90",
+    "safari >= 15.4",
+    "ios_saf >= 15.4",
+    "opera >= 78",
+    "samsung >= 16",
+    "not dead"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

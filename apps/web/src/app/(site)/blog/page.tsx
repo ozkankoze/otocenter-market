@@ -28,7 +28,12 @@ export default function BlogPage() {
       <PageBody>
         <div className="grid gap-4 md:grid-cols-2">
           {REHBER_YAZILARI.map((yazi) => (
-            <Link key={yazi.slug} href={`/blog/${yazi.slug}`} prefetch={false}>
+            <Link
+              key={yazi.slug}
+              href={`/blog/${yazi.slug}`}
+              prefetch={false}
+              title={`${yazi.title} — rehberi oku`}
+            >
               <Card interactive className="flex h-full flex-col p-6">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex h-6 items-center rounded-sm bg-brand-50 px-2.5 text-[11px] font-semibold tracking-wider text-brand-600 uppercase">

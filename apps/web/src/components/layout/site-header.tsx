@@ -87,6 +87,23 @@ export function SiteHeader({
   const { openSelector } = useVehicleUi()
   const [megaOpen, setMegaOpen] = React.useState(false)
   const [drawerOpen, setDrawerOpen] = React.useState(false)
+  /*
+   * Çekmece İÇERİĞİ ilk açılışa kadar hiç basılmıyor.
+   *
+   * Önceden 120 satırlık menü (kategori ağacı + çekmece logosu) her sayfa
+   * yüklemesinde DOM'a giriyordu. Üç ayrı denetim sinyali buradan çıkıyordu:
+   *   · "Ekran dışı görseller"  — kapalı çekmecedeki logo yine indiriliyordu
+   *   · "DOM boyutunu optimize edin"
+   *   · "[aria-hidden] içinde odaklanabilir öğe" — gizli menüdeki bağlantılar
+   *
+   * `<aside>` kabuğu her zaman basılı kalır (kayma animasyonu ona bağlı);
+   * yalnızca içerik geciktirilir. Bir kez açıldıktan sonra DOM'da kalır —
+   * ikinci açılışta yeniden kurulum maliyeti olmasın diye.
+   */
+  const [drawerAcildi, setDrawerAcildi] = React.useState(false)
+  React.useEffect(() => {
+    if (drawerOpen) setDrawerAcildi(true)
+  }, [drawerOpen])
   const [searchOpen, setSearchOpen] = React.useState(false)
   const [compact, setCompact] = React.useState(false)
   const closeTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null)
@@ -150,6 +167,7 @@ export function SiteHeader({
                 key={l.href}
                 href={l.href}
                 prefetch={false}
+                title={`${l.label} sayfasına git`}
                 className="transition-colors hover:text-white"
               >
                 {l.label}
@@ -161,6 +179,7 @@ export function SiteHeader({
             </span>
             <a
               href={SITE.phoneHref}
+              title={`${SITE.phoneDisplay} numarasını ara`}
               className="inline-flex items-center gap-2 border-l border-white/15 pl-6 font-medium text-white transition-opacity hover:opacity-80"
             >
               <Phone size={13} aria-hidden="true" />
@@ -183,10 +202,17 @@ export function SiteHeader({
               compact ? 'h-[60px]' : 'h-[82px]',
             )}
           >
-            <Logo
-              height={compact ? LOGO_HEIGHTS.desktopCompact : LOGO_HEIGHTS.desktop}
-              priority
-            />
+            {/*
+              `priority` KALDIRILDI — bilerek.
+              Logo LCP öğesi DEĞİL; LCP hero'daki <h1>. `priority` başa bir
+              <link rel="preload" as="image"> koyuyordu ve o satır stylesheet
+              etiketinden ÖNCE geliyor. Yavaş bağlantıda tarayıcı, sayfayı
+              çizmek için beklediği CSS yerine önce logoyu indiriyordu —
+              denetimdeki "oluşturma engelleme" süresinin bir kısmı buradan
+              geliyor. Üstelik bu masaüstü başlığı mobilde `hidden`, yani
+              telefonda hiç çizilmeyen bir görsel için öncelik harcanıyordu.
+            */}
+            <Logo height={compact ? LOGO_HEIGHTS.desktopCompact : LOGO_HEIGHTS.desktop} />
 
             <SiteSearchForm
               className="max-w-[560px] flex-1"
@@ -243,6 +269,7 @@ export function SiteHeader({
                     <Link
                       href={link.href}
                       prefetch={false}
+                      title={`${link.label} sayfasına git`}
                       className="text-ink-800 transition-colors hover:text-brand-600"
                     >
                       {link.label}
@@ -319,6 +346,7 @@ export function SiteHeader({
                         <Link
                           href={`/${group.slug}`}
                           prefetch={false}
+                          title={`${group.name} grubundaki tüm kategorileri görüntüle`}
                           className="inline-flex items-center gap-1 py-1.5 text-[13.5px] font-semibold text-brand-600"
                         >
                           Tümünü gör <ChevronRight size={13} aria-hidden="true" />
@@ -341,6 +369,7 @@ export function SiteHeader({
                           <Link
                             href={`/${t.slug}`}
                             prefetch={false}
+                            title={`${t.name} — ${t.brandCount} araç markası`}
                             className="flex items-baseline gap-2 py-1.5 text-[13.5px] text-ink-600 transition-colors hover:text-brand-600"
                           >
                             <span>{t.name}</span>
@@ -428,9 +457,19 @@ export function SiteHeader({
           >
             <Search size={21} />
           </button>
-          <button type="button" aria-label="Sepetim" className="relative p-1.5 text-ink-800">
-            <ShoppingCart size={21} />
-            <i className="absolute top-0 right-0 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-600 px-1 text-[10px] font-semibold text-white not-italic">
+          {/*
+            Rozetteki "0" görünür metin sayılıyordu; erişilebilir ad ise
+            "Sepetim" olduğu için denetim "görünür etiket ile erişilebilir ad
+            uyuşmuyor" diyordu. Rozet salt görsel bir tekrar — sayı zaten
+            erişilebilir adın içinde yazıyor, bu yüzden ekran okuyucudan
+            gizleniyor.
+          */}
+          <button type="button" aria-label="Sepetim — 0 ürün" className="relative p-1.5 text-ink-800">
+            <ShoppingCart size={21} aria-hidden="true" />
+            <i
+              aria-hidden="true"
+              className="absolute top-0 right-0 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-600 px-1 text-[10px] font-semibold text-white not-italic"
+            >
               0
             </i>
           </button>
@@ -471,6 +510,7 @@ export function SiteHeader({
                 href={t.href}
                 prefetch={false}
                 onClick={() => setSearchOpen(false)}
+                title={`${t.label} kategorisindeki ürünleri görüntüle`}
                 className="rounded-sm border border-ink-100 bg-white px-3 py-1.5 text-[13px] text-ink-700 transition-colors hover:border-brand-300 hover:text-brand-600"
               >
                 {t.label}
@@ -512,9 +552,22 @@ export function SiteHeader({
           drawerOpen ? 'translate-x-0' : '-translate-x-full',
         )}
         aria-label="Mobil menü"
-        aria-hidden={!drawerOpen}
+        /*
+         * `aria-hidden` DEĞİL, `inert`.
+         *
+         * `aria-hidden="true"` öğeyi erişilebilirlik ağacından siler ama
+         * içindeki bağlantılar sekme sırasında kalmaya devam eder — klavye
+         * kullanıcısı görünmeyen bir menünün içine düşer. Denetim tam olarak
+         * bunu söylüyordu: "[aria-hidden] öğelerinde odaklanabilir alt öğe".
+         *
+         * `inert` ikisini birden yapar: ağaçtan da çıkarır, odaklanmayı da
+         * engeller. React 19 bunu yerel olarak destekliyor.
+         */
+        inert={!drawerOpen}
         data-testid="mobile-drawer"
       >
+        {drawerAcildi ? (
+        <>
         <div className="flex items-center justify-between border-b border-ink-100 px-4 py-4">
           <Logo height={LOGO_HEIGHTS.drawer} />
           <button type="button" onClick={() => setDrawerOpen(false)} aria-label="Menüyü kapat">
@@ -625,6 +678,8 @@ export function SiteHeader({
             </Link>
           ))}
         </div>
+        </>
+        ) : null}
       </aside>
 
       {/* Mobil alt sabit bar */}
@@ -692,7 +747,7 @@ function HeaderAction({
   const sinif = 'flex items-center gap-2.5 text-ink-800 transition-colors hover:text-brand-600'
 
   return href ? (
-    <Link href={href} prefetch={false} className={sinif}>
+    <Link href={href} prefetch={false} title={`${title} — ${sub}`} className={sinif}>
       {govde}
     </Link>
   ) : (

@@ -4,7 +4,7 @@ import { Building2, FileText, Percent, Truck, Wrench } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { PageBody, PageHero, Prose, SectionTitle } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -119,8 +119,8 @@ export default function DealerPage() {
 
             <h2>Katalog ve stok</h2>
             <p>
-              Katalogun tamamını <Link href="/markalar">marka</Link> ya da{' '}
-              <Link href="/filtreler">kategori</Link> bazında inceleyebilirsiniz. Toplu alımlarda
+              Katalogun tamamını <Link href="/markalar" title="Ürün Markaları sayfasına git">marka</Link> ya da{' '}
+              <Link href="/filtreler" title="Filtreler sayfasına git">kategori</Link> bazında inceleyebilirsiniz. Toplu alımlarda
               stokta olmayan kalemler için tedarik süresi baştan bildirilir; “gelince göndeririz”
               diye açık bırakmayız.
             </p>
@@ -137,17 +137,17 @@ export default function DealerPage() {
             </p>
             <div className="mt-5 space-y-2.5">
               <Button asChild block>
-                <a href={SITE.whatsappHref} target="_blank" rel="noopener noreferrer">
+                <a href={SITE.whatsappHref} title={`WhatsApp'tan ${SITE.phoneDisplay} numarasına yazın`} target="_blank" rel={DIS_BAGLANTI_REL}>
                   WhatsApp ile yazın
                 </a>
               </Button>
               <Button asChild block variant="secondary">
-                <a href={SITE.phoneHref}>{SITE.phoneDisplay}</a>
+                <a href={SITE.phoneHref} title={`${SITE.phoneDisplay} numarasını ara`}>{SITE.phoneDisplay}</a>
               </Button>
             </div>
             <p className="mt-4 border-t border-ink-100 pt-4 text-[12.5px] text-ink-600">
               E-posta:{' '}
-              <a href={SITE.emailHref} className="text-brand-600 hover:underline">
+              <a href={SITE.emailHref} title={`${SITE.email} adresine e-posta gönder`} className="text-brand-600 hover:underline">
                 {SITE.email}
               </a>
             </p>

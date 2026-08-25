@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Clock, Mail, MapPin, MessageCircle, Phone } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { PageBody, PageHero, Prose, SectionTitle } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -61,7 +61,8 @@ export default function ContactPage() {
               </b>
               <a
                 href={href}
-                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                {...(external ? { target: '_blank', rel: DIS_BAGLANTI_REL } : {})}
+                title={`${title} — ${value}`}
                 className="mt-1 block text-[15px] font-semibold text-ink-900 transition-colors hover:text-brand-600"
               >
                 {value}
@@ -106,20 +107,20 @@ export default function ContactPage() {
               <p>
                 Araç ruhsatınızdaki şasi (VIN) numarasını gönderin; ürünün aracınıza uyup uymadığını
                 teyit edelim. Sitede aracınızı seçerek de{' '}
-                <Link href="/">uyumlu ürünleri listeleyebilirsiniz</Link>.
+                <Link href="/" title="Ana sayfaya dön">uyumlu ürünleri listeleyebilirsiniz</Link>.
               </p>
 
               <h3>Toplu ve kurumsal alım</h3>
               <p>
                 Servis, filo ve yedek parça satıcıları için ayrı koşullar uyguluyoruz. Ayrıntılar{' '}
-                <Link href="/bayilik-toptan">bayilik &amp; toptan sayfasında</Link>.
+                <Link href="/bayilik-toptan" title="Bayilik ve Toptan sayfasına git">bayilik &amp; toptan sayfasında</Link>.
               </p>
 
               <h3>Sipariş ve kargo</h3>
               <p>
                 Sipariş durumu, kargo ve iade süreçleri için{' '}
-                <Link href="/kargo-teslimat">kargo &amp; teslimat</Link> ve{' '}
-                <Link href="/iade-degisim">iade &amp; değişim</Link> sayfalarına bakabilir, ya da
+                <Link href="/kargo-teslimat" title="Kargo & Teslimat sayfasına git">kargo &amp; teslimat</Link> ve{' '}
+                <Link href="/iade-degisim" title="İade & Değişim sayfasına git">iade &amp; değişim</Link> sayfalarına bakabilir, ya da
                 sipariş numaranızla bize yazabilirsiniz.
               </p>
 

@@ -17,7 +17,7 @@ export default function NotFound() {
         </p>
         <div className="mt-7 flex flex-wrap justify-center gap-3">
           <Button asChild>
-            <Link href="/">Ana sayfaya dön</Link>
+            <Link href="/" title="Ana sayfaya dön">Ana sayfaya dön</Link>
           </Button>
           <Button variant="secondary" asChild>
             <Link href="/#arac-secici">Aracımı seç</Link>

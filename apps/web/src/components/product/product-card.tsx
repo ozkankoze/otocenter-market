@@ -83,9 +83,15 @@ export function ProductCard({
           ama "Sepete Ekle" butonu z-index ile üstte kalır. Erişilebilir ad
           ürün başlığından gelir — ekran okuyucu için tek anlamlı bağlantı.
         */}
+        {/*
+          `title`: SEO denetimi ana sayfadaki sekiz ürün bağlantısını
+          "title etiketi yok" diye işaretliyordu. Değer başlığı tekrar
+          etmiyor — ürünün ne olduğunu ve nereye gittiğini söylüyor.
+        */}
         <Link
           href={`/urun/${product.slug}`}
           prefetch={false}
+          title={`${productTitle(product)} — ürün detayına git`}
           className="after:absolute after:inset-0 after:content-[''] hover:text-brand-600"
         >
           {productTitle(product)}

@@ -25,6 +25,13 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,
-    host: SITE_URL,
+    /*
+     * `Host` yönergesi ŞEMASIZ olmalı — "otocentermarket.com", tam URL değil.
+     * Önceden `http://localhost:3000` biçiminde tam URL yazılıyordu; bu geçersiz
+     * bir değer ve denetim aracının "sinyal çakışması" bulgusuna katkı veriyordu
+     * (robots tercih edilen alan adını söyleyemiyor, canonical başka bir şey
+     * söylüyor). Şema ve olası son eğik çizgi burada temizleniyor.
+     */
+    host: SITE_URL.replace(/^https?:\/\//, '').replace(/\/+$/, ''),
   }
 }

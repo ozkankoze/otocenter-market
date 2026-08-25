@@ -61,10 +61,10 @@ const GRUPLAR: Grup[] = [
           'Evet. Arama kutusuna parça kodunu ya da OEM numarasını yazabilirsiniz; tire, boşluk ve nokta farkları yok sayılır.',
         a: (
           <>
-            Evet. <Link href="/arama">Arama kutusuna</Link> parça kodunu, SKU’yu ya da OEM numarasını
+            Evet. <Link href="/arama" title="Arama sayfasına git">Arama kutusuna</Link> parça kodunu, SKU’yu ya da OEM numarasını
             yazabilirsiniz. Numaradaki tire, boşluk ve nokta farkları yok sayılarak eşleştirme
             yapılır. Ayrıntı için{' '}
-            <Link href="/blog/oem-numarasi-ile-parca-bulma">OEM numarasıyla parça bulma</Link>{' '}
+            <Link href="/blog/oem-numarasi-ile-parca-bulma" title="OEM numarasıyla parça bulma rehberini oku">OEM numarasıyla parça bulma</Link>{' '}
             yazımıza bakabilirsiniz.
           </>
         ),
@@ -82,7 +82,7 @@ const GRUPLAR: Grup[] = [
           <>
             Saat 16:00’ya kadar verilen ve <strong>stokta bulunan</strong> siparişler aynı gün
             kargoya teslim edilir. Ayrıntılar{' '}
-            <Link href="/kargo-teslimat">kargo &amp; teslimat sayfasında</Link>.
+            <Link href="/kargo-teslimat" title="Kargo & Teslimat sayfasına git">kargo &amp; teslimat sayfasında</Link>.
           </>
         ),
       },
@@ -103,7 +103,7 @@ const GRUPLAR: Grup[] = [
         a: (
           <>
             Sipariş numaranızla bize ulaşın; durumu ve kargo takip numarasını iletelim.{' '}
-            <Link href="/siparis-takip">Sipariş takip sayfasında</Link> hangi bilgileri hazır
+            <Link href="/siparis-takip" title="Sipariş Takip sayfasına git">Sipariş takip sayfasında</Link> hangi bilgileri hazır
             bulundurmanız gerektiği yazıyor.
           </>
         ),
@@ -121,7 +121,7 @@ const GRUPLAR: Grup[] = [
           <>
             Teslim tarihinden itibaren <strong>14 gün içinde</strong>, ürün takılmamış ve ambalajı
             bozulmamışsa sebep göstermeden iade edebilirsiniz. Koşullar{' '}
-            <Link href="/iade-degisim">iade &amp; değişim sayfasında</Link>.
+            <Link href="/iade-degisim" title="İade & Değişim sayfasına git">iade &amp; değişim sayfasında</Link>.
           </>
         ),
       },
@@ -152,7 +152,7 @@ const GRUPLAR: Grup[] = [
         a: (
           <>
             Evet, şirket adına fatura kesilir. Düzenli ve yüksek adetli alım yapıyorsanız{' '}
-            <Link href="/bayilik-toptan">bayilik &amp; toptan koşullarına</Link> bakın.
+            <Link href="/bayilik-toptan" title="Bayilik ve Toptan sayfasına git">bayilik &amp; toptan koşullarına</Link> bakın.
           </>
         ),
       },
@@ -221,11 +221,16 @@ export default function FaqPage() {
         <Card className="mt-10 p-6">
           <b className="block text-sm font-semibold text-ink-900">Cevabını bulamadınız mı?</b>
           <p className="mt-1.5 text-[13px] text-ink-600">
-            <a href={SITE.phoneHref} className="font-semibold text-brand-600 hover:underline">
+            <a href={SITE.phoneHref} title={`${SITE.phoneDisplay} numarasını ara`} className="font-semibold text-brand-600 hover:underline">
               {SITE.phoneDisplay}
             </a>{' '}
             · {SITE.workingHours} ·{' '}
-            <Link href="/iletisim" prefetch={false} className="font-semibold text-brand-600 hover:underline">
+            <Link
+              href="/iletisim"
+              prefetch={false}
+              title="İletişim sayfasına git"
+              className="font-semibold text-brand-600 hover:underline"
+            >
               İletişim sayfası
             </Link>
           </p>

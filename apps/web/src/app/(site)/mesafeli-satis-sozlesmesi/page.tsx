@@ -87,7 +87,7 @@ export default function DistanceSalesPage() {
             </li>
           </ul>
           <p>
-            Ayrıntılar için <Link href="/kargo-teslimat">kargo &amp; teslimat sayfası</Link>.
+            Ayrıntılar için <Link href="/kargo-teslimat" title="Kargo & Teslimat sayfasına git">kargo &amp; teslimat sayfası</Link>.
           </p>
 
           <h2>Madde 5 — Cayma hakkı</h2>
@@ -127,7 +127,7 @@ export default function DistanceSalesPage() {
           <p>
             Ürünün ayıplı çıkması ya da siparişten farklı bir ürün gönderilmesi hâlinde tüm kargo ve
             değişim masrafı Satıcı’ya aittir; bu durumda 14 günlük süre şartı aranmaz. Süreç için{' '}
-            <Link href="/iade-degisim">iade &amp; değişim sayfasına</Link> bakınız.
+            <Link href="/iade-degisim" title="İade & Değişim sayfasına git">iade &amp; değişim sayfasına</Link> bakınız.
           </p>
 
           <h2>Madde 8 — Uyumluluk bilgisi</h2>
@@ -141,8 +141,8 @@ export default function DistanceSalesPage() {
 
           <h2>Madde 9 — Kişisel verilerin korunması</h2>
           <p>
-            Alıcı’nın kişisel verileri <Link href="/kvkk">KVKK Aydınlatma Metni</Link> ve{' '}
-            <Link href="/gizlilik-politikasi">Gizlilik Politikası</Link> kapsamında işlenir. Kredi
+            Alıcı’nın kişisel verileri <Link href="/kvkk" title="KVKK Aydınlatma Metni metnini oku">KVKK Aydınlatma Metni</Link> ve{' '}
+            <Link href="/gizlilik-politikasi" title="Gizlilik Politikası metnini oku">Gizlilik Politikası</Link> kapsamında işlenir. Kredi
             kartı bilgileri Satıcı tarafından saklanmaz.
           </p>
 

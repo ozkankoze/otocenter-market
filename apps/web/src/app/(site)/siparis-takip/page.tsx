@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { MessageCircle, Phone, Mail } from 'lucide-react'
 import { Card } from '@/components/ui/card'
 import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -70,8 +70,8 @@ export default function OrderTrackingPage() {
             <h2>Teslimat süresi ve iade</h2>
             <p>
               Sevkiyat saatleri ve kargo ücreti için{' '}
-              <Link href="/kargo-teslimat">kargo &amp; teslimat</Link>, iade koşulları için{' '}
-              <Link href="/iade-degisim">iade &amp; değişim</Link> sayfasına bakabilirsiniz.
+              <Link href="/kargo-teslimat" title="Kargo & Teslimat sayfasına git">kargo &amp; teslimat</Link>, iade koşulları için{' '}
+              <Link href="/iade-degisim" title="İade & Değişim sayfasına git">iade &amp; değişim</Link> sayfasına bakabilirsiniz.
             </p>
           </Prose>
 
@@ -131,7 +131,8 @@ function Kanal({
         </b>
         <a
           href={href}
-          {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          {...(external ? { target: '_blank', rel: DIS_BAGLANTI_REL } : {})}
+          title={`${title} — ${value}`}
           className="mt-0.5 block text-[15px] font-semibold text-ink-900 transition-colors hover:text-brand-600"
         >
           {value}

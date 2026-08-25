@@ -36,6 +36,7 @@ export function Breadcrumb({
                 <Link
                   href={item.href}
                   prefetch={false}
+                  title={`${item.label} sayfasına dön`}
                   className={cn(
                     'transition-colors',
                     dark ? 'hover:text-white' : 'hover:text-brand-600',
