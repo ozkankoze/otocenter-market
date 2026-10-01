@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { requireAdmin } from '@/server/admin/auth'
 import { getDashboardStats } from '@/server/admin/queries'
 import { DataTable, PageHeader, StatTile, StatusPill, Td } from '@/components/admin/shell'
 import { formatDateTime } from '@/lib/utils'
@@ -7,6 +8,7 @@ export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Dashboard' }
 
 export default async function AdminDashboard() {
+  await requireAdmin()
   const s = await getDashboardStats()
   const shown = s.verified + s.sourced
   const notShown = s.conflicted + s.incompatible

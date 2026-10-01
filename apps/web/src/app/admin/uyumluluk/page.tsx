@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { requireAdmin } from '@/server/admin/auth'
 import { compatibilityStatusCounts, listCompatibility } from '@/server/admin/queries'
 import { DataTable, PageHeader, StatTile, StatusPill, Td } from '@/components/admin/shell'
 import { cn } from '@/lib/utils'
@@ -19,6 +20,7 @@ export default async function AdminCompatibilityPage({
 }: {
   searchParams: Promise<Record<string, string | undefined>>
 }) {
+  await requireAdmin()
   const sp = await searchParams
   const status = sp.durum && sp.durum !== '' ? sp.durum : null
   const [rows, counts] = await Promise.all([listCompatibility(status), compatibilityStatusCounts()])

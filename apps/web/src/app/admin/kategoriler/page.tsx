@@ -1,10 +1,12 @@
 import { listAdminCategories } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Kategoriler' }
 
 export default async function AdminCategoriesPage() {
+  await requireAdmin()
   const categories = await listAdminCategories()
 
   return (

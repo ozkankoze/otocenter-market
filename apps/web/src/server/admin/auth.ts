@@ -1,6 +1,7 @@
 import 'server-only'
 import { createHmac, timingSafeEqual } from 'node:crypto'
 import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 import { db } from '@ocm/db'
 
 /**
@@ -16,17 +17,44 @@ import { db } from '@ocm/db'
 const COOKIE = 'ocm.admin'
 const MAX_AGE = 60 * 60 * 12
 
-function secret(): string {
+/**
+ * CANLIDA VARSAYILAN PAROLA YOK.
+ *
+ * Önceden `ADMIN_PASSWORD` tanımlı değilse parola "otocenter", oturum imza
+ * anahtarı da koddaki sabit bir metindi — yani kaynağı gören herkes panele
+ * girebilir ve geçerli oturum çerezi üretebilirdi. Panel artık müşteri adı,
+ * adresi ve telefonunu (siparişler) gösterdiği için bu KVKK açısından kabul
+ * edilemez.
+ *
+ * Üretimde iki değişken de tanımlı ve yeterince uzun değilse panel KAPALI
+ * kalır (giriş reddedilir, mevcut çerezler geçersiz sayılır). Yerel geliştirmede
+ * eski varsayılanlar çalışmaya devam eder.
+ */
+const URETIM = process.env.NODE_ENV === 'production'
+
+export function adminYapilandirildi(): boolean {
+  if (!URETIM) return true
+  const parola = process.env.ADMIN_PASSWORD ?? ''
+  const anahtar = process.env.ADMIN_SESSION_SECRET ?? ''
+  return parola.length >= 10 && anahtar.length >= 32
+}
+
+function secret(): string | null {
+  if (URETIM) return adminYapilandirildi() ? process.env.ADMIN_SESSION_SECRET! : null
   return process.env.ADMIN_SESSION_SECRET ?? process.env.ADMIN_PASSWORD ?? 'ocm-gelistirme-anahtari'
 }
 
-function sign(payload: string): string {
-  return createHmac('sha256', secret()).update(payload).digest('base64url')
+function sign(payload: string): string | null {
+  const anahtar = secret()
+  if (!anahtar) return null
+  return createHmac('sha256', anahtar).update(payload).digest('base64url')
 }
 
 export function makeSessionValue(email: string): string {
   const payload = `${email}|${Date.now()}`
-  return `${Buffer.from(payload).toString('base64url')}.${sign(payload)}`
+  const imza = sign(payload)
+  if (!imza) throw new Error('Yönetim paneli yapılandırılmamış: ADMIN_SESSION_SECRET eksik.')
+  return `${Buffer.from(payload).toString('base64url')}.${imza}`
 }
 
 export function verifySessionValue(value: string): { email: string } | null {
@@ -37,6 +65,7 @@ export function verifySessionValue(value: string): { email: string } | null {
   const payload = Buffer.from(encoded, 'base64url').toString('utf8')
 
   const expected = sign(payload)
+  if (!expected) return null
   if (expected.length !== signature.length) return null
   if (!timingSafeEqual(Buffer.from(expected), Buffer.from(signature))) return null
 
@@ -47,15 +76,21 @@ export function verifySessionValue(value: string): { email: string } | null {
 }
 
 export function checkPassword(input: string): boolean {
-  const expected = process.env.ADMIN_PASSWORD ?? 'otocenter'
-  if (input.length !== expected.length) return false
-  return timingSafeEqual(Buffer.from(input), Buffer.from(expected))
+  if (!adminYapilandirildi()) return false
+  const expected = Buffer.from(process.env.ADMIN_PASSWORD ?? 'otocenter', 'utf8')
+  const girilen = Buffer.from(input, 'utf8')
+  // Karakter değil BAYT uzunluğu karşılaştırılır: Türkçe karakterli parolada
+  // uzunluklar farklı çıkar ve timingSafeEqual istisna fırlatırdı (500).
+  if (girilen.length !== expected.length) return false
+  return timingSafeEqual(girilen, expected)
 }
 
 export const ADMIN_COOKIE = COOKIE
 export const ADMIN_COOKIE_OPTIONS = {
   httpOnly: true as const,
   sameSite: 'lax' as const,
+  // Canlıda çerez yalnızca HTTPS üzerinden gider.
+  secure: process.env.NODE_ENV === 'production',
   path: '/',
   maxAge: MAX_AGE,
 }
@@ -77,6 +112,22 @@ export async function getAdminSession(): Promise<AdminSession | null> {
     .where('is_active', '=', true)
     .executeTakeFirst()
   return user ?? null
+}
+
+/**
+ * Panel sayfalarının İLK satırı bu olmalı.
+ *
+ * Oturum kontrolü yalnızca `app/admin/layout.tsx` içindeyken, Next.js'in
+ * istemci tarafı gezinme isteği (`RSC: 1` + `Next-Router-State-Tree` başlığı
+ * "yerleşim zaten bende" diyen) yerleşimi atlayıp sayfayı doğrudan alabiliyordu
+ * — çerez olmadan müşteri adı, telefonu ve adresi dönüyordu (doğrulandı).
+ * Next.js yalnızca değişen bölümü işlediği için yerleşimdeki kontrol bir
+ * güvenlik sınırı DEĞİLDİR. Her sayfa kendini korur.
+ */
+export async function requireAdmin(): Promise<AdminSession> {
+  const oturum = await getAdminSession()
+  if (!oturum) redirect('/admin/giris')
+  return oturum
 }
 
 /** Giriş sırasında kullanıcıyı bulur ya da ilk kez oluşturur. */

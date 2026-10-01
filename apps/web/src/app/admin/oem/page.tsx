@@ -1,4 +1,5 @@
 import { listReferences } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
@@ -16,6 +17,7 @@ export default async function AdminReferencesPage({
 }: {
   searchParams: Promise<Record<string, string | undefined>>
 }) {
+  await requireAdmin()
   const sp = await searchParams
   const search = sp.ara?.trim() || null
   const rows = await listReferences(search)

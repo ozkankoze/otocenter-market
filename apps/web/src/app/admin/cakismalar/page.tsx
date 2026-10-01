@@ -1,10 +1,12 @@
 import { listConflicts } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, StatusPill, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Veri Çakışmaları' }
 
 export default async function AdminConflictsPage() {
+  await requireAdmin()
   const conflicts = await listConflicts()
   const open = conflicts.filter((c) => c.status === 'OPEN')
 

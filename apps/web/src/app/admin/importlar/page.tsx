@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { requireAdmin } from '@/server/admin/auth'
 import { listImports } from '@/server/admin/queries'
 import { DataTable, PageHeader, StatusPill, Td } from '@/components/admin/shell'
 import { formatDateTime } from '@/lib/utils'
@@ -7,6 +8,7 @@ export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Importlar' }
 
 export default async function ImportListPage() {
+  await requireAdmin()
   const imports = await listImports()
 
   return (

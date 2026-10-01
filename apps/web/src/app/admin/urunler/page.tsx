@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { requireAdmin } from '@/server/admin/auth'
 import { listAdminProducts } from '@/server/admin/queries'
 import { DataTable, PageHeader, StatusPill, Td } from '@/components/admin/shell'
 
@@ -10,6 +11,7 @@ export default async function AdminProductsPage({
 }: {
   searchParams: Promise<Record<string, string | undefined>>
 }) {
+  await requireAdmin()
   const sp = await searchParams
   const search = sp.ara?.trim() || null
   const products = await listAdminProducts(search)

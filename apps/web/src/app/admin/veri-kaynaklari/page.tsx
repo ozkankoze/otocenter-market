@@ -1,4 +1,5 @@
 import { listDataSources } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
@@ -14,6 +15,7 @@ const KIND_LABELS: Record<string, string> = {
 }
 
 export default async function AdminSourcesPage() {
+  await requireAdmin()
   const sources = await listDataSources()
 
   return (

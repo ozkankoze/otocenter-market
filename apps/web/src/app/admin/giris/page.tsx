@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
-import { getAdminSession } from '@/server/admin/auth'
+import { adminYapilandirildi, getAdminSession } from '@/server/admin/auth'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Giriş' }
@@ -27,6 +27,13 @@ export default async function AdminLoginPage({
             <span className="text-[12px] text-ink-500">Yönetim paneli</span>
           </div>
         </div>
+
+        {!adminYapilandirildi() ? (
+          <p className="mb-4 rounded-md border border-[#F3D4CF] bg-[#FDF1EF] px-3 py-2 text-[12.5px] text-danger">
+            Panel kapalı: sunucuda ADMIN_PASSWORD (en az 10 karakter) ve ADMIN_SESSION_SECRET
+            (en az 32 karakter) tanımlanmalı.
+          </p>
+        ) : null}
 
         {sp.hata ? (
           <p className="mb-4 rounded-md border border-[#F3D4CF] bg-[#FDF1EF] px-3 py-2 text-[12.5px] text-danger">

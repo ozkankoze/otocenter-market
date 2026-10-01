@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { requireAdmin } from '@/server/admin/auth'
 import { notFound } from 'next/navigation'
 import { CheckCircle2 } from 'lucide-react'
 import { getImportDetail } from '@/server/admin/queries'
@@ -41,6 +42,7 @@ export default async function ImportDetailPage({
   params: Promise<{ id: string }>
   searchParams: Promise<Record<string, string | undefined>>
 }) {
+  await requireAdmin()
   const { id } = await params
   const sp = await searchParams
   const detail = await getImportDetail(Number(id))

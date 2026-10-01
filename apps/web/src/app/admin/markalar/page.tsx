@@ -1,10 +1,12 @@
 import { listAdminBrands } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Markalar' }
 
 export default async function AdminBrandsPage() {
+  await requireAdmin()
   const brands = await listAdminBrands()
 
   return (

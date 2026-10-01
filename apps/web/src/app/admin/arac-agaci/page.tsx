@@ -1,10 +1,12 @@
 import { listVehicleTree } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { DataTable, PageHeader, Td } from '@/components/admin/shell'
 
 export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Araç Ağacı' }
 
 export default async function AdminVehicleTreePage() {
+  await requireAdmin()
   const rows = await listVehicleTree()
 
   return (

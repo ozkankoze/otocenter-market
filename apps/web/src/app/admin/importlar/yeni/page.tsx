@@ -1,4 +1,5 @@
 import { listDataSources } from '@/server/admin/queries'
+import { requireAdmin } from '@/server/admin/auth'
 import { PageHeader } from '@/components/admin/shell'
 import { ImportWizard } from '@/components/admin/import-wizard'
 
@@ -6,6 +7,7 @@ export const dynamic = 'force-dynamic'
 export const metadata = { title: 'Yeni import' }
 
 export default async function NewImportPage() {
+  await requireAdmin()
   const sources = await listDataSources()
 
   return (
