@@ -6,6 +6,11 @@ import type { CompatibilityState } from '@/features/vehicle/types'
 
 export type ProductCardData = {
   id: number
+  /**
+   * Varsayılan varyantın kimliği — sepete bu eklenir. Fiyatı olmayan ya da
+   * varyantı bulunmayan üründe null; kart "Sepete Ekle" yerine pasif görünür.
+   */
+  variantId: number | null
   sku: string
   slug: string
   name: string

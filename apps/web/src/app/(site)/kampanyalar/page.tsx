@@ -31,7 +31,7 @@ const AVANTAJLAR = [
   {
     icon: Truck,
     title: '500 ₺ üzeri kargo ücretsiz',
-    text: 'Sepet tutarı 500 ₺ ve üzerindeki siparişlerde kargo ücreti alınmaz. Tutarın altındaki siparişlerde kargo bedeli ödeme adımında açıkça gösterilir.',
+    text: 'Sepet tutarı 500 ₺ ve üzerindeki siparişlerde kargo ücreti bizden. Tutarın altındaki siparişler alıcı ödemeli gönderilir; kargo bedeli teslimatta kargo firmasına ödenir.',
     badge: 'Sürekli',
   },
   {
@@ -42,8 +42,8 @@ const AVANTAJLAR = [
   },
   {
     icon: CreditCard,
-    title: 'Taksit ve havale seçeneği',
-    text: '3D Secure destekli sanal POS üzerinden kredi kartına taksit yapılabilir. Havale/EFT ile ödemede sipariş, ödeme onayının ardından hazırlanır.',
+    title: 'Kredi kartına taksit',
+    text: 'PayTR güvenli ödeme altyapısıyla kredi kartına taksit yapılabilir. Taksit seçenekleri ve varsa vade farkı, kart bilgilerini girerken ödeme ekranında gösterilir.',
     badge: 'Sürekli',
   },
   {

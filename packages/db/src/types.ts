@@ -429,6 +429,99 @@ export interface ImportChangeTable {
   skip_reason: string | null
 }
 
+
+// ─────────────────────────── SİPARİŞ VE ÖDEME (0005) ─────────────────────────
+
+export const ORDER_STATUSES = [
+  'PENDING_PAYMENT',
+  'PAID',
+  'PAYMENT_FAILED',
+  'SHIPPED',
+  'DELIVERED',
+  'CANCELLED',
+  'REFUNDED',
+] as const
+export type OrderStatus = (typeof ORDER_STATUSES)[number]
+
+export const INVOICE_TYPES = ['BIREYSEL', 'KURUMSAL'] as const
+export type InvoiceType = (typeof INVOICE_TYPES)[number]
+
+export const SHIPPING_PAYERS = ['SATICI', 'ALICI'] as const
+export type ShippingPayer = (typeof SHIPPING_PAYERS)[number]
+
+/** BIGINT kuruş tutarları — client.ts INT8'i number'a çeviriyor. */
+type Kurus = ColumnType<number, number, number>
+/**
+ * Varsayılanı veritabanında olan zaman damgası. `ZamanVarsayilanli` iç içe
+ * ColumnType ürettiği için seçimde Date yerine ColumnType tipi dönüyordu.
+ */
+type ZamanVarsayilanli = ColumnType<Date, Date | string | undefined, Date | string>
+
+export interface CustomerOrderTable {
+  id: Generated<number>
+  order_no: string
+  status: Generated<OrderStatus>
+  full_name: string
+  email: string
+  phone: string
+  ship_city: string
+  ship_district: string
+  ship_address: string
+  ship_postal_code: string | null
+  invoice_type: Generated<InvoiceType>
+  invoice_name: string | null
+  invoice_tax_office: string | null
+  invoice_tax_no: string | null
+  invoice_address: string | null
+  subtotal_kurus: Kurus
+  shipping_kurus: Generated<number>
+  shipping_payer: ShippingPayer
+  total_kurus: Kurus
+  currency: Generated<string>
+  paid_total_kurus: number | null
+  installment_count: number | null
+  payment_type: string | null
+  test_mode: Generated<boolean>
+  failed_reason_code: string | null
+  failed_reason_msg: string | null
+  stock_shortage: Generated<boolean>
+  cargo_company: string | null
+  tracking_no: string | null
+  terms_version: string
+  terms_accepted_at: Timestamp
+  customer_ip: string
+  admin_note: string | null
+  created_at: ZamanVarsayilanli
+  updated_at: ZamanVarsayilanli
+  paid_at: Timestamp | null
+  shipped_at: Timestamp | null
+}
+
+export interface OrderItemTable {
+  id: Generated<number>
+  order_id: number
+  variant_id: number | null
+  product_id: number | null
+  sku: string
+  product_title: string
+  product_slug: string | null
+  quantity: number
+  unit_price_kurus: Kurus
+  tax_rate: number
+  line_total_kurus: Kurus
+}
+
+export interface PaymentNotificationTable {
+  id: Generated<number>
+  order_no: string | null
+  status: string | null
+  total_amount: number | null
+  hash_valid: boolean
+  outcome: string
+  payload: Json
+  received_at: ZamanVarsayilanli
+}
+
 export interface Database {
   data_source: DataSourceTable
   vehicle_type: VehicleTypeTable
@@ -455,6 +548,9 @@ export interface Database {
   import_job: ImportJobTable
   import_staging_row: ImportStagingRowTable
   import_change: ImportChangeTable
+  customer_order: CustomerOrderTable
+  order_item: OrderItemTable
+  payment_notification: PaymentNotificationTable
   _ocm_migration: MigrationTable
 }
 
@@ -472,3 +568,5 @@ export type ImportJob = Selectable<ImportJobTable>
 export type ImportStagingRow = Selectable<ImportStagingRowTable>
 export type ImportChange = Selectable<ImportChangeTable>
 export type AdminUser = Selectable<AdminUserTable>
+export type CustomerOrder = Selectable<CustomerOrderTable>
+export type OrderItem = Selectable<OrderItemTable>

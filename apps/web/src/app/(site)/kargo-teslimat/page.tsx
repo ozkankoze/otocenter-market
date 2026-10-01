@@ -26,7 +26,7 @@ export default function ShippingPage() {
 
       <PageBody>
         <div className="grid gap-4 md:grid-cols-3">
-          <Ozet baslik="Ücretsiz kargo sınırı" deger="500 ₺" not="Sepet tutarı bu tutarın üzerindeyse kargo bedeli alınmaz." />
+          <Ozet baslik="Ücretsiz kargo sınırı" deger="500 ₺" not="500 ₺ ve üzeri siparişlerde kargo bizden; altı alıcı ödemeli." />
           <Ozet baslik="Aynı gün kargo saati" deger="16:00" not="Bu saate kadar verilen ve stokta olan siparişler aynı gün çıkar." />
           <Ozet baslik="Hazırlık süresi" deger="Stoklu ürünlerde aynı gün" not="Tedarik gereken ürünlerde süre ürün sayfasında yazar." />
         </div>
@@ -39,10 +39,6 @@ export default function ShippingPage() {
               siparişler <strong>aynı gün</strong> kargoya teslim edilir. Bu saatten sonra verilen
               siparişler ertesi iş günü çıkar. Hafta sonu ve resmî tatillerde kargo firmaları
               çalışmadığı için sevkiyat ilk iş gününde yapılır.
-            </p>
-            <p>
-              Havale/EFT ile ödemede sipariş, ödemenin hesaba geçtiği anda hazırlanmaya başlar.
-              Ödeme onayı bankaya bağlı olarak gecikebilir.
             </p>
 
             <h2>Stokta olmayan ürünler</h2>
@@ -58,10 +54,9 @@ export default function ShippingPage() {
 
             <h2>Kargo ücreti</h2>
             <p>
-              Sepet tutarı <strong>500 ₺ ve üzerindeyse kargo ücretsizdir</strong>. Bu tutarın
-              altındaki siparişlerde kargo bedeli, ödeme adımında toplam tutara eklenmeden önce
-              açıkça gösterilir. Ağır ve hacimli ürünlerde (ör. ağır vasıta filtre setleri) farklı
-              bir bedel uygulanması gerekirse bu da aynı adımda görünür.
+              Sepet tutarı <strong>500 ₺ ve üzerindeyse kargo ücretsizdir</strong>; bedeli biz
+              öderiz. Bu tutarın altındaki siparişler <strong>alıcı ödemeli</strong> gönderilir: kargo bedeli teslimat sırasında kargo firmasına ödenir, sitede tahsil edilmez. Hangi durumun geçerli olduğu ödeme adımındaki sipariş
+              özetinde, siz onaylamadan önce yazar.
             </p>
 
             <h2>Teslimat süresi</h2>

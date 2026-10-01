@@ -68,7 +68,8 @@ export async function truncateAll(db: Kysely<Database>): Promise<void> {
     db.getExecutor().compileQuery({
       kind: 'RawNode',
       sqlFragments: [
-        `TRUNCATE import_change, import_staging_row, import_job, admin_user,
+        `TRUNCATE payment_notification, order_item, customer_order,
+                  import_change, import_staging_row, import_job, admin_user,
                   data_conflict, engine_category_index, product_compatibility,
                   compatibility_assertion, attribute_assertion, product_reference,
                   price, stock, product_variant, product_image, product,

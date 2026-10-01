@@ -1,8 +1,9 @@
 'use client'
 
 import * as React from 'react'
-import { Minus, Plus, ShoppingCart, Truck, RotateCcw, ShieldCheck } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { Minus, Plus, Truck, RotateCcw, ShieldCheck } from 'lucide-react'
+import { SepeteEkle } from '@/components/sepet/sepete-ekle'
+import { SATIR_ADET_SINIRI } from '@/features/sepet/sinirlar'
 import { cn, formatPrice } from '@/lib/utils'
 import type { ProductVariantView } from '@/server/product-queries'
 import type { CompatibilityState } from '@/features/vehicle/types'
@@ -10,9 +11,12 @@ import type { CompatibilityState } from '@/features/vehicle/types'
 export function ProductPurchase({
   variants,
   compatibility,
+  baslik,
 }: {
   variants: ProductVariantView[]
   compatibility: CompatibilityState
+  /** Ürünün tam adı — "sepete eklendi" bildiriminde gösterilir. */
+  baslik: string
 }) {
   const defaultIndex = Math.max(
     0,
@@ -38,7 +42,10 @@ export function ProductPurchase({
               <button
                 key={v.id}
                 type="button"
-                onClick={() => setIndex(i)}
+                onClick={() => {
+                  setIndex(i)
+                  setQty(1)
+                }}
                 aria-pressed={i === index}
                 className={cn(
                   'inline-flex h-9 items-center gap-2 rounded-md border px-3 text-[13px] font-medium transition-colors',
@@ -104,31 +111,23 @@ export function ProductPurchase({
           <button
             type="button"
             className="flex h-full w-11 items-center justify-center text-ink-600 transition-colors hover:text-brand-600"
-            onClick={() => setQty((q) => q + 1)}
+            onClick={() => setQty((q) => Math.min(q + 1, Math.max(1, Math.min(variant.stock, SATIR_ADET_SINIRI))))}
+            disabled={qty >= Math.min(variant.stock, SATIR_ADET_SINIRI)}
             aria-label="Adet artır"
           >
             <Plus size={16} />
           </button>
         </div>
 
-        <Button
+        <SepeteEkle
+          variantId={variant.id}
+          baslik={baslik}
+          adet={qty}
+          stok={variant.stock}
+          uyumsuz={incompatible}
           size="lg"
           className="min-w-[220px] flex-1"
-          disabled={incompatible}
-          variant={outOfStock ? 'secondary' : 'primary'}
-          data-testid="add-to-cart"
-        >
-          {incompatible ? (
-            'Aracınıza uygun değil'
-          ) : outOfStock ? (
-            'Gelince Haber Ver'
-          ) : (
-            <>
-              <ShoppingCart size={18} aria-hidden="true" />
-              SEPETE EKLE
-            </>
-          )}
-        </Button>
+        />
       </div>
 
       <ul className="mt-5 space-y-2 border-t border-ink-50 pt-4 text-[12.5px] text-ink-600">

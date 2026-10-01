@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { SepeteEkle } from '@/components/sepet/sepete-ekle'
 import { Card } from '@/components/ui/card'
 import { CompatibilityBadge } from './compatibility-badge'
 import { cn, formatPrice, productTitle } from '@/lib/utils'
@@ -148,14 +148,20 @@ export function ProductCard({
             : `Stokta (${product.stock} adet)`}
       </span>
 
-      <Button
+      {/*
+        `relative z-10`: kartın tamamını kaplayan ürün bağlantısının üstünde kalır,
+        yoksa tıklama ürün sayfasına gider. Stokta olmayan ürün için eskiden
+        "Gelince Haber Ver" yazıyordu ama arkasında bir işlev yoktu; artık düğme
+        durumu dürüstçe söylüyor.
+      */}
+      <SepeteEkle
+        variantId={product.variantId}
+        baslik={productTitle(product)}
+        stok={product.stock}
+        uyumsuz={incompatible}
         block
-        variant={outOfStock ? 'secondary' : 'primary'}
         className="relative z-10 mt-auto"
-        disabled={incompatible}
-      >
-        {incompatible ? 'Aracınıza uygun değil' : outOfStock ? 'Gelince Haber Ver' : 'Sepete Ekle'}
-      </Button>
+      />
     </Card>
   )
 }

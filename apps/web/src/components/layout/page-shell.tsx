@@ -104,20 +104,3 @@ export function Prose({ className, children }: { className?: string; children: R
     </div>
   )
 }
-
-/**
- * Hukuki metinlerde eksik künye bilgisi için uyarı.
- *
- * Ticaret unvanı, vergi dairesi/numarası ve MERSİS numarası projede tanımlı
- * DEĞİL. Bunları uydurmak yerine, metnin o kısmının tamamlanması gerektiğini
- * açıkça yazıyoruz — hem yasal olarak doğrusu bu, hem de unutulmasını önler.
- */
-export function EksikKunyeUyarisi() {
-  return (
-    <div className="mt-8 rounded-lg border border-warning/30 bg-warning/8 p-4 text-[13px] leading-relaxed text-ink-700">
-      <b className="mb-1 block font-semibold text-ink-900">Künye bilgileri tamamlanacak</b>
-      Bu metindeki <b>ticaret unvanı, vergi dairesi, vergi numarası ve MERSİS numarası</b> alanları
-      henüz doldurulmamıştır. Yayına çıkmadan önce şirketin resmî bilgileriyle güncellenmelidir.
-    </div>
-  )
-}

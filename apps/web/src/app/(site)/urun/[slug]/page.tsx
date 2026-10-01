@@ -218,7 +218,15 @@ export default async function ProductPage({ params, searchParams }: Props) {
             />
           </div>
 
-          <ProductPurchase variants={product.variants} compatibility={product.compatibility} />
+          <ProductPurchase
+            variants={product.variants}
+            compatibility={product.compatibility}
+            baslik={productTitle({
+              brandName: product.brand.name,
+              productCode: product.productCode,
+              name: product.name,
+            })}
+          />
         </div>
       </div>
 

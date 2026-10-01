@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Logo, LOGO_HEIGHTS } from './logo'
-import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
+import { DIS_BAGLANTI_REL, SATICI, SITE } from '@/lib/site'
 import type { MegaMenuData } from '@/server/catalog-queries'
 
 /**
@@ -169,6 +169,15 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
             </Link>
           ))}
         </div>
+        {/*
+          Satıcı künyesi — 6563 sayılı Kanun ve Mesafeli Sözleşmeler Yönetmeliği
+          satıcının unvanı, adresi ve MERSİS numarasının sitede kolayca
+          ulaşılabilir olmasını istiyor; her sayfanın altında duruyor.
+        */}
+        <p className="ocm-container pb-4 text-[11.5px] leading-relaxed">
+          {SATICI.unvan} · {SATICI.adres} · MERSİS {SATICI.mersisNo} · Vergi no {SATICI.vergiNo} (
+          {SATICI.vergiDairesi})
+        </p>
       </div>
     </footer>
   )

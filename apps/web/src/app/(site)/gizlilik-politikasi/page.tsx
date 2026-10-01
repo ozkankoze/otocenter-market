@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PageBody, PageHero, Prose, EksikKunyeUyarisi } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
+import { SATICI, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
         <Prose>
           <h2>1. Kapsam</h2>
           <p>
-            Bu politika {SITE.name} tarafından işletilen web sitesi için geçerlidir. Kişisel
+            Bu politika, {SATICI.unvan} tarafından işletilen {SITE.name} web sitesi için geçerlidir. Kişisel
             verilerin işlenmesine ilişkin yasal aydınlatma ayrıca{' '}
             <Link href="/kvkk" title="KVKK Aydınlatma Metni metnini oku">KVKK Aydınlatma Metni</Link> içinde yer alır; çerezler için{' '}
             <Link href="/cerez-politikasi" title="Çerez Politikası metnini oku">Çerez Politikası</Link> geçerlidir.
@@ -121,7 +121,6 @@ export default function PrivacyPage() {
           </p>
         </Prose>
 
-        <EksikKunyeUyarisi />
       </PageBody>
     </>
   )

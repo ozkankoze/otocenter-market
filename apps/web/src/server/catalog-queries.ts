@@ -104,6 +104,7 @@ export async function getProducts(options: {
 
   const rows = await sql<{
     id: number
+    variant_id: number | null
     sku: string
     slug: string
     name: string
@@ -123,7 +124,7 @@ export async function getProducts(options: {
     spec_labels: Array<{ key: string; label: string; unit: string | null }> | null
     image_url: string | null
   }>`
-    SELECT p.id, p.sku, p.slug, p.name, p.product_code, p.specs,
+    SELECT p.id, v.id AS variant_id, p.sku, p.slug, p.name, p.product_code, p.specs,
            b.name AS brand_name, b.slug AS brand_slug,
            c.code AS category_code, c.name AS category_name,
            pr.price_net, pr.tax_rate, pr.list_price,
@@ -195,6 +196,7 @@ export async function getProducts(options: {
 
     return {
       id: r.id,
+      variantId: r.variant_id,
       sku: r.sku,
       slug: r.slug,
       name: r.name,

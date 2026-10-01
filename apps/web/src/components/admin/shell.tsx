@@ -3,6 +3,7 @@ import { cn } from '@/lib/utils'
 
 export const ADMIN_NAV = [
   { href: '/admin', label: 'Dashboard', group: 'Genel' },
+  { href: '/admin/siparisler', label: 'Siparişler', group: 'Satış' },
   { href: '/admin/urunler', label: 'Ürünler', group: 'Katalog' },
   { href: '/admin/kategoriler', label: 'Kategoriler', group: 'Katalog' },
   { href: '/admin/markalar', label: 'Markalar', group: 'Katalog' },

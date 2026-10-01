@@ -1,6 +1,7 @@
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { WhatsAppButton } from '@/components/layout/whatsapp-button'
+import { SepetBildirimi } from '@/components/sepet/sepet-bildirimi'
 import { SiteJsonLd } from '@/components/seo/site-jsonld'
 import { VehicleUiProvider } from '@/components/vehicle/vehicle-ui-provider'
 import { getMegaMenuData } from '@/server/catalog-queries'
@@ -29,6 +30,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       </main>
       <Footer menu={menu} />
       <WhatsAppButton />
+      <SepetBildirimi />
     </VehicleUiProvider>
   )
 }

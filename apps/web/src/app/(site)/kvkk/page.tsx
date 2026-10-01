@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PageBody, PageHero, Prose, EksikKunyeUyarisi } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
+import { SATICI, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -27,8 +27,9 @@ export default function KvkkPage() {
         <Prose>
           <h2>1. Veri sorumlusu</h2>
           <p>
-            {SITE.name} olarak, 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca veri
-            sorumlusu sıfatıyla hareket ediyoruz.
+            {SITE.name} web sitesini işleten <strong>{SATICI.unvan}</strong> (Adres: {SATICI.adres};
+            MERSİS: {SATICI.mersisNo}), 6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”)
+            uyarınca veri sorumlusu sıfatıyla hareket etmektedir.
           </p>
           <p>
             <strong>Adres:</strong> {SITE.address}
@@ -59,8 +60,8 @@ export default function KvkkPage() {
           </ul>
           <p>
             <strong>Kredi kartı bilgileriniz tarafımızca saklanmaz.</strong> Ödeme işlemleri, banka
-            veya ödeme kuruluşunun sanal POS altyapısı üzerinden yürütülür; kart verisi doğrudan
-            ilgili kuruluşa iletilir.
+            veya ödeme kuruluşunun altyapısı üzerinden yürütülür (PayTR Ödeme ve Elektronik Para
+            Kuruluşu A.Ş.); kart verisi doğrudan ilgili kuruluşa iletilir, bize ulaşmaz.
           </p>
 
           <h2>3. İşleme amaçlarımız</h2>
@@ -144,7 +145,6 @@ export default function KvkkPage() {
           </p>
         </Prose>
 
-        <EksikKunyeUyarisi />
       </PageBody>
     </>
   )

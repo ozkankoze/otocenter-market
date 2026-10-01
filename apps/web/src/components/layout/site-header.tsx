@@ -19,6 +19,7 @@ import { Logo, LOGO_HEIGHTS } from './logo'
 import { Button } from '@/components/ui/button'
 import { SiteSearchForm } from './site-search-form'
 import { useVehicleUi } from '@/components/vehicle/vehicle-ui-provider'
+import { useSepet } from '@/features/sepet/use-sepet'
 import { SITE } from '@/lib/site'
 import type { MegaMenuData } from '@/server/catalog-queries'
 import type { VehicleSelection } from '@/features/vehicle/types'
@@ -85,6 +86,7 @@ export function SiteHeader({
   selection: VehicleSelection | null
 }) {
   const { openSelector } = useVehicleUi()
+  const { toplamAdet: sepetAdet } = useSepet()
   const [megaOpen, setMegaOpen] = React.useState(false)
   const [drawerOpen, setDrawerOpen] = React.useState(false)
   /*
@@ -237,8 +239,9 @@ export function SiteHeader({
               <HeaderAction
                 icon={<ShoppingCart size={20} strokeWidth={1.75} />}
                 title="Sepetim"
-                sub="0,00 ₺"
-                badge={0}
+                sub={sepetAdet > 0 ? `${sepetAdet} ürün` : 'Boş'}
+                badge={sepetAdet}
+                href="/sepet"
               />
             </div>
           </div>
@@ -464,15 +467,23 @@ export function SiteHeader({
             erişilebilir adın içinde yazıyor, bu yüzden ekran okuyucudan
             gizleniyor.
           */}
-          <button type="button" aria-label="Sepetim — 0 ürün" className="relative p-1.5 text-ink-800">
+          <Link
+            href="/sepet"
+            prefetch={false}
+            aria-label={`Sepetim — ${sepetAdet} ürün`}
+            title="Sepete git"
+            className="relative p-1.5 text-ink-800"
+          >
             <ShoppingCart size={21} aria-hidden="true" />
-            <i
-              aria-hidden="true"
-              className="absolute top-0 right-0 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-600 px-1 text-[10px] font-semibold text-white not-italic"
-            >
-              0
-            </i>
-          </button>
+            {sepetAdet > 0 ? (
+              <i
+                aria-hidden="true"
+                className="absolute top-0 right-0 inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-600 px-1 text-[10px] font-semibold text-white not-italic"
+              >
+                {sepetAdet > 99 ? '99+' : sepetAdet}
+              </i>
+            ) : null}
+          </Link>
         </div>
       </header>
 
@@ -701,7 +712,11 @@ export function SiteHeader({
             active={Boolean(selection)}
             onClick={openSelector}
           />
-          <BottomItem icon={<ShoppingCart size={19} />} label="Sepet" />
+          <BottomItem
+            icon={<ShoppingCart size={19} />}
+            label={sepetAdet > 0 ? `Sepet (${sepetAdet})` : 'Sepet'}
+            href="/sepet"
+          />
         </div>
       </nav>
     </>
@@ -760,12 +775,27 @@ function BottomItem({
   label,
   onClick,
   active,
+  href,
 }: {
   icon: React.ReactNode
   label: string
   onClick?: () => void
   active?: boolean
+  href?: string
 }) {
+  if (href) {
+    return (
+      <Link
+        href={href}
+        prefetch={false}
+        title={label}
+        className="flex flex-col items-center justify-center gap-1 text-[10.5px] font-medium text-ink-600 transition-colors"
+      >
+        {icon}
+        {label}
+      </Link>
+    )
+  }
   return (
     <button
       type="button"

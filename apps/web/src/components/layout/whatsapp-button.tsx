@@ -1,3 +1,6 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 
 /**
@@ -11,8 +14,16 @@ import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
  * `wa.me` adresi cihaza göre doğru davranır: masaüstünde WhatsApp Web ya da
  * masaüstü uygulaması, mobilde doğrudan uygulama açılır. Ayrı bir tespit
  * yapmaya gerek yok — bunu WhatsApp'ın kendi yönlendirmesi hallediyor.
+ *
+ * Sepet ve ödeme sayfalarında MOBİLDE gizlenir: dar ekranda "Ödemeye geç" ve
+ * "Siparişi onayla ve öde" düğmelerinin sağ kenarını örtüyordu. Bu sayfalarda
+ * yardım bağlantıları sayfanın içinde zaten var; masaüstünde çakışma yok.
  */
+const ODEME_YOLLARI = ['/sepet', '/odeme']
+
 export function WhatsAppButton() {
+  const yol = usePathname()
+  const odemeAdimi = ODEME_YOLLARI.some((y) => yol === y || yol?.startsWith(`${y}/`))
   return (
     <a
       href={SITE.whatsappHref}
@@ -29,6 +40,7 @@ export function WhatsAppButton() {
         'focus-visible:ring-4 focus-visible:ring-[#25D366]/35 focus-visible:outline-none',
         // Masaüstünde hover/odakta yazı açılır; mobilde yalnızca ikon kalır.
         'lg:hover:gap-2.5 lg:focus-visible:gap-2.5',
+        odemeAdimi ? 'max-lg:hidden' : '',
       ].join(' ')}
     >
       <span className="inline-flex h-14 w-14 items-center justify-center">

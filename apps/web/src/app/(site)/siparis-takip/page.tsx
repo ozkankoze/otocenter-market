@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card'
 import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
 import { DIS_BAGLANTI_REL, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
+import { SiparisSorgu } from './siparis-sorgu'
 
 export const metadata: Metadata = {
   title: 'Sipariş Takip',
@@ -13,7 +14,12 @@ export const metadata: Metadata = {
   alternates: { canonical: '/siparis-takip' },
 }
 
-export default function OrderTrackingPage() {
+type Props = { searchParams: Promise<{ siparis?: string; email?: string }> }
+
+export default async function OrderTrackingPage({ searchParams }: Props) {
+  const sp = await searchParams
+  const ilkNo = (sp.siparis ?? '').slice(0, 40)
+  const ilkEmail = (sp.email ?? '').slice(0, 100)
   const crumbs: Crumb[] = [{ label: 'Ana Sayfa', href: '/' }, { label: 'Sipariş Takip' }]
 
   return (
@@ -21,11 +27,12 @@ export default function OrderTrackingPage() {
       <PageHero
         eyebrow="Müşteri hizmetleri"
         title="Sipariş Takip"
-        description="Siparişinizin durumunu ve kargo takip numarasını doğrudan bizden öğrenebilirsiniz."
+        description="Sipariş numaranız ve e-posta adresinizle siparişinizin durumunu ve kargo takip numarasını görebilirsiniz."
         crumbs={crumbs}
       />
 
       <PageBody>
+        <SiparisSorgu ilkNo={ilkNo} ilkEmail={ilkEmail} />
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <Prose>
             <h2>Hangi bilgileri hazır bulundurmalısınız?</h2>
@@ -34,7 +41,8 @@ export default function OrderTrackingPage() {
             </p>
             <ul>
               <li>
-                <strong>Sipariş numaranız</strong> — sipariş onay mesajında yer alır.
+                <strong>Sipariş numaranız</strong> — ödeme tamamlandığında ekranda gösterilir
+                (OCM ile başlar).
               </li>
               <li>
                 <strong>Sipariş sırasında verdiğiniz telefon numarası ya da e-posta adresi</strong> —

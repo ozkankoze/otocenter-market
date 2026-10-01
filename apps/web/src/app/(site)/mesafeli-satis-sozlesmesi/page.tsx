@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { PageBody, PageHero, Prose, EksikKunyeUyarisi } from '@/components/layout/page-shell'
-import { SITE } from '@/lib/site'
+import { PageBody, PageHero, Prose } from '@/components/layout/page-shell'
+import { SATICI, SITE } from '@/lib/site'
 import type { Crumb } from '@/components/ui/breadcrumb'
 
 export const metadata: Metadata = {
@@ -31,13 +31,19 @@ export default function DistanceSalesPage() {
           <h2>Madde 1 — Taraflar</h2>
           <h3>1.1. Satıcı</h3>
           <p>
-            <strong>Unvan:</strong> {SITE.name}
+            <strong>Unvan:</strong> {SATICI.unvan} (“{SITE.name}”)
             <br />
-            <strong>Adres:</strong> {SITE.address}
+            <strong>Adres:</strong> {SATICI.adres}
             <br />
-            <strong>Telefon:</strong> {SITE.phoneDisplay}
+            <strong>Vergi dairesi / no:</strong> {SATICI.vergiDairesi} / {SATICI.vergiNo}
             <br />
-            <strong>E-posta:</strong> {SITE.email}
+            <strong>MERSİS no:</strong> {SATICI.mersisNo}
+            <br />
+            <strong>Ticaret sicil:</strong> {SATICI.ticaretSicil}
+            <br />
+            <strong>Telefon:</strong> {SATICI.telefon}
+            <br />
+            <strong>E-posta:</strong> {SATICI.eposta}
           </p>
           <h3>1.2. Alıcı</h3>
           <p>
@@ -58,9 +64,11 @@ export default function DistanceSalesPage() {
             Alıcı’ya iletilir. Listelenen fiyatlar aksi belirtilmedikçe <strong>KDV dâhildir</strong>.
           </p>
           <p>
-            Ödeme, 3D Secure destekli sanal POS üzerinden kredi kartı ile ya da havale/EFT ile
-            yapılabilir. Havale ile ödemede sipariş, ödemenin Satıcı hesabına geçtiği tarihte
-            işleme alınır.
+            Ödeme, PayTR Ödeme ve Elektronik Para Kuruluşu A.Ş. güvenli ödeme altyapısı
+            üzerinden kredi veya banka kartıyla, tek çekim ya da taksitli olarak yapılır.
+            Taksitli ödemede kart sahibinin bankasının uyguladığı vade farkı ödeme ekranında
+            gösterilir ve Alıcı’ya aittir. Kart bilgileri Satıcı tarafından görülmez ve saklanmaz.
+            Sipariş, ödemenin ödeme kuruluşu tarafından onaylanmasıyla kesinleşir.
           </p>
 
           <h2>Madde 4 — Teslimat</h2>
@@ -74,8 +82,10 @@ export default function DistanceSalesPage() {
               edilir. Kargo süreleri kargo firmasının hizmet ağına bağlıdır.
             </li>
             <li>
-              Sepet tutarı 500 ₺ ve üzerindeki siparişlerde kargo bedeli alınmaz; altındaki
-              siparişlerde bedel sipariş özetinde gösterilir.
+              Sepet tutarı 500 ₺ ve üzerindeki siparişlerde kargo bedeli Satıcı’ya aittir. Bu
+              tutarın altındaki siparişler <strong>alıcı ödemeli</strong> gönderilir; kargo bedeli
+              teslimat sırasında Alıcı tarafından kargo firmasına ödenir ve sitede tahsil edilen
+              tutara dahil değildir. Bu durum sipariş onayından önce sipariş özetinde belirtilir.
             </li>
             <li>
               Teslimat süresi, yasal azami süre olan <strong>30 günü</strong> aşamaz. Bu sürede
@@ -161,7 +171,6 @@ export default function DistanceSalesPage() {
           </p>
         </Prose>
 
-        <EksikKunyeUyarisi />
       </PageBody>
     </>
   )

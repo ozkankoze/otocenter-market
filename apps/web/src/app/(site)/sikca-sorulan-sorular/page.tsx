@@ -88,23 +88,24 @@ const GRUPLAR: Grup[] = [
       },
       {
         q: 'Kargo ücreti ne kadar?',
-        plain: '500 ₺ ve üzeri siparişlerde kargo ücretsizdir. Altındaki tutarlarda ödeme adımında gösterilir.',
+        plain: '500 ₺ ve üzeri siparişlerde kargo ücretsizdir. Altındaki siparişler alıcı ödemeli gönderilir; kargo bedeli teslimatta kargo firmasına ödenir.',
         a: (
           <>
             <strong>500 ₺ ve üzeri</strong> siparişlerde kargo ücretsizdir. Bu tutarın altındaki
-            siparişlerde kargo bedeli, ödeme adımında toplama eklenmeden önce açıkça gösterilir.
+            siparişler <strong>alıcı ödemeli</strong> gönderilir; kargo bedeli teslimatta kargo
+            firmasına ödenir, sitede tahsil edilmez.
           </>
         ),
       },
       {
         q: 'Siparişimi nasıl takip ederim?',
         plain:
-          'Sipariş numaranızla telefon, WhatsApp veya e-posta üzerinden bize ulaşarak durumu öğrenebilirsiniz.',
+          'Sipariş takip sayfasında sipariş numaranız ve e-posta adresinizle durumu ve kargo takip numarasını görebilirsiniz.',
         a: (
           <>
-            Sipariş numaranızla bize ulaşın; durumu ve kargo takip numarasını iletelim.{' '}
-            <Link href="/siparis-takip" title="Sipariş Takip sayfasına git">Sipariş takip sayfasında</Link> hangi bilgileri hazır
-            bulundurmanız gerektiği yazıyor.
+            <Link href="/siparis-takip" title="Sipariş Takip sayfasına git">Sipariş takip sayfasında</Link>{' '}
+            sipariş numaranız (OCM ile başlar) ve sipariş sırasında yazdığınız e-posta ile durumu ve
+            kargo takip numarasını görebilirsiniz. Dilerseniz telefon veya WhatsApp’tan da sorabilirsiniz.
           </>
         ),
       },
@@ -138,11 +139,12 @@ const GRUPLAR: Grup[] = [
       {
         q: 'Hangi ödeme yöntemlerini kullanabilirim?',
         plain:
-          '3D Secure destekli sanal POS ile kredi kartı (taksit dâhil) ve havale/EFT seçenekleri bulunur.',
+          'PayTR güvenli ödeme altyapısıyla kredi veya banka kartıyla, tek çekim ya da taksitli ödeme yapabilirsiniz.',
         a: (
           <>
-            3D Secure destekli sanal POS üzerinden kredi kartı (taksit dâhil) ve havale/EFT ile
-            ödeme yapılabilir. Havale ile ödemede sipariş, ödeme onayının ardından hazırlanır.
+            PayTR güvenli ödeme altyapısı üzerinden kredi veya banka kartıyla, tek çekim ya da
+            taksitli ödeme yapabilirsiniz. Taksit seçenekleri ve varsa vade farkı ödeme ekranında
+            gösterilir. Kart bilgileriniz bize ulaşmaz.
           </>
         ),
       },
