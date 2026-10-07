@@ -1,5 +1,5 @@
 import 'server-only'
-import { db, sql } from '@ocm/db'
+import { db, normalizeCode, sql } from '@ocm/db'
 import type { CompatibilityState } from '@/features/vehicle/types'
 import type { ProductCardData } from '@/features/catalog/product-types'
 import {
@@ -158,14 +158,27 @@ export type ListingScope = {
  * Katalog 2.677 ürün olduğu için ILIKE de yeterince hızlı; yine de kod eşleşmesi
  * indeksli (`product_sku_norm_idx`) yoldan gider.
  */
+/**
+ * Kod ÖNEK araması yapılacak mı? "HU7008" yazan, "HU 7008 z"yi bulmalı:
+ * üretici sonek harfleri (x, z, y…) ve paket ekleri (-2) kodun parçasıdır ama
+ * müşteri çoğu zaman onları yazmaz. Kısa ya da rakamsız girdide önek araması
+ * kapalı — "HU" ya da "W7" bütün katalogu döker.
+ */
+function kodOneki(query: string): string | null {
+  const n = normalizeCode(query)
+  return n.length >= 4 && /[0-9]/.test(n) && /[A-Z]/.test(n) ? n : null
+}
+
 function searchCondition(query: string) {
   const q = query.trim()
   const like = `%${q}%`
+  const onek = kodOneki(q)
   return sql`AND (
         p.search_vector @@ plainto_tsquery('turkish', ${q})
      OR p.name ILIKE ${like}
      OR ocm_normalize_code(p.sku) = ocm_normalize_code(${q})
      OR ocm_normalize_code(coalesce(p.product_code, '')) = ocm_normalize_code(${q})
+     ${onek ? sql`OR ocm_normalize_code(coalesce(p.product_code, '')) LIKE ${onek + '%'}` : sql``}
      OR EXISTS (
           SELECT 1 FROM product_reference pref
           WHERE pref.product_id = p.id
@@ -234,8 +247,14 @@ export async function getListing(options: {
       case 'marka':
         return sql`b.name ASC, p.name ASC, p.id`
       default:
-        // Önerilen: uyumlular önce, sonra öne çıkanlar, sonra ağırlık
+        // Önerilen: (aramada) kodu birebir tutan önce, sonra uyumlular,
+        // sonra öne çıkanlar, sonra ağırlık
         return sql`
+          ${
+            listingScope.query?.trim()
+              ? sql`CASE WHEN ocm_normalize_code(coalesce(p.product_code, '')) = ocm_normalize_code(${listingScope.query.trim()}) THEN 0 ELSE 1 END,`
+              : sql``
+          }
           CASE
             WHEN pc.status IN ('VERIFIED','SOURCED') THEN 0
             WHEN pc.status = 'CONFLICTED' THEN 1
