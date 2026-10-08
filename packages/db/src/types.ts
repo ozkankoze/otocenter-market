@@ -511,6 +511,15 @@ export interface OrderItemTable {
   line_total_kurus: Kurus
 }
 
+export interface FiyatDegisikligiTable {
+  id: Generated<number>
+  oran_yuzde: Numeric
+  satir_sayisi: number
+  onceki_toplam: Numeric
+  sonraki_toplam: Numeric
+  uygulandi_at: ZamanVarsayilanli
+}
+
 export interface PaymentNotificationTable {
   id: Generated<number>
   order_no: string | null
@@ -551,6 +560,7 @@ export interface Database {
   customer_order: CustomerOrderTable
   order_item: OrderItemTable
   payment_notification: PaymentNotificationTable
+  fiyat_degisikligi: FiyatDegisikligiTable
   _ocm_migration: MigrationTable
 }
 

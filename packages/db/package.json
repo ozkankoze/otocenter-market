@@ -28,7 +28,8 @@
     "urun-gorsel-cikar": "tsx scripts/urun-gorsel-cikar.ts",
     "urun-gorsel-bagla": "tsx scripts/urun-gorsel-bagla.ts",
     "urun-yukle": "tsx scripts/urun-yukle.ts",
-    "urun-gorsel-yertutucu": "tsx scripts/urun-gorsel-yertutucu.ts"
+    "urun-gorsel-yertutucu": "tsx scripts/urun-gorsel-yertutucu.ts",
+    "fiyat-zam": "tsx scripts/fiyat-zam.ts"
   },
   "dependencies": {
     "kysely": "^0.29.5",
