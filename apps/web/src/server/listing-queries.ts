@@ -169,16 +169,47 @@ function kodOneki(query: string): string | null {
   return n.length >= 4 && /[0-9]/.test(n) && /[A-Z]/.test(n) ? n : null
 }
 
+/**
+ * Sorgunun içinde geçen parça kodu adayları. Müşteri ürün adını olduğu gibi
+ * yapıştırabiliyor ("MANN-FILTER CU 18 009 Polen Filtresi - Kia"); kod bu
+ * metnin içinde boşluklarla bölünmüş durumda. Ardışık 1–4 kelime birleştirilip
+ * normalleştirilir; harf ve rakam içeren, en az 4 karakterli olanlar ürün
+ * koduyla BİREBİR karşılaştırılır ("CU"+"18"+"009" → CU18009). Önek ya da
+ * içerir araması yapılmaz; kısa kodlar uzun metinde yanlış eşleşmesin.
+ */
+function kodAdaylari(query: string): string[] {
+  const kelime = query.split(/\s+/).filter(Boolean).slice(0, 20)
+  const aday = new Set<string>()
+  for (let i = 0; i < kelime.length; i++) {
+    for (let n = 1; n <= 4 && i + n <= kelime.length; n++) {
+      const k = normalizeCode(kelime.slice(i, i + n).join(''))
+      if (k.length >= 4 && k.length <= 40 && /[0-9]/.test(k) && /[A-Z]/.test(k)) aday.add(k)
+    }
+  }
+  return [...aday].slice(0, 40)
+}
+
 function searchCondition(query: string) {
   const q = query.trim()
   const like = `%${q}%`
   const onek = kodOneki(q)
+  const adaylar = kodAdaylari(q)
   return sql`AND (
         p.search_vector @@ plainto_tsquery('turkish', ${q})
      OR p.name ILIKE ${like}
      OR ocm_normalize_code(p.sku) = ocm_normalize_code(${q})
      OR ocm_normalize_code(coalesce(p.product_code, '')) = ocm_normalize_code(${q})
      ${onek ? sql`OR ocm_normalize_code(coalesce(p.product_code, '')) LIKE ${onek + '%'}` : sql``}
+     ${
+       adaylar.length
+         ? sql`OR ocm_normalize_code(coalesce(p.product_code, '')) = ANY(${sql.val(adaylar)}::text[])
+               OR EXISTS (
+                    SELECT 1 FROM product_reference pref
+                    WHERE pref.product_id = p.id
+                      AND pref.normalized = ANY(${sql.val(adaylar)}::text[])
+                  )`
+         : sql``
+     }
      OR EXISTS (
           SELECT 1 FROM product_reference pref
           WHERE pref.product_id = p.id
