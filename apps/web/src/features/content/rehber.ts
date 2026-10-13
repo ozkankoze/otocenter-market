@@ -337,6 +337,396 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'yakit-filtresi-ne-zaman-degisir',
+    title: 'Yakıt Filtresi Ne Zaman Değiştirilir? Tıkanma Belirtileri',
+    metaTitle: 'Yakıt Filtresi Ne Zaman Değişir? | Oto Center Market',
+    summary:
+      'Yakıt filtresi çoğu araçta 20.000–30.000 km aralığında değişir; dizelde su ayırıcı nedeniyle daha da kritiktir. Tıkanma belirtileri, benzinli ve dizel farkı, doğru filtre seçimi.',
+    tag: 'Bakım',
+    readMinutes: 6,
+    relatedHref: '/filtreler/yakit-filtreleri',
+    relatedLabel: 'Yakıt filtrelerine göz atın',
+    guncelleme: '2026-10-13',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'hava-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Yakıt filtresi, değiştirilebilir tip filtre kullanan araçların çoğunda 20.000–30.000 kilometre aralığında değiştirilir. Dizel araçlarda filtre aynı zamanda yakıttaki suyu ayırdığı için bu aralık daha sıkı takip edilmelidir; kalitesi belirsiz yakıt alınan bölgelerde değişim öne çekilir. Kesin aralık aracın bakım kitapçığında yazar. Aracınıza uyan ürünleri [yakıt filtreleri kategorisinde](/filtreler/yakit-filtreleri "Yakıt filtrelerini görüntüle") bulabilirsiniz.',
+      'Bazı benzinli araçlarda yakıt filtresi depo içindeki pompa ünitesine entegredir ve periyodik bakımda değişmez. Aracınızda hangisinin olduğunu bilmiyorsanız, motorunuzu seçerek uyumlu bir değiştirilebilir filtre olup olmadığını görebilirsiniz; uyumlu ürün çıkmıyorsa filtre büyük ihtimalle pompaya entegredir.',
+    ],
+    body: [
+      {
+        heading: 'Yakıt filtresi ne işe yarar?',
+        paragraphs: [
+          'Yakıt deposundan motora giden yakıtın içinde pas, tortu, depo dibinde biriken kir ve — özellikle dizelde — su bulunabilir. Yakıt filtresi bunları enjektörlere ulaşmadan tutar.',
+          'Modern enjeksiyon sistemleri çok yüksek basınçla ve çok küçük deliklerden yakıt püskürtür. Bu deliklere ulaşan tek bir sert partikül enjektörü çizebilir veya tıkayabilir. Enjektör ve yüksek basınç pompası, filtreye göre kat kat pahalı parçalardır; filtre bu yüzden ucuz bir sigorta gibidir.',
+        ],
+      },
+      {
+        heading: 'Yakıt filtresi tıkanınca hangi belirtiler görülür?',
+        paragraphs: [
+          'Filtre yavaş yavaş dolar, belirtiler de genellikle sinsice başlar. Aşağıdakilerden biri ya da birkaçı görülüyorsa ve filtre uzun süredir değişmediyse ilk kontrol edilecek parçalardan biri yakıt filtresidir:',
+        ],
+        list: [
+          'Yokuşta veya yük altında güç kaybı, gaza basınca motorun "boğulması".',
+          'Uzun süre çalıştırma (marş) sonrası zor çalışma, özellikle soğuk havada.',
+          'Rölantide dengesizlik, ara ara tekleme.',
+          'Yüksek hızda kesik kesik çekiş.',
+          'Dizel araçlarda gösterge panelinde su / yakıt filtresi uyarısı (donanımı olan araçlarda).',
+        ],
+      },
+      {
+        heading: 'Dizel araçlarda neden daha önemli?',
+        paragraphs: [
+          'Dizel yakıt su tutmaya daha yatkındır ve dizel yakıt sistemleri suya karşı çok hassastır. Dizel yakıt filtrelerinin çoğu bu yüzden su ayırıcı (su tutucu) bölümle birlikte gelir; filtre suyu yakıttan ayırıp alt kısımda biriktirir.',
+          'Kış aylarında dizel yakıttaki parafin soğukta katılaşmaya başlayabilir. Dolmaya yakın bir filtre bu durumda çok daha çabuk tıkanır ve araç sabah çalışmayabilir. Kış öncesi bakımda dizel yakıt filtresinin durumunu kontrol ettirmek bu yüzden iyi bir alışkanlıktır.',
+        ],
+      },
+      {
+        heading: 'Hangi tip yakıt filtresi aracıma uyar?',
+        paragraphs: [
+          'Yakıt filtreleri iki ana tipte gelir. Hat üstü (in-line) veya kutulu tiplerde filtre komple değişir. Kartuş (element) tiplerde ise gövde araçta kalır, yalnızca içindeki filtre elemanı ve contaları değişir. MANN-FILTER kodlarında WK ile başlayanlar genellikle komple, PU ile başlayanlar kartuş tiptir; FILTRON’da PP komple, PE kartuş tipi ifade eder.',
+          'Doğru filtreyi bulmanın en kesin yolu motor bilgisidir. Sitemizde aracınızı marka, model ve motor sırasıyla seçtiğinizde yalnızca o motora uyumlu yakıt filtreleri listelenir. Eski filtrenin üzerindeki kod elinizdeyse [OEM numarasıyla arama rehberimize](/blog/oem-numarasi-ile-parca-bulma "OEM numarasıyla parça bulma rehberi") de göz atabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Yakıt filtresini kendim değiştirebilir miyim?',
+        paragraphs: [
+          'Bazı benzinli araçlarda hat üstü filtrenin değişimi basittir; ancak yakıt hattında basınç vardır ve yakıt yanıcıdır. Dizel araçlarda değişimden sonra sistemin havasının alınması gerekir; hava kalırsa araç çalışmayabilir. Deneyiminiz yoksa değişimi servise yaptırmanızı öneririz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yakıt filtresi kaç km’de bir değişir?',
+        a: 'Değiştirilebilir yakıt filtresi olan araçların çoğunda 20.000–30.000 km aralığında değişir. Dizel araçlarda ve kalitesi belirsiz yakıt kullanılan bölgelerde bu aralık kısalır. Kesin değer aracın bakım kitapçığında yazar.',
+      },
+      {
+        q: 'Yakıt filtresi değişmezse ne olur?',
+        a: 'Tıkanan filtre motora yeterli yakıt gitmesini engeller; güç kaybı, zor çalışma ve tekleme görülür. Filtreden geçemeyen kir ve su enjektörlere ve yüksek basınç pompasına zarar verebilir; bu parçaların onarımı filtreden çok daha pahalıdır.',
+      },
+      {
+        q: 'Benzinli araçlarda yakıt filtresi var mı?',
+        a: 'Vardır, ancak bazı benzinli modellerde filtre depo içindeki pompa ünitesine entegredir ve periyodik bakımda değişmez. Aracınızda değiştirilebilir bir filtre olup olmadığını motor seçimiyle uyumlu ürünlere bakarak görebilirsiniz.',
+      },
+    ],
+  },
+  {
+    slug: 'mann-filter-mi-filtron-mu',
+    title: 'MANN-FILTER mi FILTRON mu? İki Marka Arasındaki Fark',
+    metaTitle: 'MANN-FILTER mi FILTRON mu? | Oto Center Market',
+    summary:
+      'MANN-FILTER ve FILTRON bugün aynı grubun, MANN+HUMMEL’in markaları. Kod sistemleri, ürün tipleri ve aynı araç için iki markanın karşılıklarını nasıl bulacağınız.',
+    tag: 'Karşılaştırma',
+    readMinutes: 5,
+    relatedHref: '/markalar',
+    relatedLabel: 'Markalara göz atın',
+    guncelleme: '2026-10-13',
+    ilgiliYazilar: ['oem-numarasi-ile-parca-bulma', 'volkswagen-golf-filtre-rehberi'],
+    intro: [
+      'MANN-FILTER ve FILTRON bugün aynı şirketin, Alman MANN+HUMMEL grubunun markalarıdır. FILTRON, MANN+HUMMEL’in 2016’da tamamladığı Affinia Group filtrasyon işi satın alımıyla gruba katıldı. İki marka da aynı araç için birbirinin karşılığı olan ürünler sunar; fark daha çok kod sisteminde, ürün gamının genişliğinde ve fiyat konumunda görülür.',
+      'Sitemizdeki ürünlerin büyük kısmında aynı motor için hem MANN-FILTER hem FILTRON kodu bulunur. Aşağıda iki markanın kodlarını nasıl okuyacağınızı ve aracınız için hangisini seçebileceğinizi anlatıyoruz.',
+    ],
+    body: [
+      {
+        heading: 'İki marka kısaca',
+        paragraphs: [
+          'MANN-FILTER, MANN+HUMMEL’in otomotiv yedek parça pazarındaki ana markasıdır. Binek, ticari ve ağır vasıta için geniş bir hava, yağ, yakıt ve kabin filtresi gamı sunar.',
+          'FILTRON köken olarak Polonyalı bir filtre markasıdır ve özellikle Avrupa’da binek ve hafif ticari araç pazarında yaygındır. 2016’dan bu yana MANN+HUMMEL bünyesindedir.',
+        ],
+      },
+      {
+        heading: 'Kodlar nasıl okunur?',
+        paragraphs: [
+          'Her iki marka da kodun başındaki harflerle filtre tipini anlatır. Sitemizde sık gördüğünüz önekler şunlardır:',
+        ],
+        table: {
+          caption: 'MANN-FILTER ve FILTRON kod önekleri',
+          head: ['Filtre tipi', 'MANN-FILTER', 'FILTRON'],
+          rows: [
+            ['Yağ filtresi — komple (spin-on)', 'W', 'OP'],
+            ['Yağ filtresi — kartuş', 'HU', 'OE'],
+            ['Hava filtresi', 'C', 'AP (panel), AK / AR (yuvarlak)'],
+            ['Polen / kabin filtresi', 'CU', 'K'],
+            ['Polen filtresi — aktif karbonlu', 'CUK', 'K … A (sonunda A harfi)'],
+            ['Yakıt filtresi — komple', 'WK', 'PP'],
+            ['Yakıt filtresi — kartuş', 'PU', 'PE'],
+          ],
+        },
+      },
+      {
+        heading: 'Polen filtresinde FreciousPlus (FP) nedir?',
+        paragraphs: [
+          'MANN-FILTER’ın kabin filtrelerinde üç seviye görürsünüz: CU standart partikül filtresi, CUK aktif karbon katmanlı filtre, FP ise FreciousPlus serisi. FreciousPlus, aktif karbona ek olarak biyofonksiyonel bir katman içerir ve alerjen ile bakterilerin tutulmasına yöneliktir. Üçü aynı araca aynı ölçüde takılır; seçim kullanım koşuluna ve beklentinize göre yapılır.',
+          'FILTRON’da kabin filtreleri K harfiyle başlar; aktif karbonlu tipler kodun sonundaki A harfiyle ayrılır (örneğin K 1311 ve K 1311A). Standart ve aktif karbonlu tip arasındaki fark için [polen filtresi yazımıza](/blog/polen-filtresi-neden-onemli "Polen filtresi rehberi") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Hangisini seçmeliyim?',
+        paragraphs: [
+          'Aracınıza uyumlu olduğu doğrulanmış her iki marka da kullanılabilir; burada belirleyici olan markadan çok, filtrenin aracınızın motoruna uygun olmasıdır. Sitemizde motorunuzu seçtiğinizde her iki markanın uyumlu ürünleri birlikte listelenir; fiyat, stok ve tercih ettiğiniz markaya göre seçim yapabilirsiniz.',
+          'Bakım geçmişinde hangi markanın kullanıldığını biliyorsanız aynı markayla devam etmek, kodları takip etmeyi kolaylaştırır. Eski filtrenin üzerindeki kod elinizdeyse arama kutusuna yazmanız yeterlidir; kodun boşluk ve tire farkları önemli değildir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'MANN-FILTER ve FILTRON aynı şirket mi?',
+        a: 'Evet. FILTRON, MANN+HUMMEL’in 2016’da tamamladığı Affinia Group filtrasyon işi satın alımıyla MANN+HUMMEL grubuna katıldı. MANN-FILTER de aynı grubun markasıdır.',
+      },
+      {
+        q: 'MANN-FILTER kodunun FILTRON karşılığını nasıl bulurum?',
+        a: 'Sitemizde aracınızın motorunu seçtiğinizde iki markanın uyumlu ürünleri birlikte listelenir. Elinizde yalnızca kod varsa arama kutusuna yazarak ürünü bulabilir, ürün sayfasındaki uyumlu araç listesinden aynı motora uyan diğer marka ürününe geçebilirsiniz.',
+      },
+      {
+        q: 'CU, CUK ve FP polen filtreleri arasındaki fark nedir?',
+        a: 'CU standart partikül filtresidir. CUK’ta buna ek olarak koku ve gazları tutan aktif karbon katmanı vardır. FP (FreciousPlus) serisi aktif karbona ek olarak biyofonksiyonel bir katman içerir. Üçü aynı araca aynı ölçüde takılır.',
+      },
+    ],
+  },
+  {
+    slug: 'periyodik-bakimda-hangi-filtreler-degisir',
+    title: 'Periyodik Bakımda Hangi Filtreler Değişir? Filtre Kontrol Listesi',
+    metaTitle: 'Periyodik Bakımda Hangi Filtreler Değişir? | Oto Center Market',
+    summary:
+      'Her bakımda yağ filtresi değişir; hava, polen ve yakıt filtresi ise kendi aralıklarına göre. Aracınızın periyodik bakımında hangi filtrenin ne zaman değiştiğini gösteren kontrol listesi.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-13',
+    ilgiliYazilar: ['yag-filtresi-ve-motor-yagi-birlikte-mi', 'hava-filtresi-ne-zaman-degisir', 'yakit-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Periyodik bakımda yağ filtresi her seferinde motor yağıyla birlikte değişir. Hava filtresi ve polen (kabin) filtresi çoğu araçta yılda bir ya da 15.000–30.000 km aralığında, yakıt filtresi ise genellikle 20.000–30.000 km aralığında yenilenir. Otomatik şanzımanlı araçlarda şanzıman filtresi, üreticinin belirttiği aralıkta şanzıman yağıyla birlikte değişir. Kesin aralıklar aracınızın bakım kitapçığında yazar.',
+      'Bakıma gitmeden önce hangi filtrelerin sırası geldiğini bilmek, hem bütçe planlamasını hem de doğru parçanın hazır olmasını kolaylaştırır. Aşağıdaki liste, bakımda filtreler için neyin kontrol edileceğini tek yerde topluyor.',
+    ],
+    body: [
+      {
+        heading: 'Filtrelerin yaygın değişim aralıkları',
+        paragraphs: [
+          'Tablodaki aralıklar sektörde yaygın kullanılan değerlerdir ve bakım kitapçığının yerine geçmez. Tozlu yol, yoğun şehir trafiği, kısa mesafe kullanım veya kalitesi belirsiz yakıt gibi ağır koşullarda aralıklar kısalır.',
+        ],
+        table: {
+          caption: 'Periyodik bakımda filtreler — yaygın değişim aralıkları',
+          head: ['Filtre', 'Ne zaman değişir?', 'Not'],
+          rows: [
+            ['Yağ filtresi', 'Her yağ değişiminde', 'Yağ yenilenip filtre eski kalırsa bakımın anlamı büyük ölçüde kaybolur.'],
+            ['Hava filtresi', '15.000 – 30.000 km veya yılda bir', 'Tozlu yolda kullanımda aralık belirgin şekilde kısalır.'],
+            ['Polen / kabin filtresi', '15.000 – 20.000 km veya yılda bir', 'Klima kokusu ve zayıf üfleme erken değişim işaretidir.'],
+            ['Yakıt filtresi', '20.000 – 30.000 km', 'Dizelde su ayırıcı nedeniyle daha kritiktir; bazı benzinlilerde depo içindedir.'],
+            ['Şanzıman filtresi', 'Üreticinin şanzıman yağı aralığında', 'Otomatik şanzımanlarda yağla birlikte değişir.'],
+          ],
+        },
+      },
+      {
+        heading: 'Bakım öncesi kontrol listesi',
+        paragraphs: [],
+        steps: [
+          'Bakım kitapçığından ya da servis kayıtlarından son bakımda hangi filtrelerin değiştiğini kontrol edin.',
+          'Aracın şu anki kilometresini ve son değişimden bu yana geçen süreyi not edin; hangisi önce dolarsa o esas alınır.',
+          'Sitede aracınızı marka, model ve motor sırasıyla seçin; yalnızca motorunuza uyumlu filtreler listelenir.',
+          'Yağ filtresiyle birlikte motor yağının cinsini ve miktarını bakım kitapçığından teyit edin.',
+          'Hava ve polen filtresini bakımda görsel olarak kontrol ettirin; aşırı kirliyse kilometresi dolmasa da değiştirin.',
+          'Dizel araçlarda kış öncesi bakımda yakıt filtresinin durumuna özellikle baktırın.',
+        ],
+      },
+      {
+        heading: '4 filtre seti nedir, birlikte mi değişmeli?',
+        paragraphs: [
+          'Yağ, hava, polen ve yakıt filtresinin birlikte alınmasına sıklıkla "4’lü filtre seti" denir. Dört filtrenin aynı bakımda değişmesi çoğu zaman pratiktir: işçilik tek seferde yapılır ve hiçbir filtrenin aralığı gözden kaçmaz.',
+          'Ancak aralıklar farklı olduğu için her bakımda dördünün birden değişmesi şart değildir. Örneğin yağ filtresi her bakımda değişirken yakıt filtresi bir bakım atlayabilir. Kendi aracınız için hangi filtrenin sırasının geldiğine yukarıdaki tabloya ve bakım kitapçığına göre karar verebilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Doğru filtreyi nasıl bulurum?',
+        paragraphs: [
+          'Filtre uyumluluğu modelden çok motora bağlıdır; aynı modelin farklı motorları farklı filtre kullanabilir. Bu yüzden sitemizde aracınızı motor seviyesine kadar seçmenizi öneririz. Örnek olarak [Volkswagen Golf filtre rehberimizde](/blog/volkswagen-golf-filtre-rehberi "Volkswagen Golf filtre rehberi") aynı modelin farklı motorlarında filtre kodlarının nasıl değiştiğini görebilirsiniz.',
+          'Filtrelerin kendi rehberleri için: [hava filtresi](/blog/hava-filtresi-ne-zaman-degisir "Hava filtresi değişim rehberi"), [yağ filtresi](/blog/yag-filtresi-ve-motor-yagi-birlikte-mi "Yağ filtresi rehberi"), [polen filtresi](/blog/polen-filtresi-neden-onemli "Polen filtresi rehberi") ve [yakıt filtresi](/blog/yakit-filtresi-ne-zaman-degisir "Yakıt filtresi değişim rehberi").',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Her bakımda hangi filtre mutlaka değişir?',
+        a: 'Yağ filtresi her yağ değişiminde, yani her periyodik bakımda değişir. Hava, polen ve yakıt filtresi kendi aralıklarına göre değişir; bunlar her bakımda değişmeyebilir.',
+      },
+      {
+        q: 'Periyodik bakımda filtreler birlikte mi değişmeli?',
+        a: 'Şart değildir. Yağ filtresi her bakımda değişir; hava, polen ve yakıt filtresinin aralıkları farklıdır. Ancak aralıkları yakın olan filtreleri aynı bakımda değiştirmek işçilik ve takip açısından pratiktir.',
+      },
+    ],
+  },
+  {
+    slug: 'volkswagen-golf-filtre-rehberi',
+    title: 'Volkswagen Golf Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'VW Golf Filtre Kodları (IV–VIII) | Oto Center Market',
+    summary:
+      'Golf IV, V, VI, VII ve VIII için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen, yakıt ve şanzıman filtresi kodları. Doğru filtreyi motorunuza göre bulun.',
+    tag: 'Model rehberi',
+    readMinutes: 9,
+    relatedHref: '/otomobil/volkswagen',
+    relatedLabel: 'Volkswagen modellerine göz atın',
+    guncelleme: '2026-10-13',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'mann-filter-mi-filtron-mu'],
+    intro: [
+      'Volkswagen Golf’te filtre seçimi kasa neslinden çok motora bağlıdır: aynı nesilde 1.4 TSI ile 2.0 TDI farklı yağ, hava ve yakıt filtresi kullanır. Polen filtresi ise çoğu zaman aynı nesildeki tüm motorlarda ortaktır. Aşağıdaki tablolar Golf IV’ten Golf VIII’e kadar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablo hızlı bir başvuru içindir. Kesin seçim için [Volkswagen modelleri](/otomobil/volkswagen "Volkswagen yedek parça") arasından Golf neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Golf neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; ancak nesil geçiş yıllarında üretilen araçlarda iki nesil iç içe geçebilir. Motor hacmi ve gücü ruhsatta yazar; motor kodu ise genellikle motor bloğunda ve servis kayıtlarında bulunur.',
+          'Aynı motor için tabloda birden fazla kod görüyorsanız, filtre üretim yılına veya donanıma göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Golf VIII filtre kodları',
+        paragraphs: [
+          "Golf VIII (2019 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Tablodaki her satır, o filtrenin uyduğu motorları gösterir; motor adının yanındaki beygir gücü değeri önemlidir, çünkü aynı hacimdeki iki motor farklı filtre kullanabilir. Motorunuzu seçerek size uyan ürünleri [Golf VIII sayfasında](/otomobil/volkswagen/golf-viii \"Volkswagen Golf VIII yedek parça\") görebilirsiniz.",
+        ],
+        table: {
+          caption: "Volkswagen Golf VIII — filtre türüne göre MANN-FILTER ve FILTRON kodları",
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 TSI 90 HP, 1.0 TSI 110 HP, 1.0 eTSI 110 HP, 1.4 TSI eHybrid 204 HP, 1.4 TSI eHybrid 245 HP, 1.5 TGI 131 HP, 1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.5 eTSI 131 HP, 1.5 eTSI 150 HP'],
+            ['Yağ', 'HU 6013 z', 'OE 688/5', '2.0 GTI 245 HP, 2.0 GTI Clubsport 300 HP, 2.0 TSI 190 HP, 2.0 TSI R 320 HP, 2.0 TSI R 333 HP'],
+            ['Yağ', 'HU 5003 z', 'OE 688/6', '2.0 TDI 4motion 150 HP, 2.0 TDI 4motion 200 HP, 2.0 TDI Blue Motion 116 HP, 2.0 TDI Blue Motion 150 HP'],
+            ['Hava', 'C 30 005', 'AP 139/5', '2.0 GTI 245 HP, 2.0 GTI Clubsport 300 HP, 2.0 TDI 4motion 150 HP, 2.0 TDI 4motion 200 HP, 2.0 TDI Blue Motion 116 HP, 2.0 TDI Blue Motion 150 HP, 2.0 TSI 190 HP, 2.0 TSI R 320 HP, 2.0 TSI R 333 HP'],
+            ['Hava', 'C 28 043', 'AP 183/6', '1.0 TSI 90 HP, 1.0 TSI 110 HP, 1.0 eTSI 110 HP, 1.5 TGI 131 HP, 1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.5 eTSI 131 HP, 1.5 eTSI 150 HP'],
+            ['Hava', 'C 30 004', 'AP 139/6', '2.0 GTI 245 HP, 2.0 TDI 4motion 150 HP, 2.0 TDI 4motion 200 HP, 2.0 TDI Blue Motion 116 HP, 2.0 TDI Blue Motion 150 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.4 TSI eHybrid 204 HP, 1.4 TSI eHybrid 245 HP'],
+            ['Polen / kabin', 'CU 26 009, CUK 26 009, FP 26 009', 'K 1311, K 1311A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'PU 8028', 'PE 973/9, PE 993/2', '2.0 TDI 4motion 150 HP, 2.0 TDI 4motion 200 HP, 2.0 TDI Blue Motion 116 HP, 2.0 TDI Blue Motion 150 HP'],
+            ['Şanzıman', 'H 6031 z', '—', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'Golf VII filtre kodları',
+        paragraphs: [
+          "Golf VII (yaklaşık 2012–2020) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Tablodaki her satır, o filtrenin uyduğu motorları gösterir; motor adının yanındaki beygir gücü değeri önemlidir, çünkü aynı hacimdeki iki motor farklı filtre kullanabilir. Motorunuzu seçerek size uyan ürünleri [Golf VII sayfasında](/otomobil/volkswagen/golf-vii \"Volkswagen Golf VII yedek parça\") görebilirsiniz.",
+        ],
+        table: {
+          caption: "Volkswagen Golf VII — filtre türüne göre MANN-FILTER ve FILTRON kodları",
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 TSI 86 HP, 1.0 TSI 116 HP, 1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.2 TSI 110 HP, 1.4 TSI 122 HP, 1.4 TSI 125 HP, 1.4 TSI 140 HP, 1.4 TSI 150 HP, 1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.6 110 HP'],
+            ['Yağ', 'HU 7020 z', 'OE 688/3', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 116 HP, 2.0 GTD 184 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP'],
+            ['Yağ', 'HU 6013 z', '—', '1.8 TSI 179 HP, 2.0 GTI 220 HP, 2.0 GTI 230 HP, 2.0 GTI 265 HP, 2.0 R 280 HP, 2.0 R 292 HP, 2.0 TSI 211 HP'],
+            ['Hava', 'C 30 005', 'AP 139/5', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 116 HP, 1.8 TSI 179 HP, 2.0 GTD 184 HP, 2.0 GTI 220 HP, 2.0 GTI 230 HP, 2.0 GTI 265 HP, 2.0 R 280 HP, 2.0 R 292 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TSI 211 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.2 TSI 110 HP, 1.4 TSI 122 HP, 1.4 TSI 125 HP, 1.4 TSI 140 HP, 1.4 TSI 150 HP'],
+            ['Hava', '—', 'AP 062/2', '1.0 TSI 86 HP, 1.0 TSI 116 HP'],
+            ['Hava', 'C 28 043', '—', '1.5 TSI 131 HP, 1.5 TSI 150 HP'],
+            ['Hava', 'C 21 014', '—', '1.6 110 HP'],
+            ['Polen / kabin', 'CU 26 009, CUK 26 009, FP 26 009', 'K 1311', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', '—', 'K 1311A', '1.0 TSI 86 HP, 1.0 TSI 116 HP, 1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.4 TSI 140 HP, 1.4 TSI 150 HP, 1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.6 110 HP, 1.6 TDI 90 HP, 1.6 TDI 110 HP, 1.6 TDI 116 HP, 1.8 TSI 179 HP, 2.0 GTD 184 HP, 2.0 GTI 220 HP, 2.0 GTI 230 HP, 2.0 GTI 265 HP, 2.0 R 280 HP, 2.0 R 292 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TSI 211 HP'],
+            ['Yakıt', 'PU 8028', 'PE 973/9, PE 993/2', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 116 HP, 2.0 GTD 184 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Golf VI ve Golf Plus filtre kodları',
+        paragraphs: [
+          "Golf VI ve Golf Plus (yaklaşık 2008–2013) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Tablodaki her satır, o filtrenin uyduğu motorları gösterir; motor adının yanındaki beygir gücü değeri önemlidir, çünkü aynı hacimdeki iki motor farklı filtre kullanabilir. Motorunuzu seçerek size uyan ürünleri [Golf VI ve Golf Plus sayfasında](/otomobil/volkswagen/golf-vi-golf-plus \"Volkswagen Golf VI ve Golf Plus yedek parça\") görebilirsiniz.",
+        ],
+        table: {
+          caption: "Volkswagen Golf VI ve Golf Plus — filtre türüne göre MANN-FILTER ve FILTRON kodları",
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/94', 'OP 641/2', '1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.4 TSI 160 HP'],
+            ['Yağ', 'HU 7008 z', 'OE 688', '1.6 TDI 90 HP, 1.6 TDI / 1.6 TDI Blue Motion 105 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP'],
+            ['Yağ', 'W 712/93', 'OP 641/1', '1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.4 TSI 160 HP'],
+            ['Yağ', 'W 719/45', 'OP 526/7', '1.8 TSFI 160 HP, 2.0 TSI 200 HP, 2.0 TSI GTI 210 HP'],
+            ['Yağ', 'HU 719/6 x', 'OE 671/3', '2.0 TSI R 256 HP, 2.0 TSI R 270 HP, 2.5 V5 170 HP'],
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.4 TSI 125 HP, 1.4 TSI 150 HP'],
+            ['Yağ', 'HU 719/7 x', 'OE 650/1', '2.0 TDI 110 HP, 2.0 TDI 140 HP'],
+            ['Yağ', 'HU 7020 z', 'OE 688/3', '2.0 TDI 110 HP, 2.0 TDI 150 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.4 80 HP'],
+            ['Yağ', 'W 719/30', 'OP 526/1', '1.6 102 HP'],
+            ['Hava', 'C 35 154', 'AP 139/2', '1.4 TSI 160 HP, 1.6 TDI 90 HP, 1.6 TDI / 1.6 TDI Blue Motion 105 HP, 1.8 TSFI 160 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP, 2.0 TDI 150 HP, 2.0 TSI 200 HP, 2.0 TSI GTI 210 HP'],
+            ['Hava', 'C 14 130', 'AK 370/4', '1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.6 102 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.4 TSI 125 HP, 1.4 TSI 150 HP'],
+            ['Hava', 'C 41 002', '—', '2.0 TSI R 256 HP, 2.0 TSI R 270 HP'],
+            ['Hava', 'C 3880', 'AP 183/3', '1.4 80 HP'],
+            ['Hava', 'C 43 102', 'AP 149/10', '2.5 V5 170 HP'],
+            ['Polen / kabin', 'CU 2939, CUK 2939, FP 2939', 'K 1111, K 1111A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 69', 'PP 836/2', '1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.4 TSI 125 HP, 1.4 TSI 150 HP, 1.4 TSI 160 HP, 1.8 TSFI 160 HP, 2.0 TSI 200 HP, 2.0 TSI GTI 210 HP, 2.0 TSI R 256 HP, 2.0 TSI R 270 HP'],
+            ['Yakıt', 'PU 825 x', 'PE 973/3', '1.6 TDI / 1.6 TDI Blue Motion 105 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP, 2.0 TDI 150 HP'],
+            ['Yakıt', 'PU 936/1 x', 'PE 973/2', '1.6 TDI 90 HP, 1.6 TDI / 1.6 TDI Blue Motion 105 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP'],
+            ['Yakıt', 'WK 69/2', 'PP 836/4', '1.4 80 HP, 1.6 102 HP, 2.5 V5 170 HP'],
+            ['Yakıt', 'PU 8028', 'PE 973/9', '2.0 TDI 110 HP, 2.0 TDI 150 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Golf V ve Golf Plus filtre kodları',
+        paragraphs: [
+          "Golf V ve Golf Plus (yaklaşık 2003–2009) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Tablodaki her satır, o filtrenin uyduğu motorları gösterir; motor adının yanındaki beygir gücü değeri önemlidir, çünkü aynı hacimdeki iki motor farklı filtre kullanabilir. Motorunuzu seçerek size uyan ürünleri [Golf V ve Golf Plus sayfasında](/otomobil/volkswagen/golf-v-golf-plus \"Volkswagen Golf V ve Golf Plus yedek parça\") görebilirsiniz.",
+        ],
+        table: {
+          caption: "Volkswagen Golf V ve Golf Plus — filtre türüne göre MANN-FILTER ve FILTRON kodları",
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 719/7 x', 'OE 650/1', '1.9 TDI 90 HP, 1.9 TDI 105 HP, 2.0 TDI 131 HP, 2.0 TDI 140 HP, 2.0 TDI 170 HP, 3.2 R32 250 HP'],
+            ['Yağ', 'HU 712/6 x', 'OE 650/2', '1.4 FSI 90 HP, 1.4 TSI 122 HP, 1.4 TSI 140 HP, 1.4 TSI 170 HP, 1.6 FSI 115 HP'],
+            ['Yağ', 'HU 719/6 x', 'OE 671/3', '2.0 FSI 150 HP, 2.0 GTI 200 HP, 2.0 TFSI GTI 230 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.4 16V 75 HP, 1.4 16V 80 HP'],
+            ['Yağ', 'W 712/93', 'OP 641/1', '1.4 TSI 122 HP, 1.4 TSI 160 HP'],
+            ['Yağ', 'W 719/30', 'OP 526/1', '1.6 16V 102 HP, 2.0 FSI 156 HP'],
+            ['Yağ', 'W 712/94', 'OP 641/2', '1.4 TSI 122 HP'],
+            ['Yağ', 'W 719/45', 'OP 526/7', '2.0 GTI 200 HP'],
+            ['Yağ', 'HU 7008 z', 'OE 688', '2.0 TDI 140 HP'],
+            ['Hava', 'C 35 154', 'AP 139/2', '1.4 TSI 140 HP, 1.4 TSI 160 HP, 1.4 TSI 170 HP, 1.9 TDI 90 HP, 1.9 TDI 105 HP, 2.0 GTI 200 HP, 2.0 TDI 131 HP, 2.0 TDI 140 HP, 2.0 TDI 170 HP'],
+            ['Hava', 'C 14 130', 'AK 370/4', '1.4 TSI 122 HP, 1.6 16V 102 HP, 2.0 FSI 150 HP, 2.0 FSI 156 HP'],
+            ['Hava', 'C 2998/5 x', 'AP 149/3', '1.4 16V 75 HP'],
+            ['Hava', 'C 3880', 'AP 183/3', '1.4 16V 80 HP'],
+            ['Hava', 'C 3083', 'AP 149/6', '1.4 FSI 90 HP'],
+            ['Hava', 'C 3083/1', 'AP 149/7', '1.6 FSI 115 HP'],
+            ['Hava', 'C 41 110', 'AP 149/8', '2.0 GTI 200 HP'],
+            ['Hava', 'C 41 002', '—', '2.0 TFSI GTI 230 HP'],
+            ['Hava', 'C 36 188', 'AP 004/4', '3.2 R32 250 HP'],
+            ['Polen / kabin', 'CU 2939, CUK 2939, FP 2939', 'K 1111, K 1111A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 69', 'PP 836/2', '1.4 FSI 90 HP, 1.4 TSI 122 HP, 1.4 TSI 140 HP, 1.4 TSI 160 HP, 1.4 TSI 170 HP, 1.6 FSI 115 HP, 2.0 FSI 150 HP, 2.0 FSI 156 HP, 2.0 GTI 200 HP, 2.0 TFSI GTI 230 HP'],
+            ['Yakıt', 'PU 936/1 x, PU 936/2 x', 'PE 973/2', '1.9 TDI 90 HP, 1.9 TDI 105 HP, 2.0 TDI 131 HP, 2.0 TDI 140 HP, 2.0 TDI 170 HP'],
+            ['Yakıt', 'WK 69/2', 'PP 836/4', '1.4 16V 75 HP, 1.4 16V 80 HP, 1.6 16V 102 HP, 3.2 R32 250 HP'],
+            ['Yakıt', 'WK 59 x', '—', '1.4 16V 75 HP, 1.6 16V 102 HP, 1.6 FSI 115 HP'],
+            ['Yakıt', 'WK 512', 'PP 905', '1.4 FSI 90 HP, 1.6 FSI 115 HP, 2.0 FSI 150 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Golf IV filtre kodları',
+        paragraphs: [
+          "Golf IV (yaklaşık 1997–2004) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Tablodaki her satır, o filtrenin uyduğu motorları gösterir; motor adının yanındaki beygir gücü değeri önemlidir, çünkü aynı hacimdeki iki motor farklı filtre kullanabilir. Motorunuzu seçerek size uyan ürünleri [Golf IV sayfasında](/otomobil/volkswagen/golf-iv-1j1-1j5 \"Volkswagen Golf IV yedek parça\") görebilirsiniz.",
+        ],
+        table: {
+          caption: "Volkswagen Golf IV — filtre türüne göre MANN-FILTER ve FILTRON kodları",
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 726/2 x', 'OE 640/1', '1.9 TDI 100 HP, 1.9 TDI 130 HP, 1.9 TDI 150 HP'],
+            ['Yağ', 'W 719/30', 'OP 526/1', '1.6 102 HP, 1.8 Turbo 180 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.6 16V 105 HP, 1.6 FSI 110 HP'],
+            ['Hava', 'C 37 153', 'AP 149/1', '1.6 102 HP, 1.6 FSI 110 HP, 1.8 Turbo 180 HP, 1.9 TDI 100 HP, 1.9 TDI 130 HP, 1.9 TDI 150 HP'],
+            ['Hava', 'C 2998/5 x, C 4287/2', 'AP 149/3', '1.6 16V 105 HP'],
+            ['Polen / kabin', 'CUK 2862, FP 2862', 'K 1047A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 730/1', 'PP 836/1', '1.6 102 HP, 1.6 16V 105 HP, 1.6 FSI 110 HP, 1.8 Turbo 180 HP'],
+            ['Yakıt', 'WK 853/3 x', 'PP 839/1', '1.9 TDI 100 HP, 1.9 TDI 130 HP, 1.9 TDI 150 HP'],
+            ['Şanzıman', 'H 2019 KIT', '—', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Golf’te polen filtresi bütün motorlarda aynı mı?',
+        a: 'Çoğu nesilde evet; polen filtresi motordan bağımsız olduğu için aynı nesildeki motorların büyük kısmında ortaktır. Yağ, hava ve yakıt filtresi ise motora göre değişir.',
+      },
+      {
+        q: 'Golf 7 1.6 TDI yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Golf VII 1.6 TDI motorlarda MANN-FILTER HU 7020 z ve FILTRON OE 688/3 yağ filtresi kullanılır. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {

@@ -135,18 +135,18 @@ export default async function BlogPostPage({ params }: Props) {
                         </thead>
                         <tbody>
                           {bolum.table.rows.map((satir) => (
-                            <tr key={satir[0]} className="border-b border-ink-50 last:border-0">
+                            <tr key={satir.join('|')} className="border-b border-ink-50 last:border-0">
                               {satir.map((h, i) =>
                                 i === 0 ? (
                                   <th
-                                    key={h}
+                                    key={i}
                                     scope="row"
                                     className="px-3.5 py-2.5 text-[13px] font-semibold whitespace-nowrap text-ink-900"
                                   >
                                     {h}
                                   </th>
                                 ) : (
-                                  <td key={h} className="px-3.5 py-2.5 text-ink-600">
+                                  <td key={i} className="px-3.5 py-2.5 text-ink-600">
                                     {h}
                                   </td>
                                 ),
