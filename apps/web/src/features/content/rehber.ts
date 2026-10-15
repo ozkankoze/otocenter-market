@@ -727,6 +727,395 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'yag-filtresi-ne-zaman-degisir',
+    title: 'Yağ Filtresi Ne Zaman Değiştirilir? Kaç Km’de Bir Değişir?',
+    metaTitle: 'Yağ Filtresi Ne Zaman Değiştirilir? | Oto Center Market',
+    summary:
+      'Yağ filtresi her motor yağı değişiminde yenilenir; yağ değişim aralığı ise araca ve kullanılan yağa göre değişir. Komple ve kartuş filtre farkı, değişimde dikkat edilecekler.',
+    tag: 'Bakım',
+    readMinutes: 6,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-15',
+    ilgiliYazilar: ['yag-filtresi-ve-motor-yagi-birlikte-mi', 'periyodik-bakimda-hangi-filtreler-degisir', 'dortlu-filtre-seti-nedir'],
+    intro: [
+      'Yağ filtresi her motor yağı değişiminde yenilenir; ayrı bir kilometre aralığı yoktur. Yağ değişim aralığı ise araca ve kullanılan yağa göre değişir: birçok araçta 10.000–15.000 km ya da yılda bir, üreticinin onayladığı uzun ömürlü (long life) yağ kullanan bazı araçlarda daha uzun aralıklar uygulanır. Kesin aralık aracın bakım kitapçığında yazar. Motorunuza uyan ürünleri [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") bulabilirsiniz.',
+      'Aşağıda kilometre ve süre koşullarını, ağır kullanımın aralığı nasıl kısalttığını, filtre tiplerini ve değişimde sık yapılan hataları anlatıyoruz.',
+    ],
+    body: [
+      {
+        heading: 'Neden her yağ değişiminde değişir?',
+        paragraphs: [
+          'Yağ filtresi, motorun içinde oluşan metal aşınma parçacıklarını, kurumu ve yağın zamanla oluşturduğu tortuları tutar. Yağ yenilenip filtre eski kalırsa, filtrede biriken kir yeni yağa karışır ve bakımın faydası büyük ölçüde kaybolur.',
+          'Dolmuş bir filtrede baypas valfi açılır; motor yağsız kalmasın diye yağ filtreyi atlayarak dolaşmaya devam eder, ama artık filtrelenmeden. Bu konuyu [yağ filtresi ve motor yağı yazımızda](/blog/yag-filtresi-ve-motor-yagi-birlikte-mi "Yağ filtresi her yağ değişiminde yenilenmeli mi") ayrıca anlattık.',
+        ],
+      },
+      {
+        heading: 'Hangi durumlarda aralık kısalır?',
+        paragraphs: [
+          'Bakım kitapçıklarının çoğu "ağır kullanım" için daha kısa bir yağ değişim aralığı verir. Aşağıdaki koşullardan biri sizin için geçerliyse o aralığı esas almanız gerekir:',
+        ],
+        list: [
+          'Sık kısa mesafe (motor tam ısınmadan kapatılan) kullanım.',
+          'Yoğun şehir trafiği ve uzun süre rölantide bekleme.',
+          'Tozlu, toprak ya da şantiye yollarında kullanım.',
+          'Römork ya da ağır yük çekme.',
+          'Çok sıcak veya çok soğuk iklimde sürekli kullanım.',
+        ],
+      },
+      {
+        heading: 'Komple (spin-on) mi, kartuş mu?',
+        paragraphs: [
+          'Komple tipte filtre elemanı metal bir gövdenin içindedir; filtre motordan sökülür ve yenisi takılır. MANN-FILTER kodlarında W, FILTRON’da OP ile başlarlar.',
+          'Kartuş tipte gövde motorda kalır, yalnızca içindeki kâğıt eleman ve contalar değişir. MANN-FILTER’da HU, FILTRON’da OE ile başlarlar. Kartuş tiplerde contaların da yenilenmesi gerekir; çoğu ürün conta setiyle birlikte gelir. Hangi tipin aracınıza uyduğunu motorunuzu seçerek görebilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Değişimde dikkat edilecekler',
+        paragraphs: [],
+        steps: [
+          'Eski filtrenin contasının motorda kalmadığından emin olun; çift conta yağ kaçırır.',
+          'Komple filtrelerde yeni filtrenin contasını bir miktar temiz motor yağıyla yağlayın.',
+          'Filtreyi filtrenin üzerinde yazan sıkma talimatına göre takın; aşırı sıkmak contayı ezer, sonraki sökümü de zorlaştırır.',
+          'Kartuş tiplerde kapağı servis değerinde sıkın ve yeni contaları kullanın.',
+          'Motoru çalıştırıp yağ basınç lambasının sönmesini bekleyin, ardından filtre çevresinde kaçak kontrolü yapın ve yağ seviyesini yeniden ölçün.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yağ filtresi kaç km’de bir değişir?',
+        a: 'Yağ filtresinin ayrı bir aralığı yoktur; her motor yağı değişiminde yenilenir. Yağ değişim aralığı aracın bakım kitapçığında yazar ve ağır kullanım koşullarında kısalır.',
+      },
+      {
+        q: 'Sadece yağ değiştirip filtreyi değiştirmesem olur mu?',
+        a: 'Önerilmez. Eski filtrede biriken kir yeni yağa karışır; dolmuş bir filtrede baypas valfi açılarak motora filtrelenmemiş yağ gidebilir.',
+      },
+    ],
+  },
+  {
+    slug: 'aktif-karbonlu-polen-filtresi-farki',
+    title: 'Aktif Karbonlu Polen Filtresi mi, Normal Polen Filtresi mi?',
+    metaTitle: 'Aktif Karbonlu Polen Filtresi Farkı | Oto Center Market',
+    summary:
+      'Normal polen filtresi tozu ve poleni tutar; aktif karbonlu filtre buna koku ve gaz tutma özelliği ekler. Hangisini ne zaman seçmeli, kodlardan nasıl ayırt edilir?',
+    tag: 'Karşılaştırma',
+    readMinutes: 4,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-10-15',
+    ilgiliYazilar: ['polen-filtresi-neden-onemli', 'mann-filter-mi-filtron-mu'],
+    intro: [
+      'Normal (standart) polen filtresi kabine giren havadaki tozu, poleni ve partikülleri tutar. Aktif karbonlu polen filtresinde buna ek olarak bir aktif karbon katmanı bulunur; bu katman egzoz kokusu gibi kokuları ve bazı zararlı gazları da büyük ölçüde tutar. İki tip genellikle aynı ölçüdedir ve aynı araca birbirinin yerine takılabilir.',
+      'Yoğun trafikte çok zaman geçiriyorsanız, alerjiniz varsa ya da kabine giren egzoz kokusundan rahatsız oluyorsanız aktif karbonlu tip belirgin fark yaratır. Aracınıza uyan ürünleri [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Fark nerede?',
+        paragraphs: [],
+        table: {
+          caption: 'Standart ve aktif karbonlu polen filtresinin karşılaştırması',
+          head: ['Özellik', 'Standart polen filtresi', 'Aktif karbonlu polen filtresi'],
+          rows: [
+            ['Toz, polen, partikül', 'Tutar', 'Tutar'],
+            ['Egzoz kokusu ve gazlar', 'Tutmaz', 'Büyük ölçüde tutar'],
+            ['Görünüş', 'Beyaz / açık renk filtre kâğıdı', 'Gri-siyah karbon katmanlı'],
+            ['Kime uygun?', 'Genel kullanım', 'Yoğun trafik, alerji, kokuya hassas sürücüler'],
+          ],
+        },
+      },
+      {
+        heading: 'Kodlardan nasıl ayırt edilir?',
+        paragraphs: [
+          'MANN-FILTER’da CU ile başlayan kodlar standart, CUK ile başlayanlar aktif karbonludur. FP ile başlayan FreciousPlus serisinde aktif karbona ek olarak biyofonksiyonel bir katman bulunur. Örneğin aynı araca uyan CU 26 009, CUK 26 009 ve FP 26 009 aynı ölçüde üç farklı seviyedir.',
+          'FILTRON’da kabin filtreleri K ile başlar; aktif karbonlu tipler kodun sonundaki A harfiyle ayrılır (K 1311 ve K 1311A gibi). İki markanın kod sistemi için [MANN-FILTER ve FILTRON karşılaştırmamıza](/blog/mann-filter-mi-filtron-mu "MANN-FILTER mi FILTRON mu") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Değişim aralığı farklı mı?',
+        paragraphs: [
+          'Her iki tip için de yaygın uygulama yılda bir ya da 15.000–20.000 km aralığında değişimdir. Aktif karbon katmanının koku tutma kapasitesi zamanla dolar; kabine yeniden koku gelmeye başlaması filtrenin değişim zamanının geldiğini gösterebilir. Belirtilerin listesini [polen filtresi yazımızda](/blog/polen-filtresi-neden-onemli "Polen filtresi rehberi") bulabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Aktif karbonlu polen filtresi normal filtrenin yerine takılır mı?',
+        a: 'Genellikle evet; aynı araca uyan standart ve aktif karbonlu tipler aynı ölçüdedir. Sitemizde motorunuzu seçtiğinizde her iki tip de uyumlu ürünler arasında listelenir.',
+      },
+      {
+        q: 'CUK ve CU arasındaki fark nedir?',
+        a: 'MANN-FILTER kodlarında CU standart polen filtresidir; CUK aynı ölçüde, ek olarak aktif karbon katmanı bulunan tiptir ve koku ile bazı gazları da tutar.',
+      },
+    ],
+  },
+  {
+    slug: 'dortlu-filtre-seti-nedir',
+    title: '4’lü Filtre Seti Nedir? Ne Zaman Birlikte Değiştirilmeli?',
+    metaTitle: '4’lü Filtre Seti Nedir? | Oto Center Market',
+    summary:
+      'Yağ, hava, polen ve yakıt filtresinden oluşan 4’lü set nedir, dört filtre her bakımda birlikte değişmeli mi, aracınıza uygun seti nasıl oluşturursunuz?',
+    tag: 'Bakım',
+    readMinutes: 4,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-15',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'yag-filtresi-ne-zaman-degisir', 'yakit-filtresi-ne-zaman-degisir'],
+    intro: [
+      '4’lü filtre seti, bir aracın periyodik bakımında değişen dört filtrenin birlikte alınmasıdır: yağ filtresi, hava filtresi, polen (kabin) filtresi ve yakıt filtresi. Dördünü aynı bakımda değiştirmek işçiliği tek seferde toplar ve hiçbir filtrenin aralığının gözden kaçmamasını sağlar. Ancak dördünün her bakımda birlikte değişmesi şart değildir; her filtrenin kendi değişim aralığı vardır.',
+    ],
+    body: [
+      {
+        heading: 'Setteki filtreler ve aralıkları',
+        paragraphs: [
+          'Aralıklar yaygın değerlerdir ve bakım kitapçığının yerine geçmez. Ağır kullanım koşullarında kısalırlar.',
+        ],
+        table: {
+          caption: '4’lü filtre setindeki filtrelerin yaygın değişim aralıkları',
+          head: ['Filtre', 'Yaygın değişim aralığı'],
+          rows: [
+            ['Yağ filtresi', 'Her motor yağı değişiminde'],
+            ['Hava filtresi', '15.000 – 30.000 km veya yılda bir'],
+            ['Polen / kabin filtresi', '15.000 – 20.000 km veya yılda bir'],
+            ['Yakıt filtresi', '20.000 – 30.000 km'],
+          ],
+        },
+      },
+      {
+        heading: 'Dördü birlikte mi değişmeli?',
+        paragraphs: [
+          'Yağ filtresi her bakımda değişir. Hava ve polen filtresi çoğu araçta yılda bir değiştiği için, yılda bir bakıma giden bir araçta bu üçü genellikle aynı bakıma denk gelir. Yakıt filtresinin aralığı daha uzun olabilir; bir bakım atlayabilir.',
+          'Bazı benzinli araçlarda yakıt filtresi depo içindeki pompaya entegredir ve periyodik bakımda değişmez. Bu araçlarda "set" fiilen üç filtreden oluşur.',
+        ],
+      },
+      {
+        heading: 'Aracınıza uygun seti nasıl oluşturursunuz?',
+        paragraphs: [],
+        steps: [
+          'Sitede aracınızı marka, model ve motor sırasıyla seçin.',
+          'Motor sayfasında yağ, hava, polen ve yakıt filtresi kategorilerinde yalnızca o motora uyumlu ürünler listelenir.',
+          'Her kategoriden bir ürün seçip sepete ekleyin; MANN-FILTER ve FILTRON ürünlerini dilediğiniz gibi karıştırabilirsiniz.',
+          'Aracınızda değiştirilebilir yakıt filtresi yoksa o kategoride uyumlu ürün çıkmaz; bu durumda set üç filtreden oluşur.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: '4’lü filtre seti hangi filtrelerden oluşur?',
+        a: 'Yağ filtresi, hava filtresi, polen (kabin) filtresi ve yakıt filtresinden oluşur.',
+      },
+      {
+        q: 'Her bakımda 4 filtrenin de değişmesi gerekir mi?',
+        a: 'Hayır. Yağ filtresi her bakımda değişir; hava, polen ve yakıt filtresinin kendi aralıkları vardır. Aralığı gelen filtreleri aynı bakımda değiştirmek pratiktir.',
+      },
+    ],
+  },
+  {
+    slug: 'renault-clio-megane-filtre-rehberi',
+    title: 'Renault Clio ve Mégane Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Renault Clio ve Megane Filtre Kodları | Oto Center Market',
+    summary:
+      'Clio II–V ve Mégane I–IV için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. Doğru filtreyi motorunuza göre bulun.',
+    tag: 'Model rehberi',
+    readMinutes: 9,
+    relatedHref: '/otomobil/renault',
+    relatedLabel: 'Renault modellerine göz atın',
+    guncelleme: '2026-10-15',
+    ilgiliYazilar: ['volkswagen-golf-filtre-rehberi', 'dortlu-filtre-seti-nedir'],
+    intro: [
+      'Renault Clio ve Mégane’da filtre seçimi motor tipine göre belirgin şekilde değişir: 1.5 dCi dizel ile 1.2 TCe benzinli motor aynı nesilde farklı yağ, hava ve yakıt filtresi kullanır. Aşağıdaki tablolar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Renault modelleri](/otomobil/renault "Renault yedek parça") arasından neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; ancak nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki dCi dizel, TCe turbo benzinli, 16V ise atmosferik benzinli motoru gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Clio V filtre kodları',
+        paragraphs: [
+          'Clio V (yaklaşık 2019 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Clio V sayfasında](/otomobil/renault/clio-v "Renault Clio V yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Clio V — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', '—', 'OE 666/3', '1.0 LPG 91 HP, 1.0 TCe 100 101 HP, 1.0 TCe 90 91 HP, 1.3 TCe 100 131 HP, 1.3 TCe 140 140 HP'],
+            ['Yağ', 'HU 10 002 z', '—', '1.0 LPG 91 HP, 1.0 TCe 100 101 HP, 1.3 TCe 100 131 HP, 1.3 TCe 140 140 HP'],
+            ['Yağ', 'HU 618 y', 'OE 666/4', '1.5 Blue dCi 100 101 HP, 1.5 Blue dCi 115 116 HP, 1.5 Blue dCi 85 86 HP'],
+            ['Yağ', 'W 79', 'OP 643/4', '1.0 SCe 65 65 HP, 1.0 SCe 75 72 HP'],
+            ['Yağ', 'W 67/1', 'OP 595', '1.6 E-Tech 140 91 HP, 1.6 E-Tech 145 143 HP'],
+            ['Hava', '—', 'AP 154/5', '1.0 LPG 91 HP, 1.0 SCe 65 65 HP, 1.0 SCe 75 72 HP, 1.0 TCe 100 101 HP, 1.0 TCe 90 91 HP, 1.3 TCe 100 131 HP, 1.3 TCe 140 140 HP, 1.5 Blue dCi 100 101 HP, 1.5 Blue dCi 115 116 HP, 1.5 Blue dCi 85 86 HP'],
+            ['Hava', '—', 'AP 136/2', '1.6 E-Tech 140 91 HP, 1.6 E-Tech 145 143 HP'],
+            ['Hava', 'C 24 057', '—', '1.0 SCe 75 72 HP'],
+            ['Polen / kabin', 'CU 22 011, CUK 22 011, FP 22 011', '—', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', '—', 'K 1321', '1.0 LPG 91 HP, 1.0 SCe 75 72 HP, 1.3 TCe 100 131 HP, 1.3 TCe 140 140 HP, 1.5 Blue dCi 100 101 HP, 1.5 Blue dCi 115 116 HP, 1.5 Blue dCi 85 86 HP, 1.6 E-Tech 140 91 HP, 1.6 E-Tech 145 143 HP'],
+            ['Yakıt', '—', 'PE 994/1', '1.5 Blue dCi 100 101 HP, 1.5 Blue dCi 115 116 HP, 1.5 Blue dCi 85 86 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Clio IV filtre kodları',
+        paragraphs: [
+          'Clio IV (yaklaşık 2012–2019) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Clio IV sayfasında](/otomobil/renault/clio-iv "Renault Clio IV yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Clio IV — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 10 002 z', '—', '0.9 TCe 75 76 HP, 1.2 TCe 120 118 HP, 1.2 TCe 120 120 HP'],
+            ['Yağ', 'W 7032', 'OP 643/5', '1.5 dCi 75 HP, 1.5 dCi 90 HP, 1.5 dCi 110 HP'],
+            ['Yağ', 'W 66', 'OP 642/2', '1.2 16V 74 HP'],
+            ['Yağ', '—', 'OE 666/3', '1.2 TCe 120 120 HP'],
+            ['Hava', 'C 27 030', '—', '0.9 TCe 90 HP, 0.9 TCe 75 76 HP, 1.2 TCe 120 118 HP, 1.2 TCe 120 120 HP, 1.5 dCi 75 HP, 1.5 dCi 90 HP, 1.5 dCi 110 HP'],
+            ['Hava', '—', 'AP 134/8', '1.2 16V 74 HP'],
+            ['Polen / kabin', 'CU 22 011, CUK 22 011, FP 22 011', '—', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'PU 9011 z KIT', 'PE 815/7', '1.5 dCi 75 HP, 1.5 dCi 90 HP, 1.5 dCi 110 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Clio III ve Clio Collection filtre kodları',
+        paragraphs: [
+          'Clio III ve Clio Collection (yaklaşık 2005–2014) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Clio III ve Clio Collection sayfasında](/otomobil/renault/clio-iii-clio-collection "Renault Clio III ve Clio Collection yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Clio III ve Clio Collection — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.4 16V 98 HP, 1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 86 HP, 1.5 dCi 106 HP, 1.6 16V 88 HP, 1.6 16V 112 HP, 1.6 16V 128 HP'],
+            ['Yağ', 'W 79', 'OP 643/4', '1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 86 HP, 1.5 dCi 106 HP'],
+            ['Yağ', 'W 66', 'OP 642/2', '1.2 16V 65 HP, 1.2 16V 75 HP, 1.2 16V Turbo TCE 100 HP'],
+            ['Hava', '—', 'AP 134/7', '1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 86 HP, 1.5 dCi 106 HP, 1.6 16V 112 HP, 1.6 16V 128 HP'],
+            ['Hava', 'C 2485/2', '—', '1.2 16V Turbo TCE 100 HP, 1.4 16V 98 HP, 1.6 16V 88 HP'],
+            ['Hava', 'C 2485/1', '—', '1.5 dCi 106 HP, 1.6 16V 112 HP, 1.6 16V 128 HP'],
+            ['Hava', '—', 'AP 134/8', '1.2 16V 65 HP, 1.2 16V 75 HP'],
+            ['Hava', 'C 3366', '—', '1.2 16V 75 HP'],
+            ['Polen / kabin', 'CU 1829, CUK 1829', '—', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.2 16V 65 HP, 1.2 16V 75 HP, 1.2 16V Turbo TCE 100 HP, 1.4 16V 98 HP, 1.6 16V 88 HP, 1.6 16V 112 HP, 1.6 16V 128 HP'],
+            ['Yakıt', 'WK 939/11 x, WK 939/3', 'PS 980/8, PS 980/9', '1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 86 HP, 1.5 dCi 106 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Clio II ve Clio Symbol filtre kodları',
+        paragraphs: [
+          'Clio II ve Clio Symbol (yaklaşık 1998–2012) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Clio II ve Clio Symbol sayfasında](/otomobil/renault/clio-ii-clio-symbol "Renault Clio II ve Clio Symbol yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Clio II ve Clio Symbol — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.4 16V 98 HP, 1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 82 HP, 1.5 dCi 101 HP'],
+            ['Yağ', 'HU 611 x, W 66', 'OE 666, OP 642/2', '1.2 16V 75 HP'],
+            ['Hava', 'C 3875, C 3875/1', 'AP 134/4, AP 134/6', '1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 82 HP, 1.5 dCi 101 HP'],
+            ['Hava', 'C 1932', 'AP 133/2, AP 134/8', '1.2 16V 75 HP'],
+            ['Hava', 'C 1858/2', 'AP 185/1', '1.4 16V 98 HP'],
+            ['Polen / kabin', 'CU 2945', 'K 1052', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 939/9 x', '—', '1.5 dCi 65 HP, 1.5 dCi 68 HP, 1.5 dCi 82 HP, 1.5 dCi 101 HP'],
+            ['Yakıt', 'WK 939/8 x', 'PS 980/4', '1.5 dCi 65 HP, 1.5 dCi 82 HP, 1.5 dCi 101 HP'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.2 16V 75 HP, 1.4 16V 98 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Mégane IV filtre kodları',
+        paragraphs: [
+          'Mégane IV (yaklaşık 2016 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Mégane IV sayfasında](/otomobil/renault/megane-iv "Renault Mégane IV yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Mégane IV — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7032', 'OP 643/5', '1.5 dCi 110 110 HP, 1.5 dCi 90 90 HP'],
+            ['Yağ', 'HU 6011 z', 'OE 666/2', '1.6 dCi 130 131 HP, 1.6 dCi 165 163 HP'],
+            ['Yağ', 'W 6025', 'OP 643/6', '1.6 16V 114 HP'],
+            ['Hava', 'C 22 014', 'AP 135/9', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 25 003, CUK 25 003, FP 25 003', 'K 1355, K 1367A', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'Mégane III filtre kodları',
+        paragraphs: [
+          'Mégane III (yaklaşık 2008–2016) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Mégane III sayfasında](/otomobil/renault/megane-iii "Renault Mégane III yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Mégane III — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 79', 'OP 643/4', '1.4 16V 130 HP, 1.5 dCi 95 95 HP, 1.5 dCi FAP 86 HP, 1.5 dCi FAP 90 HP, 1.5 dCi FAP 110 HP'],
+            ['Yağ', 'HU 10 002 z', 'OE 666/3', '1.2 TCe 110 116 HP, 1.2 TCe 130 132 HP'],
+            ['Yağ', 'W 7032', 'OP 643/5', '1.5 dCi FAP 90 HP, 1.5 dCi FAP 110 HP'],
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.6 16V 100 HP, 1.6 16V 110 HP'],
+            ['Yağ', 'HU 6011 z', 'OE 666/2', '1.6 dCi 130 131 HP'],
+            ['Yağ', 'W 8013', 'OP 642/3', '1.9 dCi FAP 130 HP'],
+            ['Hava', 'C 25 115', 'AP 185/6', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', '—', 'K 1300A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.2 TCe 110 116 HP, 1.2 TCe 130 132 HP, 1.4 16V 130 HP, 1.6 16V 100 HP, 1.6 16V 110 HP'],
+            ['Yakıt', 'WK 9012 x', 'PP 988/2', '1.5 dCi 95 95 HP, 1.5 dCi FAP 86 HP, 1.5 dCi FAP 90 HP, 1.5 dCi FAP 110 HP, 1.9 dCi FAP 130 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Mégane II filtre kodları',
+        paragraphs: [
+          'Mégane II (yaklaşık 2002–2009) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Mégane II sayfasında](/otomobil/renault/megane-ii "Renault Mégane II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Mégane II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.4 16V 82 HP, 1.4 16V 98 HP, 1.5 dCi 82 HP, 1.5 dCi 86 HP, 1.5 dCi 101 HP, 1.5 dCi 106 HP, 1.6 16V 105 HP, 1.6 16V 113 HP'],
+            ['Yağ', 'W 79', 'OP 643/4', '1.5 dCi 86 HP, 1.5 dCi 106 HP, 1.9 dCi 92 HP, 1.9 dCi 120 HP, 1.9 dCi FAP 110 HP, 1.9 dCi FAP 130 HP'],
+            ['Hava', 'C 2512', 'AP 185/2', '1.5 dCi 82 HP, 1.5 dCi 86 HP, 1.5 dCi 101 HP, 1.5 dCi 106 HP, 1.6 16V 113 HP'],
+            ['Hava', 'C 2538', '—', '1.9 dCi 92 HP, 1.9 dCi 120 HP, 1.9 dCi FAP 110 HP, 1.9 dCi FAP 130 HP'],
+            ['Hava', 'C 1858/2', 'AP 185/1', '1.4 16V 82 HP, 1.4 16V 98 HP, 1.6 16V 105 HP'],
+            ['Polen / kabin', 'CU 2316, CUK 2316', 'K 1130', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.4 16V 82 HP, 1.4 16V 98 HP, 1.6 16V 105 HP, 1.6 16V 113 HP'],
+            ['Yakıt', '—', 'PM 816/1', '1.9 dCi 92 HP, 1.9 dCi 120 HP, 1.9 dCi FAP 110 HP, 1.9 dCi FAP 130 HP'],
+            ['Yakıt', 'WK 939/4, WK 939/5', 'PS 980/1, PS 980/3', '1.5 dCi 82 HP, 1.5 dCi 101 HP'],
+            ['Yakıt', 'WK 919/1, WK 920/5', 'PP 980/7', '1.5 dCi 86 HP, 1.5 dCi 106 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Mégane I filtre kodları',
+        paragraphs: [
+          'Mégane I (yaklaşık 1995–2003) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Mégane I sayfasında](/otomobil/renault/megane-i "Renault Mégane I yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Renault Mégane I — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.4i 16V 95 HP, 1.6i 16V 107 HP, 1.8i 16V 115 HP, 1.9 D 65 HP, 1.9 dTi 80 HP, 2.0i 109 HP, 2.0i 16V 138 HP, 2.0i 16V 139 HP, 2.0i 16V 140 HP'],
+            ['Yağ', 'W 79', 'OP 643/4', '1.9 dCi 102 HP'],
+            ['Hava', 'C 1858/2', 'AP 185/1', '1.4i 16V 95 HP, 1.6i 16V 107 HP, 1.8i 16V 115 HP, 2.0i 16V 139 HP'],
+            ['Hava', 'C 18 121', 'AR 274', '2.0i 109 HP, 2.0i 16V 138 HP, 2.0i 16V 140 HP'],
+            ['Hava', 'C 3251/1', 'AP 134/2', '1.9 dCi 102 HP, 1.9 dTi 80 HP'],
+            ['Hava', 'C 2987/1', 'AP 134/3', '1.9 D 65 HP'],
+            ['Polen / kabin', 'CU 2424, CU 2945', 'K 1030, K 1052', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.4i 16V 95 HP, 1.6i 16V 107 HP, 1.8i 16V 115 HP, 2.0i 109 HP, 2.0i 16V 138 HP, 2.0i 16V 139 HP, 2.0i 16V 140 HP'],
+            ['Yakıt', 'P 716/1 x, PU 822 x', 'PE 815/2, PM 815/1', '1.9 D 65 HP, 1.9 dTi 80 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Renault Clio 4 1.5 dCi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Clio IV 1.5 dCi motorlarda MANN-FILTER W 7032 ve FILTRON OP 643/5 yağ filtresi kullanılır. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Clio ve Mégane’da polen filtresi bütün motorlarda aynı mı?',
+        a: 'Çoğu nesilde evet; polen filtresi motordan bağımsız olduğu için aynı nesildeki motorların büyük kısmında ortaktır. Yağ, hava ve yakıt filtresi ise motora göre değişir.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
