@@ -1116,6 +1116,328 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'polen-filtresi-kac-km-de-degisir',
+    title: 'Polen Filtresi Kaç Km’de Değişir? Klimadan Gelen Kötü Kokunun Sebepleri',
+    metaTitle: 'Polen Filtresi Kaç Km’de Değişir? | Oto Center Market',
+    summary:
+      'Polen filtresi çoğu araçta 15.000–20.000 km’de ya da yılda bir değişir. Klimadan gelen küf kokusu, zayıf üfleme ve buğulanan camlar filtrenin erken değişmesi gerektiğini gösterebilir.',
+    tag: 'Bakım',
+    readMinutes: 4,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-10-16',
+    ilgiliYazilar: ['aktif-karbonlu-polen-filtresi-farki', 'polen-filtresi-neden-onemli'],
+    intro: [
+      'Polen filtresi çoğu araçta 15.000–20.000 kilometrede ya da yılda bir kez, hangisi önce gelirse değiştirilir. Yoğun trafikte, tozlu yolda veya nemli bölgelerde kullanılan araçlarda bu süre kısalır; birçok sürücü filtreyi her yıl klima sezonundan önce yeniler. Kesin değer aracınızın bakım kitapçığında yazar.',
+      'Klimadan gelen kötü koku çoğu zaman ilk olarak polen filtresine bakılmasını gerektirir: nem ve kir tutmuş eski bir filtre koku kaynağı olabilir. Aracınıza uyan ürünleri [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Değişim aralığını ne kısaltır?',
+        paragraphs: [
+          'Bakım kitapçığındaki aralık normal kullanım içindir. Aşağıdaki durumlarda filtre daha çabuk dolar ve kitapçıktaki süreyi beklemeden kontrol etmek mantıklıdır:',
+        ],
+        list: [
+          'Şehir içi yoğun trafikte, egzoz dumanı içinde uzun süre kalmak.',
+          'Toprak, şantiye ya da tozlu köy yolunda sık kullanım.',
+          'Ağaç altında park etmek: yaprak, polen ve reçine hava girişine dolar.',
+          'Nemli iklim ve sık yağmur: ıslanan filtre kuruyamadan kir tutar.',
+          'Araçta sigara içilmesi.',
+        ],
+      },
+      {
+        heading: 'Klimadan neden kötü koku gelir?',
+        paragraphs: [
+          'Klima çalışırken evaporatör (soğutucu) üzerinde nem yoğuşur. Bu nem, filtreden geçen toz ve organik kirle birleştiğinde küf ve bakteri üremesine uygun bir ortam oluşur. Kokunun yaygın kaynakları şunlardır:',
+        ],
+        list: [
+          'Eski ve kirli polen filtresi: tuttuğu nemli kir koku yapar.',
+          'Evaporatör yüzeyinde küf: filtre yenilense de koku sürebilir.',
+          'Tıkalı klima tahliye (drenaj) hortumu: yoğuşan su dışarı atılamaz, kutuda birikir.',
+          'Hava girişine dolan yaprak ve kir: genellikle ön cam altındaki ızgaranın altında birikir.',
+        ],
+      },
+      {
+        heading: 'Koku varsa ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Önce polen filtresini kontrol edin; kararmış, nemli ya da yaprak dolmuşsa değiştirin.',
+          'Filtre yuvasını ve ön cam altındaki hava girişini yaprak ve kirden temizleyin.',
+          'Koku devam ediyorsa klima sistemini bir serviste temizletin (evaporatör ve kanal temizliği).',
+          'Araç altında klima suyunun damladığını kontrol edin; yaz aylarında damlama yoksa tahliye hortumu tıkalı olabilir.',
+          'Günlük kullanımda, park etmeden birkaç dakika önce klimayı (kompresörü) kapatıp yalnızca fanı çalıştırın. Bu, evaporatörün kurumasına yardım eder.',
+        ],
+      },
+      {
+        heading: 'Hangi filtreyi seçmeli?',
+        paragraphs: [
+          'Koku hassasiyetiniz varsa ya da yoğun trafikte çok zaman geçiriyorsanız aktif karbonlu tip daha uygundur; farkları [aktif karbonlu polen filtresi yazımızda](/blog/aktif-karbonlu-polen-filtresi-farki "Aktif karbonlu polen filtresi farkı") anlattık. İki tip genellikle aynı ölçüdedir ve aynı araca takılabilir.',
+          'Doğru ölçüyü bulmak için sitede aracınızın marka, model ve motorunu seçin ya da eski filtrenin üzerindeki kodu arama kutusuna yazın.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Polen filtresi değiştirilmezse ne olur?',
+        a: 'Filtre tıkandıkça fandan gelen hava zayıflar, camların buğusu geç açılır ve kabine daha fazla toz girer. Nem tutmuş eski filtre klimadan kötü koku gelmesine de yol açabilir.',
+      },
+      {
+        q: 'Polen filtresi yıkanıp tekrar takılabilir mi?',
+        a: 'Hayır. Polen filtresi tek kullanımlıktır; yıkamak ya da hava ile üflemek filtre malzemesine zarar verir ve tutma özelliğini düşürür. Kirlendiğinde yenisiyle değiştirilir.',
+      },
+      {
+        q: 'Filtreyi değiştirdim ama koku geçmedi, neden?',
+        a: 'Koku büyük ihtimalle evaporatör yüzeyindeki küften ya da tıkalı tahliye hortumundan geliyordur. Bu durumda klima sisteminin bir serviste temizletilmesi gerekir.',
+      },
+    ],
+  },
+  {
+    slug: 'orijinal-ve-muadil-filtre-farki',
+    title: 'Orijinal (OE) Filtre ile Muadil Filtre Arasındaki Fark Nedir?',
+    metaTitle: 'Orijinal ve Muadil Filtre Farkı | Oto Center Market',
+    summary:
+      'OE parça, OEM, muadil ve yan sanayi ne anlama gelir? Araç markasının kutusundaki filtre ile filtre üreticisinin kendi markalı ürünü arasındaki farkı ve dikkat edilmesi gerekenleri anlattık.',
+    tag: 'Rehber',
+    readMinutes: 5,
+    relatedHref: '/markalar',
+    relatedLabel: 'Markalarımıza göz atın',
+    guncelleme: '2026-10-16',
+    ilgiliYazilar: ['oem-numarasi-ile-parca-bulma', 'mann-filter-mi-filtron-mu'],
+    intro: [
+      'Orijinal (OE) filtre, araç üreticisinin kendi logolu kutusunda sattığı filtredir; muadil filtre ise aynı araca uyan, başka bir markanın ürettiği filtredir. Araç markaları filtreyi genellikle kendileri üretmez, MANN-FILTER gibi filtre üreticilerinden alır. Bu yüzden iyi bir muadil ile OE parça arasındaki fark çoğu zaman kalitede değil, kutudaki logodadır.',
+      'Asıl fark muadil markalar arasındadır: tanınmış bir filtre üreticisinin ürünü ile kaynağı belirsiz ucuz bir filtre aynı ölçüde olsa da aynı işi yapmayabilir. Aşağıda terimleri ve seçerken nelere bakmanız gerektiğini açıkladık.',
+    ],
+    body: [
+      {
+        heading: 'Terimler ne anlama geliyor?',
+        paragraphs: [],
+        table: {
+          caption: 'Yedek parça piyasasında sık kullanılan terimler',
+          head: ['Terim', 'Anlamı'],
+          rows: [
+            ['OE / orijinal parça', 'Araç üreticisinin logolu kutusunda, yetkili servis kanalıyla satılan parça.'],
+            ['OEM numarası', 'Araç üreticisinin parçaya verdiği kod. Parçanın kendisini değil, numarayı anlatır.'],
+            ['Muadil', 'Aynı araca uyan, başka bir markanın ürettiği parça. Kalitesi markaya göre çok değişir.'],
+            ['Yan sanayi', 'Günlük dilde muadil ile aynı anlamda kullanılır; çoğu zaman ucuz ve kaynağı belirsiz ürünleri anlatır.'],
+            ['Orijinal ürün (sahte değil)', 'Üzerinde yazan markanın gerçekten ürettiği ürün. “Orijinal MANN-FILTER” ifadesi bu anlamdadır.'],
+          ],
+        },
+      },
+      {
+        heading: 'Araç markası filtreyi nereden alıyor?',
+        paragraphs: [
+          'Otomobil üreticileri filtreyi çoğunlukla filtre üreticilerinden tedarik eder. MANN+HUMMEL, birçok araç üreticisine fabrikada takılan (ilk montaj) filtre sağlayan firmalardandır ve aynı tecrübeyle MANN-FILTER ve FILTRON markalarını yedek parça pazarında satar.',
+          'Bu nedenle bir filtrenin “orijinal” olup olmadığını yalnızca kutudaki araç logosuna bakarak anlamak yanıltıcı olabilir. Önemli olan filtrenin araç üreticisinin istediği ölçü, filtreleme ve dayanım değerlerini karşılamasıdır.',
+        ],
+      },
+      {
+        heading: 'Muadil filtre seçerken nelere dikkat etmeli?',
+        paragraphs: [],
+        list: [
+          'Marka: filtre üretimiyle tanınan, kataloğu ve çapraz numaraları açık olan markaları seçin.',
+          'Doğru kod: aracınızın motoruna uyan kodu katalogdan doğrulayın; dış ölçünün uyması yeterli değildir.',
+          'Ambalaj ve baskı: bulanık baskı, yazım hatası, etiketsiz kutu sahte ürün işareti olabilir.',
+          'Fiyat: piyasanın çok altındaki fiyat sahte ya da düşük kaliteli ürün riskini artırır.',
+          'Satıcı: faturalı satış yapan ve ürünün kaynağını gösterebilen satıcıdan alın.',
+        ],
+      },
+      {
+        heading: 'Kalitesiz filtrenin riski nedir?',
+        paragraphs: [
+          'Filtre dışarıdan aynı görünse de içindeki kâğıdın kalitesi, kat sayısı, conta ve bypass valfi farklı olabilir. Kalitesiz bir yağ filtresi yağı yeterince temizleyemez ya da soğuk çalıştırmada motoru kısa süre yağsız bırakabilir; kalitesiz hava filtresi ise ince tozu motora geçirebilir. Bu hasarlar hemen fark edilmez, motor aşınması olarak zamanla ortaya çıkar.',
+        ],
+      },
+      {
+        heading: 'Garanti süresindeki araçlarda ne yapmalı?',
+        paragraphs: [
+          'Garantisi devam eden araçlarda bakımın nerede ve hangi parçayla yapılacağına dair şartlar üreticiden üreticiye değişir. Muadil parça kullanmadan önce aracınızın garanti kitapçığındaki koşulları okuyun ve bakım faturalarınızı saklayın.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'MANN-FILTER orijinal parça mı, muadil mi?',
+        a: 'MANN-FILTER kutusundaki ürün, araç markasının logolu kutusunda satılmadığı için yedek parça dilinde muadil sayılır. Ancak MANN+HUMMEL birçok araç üreticisine ilk montaj filtre sağlayan bir firmadır; ürünün kendisi orijinal MANN-FILTER ürünüdür.',
+      },
+      {
+        q: 'Muadil filtre motora zarar verir mi?',
+        a: 'Doğru kodda, tanınmış bir üreticinin filtresi zarar vermez. Risk, kaynağı belirsiz ve kalitesiz ürünlerdedir; bu yüzden markaya ve satıcıya dikkat etmek gerekir.',
+      },
+      {
+        q: 'Aracımın orijinal filtre numarasını nasıl bulurum?',
+        a: 'Eski filtrenin üzerindeki kodu ya da faturadaki OEM numarasını sitedeki arama kutusuna yazabilirsiniz. Ayrıntılar için OEM numarasıyla parça bulma yazımıza bakabilirsiniz.',
+      },
+    ],
+  },
+  {
+    slug: 'uzun-yol-oncesi-arac-bakim-kontrol-listesi',
+    title: 'Uzun Yol Öncesi Araç Bakım Kontrol Listesi',
+    metaTitle: 'Uzun Yol Öncesi Araç Kontrol Listesi | Oto Center Market',
+    summary:
+      'Uzun yola çıkmadan önce yağ, soğutma suyu, lastik, fren, akü, filtreler ve araçta bulunması gereken ekipmanlar için adım adım kontrol listesi.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-16',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'dortlu-filtre-seti-nedir'],
+    intro: [
+      'Uzun yoldan önce en az birkaç gün önce motor yağı ve soğutma suyu seviyesini, lastik basıncı ve diş derinliğini, frenleri, aküyü, farları ve silecekleri kontrol edin; bakımı yaklaşmışsa yağ ve filtre değişimini yoldan önce yaptırın. Böylece eksik bir parça çıkarsa tedarik etmek için zamanınız olur.',
+      'Aşağıdaki listeyi yolculuktan önce sırayla kontrol edebilirsiniz. Kontrollerin çoğu motor soğukken ve araç düz bir zemindeyken yapılmalıdır.',
+    ],
+    body: [
+      {
+        heading: 'Motor bölmesi',
+        paragraphs: [],
+        list: [
+          'Motor yağı: çubuktaki seviye min ile max arasında olmalı. Bakım kilometresi yaklaşmışsa yağ ve yağ filtresini yoldan önce değiştirin.',
+          'Soğutma suyu (antifriz): genleşme kabındaki seviye işaretler arasında olmalı. Kapağı motor sıcakken açmayın.',
+          'Fren hidroliği: seviye min çizgisinin üzerinde olmalı; hızlı azalıyorsa servise gösterin.',
+          'Cam suyu: depoyu doldurun; kışa giriliyorsa antifrizli cam suyu kullanın.',
+          'Kayışlar ve hortumlar: görünür çatlak, şişme ya da sızıntı olmamalı.',
+        ],
+      },
+      {
+        heading: 'Filtreler',
+        paragraphs: [
+          'Uzun yol, motorun saatlerce yük altında çalışması demektir. Tıkalı bir hava filtresi performansı ve yakıt tüketimini olumsuz etkiler, tıkalı bir polen filtresi ise uzun saatler boyunca kabin havasını kötüleştirir. Bakım aralığı dolmak üzereyse filtreleri yoldan önce yenileyin.',
+        ],
+        list: [
+          'Yağ filtresi: motor yağıyla birlikte değişir.',
+          'Hava filtresi: kararmış ya da toz dolmuşsa değiştirin.',
+          'Polen filtresi: klima kokusu ya da zayıf üfleme varsa değiştirin.',
+          'Yakıt filtresi: özellikle dizel araçlarda bakım aralığı geçtiyse yoldan önce yenileyin.',
+        ],
+      },
+      {
+        heading: 'Lastikler ve frenler',
+        paragraphs: [],
+        list: [
+          'Lastik basıncını lastikler soğukken ölçün; doğru değer genellikle sürücü kapısı kenarındaki etikette ya da depo kapağının içinde yazar. Yüklü araç için verilen değeri kullanın.',
+          'Diş derinliğini kontrol edin; yasal alt sınır 1,6 mm’dir ama güvenli sürüş için bunun çok altına inmeden lastik değiştirilmelidir.',
+          'Yanaklarda kesik, şişlik ya da düzensiz aşınma olmamalı.',
+          'Stepne ya da lastik tamir kitinin çalışır durumda olduğunu, kriko ve bijon anahtarının araçta olduğunu kontrol edin.',
+          'Frende ses, titreşim ya da direksiyonda çekme varsa yoldan önce servise gösterin.',
+        ],
+      },
+      {
+        heading: 'Elektrik ve görüş',
+        paragraphs: [],
+        list: [
+          'Akü: sabah ilk çalıştırmada marş zorlanıyorsa aküyü test ettirin; kutup başlarında oksitlenme olmamalı.',
+          'Farlar, sinyaller, fren ve geri vites lambaları: hepsini birine kontrol ettirin.',
+          'Silecekler: iz bırakıyor ya da ses yapıyorsa lastiklerini değiştirin.',
+          'Ön cam: görüşü engelleyen çatlak ya da taş izi büyümeden onartın.',
+        ],
+      },
+      {
+        heading: 'Araçta bulunması gerekenler',
+        paragraphs: [
+          'Trafikte araçta bulundurulması zorunlu ekipmanlar ile yolda işinize yarayacak malzemeleri yolculuktan önce kontrol edin:',
+        ],
+        list: [
+          'İlk yardım çantası, yangın söndürme cihazı ve iki adet reflektör (yangın tüpünün dolum tarihine bakın).',
+          'Ruhsat, sürücü belgesi, trafik sigortası ve varsa kasko poliçesi.',
+          'Yedek ampul seti, akü takviye kablosu, el feneri ve yansıtıcı yelek.',
+          'Su ve kışın battaniye; uzun yolda telefon şarj kablosu.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Uzun yoldan önce yağ değiştirmek gerekir mi?',
+        a: 'Bakım kilometresine az kaldıysa evet; yolculuk sırasında aralığı aşacaksanız yağ ve yağ filtresini yoldan önce değiştirmek daha doğrudur. Yeni bakım yapılmışsa yalnızca seviyeyi kontrol etmek yeterlidir.',
+      },
+      {
+        q: 'Uzun yolda lastik basıncı artırılmalı mı?',
+        a: 'Araç yüklüyse üreticinin yüklü araç için verdiği basıncı kullanın. Bu değer genellikle sürücü kapısı kenarındaki ya da depo kapağı içindeki etikette yazar. Basıncı lastikler soğukken ölçün.',
+      },
+    ],
+  },
+  {
+    slug: 'fiat-egea-filtre-rehberi',
+    title: 'Fiat Egea Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Fiat Egea Filtre Kodları | Oto Center Market',
+    summary:
+      'Fiat Egea (sedan, hatchback ve cross) için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.3 ve 1.6 MultiJet, 1.4 ve 1.0 benzinli, 1.5 Hybrid.',
+    tag: 'Model rehberi',
+    readMinutes: 6,
+    relatedHref: '/otomobil/fiat',
+    relatedLabel: 'Fiat modellerine göz atın',
+    guncelleme: '2026-10-16',
+    ilgiliYazilar: ['renault-clio-megane-filtre-rehberi', 'dortlu-filtre-seti-nedir'],
+    intro: [
+      'Fiat Egea’da filtre seçimi motor tipine göre değişir: 1.3 MultiJet, 1.6 MultiJet, 1.4 Fire, 1.0 turbo benzinli ve 1.5 Hybrid motorlar farklı yağ ve hava filtresi kullanır. Polen filtresi ise aynı motor grubundaki araçlarda çoğunlukla ortaktır. Aşağıdaki tablolar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Fiat modelleri](/otomobil/fiat "Fiat yedek parça") arasından aracınızı ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Motor hacmi ve gücü ruhsatta yazar. Motor adındaki MultiJet dizel, T-Jet turbo benzinli motoru gösterir; 1.4 95 HP atmosferik benzinli (Fire) motordur. Katalogda Egea, ilk motor seçenekleri ve güncel motorlar olarak iki grupta listelenir; Tipo ile ortak motorlar ikinci grupta yer alır.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Egea ve Tipo (güncel motorlar) filtre kodları',
+        paragraphs: [
+          'Egea ve Tipo (güncel motorlar) (1.0, 1.5 Hybrid ve 1.6 D 131 HP) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Egea ve Tipo (güncel motorlar) sayfasında](/otomobil/fiat/tipo-egea-356 "Fiat Egea ve Tipo (güncel motorlar) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Fiat Egea ve Tipo (güncel motorlar) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 79', 'OP 643/4', '1.0 101 HP, 1.5 T4 Hybrid 131 HP'],
+            ['Yağ', 'HU 8006 z', 'OE 682/3', '1.6 D 131 HP'],
+            ['Hava', 'C 27 046', 'AP 078/6', '1.0 101 HP'],
+            ['Hava', 'C 31 028', 'AP 022/9', '1.5 T4 Hybrid 131 HP'],
+            ['Polen / kabin', 'CU 2040, CUK 2040', 'K 1228, K 1228A', '1.0 101 HP, 1.5 T4 Hybrid 131 HP, 1.6 D 131 HP'],
+            ['Yakıt', '—', 'PE 982/5', '1.6 D 131 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Egea (ilk motor seçenekleri) filtre kodları',
+        paragraphs: [
+          'Egea (ilk motor seçenekleri) (1.3 ve 1.6 MultiJet, 1.4, 1.4 T-Jet ve 1.6 benzinli) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Egea (ilk motor seçenekleri) sayfasında](/otomobil/fiat/aegea-356 "Fiat Egea (ilk motor seçenekleri) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Fiat Egea (ilk motor seçenekleri) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 7042 z, HU 712/11 x', 'OE 682/2', '1.3 D MultiJet 95 HP'],
+            ['Yağ', 'HU 713/1 x', 'OE 670', '1.4 16V T-Jet 120 HP'],
+            ['Yağ', 'HU 816/2 x', 'OE 672', '1.6 110 HP'],
+            ['Yağ', 'HU 8006 z', 'OE 682/3', '1.6 D MultiJet 120 HP'],
+            ['Hava', 'C 25 033', '—', '1.3 D MultiJet 95 HP, 1.4 16V T-Jet 120 HP, 1.6 110 HP, 1.6 D MultiJet 120 HP'],
+            ['Hava', '—', 'AP 078/1', '1.3 D MultiJet 95 HP'],
+            ['Hava', '—', 'AP 092/3', '1.4 95 HP'],
+            ['Polen / kabin', '—', 'K 1228', '1.4 16V T-Jet 120 HP, 1.6 D MultiJet 120 HP'],
+            ['Yakıt', '—', 'PE 982/2', '1.3 D MultiJet 95 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Fiat Egea 1.3 MultiJet yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Egea 1.3 MultiJet 95 HP motorda MANN-FILTER HU 7042 z ya da HU 712/11 x, FILTRON tarafında OE 682/2 yağ filtresi kullanılır. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Fiat Egea 1.6 MultiJet yağ filtresi kodu nedir?',
+        a: 'Katalogda Egea 1.6 MultiJet motorlar için MANN-FILTER HU 8006 z ve FILTRON OE 682/3 kayıtlıdır.',
+      },
+      {
+        q: 'Egea polen filtresi bütün motorlarda aynı mı?',
+        a: 'Güncel motor grubunda katalogda bütün motorlar için MANN-FILTER CU 2040 (aktif karbonlu CUK 2040) ve FILTRON K 1228 (aktif karbonlu K 1228A) kayıtlıdır. İlk motor grubunda 1.4 T-Jet ve 1.6 MultiJet için FILTRON K 1228 kayıtlıdır; diğer motorlar için sitede aracınızı seçerek kontrol edin.',
+      },
+      {
+        q: 'Egea 1.4 95 HP için neden yalnızca hava filtresi görünüyor?',
+        a: 'Katalogda bu motor için şu an yalnızca FILTRON AP 092/3 hava filtresi kayıtlı. Yağ, polen ya da yakıt filtresi için eski filtrenin üzerindeki kodu arama kutusuna yazabilir ya da şasi numaranızla bize sorabilirsiniz.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
