@@ -1438,6 +1438,362 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'sanzuman-filtresi-ne-zaman-degisir',
+    title: 'Şanzıman Filtresi Ne Zaman Değişir? Otomatik ve DSG Şanzımanlarda Filtre',
+    metaTitle: 'Şanzıman Filtresi Ne Zaman Değişir? | Oto Center Market',
+    summary:
+      'Otomatik ve çift kavramalı (DSG) şanzımanlarda şanzıman yağı ile birlikte değişen filtrenin görevi, değişim aralığı, belirtileri ve hangi araca hangi MANN-FILTER kodunun uyduğu.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler/sanzuman-filtreleri',
+    relatedLabel: 'Şanzıman filtrelerine göz atın',
+    guncelleme: '2026-10-17',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'orijinal-ve-muadil-filtre-farki'],
+    intro: [
+      'Şanzıman filtresi, otomatik ve çift kavramalı (DSG gibi) şanzımanlarda şanzıman yağı ile birlikte değiştirilir. Değişim aralığı araç üreticisine ve şanzıman tipine göre çok farklıdır: bazı üreticiler belirli bir kilometre verir, bazıları yağı “ömür boyu” olarak tanımlar. Kesin bilgi aracınızın bakım kitapçığında yazar; ağır kullanımda (şehir içi dur-kalk, römork çekme, sıcak iklim) değişimi öne almak yaygın bir uygulamadır.',
+      'Manuel şanzımanların çoğunda ayrı bir filtre bulunmaz; bu yazı otomatik ve çift kavramalı şanzımanlar içindir. Aracınıza uyan ürünleri [şanzıman filtreleri kategorisinde](/filtreler/sanzuman-filtreleri "Şanzıman filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Şanzıman filtresi ne işe yarar?',
+        paragraphs: [
+          'Otomatik şanzımanda yağ hem dişlileri yağlar hem de vites geçişlerini sağlayan hidrolik sistemi çalıştırır. Zamanla kavrama balatalarından ve metal parçalardan ince aşınma tozu oluşur. Şanzıman filtresi bu partikülleri tutarak valf gövdesindeki ince kanalların ve solenoid valflerin tıkanmasını önler.',
+          'Filtre tıkandığında yağ akışı azalır; bu da vites geçişlerinde sertleşme, gecikme ya da şanzımanın acil durum moduna geçmesi gibi sorunlara yol açabilir.',
+        ],
+      },
+      {
+        heading: 'Ne zaman değiştirilmeli?',
+        paragraphs: [
+          'Şanzıman yağı ve filtresi birlikte değişir; yağı yenileyip eski filtreyi bırakmak, yeni yağın kısa sürede kirlenmesine yol açar. Volkswagen grubunun yağlı (ıslak) kavramalı DSG şanzımanlarında yağ ve filtre değişimi genellikle 60.000 km aralığıyla öngörülür. Klasik tork konvertörlü otomatik şanzımanlarda ise aralık üreticiye göre değişir.',
+          'Bakım kitapçığında “ömür boyu yağ” yazsa bile şu durumlarda kontrol ettirmek mantıklıdır:',
+        ],
+        list: [
+          'Vites geçişleri sertleştiyse ya da gecikmeli geçiyorsa.',
+          'Araç kalkışta titriyor ya da vites atlıyorsa.',
+          'Gösterge panelinde şanzıman uyarısı yandıysa.',
+          'Araç uzun süre ağır şehir içi trafikte ya da römork çekerek kullanıldıysa.',
+          'Kilometresi yüksek, ikinci el bir araç aldıysanız ve bakım geçmişi belli değilse.',
+        ],
+      },
+      {
+        heading: 'Hangi araca hangi şanzıman filtresi?',
+        paragraphs: [
+          'Katalogdaki uyumluluk verisine göre sık aranan MANN-FILTER şanzıman filtreleri ve uyduğu modeller aşağıda. Aynı modelde şanzıman tipine göre farklı filtre kullanılabildiği için kesin seçimi sitede aracınızın motorunu seçerek yapın.',
+        ],
+        table: {
+          caption: 'MANN-FILTER şanzıman filtresi kodları ve uyumlu modeller (katalog verisi)',
+          head: ['MANN-FILTER kodu', 'Uyumlu modellerden bazıları'],
+          rows: [
+            ['H 6003 z', 'VW Golf VII, Passat B8, Tiguan II, Polo VI, Touran, Caddy IV; Skoda Octavia III–IV, Superb III, Kodiaq; Seat Leon IV, Ateca; Audi A1, Q2'],
+            ['H 6031 z', 'VW Golf VII–VIII, T-Roc, Tiguan II, Arteon; Skoda Octavia III–IV, Karoq; Seat Leon IV, Ateca; Cupra Formentor; Audi A3 (8Y)'],
+            ['H 6005 z', 'VW Passat B8, Arteon, Tiguan Allspace, Transporter T6; Skoda Kodiaq'],
+            ['H 2019 KIT', 'VW Golf IV, Bora, New Beetle; Audi A3 (8L); Skoda Octavia I; Seat Leon I'],
+            ['H 2019 KIT 1', 'VW Passat B5; Audi A4 (B5, B6, B7), A6 (C5)'],
+            ['H 182 KIT', 'Mercedes-Benz C (W202, W203, W204), E (W210, W211, W212), Vito ve Viano 639, Sprinter; Jeep Grand Cherokee'],
+            ['H 27 001', 'Mercedes-Benz C (W203, W204, W205), E (W211, W212), CLS, GLK, M serisi, Sprinter 906'],
+            ['H 50 001', 'BMW 1 (E87), 3 (E90), 5 (E60), X1 (E84), X3 (E83), X5 (E70)'],
+            ['H 50 004', 'BMW 2, 3 (G20), 4, 5 (G30), X3 (G01), X4, X7; Land Rover ve Jaguar güncel modeller; Volvo XC40'],
+          ],
+        },
+      },
+      {
+        heading: 'KIT ibaresi ne anlama gelir?',
+        paragraphs: [
+          'Kodunda KIT geçen şanzıman filtreleri genellikle filtreyle birlikte montaj için gereken conta gibi parçaları da içeren paketlerdir. Şanzıman karteri söküldüğünde eski contanın yeniden kullanılması yağ kaçağına yol açabileceği için set halinde değişim tercih edilir.',
+          'Kodun sonundaki z harfi gibi ekler, aynı ölçüdeki ürünün farklı bir versiyonunu gösterebilir. Bu yüzden kodu harfiyle birlikte eşleştirin.',
+        ],
+      },
+      {
+        heading: 'Şanzıman filtresini kendim değiştirebilir miyim?',
+        paragraphs: [
+          'Önerilmez. Otomatik şanzımanlarda doğru yağ tipi, doğru dolum miktarı ve dolumun belirli bir yağ sıcaklığında yapılması gerekir; çoğu araçta bu işlem arıza tespit cihazıyla yağ sıcaklığı izlenerek yapılır. Eksik ya da fazla dolum şanzımana zarar verebilir. Filtreyi temin edip değişimi şanzıman konusunda deneyimli bir servise yaptırmanız daha güvenlidir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Şanzıman yağı değişirken filtre de değişmeli mi?',
+        a: 'Evet. Filtresi değiştirilmeyen şanzımanda eski filtrede biriken kir yeni yağa karışır. Otomatik ve DSG şanzımanlarda yağ ve filtre birlikte değiştirilir.',
+      },
+      {
+        q: 'Manuel şanzımanda filtre var mı?',
+        a: 'Manuel şanzımanların çoğunda ayrı bir şanzıman filtresi bulunmaz. Şanzıman filtresi otomatik ve çift kavramalı şanzımanlarda kullanılır.',
+      },
+      {
+        q: 'DSG şanzıman filtresi kaç km’de değişir?',
+        a: 'Volkswagen grubunun yağlı kavramalı DSG şanzımanlarında yağ ve filtre değişimi genellikle 60.000 km aralığıyla yapılır. Kuru kavramalı tiplerde ayrı bir değişim aralığı olmayabilir. Kesin bilgi için aracınızın bakım kitapçığına bakın.',
+      },
+    ],
+  },
+  {
+    slug: 'yag-filtresi-nasil-degistirilir',
+    title: 'Yağ Filtresi Nasıl Değiştirilir? Adım Adım Rehber',
+    metaTitle: 'Yağ Filtresi Nasıl Değiştirilir? Adım Adım | Oto Center Market',
+    summary:
+      'Komple (spin-on) ve kartuş tipi yağ filtresinin nasıl değiştirileceği, gereken malzemeler, conta ve sıkma ayarı ile en sık yapılan hatalar.',
+    tag: 'Nasıl yapılır',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-17',
+    ilgiliYazilar: ['yag-filtresi-ne-zaman-degisir', 'yag-filtresi-ve-motor-yagi-birlikte-mi'],
+    intro: [
+      'Yağ filtresi motor yağıyla birlikte değiştirilir: önce eski yağ boşaltılır, ardından eski filtre sökülür, yeni filtrenin contası yağlanarak takılır ve motor yeni yağla doldurulur. Komple (spin-on) filtre elle sıkılarak takılırken, kartuş tipi filtrede filtre elemanı plastik ya da metal bir yuvanın içine yerleştirilir ve kapağın O-ringi yenilenir.',
+      'İşlem temel aletlerle yapılabilir; ancak aracı güvenli şekilde kaldıracak ekipmanınız yoksa ya da motor alttan muhafazalıysa işi bir servise bırakmak daha doğrudur. Aracınıza uyan filtreyi [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Önce filtre tipinizi öğrenin',
+        paragraphs: [
+          'Komple (spin-on) yağ filtresi, filtre elemanı ile metal gövdenin tek parça olduğu tiptir; MANN-FILTER’da W, FILTRON’da OP koduyla başlar. Kartuş tipinde ise motor üzerinde kalıcı bir filtre yuvası vardır ve yalnızca içindeki eleman değişir; MANN-FILTER’da HU, FILTRON’da OE koduyla başlar. Kartuş filtreler genellikle yeni O-ring ya da contalarıyla birlikte gelir.',
+        ],
+      },
+      {
+        heading: 'Gerekenler',
+        paragraphs: [],
+        list: [
+          'Aracınıza uygun yeni yağ filtresi.',
+          'Üreticinin önerdiği standartta ve miktarda motor yağı.',
+          'Karter tapası için yeni conta (pul) — çoğu araçta her değişimde yenilenmesi önerilir.',
+          'Yağ filtresi anahtarı (spin-on için) ya da kapak için uygun lokma (kartuş için).',
+          'Atık yağ için en az motor yağı miktarı kadar hacimli bir kap, eldiven ve bez.',
+          'Aracı kaldırmak gerekiyorsa sağlam bir kriko ve sehpa — yalnızca krikoya güvenip aracın altına girmeyin.',
+        ],
+      },
+      {
+        heading: 'Adım adım değişim',
+        paragraphs: [],
+        steps: [
+          'Motoru birkaç dakika çalıştırıp yağı ılıtın; sıcak yağ daha kolay akar. Motoru kapatıp yağın biraz soğumasını bekleyin, yanma riskine dikkat edin.',
+          'Aracı düz zeminde sabitleyin, gerekiyorsa sehpalara alın. Yağ doldurma kapağını açın; boşaltma daha hızlı olur.',
+          'Kabı karter tapasının altına koyun, tapayı söküp yağın tamamen akmasını bekleyin.',
+          'Spin-on filtrede eski filtreyi filtre anahtarıyla sökün. Kartuş tipinde filtre kapağını söküp eski elemanı ve O-ringi çıkarın.',
+          'Filtre yuvasının oturma yüzeyini temizleyin; eski contanın yüzeye yapışıp kalmadığından emin olun. Çift conta yağ kaçağının en sık sebebidir.',
+          'Yeni filtrenin contasına parmakla ince bir kat temiz motor yağı sürün.',
+          'Spin-on filtreyi elle takın; conta yüzeye değdikten sonra filtre üzerindeki talimata göre (genellikle yaklaşık 3/4 tur) elle sıkın. Kartuş tipinde yeni elemanı ve O-ringi takıp kapağı servis bilgisindeki tork değeriyle sıkın.',
+          'Karter tapasını yeni contasıyla takıp sıkın.',
+          'Motoru belirtilen miktardan biraz eksik yağla doldurun, çalıştırıp yağ basıncı lambasının söndüğünü görün ve filtre ile tapa çevresinde kaçak olup olmadığını kontrol edin.',
+          'Motoru durdurup birkaç dakika bekleyin, çubuktan seviyeyi kontrol edip eksikse tamamlayın. Gerekiyorsa servis göstergesini sıfırlayın.',
+        ],
+      },
+      {
+        heading: 'En sık yapılan hatalar',
+        paragraphs: [],
+        list: [
+          'Filtreyi anahtarla aşırı sıkmak: conta ezilir ve bir sonraki değişimde filtre sökülemez hale gelir.',
+          'Eski contayı yerinde unutmak: yeni contayla üst üste binerek yağ kaçırır.',
+          'Contayı yağlamamak: conta kuru sürtünür, düzgün oturmaz.',
+          'Yanlış filtre takmak: dış ölçüsü uysa bile bypass valfi ve basınç değerleri motora uygun olmayabilir. Kodu aracınızın motoruna göre doğrulayın.',
+          'Atık yağı lavaboya ya da toprağa dökmek: atık yağ çevreye zarar verir; kapalı bir kapta, atık yağ toplayan bir servise ya da toplama noktasına teslim edin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yağ filtresi ne kadar sıkılmalı?',
+        a: 'Spin-on filtreler elle sıkılır: conta yüzeye değdikten sonra filtre üzerindeki talimata göre, genellikle yaklaşık 3/4 tur. Anahtarla aşırı sıkmak contayı bozar. Kartuş tipinde kapak, servis bilgisindeki tork değeriyle sıkılır.',
+      },
+      {
+        q: 'Yağ filtresine takmadan önce yağ doldurulur mu?',
+        a: 'Dik takılan spin-on filtrelerde bazı ustalar filtreyi önceden kısmen yağla doldurur; yatay ya da ters takılan filtrelerde bu yapılmaz. Her durumda contaya ince bir kat yağ sürmek gerekir.',
+      },
+      {
+        q: 'Yağ değiştirmeden sadece yağ filtresi değişir mi?',
+        a: 'Önerilmez. Filtre değişirken bir miktar yağ zaten boşalır ve eski yağdaki kir yeni filtreyi kısa sürede doldurur. Yağ filtresi motor yağıyla birlikte değiştirilir.',
+      },
+    ],
+  },
+  {
+    slug: 'kis-oncesi-arac-bakimi',
+    title: 'Kış Öncesi Araç Bakımı: Aracınızı Kışa Hazırlamak İçin Kontrol Listesi',
+    metaTitle: 'Kış Öncesi Araç Bakımı Kontrol Listesi | Oto Center Market',
+    summary:
+      'Kış gelmeden antifriz, akü, lastik, silecek, cam suyu ve filtreler için yapılması gereken kontroller. Dizel araçlarda yakıt filtresinin kışın neden daha önemli olduğu.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-17',
+    ilgiliYazilar: ['uzun-yol-oncesi-arac-bakim-kontrol-listesi', 'yakit-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Aracınızı kışa hazırlamak için antifrizin donma koruma derecesini ölçtürün, aküyü test ettirin, lastik diş derinliğini ve basıncını kontrol edin, silecekleri ve cam suyunu kışlığa çevirin. Dizel araçlarda bakım aralığı yaklaşan yakıt filtresini kıştan önce değiştirmek, soğuk sabahlarda çalıştırma sorunlarının önüne geçebilir.',
+      'Bu kontrolleri hava iyice soğumadan, ekim–kasım aylarında yaptırmak hem servis yoğunluğundan kaçınmanızı hem de eksik parçayı zamanında temin etmenizi sağlar.',
+    ],
+    body: [
+      {
+        heading: 'Antifriz (soğutma sıvısı)',
+        paragraphs: [
+          'Soğutma sıvısı yalnızca motoru soğutmaz, donmaya karşı da korur. Su eklenerek seyreltilmiş ya da eskimiş antifriz, soğukta donarak motor bloğuna ve radyatöre zarar verebilir. Servislerde basit bir ölçüm cihazıyla sıvının kaç dereceye kadar koruduğu ölçülür; bulunduğunuz bölgenin en düşük sıcaklıklarına göre koruma yeterli olmalıdır.',
+          'Seviyeyi motor soğukken genleşme kabından kontrol edin. Eksiltme varsa yalnızca su eklemek yerine aracınıza uygun tipte antifrizle tamamlayın ve kaçak olup olmadığını kontrol ettirin.',
+        ],
+      },
+      {
+        heading: 'Akü',
+        paragraphs: [
+          'Soğuk havada akünün verebildiği güç düşerken motoru çalıştırmak için gereken güç artar. Bu yüzden yazın sorunsuz görünen yaşlı bir akü ilk soğuk sabahta aracı çalıştıramayabilir. Marş zorlanıyorsa, akü birkaç yaşını geçtiyse ya da araç uzun süre kısa mesafelerde kullanılıyorsa kıştan önce aküyü test ettirin. Kutup başlarındaki oksitlenmeyi temizletin.',
+        ],
+      },
+      {
+        heading: 'Lastikler',
+        paragraphs: [
+          'Kış lastiği, hava sıcaklığı 7 °C’nin altına düştüğünde yaz lastiğine göre daha iyi yol tutuşu sağlar. Diş derinliğini ve lastik basıncını kontrol edin; basınç soğukta düşer. Kış lastiği uygulamasına ilişkin kurallar araç türüne ve bölgeye göre değişebildiği için güncel düzenlemeyi takip edin.',
+        ],
+      },
+      {
+        heading: 'Görüş: silecek, cam suyu ve farlar',
+        paragraphs: [],
+        list: [
+          'Silecek lastikleri iz bırakıyor ya da ses yapıyorsa değiştirin.',
+          'Cam suyu deposuna antifrizli (kışlık) cam suyu koyun; düz su depoda ve hortumlarda donar.',
+          'Far, sis farı ve stop lambalarını kontrol edin; kışın günler kısalır.',
+          'Polen filtresi tıkalıysa camların buğusu geç açılır. Buğu sorunu yaşıyorsanız polen filtresini kontrol edin.',
+        ],
+      },
+      {
+        heading: 'Filtreler ve kış',
+        paragraphs: [
+          'Dizel araçlarda yakıt filtresi kışın daha kritik hale gelir. Çok soğuk havada motorinde parafin kristalleri oluşabilir ve kirli ya da suyla dolmuş bir filtre bu durumda daha kolay tıkanır. Bakım aralığı yaklaşan dizel yakıt filtresini kıştan önce değiştirmek ve su ayırıcılı filtrelerde suyu boşaltmak, soğuk sabahlarda çalıştırma sorunlarını azaltır. Ayrıntılar için [yakıt filtresi yazımıza](/blog/yakit-filtresi-ne-zaman-degisir "Yakıt filtresi ne zaman değişir") bakabilirsiniz.',
+          'Kısa mesafe kullanımda motor yağı yeterince ısınmaz ve içinde nem birikebilir. Bakım kilometresi yaklaştıysa yağ ve yağ filtresini kıştan önce değiştirmek iyi bir başlangıçtır.',
+        ],
+      },
+      {
+        heading: 'Araçta bulundurmanız iyi olanlar',
+        paragraphs: [],
+        list: [
+          'Buz kazıyıcı ve fırça.',
+          'Akü takviye kablosu.',
+          'Battaniye, el feneri, eldiven ve su.',
+          'Kar zinciri — özellikle dağlık bölgelere gidiyorsanız; takmayı yola çıkmadan önce deneyin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Kışın hangi filtreler kontrol edilmeli?',
+        a: 'Dizel araçlarda yakıt filtresi, tüm araçlarda yağ filtresi ve buğu sorununu etkileyen polen filtresi kıştan önce kontrol edilmelidir. Bakım aralığı yaklaşan filtreleri kıştan önce değiştirmek önerilir.',
+      },
+      {
+        q: 'Dizel araç kışın neden zor çalışır?',
+        a: 'Çok soğuk havada motorinde parafin kristalleri oluşabilir, kızdırma bujileri ya da akü zayıfsa çalıştırma zorlaşır. Kirli ya da su dolmuş yakıt filtresi bu sorunu artırır.',
+      },
+      {
+        q: 'Antifriz ne zaman değişir?',
+        a: 'Değişim aralığı antifriz tipine ve araç üreticisine göre değişir; bakım kitapçığınızda yazar. Kıştan önce koruma derecesini ölçtürmek, değişim gerekip gerekmediğini anlamanın en kolay yoludur.',
+      },
+    ],
+  },
+  {
+    slug: 'ford-focus-filtre-rehberi',
+    title: 'Ford Focus Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Ford Focus Filtre Kodları | Oto Center Market',
+    summary:
+      'Ford Focus II, III ve IV için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. TDCi, EcoBlue, EcoBoost ve Ti-VCT motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 7,
+    relatedHref: '/otomobil/ford',
+    relatedLabel: 'Ford modellerine göz atın',
+    guncelleme: '2026-10-17',
+    ilgiliYazilar: ['fiat-egea-filtre-rehberi', 'volkswagen-golf-filtre-rehberi'],
+    intro: [
+      'Ford Focus’ta filtre seçimi nesle ve motora göre değişir: aynı nesilde 1.6 TDCi dizel ile 1.0 EcoBoost benzinli motor farklı yağ ve yakıt filtresi kullanır. Polen filtresi ise çoğu nesilde motordan bağımsızdır. Aşağıdaki tablolar Focus II, III ve IV için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Ford modelleri](/otomobil/ford "Ford yedek parça") arasından Focus neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki TDCi ve EcoBlue dizel, EcoBoost turbo benzinli, Ti-VCT ve 16V atmosferik benzinli motoru gösterir; mHEV hafif hibrit versiyonu anlatır.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Focus IV filtre kodları',
+        paragraphs: [
+          'Focus IV (yaklaşık 2018 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Focus IV sayfasında](/otomobil/ford/focus-iv "Ford Focus IV yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Ford Focus IV — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7057', '—', '1.0 Ecoboost 86 HP, 1.0 Ecoboost 101 HP, 1.0 Ecoboost 125 HP, 1.0 Ecoboost mHEV 125 HP, 1.0 Ecoboost mHEV 155 HP, 1.0 Ecoboost mHEV Flex 125 HP, 1.5 Ecoboost 150 HP, 1.5 Ecoboost 182 HP'],
+            ['Yağ', '—', 'OP 629/3', '1.0 Ecoboost mHEV 125 HP, 1.0 Ecoboost mHEV 155 HP, 1.0 Ecoboost mHEV Flex 125 HP'],
+            ['Yağ', 'HU 7032 z', '—', '1.5 EcoBlue 95 HP, 1.5 EcoBlue 116 HP, 1.5 EcoBlue 120 HP'],
+            ['Yağ', 'HU 5001 z', 'OE 667/6', '1.5 EcoBlue 116 HP'],
+            ['Yağ', 'W 7054', 'OP 629/4', '2.0 ST EcoBlue 190 HP'],
+            ['Yağ', 'W 7015', 'OP 629/2', '2.3 ST Ecoboost 280 HP'],
+            ['Hava', 'C 27 031', 'AP 074/8', '1.0 Ecoboost mHEV 125 HP, 1.0 Ecoboost mHEV 155 HP, 1.0 Ecoboost mHEV Flex 125 HP, 1.5 EcoBlue 116 HP, 2.0 ST EcoBlue 190 HP, 2.3 ST Ecoboost 280 HP'],
+            ['Polen / kabin', 'CU 28 009, CUK 28 009', 'K 1424, K 1424A', '1.0 Ecoboost mHEV 125 HP, 1.0 Ecoboost mHEV 155 HP, 1.0 Ecoboost mHEV Flex 125 HP, 1.5 EcoBlue 116 HP, 2.0 ST EcoBlue 190 HP, 2.3 ST Ecoboost 280 HP'],
+            ['Polen / kabin', 'FP 28 009', '—', '1.0 Ecoboost mHEV 155 HP, 1.5 EcoBlue 116 HP, 2.0 ST EcoBlue 190 HP, 2.3 ST Ecoboost 280 HP'],
+            ['Yakıt', 'WK 11 024, WK 11 025', '—', '1.5 EcoBlue 116 HP, 2.0 ST EcoBlue 190 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Focus III filtre kodları',
+        paragraphs: [
+          'Focus III (yaklaşık 2011–2018) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Focus III sayfasında](/otomobil/ford/focus-iii "Ford Focus III yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Ford Focus III — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.5 TDCi 95 HP, 1.5 TDCi 105 HP, 1.5 TDCi 120 HP, 1.6 TDCi 95 HP, 1.6 TDCi 115 HP'],
+            ['Yağ', 'W 7015', 'OP 629/2', '1.0 EcoBoost 100 HP, 1.0 EcoBoost 125 HP, 1.0 EcoBoost 140 HP'],
+            ['Yağ', 'W 7008', 'OP 629/1', '1.5 EcoBoost 150 HP, 1.5 EcoBoost 182 HP'],
+            ['Hava', 'C 16 134/2', 'AK 372/1', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 25 007, CUK 25 007, FP 25 007', 'K 1350', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 9046 z', 'PP 838/9', '1.6 TDCi 95 HP, 1.6 TDCi 115 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Focus II filtre kodları',
+        paragraphs: [
+          'Focus II (yaklaşık 2004–2011) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Focus II sayfasında](/otomobil/ford/focus-ii "Ford Focus II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Ford Focus II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7008', 'OP 629/1', '1.4 16V 80 HP, 1.6 16V 100 HP, 1.6 16V Ti-VCT 115 HP'],
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.6 TDCi 90 HP, 1.6 TDCi 100 HP, 1.6 TDCi 109 HP'],
+            ['Yağ', 'HU 711/51 x', 'OE 673', '2.0 TDCi 110 HP, 2.0 TDCi 136 HP'],
+            ['Yağ', 'W 712/82', 'OP 546/1', '1.8 TDCi 115 HP'],
+            ['Yağ', 'W 7015', 'OP 629/2', '2.0 16V 145 HP'],
+            ['Hava', 'C 16 134/2', 'AK 372/1', 'Bu nesildeki tüm motorlar'],
+            ['Hava', '—', 'AP 074/4', '1.4 16V 80 HP, 1.6 16V 100 HP, 1.6 16V Ti-VCT 115 HP, 2.0 16V 145 HP'],
+            ['Hava', 'C 27 105', 'AP 074/5', '1.6 TDCi 90 HP, 1.6 TDCi 100 HP, 1.6 TDCi 109 HP'],
+            ['Hava', 'C 28 110', 'AP 074/6', '1.8 TDCi 115 HP, 2.0 TDCi 136 HP'],
+            ['Polen / kabin', 'CUK 2440, FP 2440', 'K 1150', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 939/2', 'PP 838/8', '1.6 TDCi 90 HP, 1.6 TDCi 100 HP, 1.6 TDCi 109 HP'],
+            ['Yakıt', 'WK 939/13', '—', '1.6 TDCi 90 HP, 1.6 TDCi 100 HP'],
+            ['Yakıt', 'PU 1018 x', 'PE 816/5', '2.0 TDCi 110 HP, 2.0 TDCi 136 HP'],
+            ['Yakıt', 'PU 7002 x', '—', '1.8 TDCi 115 HP'],
+            ['Yakıt', 'WK 614/46', 'PP 865/5', '2.0 16V 145 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Ford Focus 3 1.6 TDCi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Focus III 1.6 TDCi (95 ve 115 HP) motorlarda MANN-FILTER HU 716/2 x ve FILTRON OE 667/1 yağ filtresi kullanılır. Aynı filtre Focus III 1.5 TDCi motorlarda da kayıtlıdır.',
+      },
+      {
+        q: 'Ford Focus 2 1.6 benzinli yağ filtresi kodu nedir?',
+        a: 'Focus II 1.4 16V, 1.6 16V ve 1.6 Ti-VCT motorlarda katalogda MANN-FILTER W 7008 ve FILTRON OP 629/1 kayıtlıdır.',
+      },
+      {
+        q: 'Ford Focus 4 1.5 EcoBlue yağ filtresi kodu nedir?',
+        a: 'Focus IV 1.5 EcoBlue motorlarda katalogda MANN-FILTER HU 7032 z kayıtlıdır; 116 HP versiyon için ayrıca MANN-FILTER HU 5001 z ve FILTRON OE 667/6 görünür. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Focus 3 polen filtresi bütün motorlarda aynı mı?',
+        a: 'Evet. Katalogda Focus III’ün tüm motorları için MANN-FILTER CU 25 007 (aktif karbonlu CUK 25 007, FreciousPlus FP 25 007) ve FILTRON K 1350 kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
