@@ -1794,6 +1794,340 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'motor-yagi-5w30-5w40-ne-demek',
+    title: 'Motor Yağı Seçimi: 5W-30, 5W-40, 0W-20 Ne Demek?',
+    metaTitle: '5W-30, 5W-40 Ne Demek? Motor Yağı Seçimi | Oto Center Market',
+    summary:
+      'Motor yağı üzerindeki 5W-30 gibi viskozite değerleri ne anlama gelir, onay kodları (ACEA, API, üretici normları) neden önemlidir ve aracınıza doğru yağı nasıl seçersiniz?',
+    tag: 'Rehber',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-19',
+    ilgiliYazilar: ['yag-filtresi-ne-zaman-degisir', 'yag-filtresi-nasil-degistirilir'],
+    intro: [
+      '5W-30 gibi bir değer motor yağının viskozitesini (akışkanlığını) anlatır: “W” öncesindeki sayı yağın soğukta ne kadar kolay aktığını, tireden sonraki sayı ise motor çalışma sıcaklığındaki kıvamını gösterir. W’den önceki sayı küçüldükçe yağ soğuk çalıştırmada daha hızlı dolaşır; ikinci sayı büyüdükçe yağ sıcakta daha kalın kalır.',
+      'Doğru yağ yalnızca viskoziteyle seçilmez; aracınızın üreticisinin istediği onay ya da norm da karşılanmalıdır. Her ikisi de bakım kitapçığında yazar. Yağı değiştirirken yağ filtresini de yenilemeyi unutmayın; aracınıza uyan filtreyi [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Viskozite değeri nasıl okunur?',
+        paragraphs: [
+          'Viskozite sınıfları SAE J300 standardıyla tanımlanır. 5W-30 örneğinde:',
+        ],
+        list: [
+          '“5W”: W, İngilizce winter (kış) kelimesinden gelir. Bu sayı yağın düşük sıcaklıktaki davranışını gösterir; 0W, 5W’den, 5W de 10W’den soğukta daha akıcıdır.',
+          '“30”: Yağın yaklaşık 100 °C’deki, yani motor çalışma sıcaklığındaki kıvamını gösterir. 40, 30’dan daha kalındır.',
+          'Çok dereceli yağlar (5W-30 gibi) hem soğuk çalıştırmada akıcı kalır hem de sıcakta yeterli kalınlığı korur. Günümüz binek araçlarının neredeyse tamamı çok dereceli yağ kullanır.',
+        ],
+      },
+      {
+        heading: 'Sık görülen viskoziteler',
+        paragraphs: [],
+        table: {
+          caption: 'Yaygın motor yağı viskoziteleri ve genel kullanım alanları',
+          head: ['Viskozite', 'Genel özellik', 'Nerede görülür?'],
+          rows: [
+            ['0W-20, 0W-16', 'Çok akıcı, düşük sürtünme', 'Yeni nesil benzinli ve hibrit motorlar'],
+            ['0W-30, 5W-30', 'Akıcı, geniş kullanım', 'Birçok güncel benzinli ve dizel motor'],
+            ['5W-40', 'Sıcakta daha kalın', 'Bazı benzinli ve dizel motorlar, özellikle eski nesil'],
+            ['10W-40, 15W-40', 'Kalın', 'Eski motorlar, bazı ticari ve ağır vasıta motorları'],
+          ],
+        },
+      },
+      {
+        heading: 'Onay ve norm kodları neden önemli?',
+        paragraphs: [
+          'Aynı viskozitedeki iki yağ, katkı paketi bakımından farklı olabilir. Bu yüzden ambalajda viskozitenin yanında ACEA (ör. A3/B4, C3), API (ör. SP) ya da araç üreticisinin onay kodları (ör. VW 504 00, MB 229.51, BMW Longlife-04, Renault RN0720) yer alır. Bakım kitapçığında bir üretici onayı yazıyorsa, yağın bu onayı taşıması gerekir.',
+          'Dizel partikül filtresi (DPF) bulunan araçlarda genellikle düşük kül içerikli (Low SAPS) yağ istenir; ACEA C sınıfları bu yağları tanımlar. Uygun olmayan yağ uzun vadede partikül filtresinin tıkanmasına katkıda bulunabilir.',
+        ],
+      },
+      {
+        heading: 'Aracıma hangi yağı koymalıyım?',
+        paragraphs: [],
+        steps: [
+          'Bakım kitapçığında ya da kullanım kılavuzunda “motor yağı” bölümünü bulun; viskozite ve onay kodu burada yazar.',
+          'Yağ ambalajında aynı viskoziteyi ve istenen onay kodunu arayın. İkisi de uyuyorsa marka tercihi size kalmıştır.',
+          'Kitapçık birden fazla viskozite veriyorsa iklim koşullarınıza göre seçim yapın; soğuk bölgelerde W öncesi sayısı düşük olan yağ ilk çalıştırmada avantaj sağlar.',
+          'Yağı değiştirirken aynı anda motorunuza uygun yağ filtresini de değiştirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: '5W-30 yerine 5W-40 kullanılır mı?',
+        a: 'Bakım kitapçığı iki viskoziteye de izin veriyorsa kullanılabilir. Kitapçıkta yalnızca 5W-30 ve belirli bir üretici onayı yazıyorsa, o onayı taşıyan 5W-30 yağ kullanmak gerekir; özellikle uzun ömürlü bakım programlı ve DPF’li araçlarda bu önemlidir.',
+      },
+      {
+        q: 'Farklı marka motor yağları karıştırılır mı?',
+        a: 'Aynı viskozite ve aynı onaya sahip yağlarla acil bir tamamlama genellikle sorun yaratmaz. Ancak bir sonraki bakımda yağın tamamen değiştirilmesi önerilir.',
+      },
+      {
+        q: 'Sentetik yağ ile mineral yağ arasındaki fark nedir?',
+        a: 'Sentetik yağlar sıcaklık değişimlerine ve yaşlanmaya karşı daha dayanıklıdır; düşük viskoziteli modern yağların çoğu sentetiktir. Hangi tipin kullanılacağını aracınızın istediği viskozite ve onay belirler.',
+      },
+    ],
+  },
+  {
+    slug: 'yag-lambasi-yaniyor-ne-yapmali',
+    title: 'Yağ Lambası Yanıyor: Sebepleri ve Ne Yapmalısınız?',
+    metaTitle: 'Yağ Lambası Neden Yanar? Ne Yapmalı? | Oto Center Market',
+    summary:
+      'Gösterge panelindeki kırmızı yağ lambası düşük yağ basıncını gösterir ve motoru durdurmanız gerekir. Yağ lambasının yanma sebepleri, yağ filtresiyle ilişkisi ve yapılması gerekenler.',
+    tag: 'Arıza',
+    readMinutes: 4,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-19',
+    ilgiliYazilar: ['yag-filtresi-ne-zaman-degisir', 'motor-yagi-5w30-5w40-ne-demek'],
+    intro: [
+      'Kırmızı yağ lambası (yağdanlık simgesi) motorda yağ basıncının düştüğünü gösterir. Seyir sırasında yanarsa güvenli bir yerde durup motoru hemen kapatın: yağ basıncı olmadan çalışan motor kısa sürede ağır hasar görebilir. Ardından motor soğuyunca yağ seviyesini kontrol edin; seviye normalse aracı çalıştırmadan çekici ya da servis desteği alın.',
+      'Bazı araçlarda sarı ya da turuncu renkte ayrı bir yağ seviyesi uyarısı bulunur. Bu uyarı genellikle yağın eksildiğini gösterir; yağ tamamlanarak kısa sürede çözülebilir, ancak sebebi araştırılmalıdır.',
+    ],
+    body: [
+      {
+        heading: 'Yağ lambası neden yanar?',
+        paragraphs: [],
+        list: [
+          'Yağ seviyesinin düşük olması: yağ yakma, kaçak ya da uzun süre kontrol edilmemesi.',
+          'Yağ pompasında arıza ya da pompanın emiş süzgecinin tıkanması.',
+          'Yanlış viskozitede ya da çok eskimiş yağ kullanılması.',
+          'Yanlış ya da kalitesiz yağ filtresi: uygun olmayan bypass veya geri akış valfi yağ basıncını etkileyebilir.',
+          'Yağ basınç müşürü (sensör) ya da kablo arızası: lamba yanar ama gerçek basınç normal olabilir. Bunu ancak servis ölçerek anlayabilir.',
+        ],
+      },
+      {
+        heading: 'Yağ lambası yandığında ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Güvenli bir yerde durun ve motoru hemen kapatın. “Biraz daha gideyim” demek motor hasarına yol açabilir.',
+          'Motorun birkaç dakika soğumasını bekleyin, araç düz zemindeyken yağ çubuğuyla seviyeyi kontrol edin.',
+          'Seviye düşükse aracınıza uygun yağla tamamlayın. Motoru çalıştırdığınızda lamba birkaç saniye içinde sönüyorsa yavaşça en yakın servise gidin ve kaçak ya da yağ yakma kontrolü yaptırın.',
+          'Seviye normal olmasına rağmen lamba yanıyorsa aracı çalıştırmayın; çekiciyle servise götürün.',
+          'Motordan vuruntu, tıkırtı gibi sesler geliyorsa kesinlikle tekrar çalıştırmayın.',
+        ],
+      },
+      {
+        heading: 'Yağ filtresinin rolü',
+        paragraphs: [
+          'Yağ filtresi yalnızca yağı temizlemez; birçok filtrede motor durduğunda yağın karterine geri boşalmasını engelleyen bir geri akış valfi ve filtre tıkandığında yağın motora ulaşmaya devam etmesini sağlayan bir bypass valfi bulunur. Motora uygun olmayan bir filtre takıldığında ilk çalıştırmada lamba birkaç saniye geç sönebilir ya da yağ basıncı beklenenden farklı olabilir.',
+          'Bu yüzden yağ filtresini dış ölçüsüne göre değil, motorunuza uygun koduna göre seçin. Yağ değişiminde filtreyi de yenilemek ve doğru şekilde takmak için [yağ filtresi değişim rehberimize](/blog/yag-filtresi-nasil-degistirilir "Yağ filtresi nasıl değiştirilir") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yağ lambası yanıp sönüyorsa ne demek?',
+        a: 'Özellikle virajlarda ya da frenlemede yanıp sönen lamba çoğu zaman yağ seviyesinin düşük olduğunu gösterir; yağ karterde bir yana kaçtığında pompa kısa süre hava emer. Seviyeyi hemen kontrol edin.',
+      },
+      {
+        q: 'Yağ lambası yanarken araç kullanılır mı?',
+        a: 'Kırmızı yağ lambası yanarken araç kullanılmamalıdır. Yağ basıncı olmadan motor yatakları ve turbo kısa sürede hasar görebilir.',
+      },
+      {
+        q: 'Yağ değişiminden sonra yağ lambası yanıyorsa sebebi ne olabilir?',
+        a: 'Yağ eksik doldurulmuş olabilir, filtre yanlış takılmış ya da motora uygun olmayan bir filtre kullanılmış olabilir, eski filtre contası yerinde kalıp kaçak yapıyor olabilir. Motoru çalıştırmadan seviyeyi ve filtre çevresini kontrol ettirin.',
+      },
+    ],
+  },
+  {
+    slug: 'hava-kurutucu-filtresi-nedir',
+    title: 'Hava Kurutucu Filtresi Nedir? Kamyon ve Otobüslerde Ne Zaman Değişir?',
+    metaTitle: 'Hava Kurutucu Filtresi Nedir, Ne Zaman Değişir? | Oto Center Market',
+    summary:
+      'Havalı fren sistemli kamyon, çekici ve otobüslerde hava kurutucu filtresinin (kartuşunun) görevi, değişim zamanı, belirtileri ve hangi araca hangi MANN-FILTER kodunun uyduğu.',
+    tag: 'Ağır vasıta',
+    readMinutes: 5,
+    relatedHref: '/filtreler/kurutucu-filtreler',
+    relatedLabel: 'Kurutucu filtrelere göz atın',
+    guncelleme: '2026-10-19',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'kis-oncesi-arac-bakimi'],
+    intro: [
+      'Hava kurutucu filtresi (kurutucu kartuş), havalı fren sistemli kamyon, çekici ve otobüslerde kompresörün ürettiği basınçlı havadaki nemi ve yağ buharını tutar. Kuru ve temiz hava; fren valflerinin, körüklerin ve hava tanklarının paslanmasını, donmasını ve tıkanmasını önler. Değişim aralığı araç ve kurutucu üreticisine göre değişir; yaygın uygulama kartuşun periyodik bakımlarla, genellikle yılda bir değiştirilmesidir.',
+      'Aracınıza uyan kartuşu [kurutucu filtreler kategorisinde](/filtreler/kurutucu-filtreler "Kurutucu filtreleri görüntüle") ya da [ağır vasıta](/agir-vasita "Ağır vasıta filtreleri") bölümünden aracınızı seçerek bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Hava kurutucu nasıl çalışır?',
+        paragraphs: [
+          'Kompresör dış havayı sıkıştırırken havadaki nem de yoğunlaşır. Kurutucu kartuşun içindeki kurutucu madde (granül) bu nemi tutar; kartuşta ayrıca kompresörden gelen yağ buharını ayıran bir bölüm bulunabilir. Tanklar dolduğunda kurutucu kısa bir tahliye (boşaltma) yaparak biriktirdiği nemi dışarı atar ve kendini yeniler.',
+          'Zamanla kurutucu madde yağla kirlenir ve nem tutma kapasitesini kaybeder. Bu noktada kartuş değiştirilmezse nemli hava fren sistemine ulaşır.',
+        ],
+      },
+      {
+        heading: 'Kurutucu kartuşun bittiğini gösteren işaretler',
+        paragraphs: [],
+        list: [
+          'Hava tanklarının tahliye musluğundan su ya da yağlı su gelmesi.',
+          'Kışın valflerin ve hava hatlarının donması, fren ya da vites (pnömatik) sisteminde gecikme.',
+          'Kompresörün tankları doldurmak için normalden uzun çalışması.',
+          'Kurutucunun çok sık tahliye yapması ya da sürekli hava kaçırması.',
+        ],
+      },
+      {
+        heading: 'Hangi araca hangi kurutucu filtre?',
+        paragraphs: [
+          'Katalogdaki uyumluluk verisine göre MANN-FILTER kurutucu kartuşları ve uyduğu araçlardan bazıları aşağıda. Aynı markanın farklı modellerinde kurutucu üreticisi değişebildiği için kesin seçimi aracınızı seçerek ya da sökülen kartuşun üzerindeki kodla yapın.',
+        ],
+        table: {
+          caption: 'MANN-FILTER hava kurutucu kartuşları ve uyumlu araçlar (katalog verisi)',
+          head: ['MANN-FILTER kodu', 'Uyumlu araçlardan bazıları'],
+          rows: [
+            ['TB 1394/1 x', 'Mercedes-Benz Actros, Axor, Atego, Arocs, Antos; MAN TGA, TGL, TGS, TGX; Iveco Stralis, EuroCargo; Renault Trucks; Ford Trucks Cargo, F-Max; BMC; Otokar; Temsa; Volvo FH 16'],
+            ['TB 1374 x', 'BMC Fatih, Probus, Procity, Professional; Ford Trucks Cargo; Iveco EuroCargo, Stralis; Otokar Kent, Navigo, Territo, Vectio; Temsa Safari'],
+            ['TB 1394/3 x', 'Scania G, P, R, S, T ve New Generation serileri'],
+            ['TB 1374/3 x', 'Scania P, R, T'],
+            ['TB 1394/6 x', 'DAF CF75, CF85, XF105, New XF (XF106)'],
+            ['TB 1364 x', 'DAF CF75, CF85'],
+          ],
+        },
+      },
+      {
+        heading: 'Değişimde dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Kartuşu sökmeden önce sistemdeki havayı tamamen boşaltın. Basınç altındaki kartuşu sökmek tehlikelidir.',
+          'Yeni kartuşun contasına ince bir kat yağ sürün ve üreticinin belirttiği şekilde elle ya da belirtilen torkla sıkın.',
+          'Değişimden sonra tankları doldurup kaçak kontrolü yapın, tanklardaki suyu boşaltın.',
+          'Kartuş kısa sürede yağla doluyorsa sorun kompresörde olabilir; kompresörü kontrol ettirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Hava kurutucu filtresi kaç km’de değişir?',
+        a: 'Değişim aralığı araç üreticisine, kurutucu tipine ve kullanım yoğunluğuna göre değişir. Yaygın uygulama kartuşun yılda bir, periyodik bakımlarla değiştirilmesidir; kesin aralık için aracınızın bakım planına bakın.',
+      },
+      {
+        q: 'Kurutucu filtre değişmezse ne olur?',
+        a: 'Nemli hava fren sistemine ulaşır; tanklarda su birikir, valfler paslanabilir ve kışın donma nedeniyle fren ve pnömatik sistemlerde arıza riski artar.',
+      },
+      {
+        q: 'Kurutucu kartuşta yağ çıkması normal mi?',
+        a: 'Az miktarda yağ buharı normaldir ve kartuş bunu tutar. Tank tahliyesinden belirgin yağ geliyorsa ya da kartuş kısa sürede yağla doluyorsa kompresör aşınmış olabilir; kontrol ettirin.',
+      },
+    ],
+  },
+  {
+    slug: 'toyota-corolla-filtre-rehberi',
+    title: 'Toyota Corolla Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Toyota Corolla Filtre Kodları | Oto Center Market',
+    summary:
+      'Toyota Corolla E12, E15, E18 ve E210 için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. Benzinli, D-4D dizel ve hibrit motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 7,
+    relatedHref: '/otomobil/toyota',
+    relatedLabel: 'Toyota modellerine göz atın',
+    guncelleme: '2026-10-19',
+    ilgiliYazilar: ['ford-focus-filtre-rehberi', 'fiat-egea-filtre-rehberi'],
+    intro: [
+      'Toyota Corolla’da filtre seçimi nesle ve motora göre değişir: aynı nesilde benzinli, D-4D dizel ve hibrit motorlar farklı yağ ve hava filtresi kullanabilir. Polen filtresi ise çoğu nesilde tüm motorlarda ortaktır. Aşağıdaki tablolar Corolla E12, E15, E18 ve E210 için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Toyota modelleri](/otomobil/toyota "Toyota yedek parça") arasından Corolla neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Katalogda nesiller şasi koduyla (E12, E15, E18, E210) geçer. Motor hacmi ve gücü ruhsatta yazar; D-4D dizel, VVT-i benzinli motoru, Hybrid ise hibrit versiyonu gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Corolla E210 filtre kodları',
+        paragraphs: [
+          'Corolla E210 (yaklaşık 2019 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Corolla E210 sayfasında](/otomobil/toyota/corolla-e210 "Toyota Corolla E210 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Corolla E210 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 68/3', 'OP 572', '1.2 116 HP, 1.6 VVTi 122 HP, 1.6 VVTi 132 HP, 1.8 116 HP, 1.8 VVTi Hybrid 140 HP'],
+            ['Yağ', '—', 'OP 618/2', '1.5 VVTi 125 HP, 1.8 VVTi Hybrid 140 HP, 2.0 Hybrid 152 HP, 2.0 Hybrid 184 HP'],
+            ['Yağ', 'W 6031', '—', '1.8 VVTi Hybrid 140 HP, 2.0 Hybrid 152 HP, 2.0 Hybrid 184 HP'],
+            ['Hava', '—', 'AP 178/4', '1.2 116 HP, 1.5 VVTi 125 HP, 1.6 VVTi 122 HP, 1.6 VVTi 132 HP'],
+            ['Hava', '—', 'AP 178/3', '1.8 116 HP, 1.8 VVTi Hybrid 140 HP'],
+            ['Hava', 'C 18 021', 'AP 178/6', '2.0 Hybrid 152 HP, 2.0 Hybrid 184 HP'],
+            ['Hava', 'C 17 008', '—', '1.8 116 HP'],
+            ['Polen / kabin', 'CUK 22 032', 'K 1310, K 1310A', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'FP 22 032', '—', '1.2 116 HP, 1.6 VVTi 122 HP, 1.6 VVTi 132 HP, 1.8 VVTi Hybrid 140 HP, 2.0 Hybrid 152 HP, 2.0 Hybrid 184 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Corolla E18 filtre kodları',
+        paragraphs: [
+          'Corolla E18 (yaklaşık 2013–2019) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Corolla E18 sayfasında](/otomobil/toyota/corolla-xi-e18 "Toyota Corolla E18 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Corolla E18 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 6006 z', 'OE 685/2', '1.33 VVT-i 99 HP, 1.6 132 HP, 1.6 VVT-i 122 HP'],
+            ['Yağ', 'HU 7019 z', 'OE 685/1', '1.4 D-4D 90 HP'],
+            ['Yağ', 'W 68/3', 'OP 572', '1.5 Hybrid 73 HP'],
+            ['Hava', 'C 24 005', 'AP 160/1', '1.33 VVT-i 99 HP, 1.6 VVT-i 122 HP'],
+            ['Hava', 'C 27 013', '—', '1.4 D-4D 90 HP'],
+            ['Hava', 'C 17 008', 'AP 178/3', '1.5 Hybrid 73 HP'],
+            ['Polen / kabin', 'CUK 1919, FP 1919', '—', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 1919', '—', '1.33 VVT-i 99 HP, 1.5 Hybrid 73 HP, 1.6 VVT-i 122 HP'],
+            ['Yakıt', 'WK 8028 z', '—', '1.4 D-4D 90 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Corolla E15 filtre kodları',
+        paragraphs: [
+          'Corolla E15 (yaklaşık 2007–2013) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Corolla E15 sayfasında](/otomobil/toyota/corolla-x-e14-e15 "Toyota Corolla E15 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Corolla E15 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 6006 z', 'OE 685/2', '1.33 VVT 101 HP, 1.6 16V 124 HP, 1.6 16V 132 HP, 1.6 VVTi 136 HP, 1.8 136 HP, 1.8 16V 147 HP, 1.8i 16V DOHC 136 HP'],
+            ['Yağ', 'W 68/3', 'OP 572', '1.4 97 HP, 1.6 16V 124 HP, 1.6 VVTi 136 HP, 1.8 128 HP, 1.8i 16V DOHC 136 HP'],
+            ['Hava', 'C 24 005', 'AP 160/1', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 1919, CUK 1919, FP 1919', '—', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'Corolla E12 filtre kodları',
+        paragraphs: [
+          'Corolla E12 (yaklaşık 2002–2007) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Corolla E12 sayfasında](/otomobil/toyota/corolla-ix-e12-e13 "Toyota Corolla E12 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Corolla E12 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 68/3', 'OP 572', '1.4 97 HP, 1.6 110 HP, 1.8 VVTi 134 HP'],
+            ['Yağ', 'WP 1026', 'OP 619/2', '2.0 D-4D 90 HP, 2.0 D-4D 110 HP, 2.0 D-4D 116 HP'],
+            ['Yağ', 'W 610/9', '—', '1.8 173 HP, 1.8 192 HP'],
+            ['Yağ', 'W 712/83', 'OP 618', '1.4 D-4D 90 HP'],
+            ['Hava', 'C 2620', 'AP 142/3', '1.4 97 HP, 1.6 110 HP, 1.8 173 HP, 1.8 192 HP, 1.8 VVTi 134 HP'],
+            ['Hava', 'C 3230', 'AP 142/6', '1.4 D-4D 90 HP, 2.0 D-4D 90 HP, 2.0 D-4D 110 HP, 2.0 D-4D 116 HP'],
+            ['Polen / kabin', 'CU 1912', 'K 1123', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 720/2 x', 'PP 950', '1.4 D-4D 90 HP, 2.0 D-4D 90 HP, 2.0 D-4D 110 HP, 2.0 D-4D 116 HP'],
+            ['Yakıt', 'WK 828 x', '—', '2.0 D-4D 116 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Toyota Corolla 1.6 benzinli yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Corolla E18’in 1.6 benzinli motorlarında MANN-FILTER HU 6006 z ve FILTRON OE 685/2 kartuş yağ filtresi kayıtlıdır; Corolla E15 1.6’da bu kodun yanında motor versiyonuna göre W 68/3 ve OP 572 de görünür. Corolla E210 1.6 VVTi’de ise MANN-FILTER W 68/3 ve FILTRON OP 572 görünür. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Corolla hibrit yağ filtresi kodu nedir?',
+        a: 'Corolla E210 1.8 ve 2.0 Hybrid motorlarda katalogda MANN-FILTER W 6031 ve FILTRON OP 618/2 kayıtlıdır; 1.8 Hybrid için ayrıca W 68/3 ve OP 572 de görünür. Aynı motorda iki kod görülmesi üretim yılına bağlı olabilir; eski filtrenin kodunu kontrol edin.',
+      },
+      {
+        q: 'Corolla E12 polen filtresi kodu nedir?',
+        a: 'Katalogda Corolla E12’nin tüm motorları için MANN-FILTER CU 1912 ve FILTRON K 1123 polen filtresi kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
