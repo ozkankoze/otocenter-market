@@ -2128,6 +2128,377 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'polen-filtresi-nasil-degistirilir',
+    title: 'Polen Filtresi Nasıl Değiştirilir? Torpido Arkası ve Kaput Altı Adım Adım',
+    metaTitle: 'Polen Filtresi Nasıl Değiştirilir? Adım Adım | Oto Center Market',
+    summary:
+      'Polen (kabin) filtresi çoğu araçta torpido gözünün arkasında, bazılarında ön cam altındaki kaputun içindedir. Yerini bulmak, eski filtreyi çıkarmak ve yenisini doğru yönde takmak için adım adım rehber.',
+    tag: 'Nasıl yapılır',
+    readMinutes: 4,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-10-20',
+    ilgiliYazilar: ['polen-filtresi-kac-km-de-degisir', 'aktif-karbonlu-polen-filtresi-farki'],
+    intro: [
+      'Polen filtresi çoğu otomobilde torpido gözünün arkasındaki bir kapağın içindedir: torpido gözünü boşaltıp indirir, filtre kapağını açar, eski filtreyi çekip yenisini hava akış okuna dikkat ederek takarsınız. Bazı araçlarda ise filtre kaputun altında, ön cam önündeki plastik ızgaranın (torpido sacı kapağı) altında yer alır. İşlem çoğu araçta alet gerektirmez ve 10–15 dakika sürer.',
+      'Aracınıza uyan filtreyi sitede marka, model ve motorunuzu seçerek ya da eski filtrenin üzerindeki kodla [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Polen filtresi nerede?',
+        paragraphs: [
+          'Yerini en kolay kullanım kılavuzundan öğrenirsiniz. Genel olarak iki yerleşim görülür:',
+        ],
+        list: [
+          'Torpido gözünün arkası: Günümüz otomobillerinin çoğunda filtre, torpido gözü indirildiğinde görünen dikdörtgen bir kapağın içindedir.',
+          'Kaput altı, ön cam önü: Bazı modellerde filtre, motor bölmesinde ön camın hemen önündeki plastik kapağın altındaki yuvada bulunur.',
+          'Bazı araçlarda filtreye ulaşmak için torpido altındaki ya da yolcu ayak boşluğundaki bir panelin sökülmesi gerekir.',
+        ],
+      },
+      {
+        heading: 'Torpido arkasındaki filtre nasıl değiştirilir?',
+        paragraphs: [],
+        steps: [
+          'Kontağı kapatın, fan ve klimanın kapalı olduğundan emin olun.',
+          'Torpido gözünü boşaltın ve açın. Yan taraflardaki durdurucuları ya da amortisör bağlantısını serbest bırakarak torpido gözünü aşağı indirin.',
+          'Arkada görünen filtre kapağının tırnaklarına bastırarak kapağı çıkarın.',
+          'Eski filtreyi yavaşça kendinize doğru çekin. Biriken toz ve yaprakların kanala düşmemesi için filtreyi düz tutun.',
+          'Filtre yuvasını mümkünse elektrik süpürgesiyle temizleyin.',
+          'Yeni filtrenin üzerindeki hava akış okunu bulun. Ok, havanın filtreden geçtiği yönü gösterir; eski filtrenin takılı olduğu yönü ve kapağın üzerindeki işareti esas alın.',
+          'Yeni filtreyi yuvaya bükmeden kaydırın, kapağı takın ve torpido gözünü yerine kaldırın.',
+          'Fanı çalıştırıp hava akışının ve sesin normal olduğunu kontrol edin.',
+        ],
+      },
+      {
+        heading: 'Kaput altındaki filtre nasıl değiştirilir?',
+        paragraphs: [],
+        steps: [
+          'Kontak kapalıyken kaputu açın; silecek kollarının kapağı engelleyip engellemediğine bakın.',
+          'Ön cam önündeki plastik kapağın klipslerini ya da vidalarını sökerek filtre yuvasını açın.',
+          'Eski filtreyi çıkarın, yuvaya dolmuş yaprakları ve kiri temizleyin. Bu bölgedeki su tahliye deliklerinin açık olduğundan emin olun.',
+          'Yeni filtreyi hava akış okuna dikkat ederek takın, kapağı ve conta kenarlarını düzgün oturtarak kapatın.',
+        ],
+      },
+      {
+        heading: 'Dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Filtreyi ters takmayın: ok yönü yanlışsa filtrenin tutma verimi düşer.',
+          'Filtreyi aşırı bükmeyin; kıvrılan kenarlardan filtrelenmemiş hava geçebilir.',
+          'Torpido gözünü indirirken plastik tırnakları zorlamayın; çoğu araçta yandan esneterek çıkarılır.',
+          'Klimadan koku geliyorsa yalnızca filtre değişimi yetmeyebilir; [klima kokusu yazımızda](/blog/polen-filtresi-kac-km-de-degisir "Polen filtresi kaç km’de değişir") sebeplerini anlattık.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Polen filtresi değişimi ne kadar sürer?',
+        a: 'Torpido gözü arkasındaki filtrelerde işlem genellikle 10–15 dakika sürer ve alet gerektirmez. Kaput altındaki ya da panel sökülmesi gereken modellerde biraz daha uzun sürebilir.',
+      },
+      {
+        q: 'Polen filtresinin ok yönü neye göre takılır?',
+        a: 'Filtre üzerindeki ok, havanın filtreden geçiş yönünü gösterir. Eski filtrenin hangi yönde takılı olduğuna ve filtre kapağındaki işarete bakarak yeni filtreyi aynı yönde takın.',
+      },
+      {
+        q: 'Polen filtresini kendim değiştirebilir miyim?',
+        a: 'Evet, çoğu araçta polen filtresi kullanıcının değiştirebileceği basit bir parçadır. Yerini ve sökme şeklini aracınızın kullanım kılavuzundan kontrol edebilirsiniz.',
+      },
+    ],
+  },
+  {
+    slug: 'dizel-yakit-filtresi-degisimi-hava-alma',
+    title: 'Dizel Yakıt Filtresi Değişimi ve Hava Alma: Adım Adım Rehber',
+    metaTitle: 'Dizel Yakıt Filtresi Değişimi ve Hava Alma | Oto Center Market',
+    summary:
+      'Dizel araçlarda yakıt filtresinin nasıl değiştirildiği, değişimden sonra sistemin havasının nasıl alındığı, su ayırıcının boşaltılması ve common rail motorlarda temizliğin neden kritik olduğu.',
+    tag: 'Nasıl yapılır',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yakit-filtreleri',
+    relatedLabel: 'Yakıt filtrelerine göz atın',
+    guncelleme: '2026-10-20',
+    ilgiliYazilar: ['yakit-filtresi-ne-zaman-degisir', 'kis-oncesi-arac-bakimi'],
+    intro: [
+      'Dizel yakıt filtresi değiştirilirken önce filtre gövdesindeki yakıt boşaltılır, eski filtre ya da kartuş sökülür, yeni filtre contaları yenilenerek takılır ve ardından sisteme giren hava alınır. Elektrikli besleme pompası olan araçlarda hava alma çoğu zaman kontağı birkaç kez açıp kapatarak yapılır; el pompalı sistemlerde filtre üzerindeki pompa basılarak yakıt gelene kadar devam edilir.',
+      'Common rail dizel motorlarda yakıt sistemine giren en küçük kir bile enjektörlere zarar verebilir. Temiz bir çalışma ortamınız ve doğru ekipmanınız yoksa değişimi servise yaptırmanız daha güvenlidir. Aracınıza uyan filtreyi [yakıt filtreleri kategorisinde](/filtreler/yakit-filtreleri "Yakıt filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Önce filtre tipinizi öğrenin',
+        paragraphs: [
+          'Dizel yakıt filtreleri iki ana tipte görülür. Komple (hat tipi ya da spin-on) filtrelerde filtre gövdesiyle birlikte değişir; MANN-FILTER’da WK, FILTRON’da PP koduyla başlar. Kartuş tipinde motor üzerindeki gövde kalır, yalnızca içindeki eleman değişir; MANN-FILTER’da PU, FILTRON’da PE koduyla başlar. Kartuş filtreler genellikle yeni contalarıyla gelir.',
+          'Birçok dizel filtrede altta bir su ayırıcı ve boşaltma vidası, bazılarında ise su seviyesi sensörü bulunur.',
+        ],
+      },
+      {
+        heading: 'Hazırlık ve güvenlik',
+        paragraphs: [],
+        list: [
+          'Motor soğukken çalışın; yakıt sıcak motor parçalarına damlamamalı.',
+          'Çalışma alanında açık alev, kıvılcım ya da sigara olmamalı.',
+          'Akan yakıt için bir kap ve emici bez hazırlayın; yakıtın kayışlara ve hortumlara bulaşmasını önleyin.',
+          'Filtre gövdesinin çevresini sökmeden önce temizleyin. Gövde açıkken içeri toz girmemesi çok önemlidir.',
+          'Eldiven ve göz koruması kullanın.',
+        ],
+      },
+      {
+        heading: 'Adım adım değişim',
+        paragraphs: [],
+        steps: [
+          'Filtre gövdesinin altına kabı yerleştirin. Varsa su boşaltma vidasını açarak gövdedeki yakıtı ve suyu boşaltın.',
+          'Komple filtrede hortum bağlantılarını ya da filtreyi sökün; bağlantıların takılış yönünü not edin. Kartuş tipinde gövde kapağını söküp eski elemanı çıkarın.',
+          'Kartuş gövdesinin içini temiz, tüy bırakmayan bir bezle silin. Temiz tarafa (motora giden çıkış kanalına) kir girmemesine dikkat edin.',
+          'Yeni contaları ya da O-ringleri takın, contalara ince bir kat temiz yakıt sürün.',
+          'Yeni filtreyi ya da kartuşu takın, kapağı servis bilgisindeki tork değeriyle sıkın. Su sensörü varsa yeni filtreye aktarın ve fişini takın.',
+          'Su boşaltma vidasını kapatın ve bağlantıları kontrol edin.',
+        ],
+      },
+      {
+        heading: 'Hava nasıl alınır?',
+        paragraphs: [
+          'Değişimden sonra filtre gövdesinde ve hatlarda hava kalır. Hava alma yöntemi araca göre değişir; kesin yöntem için servis bilgisine bakın. Genel uygulamalar şunlardır:',
+        ],
+        list: [
+          'Elektrikli besleme pompası olan araçlarda: kontağı motoru çalıştırmadan birkaç kez açıp birkaç saniye bekleyerek pompanın sistemi doldurmasını sağlayın.',
+          'El pompası (pompa topu ya da filtre üzerinde basma düğmesi) olan araçlarda: pompa sertleşip direnç hissedilene kadar basın.',
+          'Hava alma vidası olan sistemlerde: vidayı hafifçe gevşetip el pompasıyla hava kabarcıksız yakıt gelene kadar basın, sonra vidayı sıkın.',
+          'Motor çalıştıktan sonra kısa süre düzensiz çalışabilir. Marşa art arda uzun süre basmayın; çalışmazsa hava almayı tekrarlayın.',
+        ],
+      },
+      {
+        heading: 'Sık yapılan hatalar',
+        paragraphs: [],
+        list: [
+          'Yeni filtreyi temiz tarafından filtrelenmemiş yakıtla doldurmak: kir doğrudan enjeksiyon sistemine gider. Üretici önceden doldurmaya izin vermiyorsa filtreyi boş takıp hava alma yöntemini kullanın.',
+          'Eski contayı yeniden kullanmak: hava ya da yakıt kaçağına yol açar.',
+          'Su sensörünü yeni filtreye aktarmayı unutmak: gösterge uyarısına sebep olabilir.',
+          'Benzinli araçla karıştırmak: benzinli araçların çoğunda yakıt filtresi depodaki pompa modülünün içindedir ve değişimi farklıdır.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Dizel yakıt filtresi değişince araç neden çalışmaz?',
+        a: 'En sık sebep sistemde hava kalmasıdır. Kontağı birkaç kez açıp kapatarak ya da el pompasıyla hava alın. Hâlâ çalışmıyorsa bağlantılarda hava emişi veya yanlış takılmış conta olabilir.',
+      },
+      {
+        q: 'Yakıt filtresinin suyu ne sıklıkla boşaltılmalı?',
+        a: 'Gösterge panelinde su uyarısı yandığında ve periyodik bakımlarda boşaltılmalıdır. Su ayırıcılı filtrelerde, özellikle kıştan önce boşaltmak donma riskini azaltır.',
+      },
+      {
+        q: 'Yakıt filtresini değiştirmeden önce doldurmak gerekir mi?',
+        a: 'Üreticiye göre değişir. Common rail sistemlerde temiz tarafa kir girme riski nedeniyle çoğu zaman filtre boş takılır ve sistemin havası alınır. Aracınızın servis bilgisine uyun.',
+      },
+    ],
+  },
+  {
+    slug: 'adblue-filtresi-nedir',
+    title: 'AdBlue Filtresi Nedir? Ne Zaman Değişir, Tıkanırsa Ne Olur?',
+    metaTitle: 'AdBlue Filtresi Nedir, Ne Zaman Değişir? | Oto Center Market',
+    summary:
+      'SCR sistemli dizel kamyon, otobüs ve çekicilerde AdBlue filtresinin görevi, tıkandığında görülen arızalar, değişim zamanı ve hangi araca hangi MANN-FILTER kitinin uyduğu.',
+    tag: 'Ağır vasıta',
+    readMinutes: 4,
+    relatedHref: '/filtreler/adblue-filtreleri',
+    relatedLabel: 'AdBlue filtrelerine göz atın',
+    guncelleme: '2026-10-20',
+    ilgiliYazilar: ['hava-kurutucu-filtresi-nedir', 'periyodik-bakimda-hangi-filtreler-degisir'],
+    intro: [
+      'AdBlue filtresi, SCR (seçici katalitik indirgeme) sistemli dizel araçlarda AdBlue sıvısını dozaj pompasına ve enjektöre gitmeden önce süzer. AdBlue; yüzde 32,5 oranında üre içeren, egzozdaki azot oksitleri (NOx) azaltmak için kullanılan bir sıvıdır. Filtre, sıvıdaki partiküllerin ve kristalleşmiş ürenin pompayı ve dozaj valfini tıkamasını önler.',
+      'Değişim aralığı araç ve SCR sistemi üreticisine göre değişir ve bakım planında belirtilir. Aracınıza uyan kiti [AdBlue filtreleri kategorisinde](/filtreler/adblue-filtreleri "AdBlue filtrelerini görüntüle") ya da [ağır vasıta](/agir-vasita "Ağır vasıta filtreleri") bölümünden aracınızı seçerek bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'AdBlue filtresi neden tıkanır?',
+        paragraphs: [
+          'AdBlue havayla temas ettiğinde ya da kuruduğunda beyaz üre kristalleri oluşturur. Depoya giren toz, uygun olmayan kaplarla doldurma ve standart dışı sıvı kullanımı da filtreyi kirletir. Zamanla tıkanan filtre, pompanın yeterli sıvıyı basamamasına yol açar.',
+        ],
+      },
+      {
+        heading: 'Tıkalı AdBlue filtresinin belirtileri',
+        paragraphs: [],
+        list: [
+          'Gösterge panelinde AdBlue ya da emisyon sistemi uyarısı.',
+          'Motor arıza lambasının yanması ve emisyon sistemiyle ilgili arıza kodları.',
+          'Motor gücünün sistem tarafından sınırlandırılması (güç düşürme).',
+          'AdBlue tüketiminin beklenenden belirgin şekilde düşmesi.',
+        ],
+      },
+      {
+        heading: 'Hangi araca hangi AdBlue filtresi?',
+        paragraphs: [
+          'Katalogdaki uyumluluk verisine göre MANN-FILTER AdBlue filtre kitleri ve uyduğu araçlardan bazıları aşağıda. Kesin seçim için aracınızı seçin ya da sökülen filtrenin üzerindeki kodu kontrol edin.',
+        ],
+        table: {
+          caption: 'MANN-FILTER AdBlue filtre kitleri ve uyumlu araçlar (katalog verisi)',
+          head: ['MANN-FILTER kodu', 'Uyumlu araçlardan bazıları'],
+          rows: [
+            ['U 58/1 KIT', 'Mercedes-Benz Actros I, Axor II, Atego II, Econic, Vario, Zetros; Setra otobüsleri'],
+            ['U 630 x KIT', 'Volvo FH, FH 16, FM, FMX, FL, FE; Renault Trucks Premium, Magnum, Kerax, Midlum; Iveco Stralis, EuroCargo; Ford Trucks Cargo, F-Max'],
+            ['U 620/3 y KIT', 'DAF CF75, CF85, XF105'],
+          ],
+        },
+      },
+      {
+        heading: 'Değişimde dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Kodunda KIT geçen ürünler genellikle filtreyle birlikte conta gibi montaj parçalarını da içerir; eski parçaları yeniden kullanmayın.',
+          'Filtre yuvasını temiz tutun; üre kristallerini sıcak suyla temizleyin, sistemi kirle temas ettirmeyin.',
+          'AdBlue depoya yalnızca standarda uygun (ISO 22241) sıvı ve temiz kaplarla doldurulmalıdır.',
+          'Değişimden sonra arıza kodlarının silinmesi ve sistem testinin yapılması için servis cihazı gerekebilir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'AdBlue filtresi kaç km’de değişir?',
+        a: 'Değişim aralığı araç ve SCR sistemi üreticisine göre farklıdır ve bakım planında yazar. Ağır kullanımda ya da kalitesiz AdBlue kullanıldığında filtre daha erken tıkanabilir.',
+      },
+      {
+        q: 'AdBlue filtresi tıkanırsa araç durur mu?',
+        a: 'Araç hemen durmaz, ancak SCR sistemi arıza verdiğinde motor gücü sınırlandırılabilir ve bazı araçlarda arıza giderilmeden motorun yeniden çalıştırılması kısıtlanabilir. Uyarı yandığında sistemi kontrol ettirin.',
+      },
+      {
+        q: 'Binek araçlarda AdBlue filtresi var mı?',
+        a: 'AdBlue kullanan binek ve hafif ticari araçlarda da filtre bulunur; ancak çoğu modelde filtre depo ve pompa modülünün içindedir ve ayrı değiştirilemeyebilir. Ayrıntı için aracınızın servis bilgisine bakın.',
+      },
+    ],
+  },
+  {
+    slug: 'opel-astra-filtre-rehberi',
+    title: 'Opel Astra Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Opel Astra Filtre Kodları | Oto Center Market',
+    summary:
+      'Opel Astra H, J, K ve L için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. Benzinli, CDTI dizel ve plug-in hibrit motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 8,
+    relatedHref: '/otomobil/opel',
+    relatedLabel: 'Opel modellerine göz atın',
+    guncelleme: '2026-10-20',
+    ilgiliYazilar: ['toyota-corolla-filtre-rehberi', 'ford-focus-filtre-rehberi'],
+    intro: [
+      'Opel Astra’da filtre seçimi nesle ve motora göre değişir: aynı nesilde 1.4 benzinli ile 1.7 CDTI dizel farklı yağ, hava ve yakıt filtresi kullanır. Polen filtresi ise her nesilde tüm motorlarda ortaktır. Aşağıdaki tablolar Astra H, J, K ve L için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Opel modelleri](/otomobil/opel "Opel yedek parça") arasından Astra neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki CDTI dizel, Turbo turbo benzinli, 16V atmosferik benzinli motoru, Plug-In-Hybrid ise şarj edilebilir hibrit versiyonu gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Astra L filtre kodları',
+        paragraphs: [
+          'Astra L (yaklaşık 2021 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Astra L sayfasında](/otomobil/opel/astra-l "Opel Astra L yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Opel Astra L — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7058', 'OP 540/1', '1.2 110 HP, 1.2 131 HP'],
+            ['Yağ', 'HU 711/51 x', 'OE 673', '1.6 Plug-In-Hybrid 181 HP, 1.6 Plug-In-Hybrid 224 HP'],
+            ['Yağ', 'HU 7032 z', 'OE 667/6', '1.5 Turbo Diesel 131 HP'],
+            ['Hava', 'C 36 007 KIT', 'AP 196/2', '1.2 110 HP, 1.2 131 HP'],
+            ['Hava', 'C 36 003', 'AP 196/4', '1.6 Plug-In-Hybrid 181 HP, 1.6 Plug-In-Hybrid 224 HP'],
+            ['Hava', 'C 24 036', 'AP 196/9', '1.5 Turbo Diesel 131 HP'],
+            ['Polen / kabin', 'CU 26 014-2', 'K 1328-2x, K 1328A-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', '—', 'PE 816/6', '1.5 Turbo Diesel 131 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Astra K filtre kodları',
+        paragraphs: [
+          'Astra K (yaklaşık 2015–2021) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Astra K sayfasında](/otomobil/opel/astra-k "Opel Astra K yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Opel Astra K — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 6019 z', 'OE 648/9', '1.6 CDTI 95 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.6 CDTI 150 HP, 1.6 CDTI 160 HP'],
+            ['Yağ', 'W 7056', 'OP 570/2', '1.2 Turbo 110 HP, 1.2 Turbo 131 HP, 1.2 Turbo 145 HP, 1.4 101 HP'],
+            ['Yağ', 'HU 6018 z', '—', '1.6 Turbo 200 HP'],
+            ['Hava', 'C 16 012', '—', '1.4 101 HP, 1.6 CDTI 95 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.6 CDTI 150 HP, 1.6 CDTI 160 HP, 1.6 Turbo 200 HP'],
+            ['Hava', '—', 'AK 375/1', '1.6 CDTI 95 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.6 CDTI 150 HP, 1.6 CDTI 160 HP'],
+            ['Hava', '—', 'AK 375', '1.4 101 HP, 1.6 Turbo 200 HP'],
+            ['Hava', 'C 24 077', '—', '1.5 105 HP, 1.5 122 HP'],
+            ['Polen / kabin', 'CUK 24 003', 'K 1343A', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'FP 24 003', 'K 1343', '1.2 Turbo 110 HP, 1.2 Turbo 131 HP, 1.2 Turbo 145 HP, 1.4 Turbo 145 HP, 1.5 105 HP, 1.5 122 HP'],
+            ['Yakıt', 'PU 9012 z', '—', '1.6 CDTI 95 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.6 CDTI 150 HP, 1.6 CDTI 160 HP'],
+            ['Yakıt', 'PU 9012/1 z', 'PE 982/4', '1.5 105 HP, 1.5 122 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Astra J filtre kodları',
+        paragraphs: [
+          'Astra J (yaklaşık 2009–2015) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Astra J sayfasında](/otomobil/opel/astra-j-astra-j-gtc "Opel Astra J yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Opel Astra J — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 612/2 x', 'OE 648/6', '1.4 16V 87 HP, 1.4 16V 100 HP, 1.4 16V Turbo 120 HP, 1.4 16V Turbo 140 HP, 1.6 16V 115 HP, 1.6 16V Turbo 180 HP'],
+            ['Yağ', '—', 'OE 682/1', '1.3 CDTi 95 HP, 2.0 CDTi 131 HP, 2.0 CDTi 160 HP, 2.0 CDTi 165 HP, 2.0 CDTi BiTurbo 195 HP'],
+            ['Yağ', 'HU 820/1 y', 'OE 648/8', '1.7 CDTi 101 HP, 1.7 CDTi 110 HP, 1.7 CDTi 125 HP, 1.7 CDTi 131 HP'],
+            ['Yağ', 'HU 6019 z', 'OE 648/9', '1.6 CDTI 110 HP, 1.6 CDTI 136 HP'],
+            ['Hava', 'C 27 107', '—', '1.3 CDTi 95 HP, 1.4 16V Turbo 120 HP, 1.4 16V Turbo 140 HP, 1.6 16V Turbo 180 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.7 CDTi 101 HP, 1.7 CDTi 110 HP, 1.7 CDTi 125 HP, 1.7 CDTi 131 HP, 2.0 CDTi 131 HP, 2.0 CDTi 160 HP, 2.0 CDTi 165 HP, 2.0 CDTi BiTurbo 195 HP'],
+            ['Hava', 'C 26 106, C 26 108', 'AP 051/8, AP 051/9', '1.4 16V 87 HP, 1.4 16V 100 HP, 1.6 16V 115 HP'],
+            ['Hava', '—', 'AP 051/7', '2.0 CDTi 131 HP'],
+            ['Polen / kabin', 'CU 2442, CUK 2442, FP 2442', 'K 1223, K 1223A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'PU 9001/1 x', 'PE 982/1', '1.3 CDTi 95 HP, 1.6 CDTI 110 HP, 1.6 CDTI 136 HP, 1.7 CDTi 101 HP, 1.7 CDTi 110 HP, 1.7 CDTi 125 HP, 1.7 CDTi 131 HP, 2.0 CDTi 131 HP, 2.0 CDTi 160 HP, 2.0 CDTi 165 HP, 2.0 CDTi BiTurbo 195 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Astra H filtre kodları',
+        paragraphs: [
+          'Astra H (yaklaşık 2004–2010) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Astra H sayfasında](/otomobil/opel/astra-h-astra-h-gtc "Opel Astra H yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Opel Astra H — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 612/2 x', 'OE 648/6', '1.2 16V 80 HP, 1.4 16V 75 HP, 1.4 16V 90 HP, 1.6 16V 115 HP, 1.6 16V Turbo 180 HP, 1.8 16V 140 HP'],
+            ['Yağ', 'W 712/75', 'OP 570/1', '1.6 16V 105 HP, 1.8 16V 125 HP, 2.0 16V Turbo 170 HP, 2.0 16V Turbo 200 HP'],
+            ['Yağ', 'HU 712/8 x', 'OE 648', '1.2 16V 80 HP, 1.4 16V 75 HP, 1.4 16V 90 HP'],
+            ['Yağ', 'HU 711/4 x', 'OE 648/5', '1.9 CDTI 100 HP, 1.9 CDTI 120 HP, 1.9 CDTI 150 HP'],
+            ['Yağ', 'HU 820/1 y', 'OE 648/8', '1.7 CDTI 110 HP, 1.7 CDTI 125 HP'],
+            ['Yağ', 'HU 820 x', 'OE 648/4', '1.7 CDTI 80 HP, 1.7 CDTI 100 HP'],
+            ['Yağ', 'HU 712/7 x, HU 713/1 x', 'OE 670, OE 682', '1.3 CDTI 90 HP'],
+            ['Hava', 'C 30 130', 'AP 051', '1.2 16V 80 HP, 1.4 16V 75 HP, 1.4 16V 90 HP, 1.6 16V 105 HP, 1.6 16V 115 HP, 1.8 16V 125 HP, 1.8 16V 140 HP, 2.0 16V Turbo 170 HP, 2.0 16V Turbo 200 HP'],
+            ['Hava', 'C 30 138', 'AP 051/6', '1.6 16V Turbo 180 HP, 1.7 CDTI 110 HP, 1.7 CDTI 125 HP, 1.9 CDTI 100 HP, 1.9 CDTI 120 HP, 1.9 CDTI 150 HP'],
+            ['Hava', 'C 30 130/2', 'AP 051/4', '1.3 CDTI 90 HP, 1.7 CDTI 80 HP, 1.7 CDTI 100 HP'],
+            ['Polen / kabin', 'CU 3054, CUK 3054', 'K 1014', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'FP 3054', '—', '1.6 16V 115 HP'],
+            ['Yakıt', 'PU 723 x', 'PE 982', '1.3 CDTI 90 HP, 1.9 CDTI 100 HP, 1.9 CDTI 120 HP, 1.9 CDTI 150 HP'],
+            ['Yakıt', 'PU 8013 z', 'PE 936/1', '1.7 CDTI 80 HP, 1.7 CDTI 100 HP, 1.7 CDTI 110 HP, 1.7 CDTI 125 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Opel Astra J 1.4 Turbo yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Astra J 1.4 Turbo (120 ve 140 HP) motorlarda MANN-FILTER HU 612/2 x ve FILTRON OE 648/6 yağ filtresi kullanılır. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Opel Astra K 1.6 CDTI yağ filtresi kodu nedir?',
+        a: 'Astra K 1.6 CDTI motorlarda katalogda MANN-FILTER HU 6019 z ve FILTRON OE 648/9 kayıtlıdır. Aynı filtre Astra J’nin 1.6 CDTI motorlarında da görünür.',
+      },
+      {
+        q: 'Astra H 1.7 CDTI yağ filtresi hangisi?',
+        a: 'Motor gücüne göre değişir: katalogda Astra H 1.7 CDTI 80 ve 100 HP için MANN-FILTER HU 820 x ve FILTRON OE 648/4, 110 ve 125 HP için MANN-FILTER HU 820/1 y ve FILTRON OE 648/8 kayıtlıdır.',
+      },
+      {
+        q: 'Astra J polen filtresi bütün motorlarda aynı mı?',
+        a: 'Evet. Katalogda Astra J’nin tüm motorları için MANN-FILTER CU 2442 (aktif karbonlu CUK 2442, FreciousPlus FP 2442) ve FILTRON K 1223 (aktif karbonlu K 1223A) kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
