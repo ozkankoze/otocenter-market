@@ -2499,6 +2499,322 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'yag-filtresi-sizdiriyor',
+    title: 'Yağ Filtresi Yağ Sızdırıyor: Sebepleri ve Çözümü',
+    metaTitle: 'Yağ Filtresinden Yağ Sızıyor: Sebepleri | Oto Center Market',
+    summary:
+      'Yağ filtresinden yağ sızmasının en sık sebepleri: üst üste binmiş eski conta, yanlış sıkma, yanlış filtre ve hasarlı kapak. Kaçağın gerçekten filtreden gelip gelmediğini nasıl anlarsınız?',
+    tag: 'Arıza',
+    readMinutes: 4,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-21',
+    ilgiliYazilar: ['yag-filtresi-nasil-degistirilir', 'yag-lambasi-yaniyor-ne-yapmali'],
+    intro: [
+      'Yağ filtresinden yağ sızmasının en sık sebebi, değişimde eski filtrenin contasının motor üzerinde kalması ve yeni contayla üst üste binmesidir. Bunu yanlış sıkma (çok gevşek ya da aşırı sıkı), contaya yağ sürülmemesi, motora uygun olmayan filtre takılması ve kartuş tipinde yenilenmeyen O-ring izler. Yağ değişiminden hemen sonra başlayan kaçak neredeyse her zaman montajla ilgilidir.',
+      'Filtre çevresinde belirgin yağ akıntısı varsa ve yağ seviyesi hızla düşüyorsa aracı kullanmayın; yağ basıncı düşerse motor zarar görebilir. Aracınıza uygun filtreyi [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Kaçak gerçekten filtreden mi geliyor?',
+        paragraphs: [
+          'Motorun alt kısmında görülen yağ her zaman filtreden gelmez. Yağ yerçekimiyle aşağı aktığı için kaçağın kaynağı genellikle ıslak bölgenin en üst noktasıdır. Filtre çevresini temizleyip motoru birkaç dakika çalıştırdıktan sonra tekrar bakmak, kaynağı bulmanın en kolay yoludur.',
+        ],
+        list: [
+          'Filtrenin conta hizasında taze yağ varsa: kaçak büyük ihtimalle filtreden.',
+          'Filtrenin üzerinden aşağı yağ akıyorsa: kaynak daha yukarıda olabilir (külbütör kapağı, yağ soğutucusu, yağ basınç müşürü).',
+          'Karter tapası çevresi ıslaksa: tapa contası yenilenmemiş ya da tapa gevşek olabilir.',
+          'Karter ile motor bloğu birleşiminde yağ varsa: karter contası ya da sızdırmazlık macunu.',
+        ],
+      },
+      {
+        heading: 'Yağ filtresinden sızıntının sebepleri',
+        paragraphs: [],
+        list: [
+          'Çift conta: eski filtrenin contası motor üzerinde yapışık kalmıştır. Yeni filtre bunun üzerine takıldığında yağ basıncıyla kaçırır, hatta conta dışarı fırlayabilir.',
+          'Gevşek filtre: conta yeterince bastırılmamıştır.',
+          'Aşırı sıkılmış filtre: conta ezilir ya da yerinden kayar.',
+          'Contaya yağ sürülmemesi: kuru conta sıkılırken burulur ve düzgün oturmaz.',
+          'Yanlış filtre: dişi ya da conta çapı aynı görünen ama motora uygun olmayan filtre tam oturmaz.',
+          'Kartuş tipinde eski O-ring: kapak contası yenilenmemiş, yanlış oturmuş ya da kapak çatlamıştır.',
+          'Hasarlı filtre gövdesi: taş çarpması ya da sökme sırasında ezilen gövde.',
+        ],
+      },
+      {
+        heading: 'Ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Motoru durdurun ve yağ seviyesini kontrol edin; eksikse uygun yağla tamamlayın.',
+          'Kaçak az ve yeni değişim yapıldıysa filtreyi söküp motor üzerindeki oturma yüzeyine bakın; eski conta kalmışsa çıkarın.',
+          'Yeni filtrenin contasına ince bir kat yağ sürün ve filtreyi üzerindeki talimata göre (spin-on filtrelerde genellikle conta değdikten sonra yaklaşık 3/4 tur) elle sıkın.',
+          'Kartuş tipinde kapağın O-ringini yenisiyle değiştirin ve kapağı servis bilgisindeki torkla sıkın.',
+          'Motoru çalıştırıp birkaç dakika sonra filtre çevresini kontrol edin. Kaçak sürüyorsa filtre kodunun motorunuza uygun olup olmadığını kontrol edin ya da servise başvurun.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yağ değişiminden sonra yağ filtresi neden sızdırır?',
+        a: 'En sık sebep eski filtre contasının motor üzerinde kalıp yeni contayla üst üste binmesidir. Gevşek ya da aşırı sıkılmış filtre ve yağlanmamış conta da sık görülen sebeplerdir.',
+      },
+      {
+        q: 'Yağ filtresi sızdırırken araç kullanılır mı?',
+        a: 'Küçük bir terleme kısa mesafe için risk oluşturmayabilir, ancak damlama ya da akıntı varsa aracı kullanmayın. Yağ seviyesi düşerse yağ basıncı azalır ve motor zarar görebilir.',
+      },
+      {
+        q: 'Yağ filtresi sıkıştırılırsa kaçak durur mu?',
+        a: 'Gevşek filtrede durabilir; ancak kaçağın sebebi çift conta, ezilmiş conta ya da yanlış filtreyse daha fazla sıkmak sorunu büyütür. Filtreyi söküp contayı ve oturma yüzeyini kontrol etmek daha doğrudur.',
+      },
+    ],
+  },
+  {
+    slug: 'lpg-li-araclarda-bakim-ve-filtreler',
+    title: 'LPG’li Araçlarda Bakım: Hangi Filtreler Değişir, Nelere Dikkat Edilir?',
+    metaTitle: 'LPG’li Araç Bakımı ve Filtreler | Oto Center Market',
+    summary:
+      'LPG’li araçlarda motor filtrelerine ek olarak LPG gaz faz filtresi de bakım ister. Hava ve yağ filtresinin LPG’li araçta neden daha önemli olduğu, buji ve LPG sistemi kontrolleri.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-21',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'hava-filtresi-ne-zaman-degisir'],
+    intro: [
+      'LPG’li araçlarda normal motor bakımına (yağ, yağ filtresi, hava filtresi, polen filtresi) ek olarak LPG sisteminin kendi filtreleri de değiştirilir. En yaygın olanı, buharlaştırıcı (regülatör) ile enjektörler arasındaki gaz faz filtresidir; bazı sistemlerde sıvı faz filtresi de bulunur. Bu filtrelerin değişim aralığını LPG sisteminin üreticisi belirler ve genellikle LPG servisindeki periyodik bakımda değiştirilir.',
+      'LPG ile çalışan motor, yanma koşulları nedeniyle hava filtresine ve ateşleme sistemine benzine göre daha duyarlıdır. Bu yüzden motor filtrelerini aksatmamak LPG’li araçta daha da önemlidir. Aracınıza uygun motor filtrelerini [filtreler kategorisinde](/filtreler "Filtreleri görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'LPG’li araçta değişen filtreler',
+        paragraphs: [],
+        table: {
+          caption: 'LPG’li araçlarda bakımda değişen başlıca filtreler',
+          head: ['Filtre', 'Görevi', 'Nerede değişir?'],
+          rows: [
+            ['Motor yağ filtresi', 'Motor yağını temizler', 'Her yağ değişiminde'],
+            ['Hava filtresi', 'Motora giren havayı temizler; LPG karışımı için önemlidir', 'Motor bakımında'],
+            ['Polen filtresi', 'Kabin havasını temizler', 'Motor bakımında'],
+            ['Yakıt (benzin) filtresi', 'Benzini temizler; araç benzinle de çalıştığı için gereklidir', 'Araç üreticisinin aralığında'],
+            ['LPG gaz faz filtresi', 'Buharlaşmış LPG’deki partikülleri ve yağlı kalıntıları tutar', 'LPG servisinde'],
+            ['LPG sıvı faz filtresi', 'Sıvı LPG’yi buharlaştırıcıya girmeden süzer (sisteme göre)', 'LPG servisinde'],
+          ],
+        },
+      },
+      {
+        heading: 'Hava filtresi LPG’li araçta neden daha önemli?',
+        paragraphs: [
+          'LPG sistemi, motora giren hava miktarına göre gaz püskürtür. Tıkalı bir hava filtresi karışımı bozabilir; bu da performans düşüşü, rölantide düzensizlik ve yakıt tüketiminde artış olarak görülebilir. LPG’li araçta hava filtresini kontrol aralığını aksatmadan değiştirmek iyi bir uygulamadır. Ayrıntılar için [hava filtresi yazımıza](/blog/hava-filtresi-ne-zaman-degisir "Hava filtresi ne zaman değişir") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'LPG’li araçta diğer bakım noktaları',
+        paragraphs: [],
+        list: [
+          'Bujiler: LPG’de ateşleme için daha yüksek voltaj gerektiği için bujiler daha çabuk yıpranabilir. Tekleme ya da geçişte sarsıntı varsa bujileri kontrol ettirin.',
+          'Supap ayarı: Bazı motorlarda LPG kullanımı supap ayarının daha sık kontrol edilmesini gerektirebilir. Motorunuz için önerilen kontrol aralığını LPG servisinize sorun.',
+          'Soğutma sıvısı: Buharlaştırıcı motorun soğutma suyuyla ısınır; soğutma sıvısı eksikse LPG geçişinde sorun yaşanabilir.',
+          'Kaçak kontrolü: Gaz kokusu alırsanız aracı kullanmayın, LPG vanasını kapatın ve servise başvurun.',
+          'Benzin deposu: Araç her çalıştırmada kısa süre benzinle çalıştığı için depoda bir miktar benzin bulundurun.',
+          'Tank ve sistem kontrolü: LPG tankının ve sistemin yasal kontrollerini ve muayene gerekliliklerini takip edin.',
+        ],
+      },
+      {
+        heading: 'LPG filtresini nereden alırım?',
+        paragraphs: [
+          'LPG gaz faz ve sıvı faz filtreleri LPG sisteminin markasına ve modeline özeldir. Doğru filtreyi LPG kitinizi bilen servisinizden temin etmeniz en güvenli yoldur. Sitemizde LPG’li motorlar için motor yağ, hava, polen ve yakıt filtrelerini bulabilirsiniz; aracınızı seçerken motor listesinde LPG ibaresi geçen versiyonları da görebilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'LPG filtresi kaç km’de değişir?',
+        a: 'Değişim aralığını LPG sisteminin üreticisi belirler ve genellikle LPG servisindeki periyodik bakımda değiştirilir. Kesin aralık için sisteminizin bakım kartına bakın.',
+      },
+      {
+        q: 'LPG’li araçta yağ filtresi farklı mı?',
+        a: 'Hayır, yağ filtresi aracın motoruna göre seçilir; LPG takılı olması filtre kodunu değiştirmez. Önemli olan yağ ve yağ filtresinin bakım aralığında değişmesidir.',
+      },
+      {
+        q: 'LPG’li araçta hava filtresi değişmezse ne olur?',
+        a: 'Tıkalı hava filtresi LPG karışımını bozabilir; performans düşüşü, rölantide düzensizlik ve tüketim artışı görülebilir. Hava filtresini bakım aralığında değiştirmek LPG’li araçta özellikle önemlidir.',
+      },
+    ],
+  },
+  {
+    slug: 'dacia-duster-filtre-rehberi',
+    title: 'Dacia Duster Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Dacia Duster Filtre Kodları | Oto Center Market',
+    summary:
+      'Dacia Duster I ve Duster II için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.5 dCi, 1.0 ve 1.3 TCe, 1.6 benzinli ve LPG’li motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 6,
+    relatedHref: '/otomobil/dacia',
+    relatedLabel: 'Dacia modellerine göz atın',
+    guncelleme: '2026-10-21',
+    ilgiliYazilar: ['renault-clio-megane-filtre-rehberi', 'lpg-li-araclarda-bakim-ve-filtreler'],
+    intro: [
+      'Dacia Duster’da filtre seçimi motora göre değişir: 1.5 dCi dizel, 1.0 ve 1.3 TCe turbo benzinli ve 1.6 benzinli motorlar farklı yağ ve yakıt filtresi kullanır. Duster, Renault grubuyla ortak motorlar kullandığı için kodların bir kısmı Clio ve Mégane ile aynıdır. Aşağıdaki tablolar Duster I ve Duster II için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Dacia modelleri](/otomobil/dacia "Dacia yedek parça") arasından Duster neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Duster I yaklaşık 2010–2017, Duster II yaklaşık 2017 sonrası üretilmiştir. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki dCi dizel, TCe turbo benzinli, SCe ve 16V atmosferik benzinli motoru gösterir; LPG ibaresi fabrika çıkışlı LPG’li versiyonları anlatır.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Duster II filtre kodları',
+        paragraphs: [
+          'Duster II (yaklaşık 2017–2024) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Duster II sayfasında](/otomobil/dacia/duster-ii "Dacia Duster II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Dacia Duster II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 10 002 z', '—', '1.0 LPG 101 HP, 1.0 TCe 100 101 HP, 1.0 TCe 90 91 HP, 1.0 TCe LPG 91 HP, 1.2 TCe 125 125 HP, 1.3 TCe 130 HP, 1.3 TCe 150 150 HP'],
+            ['Yağ', '—', 'OE 666/3', '1.0 LPG 101 HP, 1.0 TCe 100 101 HP, 1.0 TCe 90 91 HP, 1.0 TCe LPG 91 HP, 1.3 TCe 130 HP, 1.3 TCe 150 150 HP'],
+            ['Yağ', 'W 7032', 'OP 643/5', '1.5 dCi 110 109 HP, 1.5 dCi 90 90 HP'],
+            ['Yağ', 'HU 618 y', 'OE 666/4', '1.5 dCi 115 114 HP'],
+            ['Yağ', 'W 6025', 'OP 643/6', '1.6 SCe 115 114 HP'],
+            ['Hava', 'C 27 030', '—', '1.0 LPG 101 HP, 1.0 TCe 100 101 HP, 1.2 TCe 125 125 HP, 1.3 TCe 130 HP, 1.3 TCe 150 150 HP, 1.5 Blue dCi 115 HP, 1.5 Blue dCi 95 95 HP, 1.5 dCi 110 109 HP, 1.5 dCi 115 114 HP, 1.5 dCi 90 90 HP, 1.6 SCe 115 114 HP'],
+            ['Polen / kabin', 'CU 22 011, CUK 22 011, FP 22 011', '—', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', '—', 'K 1321', '1.0 LPG 101 HP, 1.0 TCe 100 101 HP, 1.0 TCe 90 91 HP, 1.0 TCe LPG 91 HP, 1.3 TCe 130 HP, 1.5 dCi 115 114 HP'],
+            ['Yakıt', 'PU 9011 z KIT', 'PE 815/7', '1.5 Blue dCi 115 HP, 1.5 Blue dCi 95 95 HP, 1.5 dCi 110 109 HP, 1.5 dCi 90 90 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Duster I filtre kodları',
+        paragraphs: [
+          'Duster I (yaklaşık 2010–2017) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Duster I sayfasında](/otomobil/dacia/duster-i "Dacia Duster I yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Dacia Duster I — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7032, W 79', 'OP 643/4, OP 643/5', '1.5 dCi 86 HP, 1.5 dCi 90 HP, 1.5 dCi 107 HP, 1.5 dCi 109 HP, 1.5 dCi 110 HP'],
+            ['Yağ', 'W 75/3', 'OP 643/3', '1.6 16V 105 HP, 1.6 16V LPG 100 HP, 2.0 16V 135 HP, 2.0 16V 143 HP'],
+            ['Yağ', 'HU 10 002 z', 'OE 666/3', '1.2 TCe 125 125 HP'],
+            ['Yağ', 'W 6025', 'OP 643/6', '1.6 SCe 115 114 HP'],
+            ['Hava', 'C 27 030', '—', '1.2 TCe 125 125 HP, 1.5 dCi 90 HP, 1.5 dCi 107 HP, 1.5 dCi 109 HP, 1.5 dCi 110 HP, 1.6 SCe 115 114 HP'],
+            ['Hava', 'C 27 010', 'AP 134/9', '1.5 dCi 90 HP, 1.5 dCi 107 HP, 1.5 dCi 109 HP, 1.5 dCi 110 HP'],
+            ['Hava', 'C 1858/2', 'AP 185/1', '1.6 16V 105 HP, 1.6 16V LPG 100 HP, 2.0 16V 135 HP, 2.0 16V 143 HP'],
+            ['Hava', 'C 3875, C 3875/1', 'AP 134/4, AP 134/6', '1.5 dCi 86 HP'],
+            ['Polen / kabin', 'CU 1829, CUK 1829', '—', '1.2 TCe 125 125 HP, 1.5 dCi 109 HP, 1.6 16V 105 HP, 1.6 16V LPG 100 HP, 1.6 SCe 115 114 HP, 2.0 16V 135 HP, 2.0 16V 143 HP'],
+            ['Yakıt', 'WK 6002', 'PP 831/1', '1.2 TCe 125 125 HP, 1.6 16V 105 HP, 1.6 16V LPG 100 HP, 1.6 SCe 115 114 HP, 2.0 16V 135 HP, 2.0 16V 143 HP'],
+            ['Yakıt', 'PU 9011 z KIT, WK 8039', 'PE 815/7, PP 988/3', '1.5 dCi 86 HP, 1.5 dCi 90 HP, 1.5 dCi 107 HP, 1.5 dCi 109 HP, 1.5 dCi 110 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Dacia Duster 1.5 dCi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Duster 1.5 dCi 90 ve 110 HP motorlarda MANN-FILTER W 7032 ve FILTRON OP 643/5 kayıtlıdır; Duster II 1.5 dCi 115 HP’de ise MANN-FILTER HU 618 y ve FILTRON OE 666/4 görünür. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Duster 1.0 TCe yağ filtresi kodu nedir?',
+        a: 'Duster II 1.0 TCe (LPG’li versiyonlar dahil) motorlarda katalogda MANN-FILTER HU 10 002 z ve FILTRON OE 666/3 kayıtlıdır. Aynı filtre 1.3 TCe motorlarda da kullanılır.',
+      },
+      {
+        q: 'Duster II polen filtresi kodu nedir?',
+        a: 'Katalogda Duster II’nin tüm motorları için MANN-FILTER CU 22 011 (aktif karbonlu CUK 22 011, FreciousPlus FP 22 011) kayıtlıdır. Aynı kod Clio V’te de kullanılır.',
+      },
+    ],
+  },
+  {
+    slug: 'hyundai-i20-filtre-rehberi',
+    title: 'Hyundai i20 Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Hyundai i20 Filtre Kodları | Oto Center Market',
+    summary:
+      'Hyundai i20’nin üç nesli için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.0 T-GDI, 1.2, 1.4 MPI ve CRDi dizel motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 5,
+    relatedHref: '/otomobil/hyundai',
+    relatedLabel: 'Hyundai modellerine göz atın',
+    guncelleme: '2026-10-21',
+    ilgiliYazilar: ['dacia-duster-filtre-rehberi', 'aktif-karbonlu-polen-filtresi-farki'],
+    intro: [
+      'Hyundai i20’de hava ve polen filtresi her nesilde tüm motorlarda ortaktır; yağ filtresi ise motora göre değişir. Örneğin i20 III’te 1.0 T-GDI ve 1.4 MPI motorlar aynı yağ filtresini kullanırken 1.2 motor farklı bir filtre kullanır. Aşağıdaki tablolar i20’nin üç nesli için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Hyundai modelleri](/otomobil/hyundai "Hyundai yedek parça") arasından i20 neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'i20’nin ilk nesli yaklaşık 2008–2014, ikinci nesli yaklaşık 2014–2020, üçüncü nesli (BC3) yaklaşık 2020 sonrası üretilmiştir. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki CRDi dizel, T-GDI turbo benzinli, MPI atmosferik benzinli motoru gösterir; Hybrid 48V hafif hibrit versiyonu anlatır.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'i20 III filtre kodları',
+        paragraphs: [
+          'i20 III (yaklaşık 2020 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [i20 III sayfasında](/otomobil/hyundai/i20-iii-bc3 "Hyundai i20 III yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Hyundai i20 III — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7023', 'OP 595/2', '1.0 T-GDI 101 HP, 1.0 T-GDI Hybrid 48V 101 HP, 1.0 T-GDI Hybrid 48V 120 HP, 1.4 MPI 101 HP'],
+            ['Yağ', 'W 811/80', 'OP 617', '1.2 84 HP'],
+            ['Hava', 'C 25 002', 'AP 197/2', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CUK 24 013', 'K 1314A', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'i20 II filtre kodları',
+        paragraphs: [
+          'i20 II (yaklaşık 2014–2020) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [i20 II sayfasında](/otomobil/hyundai/i20-ii "Hyundai i20 II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Hyundai i20 II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 610/7', 'OP 575', '1.2 LPG 75 HP'],
+            ['Yağ', 'W 7023', 'OP 595/2', '1.4 101 HP'],
+            ['Yağ', 'HU 7001 x', 'OE 674/5', '1.4 CRDi 90 HP'],
+            ['Hava', 'C 25 002', 'AP 197/2', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CUK 24 013', 'K 1314A', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'i20 I filtre kodları',
+        paragraphs: [
+          'i20 I (yaklaşık 2008–2014) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [i20 I sayfasında](/otomobil/hyundai/i20 "Hyundai i20 I yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Hyundai i20 I — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 7001 x', 'OE 674/5', '1.4 CRDi 75 HP, 1.4 CRDi 90 HP, 1.6 CRDi 116 HP'],
+            ['Yağ', 'W 811/80', 'OP 617', '1.4 101 HP, 1.6 126 HP'],
+            ['Hava', 'C 26 014', 'AP 107/7', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 25 008-2, CU 29 002-2', 'K 1257-2x, K 1357-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 8019', 'PP 979/2', '1.4 CRDi 75 HP, 1.4 CRDi 90 HP, 1.6 CRDi 116 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Hyundai i20 1.4 benzinli yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre i20 II 1.4 ve i20 III 1.4 MPI motorlarda MANN-FILTER W 7023 ve FILTRON OP 595/2 kullanılır. İlk nesil i20’nin 1.4 benzinli motorunda ise MANN-FILTER W 811/80 ve FILTRON OP 617 kayıtlıdır.',
+      },
+      {
+        q: 'i20 III 1.0 T-GDI yağ filtresi kodu nedir?',
+        a: 'i20 III 1.0 T-GDI (48V hibrit versiyonlar dahil) motorlarda katalogda MANN-FILTER W 7023 ve FILTRON OP 595/2 kayıtlıdır.',
+      },
+      {
+        q: 'i20 II ve i20 III polen filtresi aynı mı?',
+        a: 'Katalogda iki nesil için de MANN-FILTER CUK 24 013 ve FILTRON K 1314A aktif karbonlu polen filtresi kayıtlıdır. Hava filtresi de iki nesilde aynıdır: MANN-FILTER C 25 002 ve FILTRON AP 197/2.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
