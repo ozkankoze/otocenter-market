@@ -2815,6 +2815,367 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'turbo-motor-bakimi-yag-ve-filtre',
+    title: 'Turbo Motor Bakımı: Turbonun Ömrünü Uzatan Yağ ve Filtre Alışkanlıkları',
+    metaTitle: 'Turbo Motor Bakımı: Yağ ve Filtre | Oto Center Market',
+    summary:
+      'Turbo motor motor yağıyla yağlanır ve soğur; bu yüzden yağın, yağ filtresinin ve hava filtresinin zamanında değişmesi turbonun ömrünü doğrudan etkiler. Turbo motorlu araçlar için bakım ve kullanım önerileri.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-22',
+    ilgiliYazilar: ['motor-yagi-5w30-5w40-ne-demek', 'hava-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Turboşarj, motor yağıyla yağlanan ve çok yüksek devirde dönen bir parçadır; bu yüzden turbonun ömrünü en çok yağın kalitesi ve temizliği belirler. Motor yağını ve yağ filtresini bakım aralığında değiştirmek, üreticinin istediği onaylı yağı kullanmak ve hava filtresini temiz tutmak turbo motor bakımının temelidir. Soğuk motoru yüksek devirde zorlamamak ve ağır kullanımdan sonra motoru kısa süre rölantide bekletmek de turboyu korur.',
+      'Aracınıza uygun yağ filtresini [yağ filtreleri](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle"), hava filtresini [hava filtreleri](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") kategorisinde bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Turbo neden yağa bu kadar bağımlı?',
+        paragraphs: [
+          'Turbonun mili, egzoz gazıyla dönen türbin ve havayı sıkıştıran kompresör çarkını birbirine bağlar. Bu mil, ince bir yağ filmi üzerinde çok yüksek devirlerde döner. Egzoz tarafı çok ısındığı için yağ aynı zamanda turboyu soğutur.',
+          'Kirlenmiş, eskimiş ya da yetersiz yağ bu ince yağ filminin bozulmasına, yataklarda aşınmaya ve yağ kanallarında karbonlaşmaya yol açabilir. Tıkanmış bir yağ filtresi ise bypass valfi açıldığında filtrelenmemiş yağın turboya ulaşmasına neden olabilir.',
+        ],
+      },
+      {
+        heading: 'Turbo motorda bakımda dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Motor yağı: aracınızın bakım kitapçığındaki viskozite ve üretici onayına uyan yağ kullanın; bakım aralığını aşmayın.',
+          'Yağ filtresi: her yağ değişiminde motorunuza uygun kodla değiştirin. Ayrıntılar için [yağ filtresi yazımıza](/blog/yag-filtresi-ne-zaman-degisir "Yağ filtresi ne zaman değişir") bakabilirsiniz.',
+          'Hava filtresi: turbo, hava filtresinden geçen havayı sıkıştırır. Yırtık ya da yanlış oturmuş filtreden geçen toz kompresör çarkına zarar verebilir.',
+          'Emme hortumları ve bağlantılar: hava filtresi ile turbo arasındaki hortumlarda çatlak ya da gevşek kelepçe filtrelenmemiş hava emilmesine yol açar.',
+          'Ağır kullanım: şehir içi kısa mesafe, yoğun trafik ve sık yüklü kullanımda bakım aralığını kısaltmak iyi bir uygulamadır.',
+        ],
+      },
+      {
+        heading: 'Kullanım alışkanlıkları',
+        paragraphs: [],
+        list: [
+          'Motor soğukken yüksek devirde ve tam gazda sürmeyin; yağın ısınıp tüm kanallara ulaşmasını bekleyin.',
+          'Otoyolda ya da yokuşta uzun süre zorlandıktan sonra motoru hemen kapatmayın; kısa süre rölantide ya da sakin sürüşle soğumasına izin verin.',
+          'Yağ seviyesini düzenli kontrol edin; turbo motorlar bakım aralığında bir miktar yağ eksiltebilir.',
+          'Gösterge panelinde yağ basıncı uyarısı yanarsa aracı hemen durdurun.',
+        ],
+      },
+      {
+        heading: 'Turbo arızasının belirtileri',
+        paragraphs: [
+          'Aşağıdaki belirtiler turbo ya da turbo besleme sisteminde sorun olabileceğini gösterir. Bunlar başka arızalarla da karışabileceği için bir servise kontrol ettirin:',
+        ],
+        list: [
+          'Belirgin güç kaybı ve hızlanmada gecikme.',
+          'Turbodan gelen ıslık ya da siren benzeri yeni bir ses.',
+          'Egzozdan mavi duman ya da yağ eksilmesinde artış.',
+          'Gösterge panelinde motor arıza lambası ve güç sınırlaması.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Turbo motorda yağ kaç km’de değişmeli?',
+        a: 'Değişim aralığı araç üreticisine ve kullanılan yağa göre değişir; bakım kitapçığında yazar. Ağır şehir içi kullanımda ya da sık yüklü kullanımda aralığı kısaltmak turbo için faydalıdır.',
+      },
+      {
+        q: 'Turbo motoru kapatmadan önce beklemek gerekir mi?',
+        a: 'Normal sürüşten sonra uzun beklemeye gerek yoktur. Ancak otoyolda, yokuşta ya da yüklü olarak uzun süre zorlandıktan sonra motoru kısa süre rölantide bekletmek turbonun soğumasına yardımcı olur.',
+      },
+      {
+        q: 'Hava filtresi turboya zarar verir mi?',
+        a: 'Doğru takılmış sağlam bir hava filtresi turboyu korur. Yırtık, yanlış ölçüde ya da yerine tam oturmamış filtre ise tozun kompresör çarkına ulaşmasına ve aşınmaya neden olabilir.',
+      },
+    ],
+  },
+  {
+    slug: 'hibrit-arac-bakimi-ve-filtreler',
+    title: 'Hibrit Araç Bakımı: Hangi Filtreler Değişir, Nelere Dikkat Edilir?',
+    metaTitle: 'Hibrit Araç Bakımı ve Filtreler | Oto Center Market',
+    summary:
+      'Hibrit araçlarda benzinli motor daha az çalışsa da yağ, yağ filtresi, hava ve polen filtresi bakımı sürer. Hibritlerde süreye bağlı bakımın önemi, batarya soğutma havası ve fren bakımı.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-22',
+    ilgiliYazilar: ['toyota-corolla-filtre-rehberi', 'periyodik-bakimda-hangi-filtreler-degisir'],
+    intro: [
+      'Hibrit araçlarda benzinli motor bulunduğu için motor yağı, yağ filtresi ve hava filtresi bakımı normal araçlardaki gibi sürer; polen filtresi de aynı şekilde değişir. Motor daha az çalıştığı için kilometre yavaş birikebilir, ancak yağ zamanla da eskidiği için hibritlerde bakım genellikle “kilometre ya da süre, hangisi önce gelirse” kuralıyla yapılır. Bazı hibrit modellerde ayrıca yüksek voltaj bataryasının soğutma havası girişinin temizlenmesi gerekir.',
+      'Hibrit aracınıza uygun filtreleri sitede marka, model ve motorunuzu seçerek bulabilirsiniz; hibrit versiyonlar motor listesinde ayrıca yer alır.',
+    ],
+    body: [
+      {
+        heading: 'Hibrit araçta hangi filtreler değişir?',
+        paragraphs: [],
+        table: {
+          caption: 'Hibrit araçlarda bakımda değişen filtreler',
+          head: ['Filtre', 'Hibritte durum'],
+          rows: [
+            ['Yağ filtresi', 'Her yağ değişiminde değişir; benzinli araçtaki gibidir'],
+            ['Hava filtresi', 'Motor bakımında kontrol edilir ve değişir'],
+            ['Polen filtresi', 'Klima ve kabin havası için normal araçtaki gibi değişir'],
+            ['Yakıt filtresi', 'Çoğu benzinli hibritte depo içindeki pompa modülündedir'],
+            ['Batarya soğutma filtresi / ızgarası', 'Bazı modellerde bulunur; temizlenmesi ya da değişmesi gerekir'],
+          ],
+        },
+      },
+      {
+        heading: 'Neden süreye bağlı bakım önemli?',
+        paragraphs: [
+          'Hibrit araçta benzinli motor sık sık durup kalkar ve özellikle şehir içinde kısa süreler çalışır. Bu kullanımda motor yağı her zaman tam çalışma sıcaklığına ulaşmayabilir; yağda nem ve yakıt kalıntısı birikebilir. Bu yüzden yıllık kilometre düşük olsa bile yağ ve yağ filtresini bakım kitapçığındaki süre aralığında değiştirmek önemlidir.',
+          'Birçok hibrit motor 0W-16 ya da 0W-20 gibi düşük viskoziteli yağlar ister. Doğru yağı seçmek için [motor yağı yazımıza](/blog/motor-yagi-5w30-5w40-ne-demek "Motor yağı seçimi") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Batarya soğutma havası',
+        paragraphs: [
+          'Bazı hibrit modellerde yüksek voltaj bataryası, kabinden emilen havayla soğutulur. Bu hava girişi genellikle arka koltuk çevresinde bir ızgara ya da filtreyle korunur. Izgara toz, tüy ya da eşya ile tıkanırsa batarya ısınabilir ve sistem performansı düşebilir. Aracınızda böyle bir giriş olup olmadığını ve temizleme aralığını kullanım kılavuzundan öğrenin; girişin önünü eşyayla kapatmayın.',
+        ],
+      },
+      {
+        heading: 'Hibritte diğer bakım noktaları',
+        paragraphs: [],
+        list: [
+          'Frenler: rejeneratif frenleme sayesinde balatalar daha geç aşınır, ancak az kullanılan disk ve kaliperlerde paslanma görülebilir. Fren hidroliğini süre aralığında değiştirin.',
+          'Soğutma sıvısı: birçok hibritte motor ve invertör/elektrik sistemi için ayrı soğutma devreleri bulunur.',
+          '12 V akü: hibritlerde de 12 V akü vardır; zayıfladığında araç “hazır” konuma geçmeyebilir.',
+          'Yüksek voltaj sistemi: turuncu kablolu parçalara yalnızca yetkili ve eğitimli personel müdahale etmelidir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Hibrit araçta yağ değişimi gerekir mi?',
+        a: 'Evet. Hibrit araçlarda benzinli motor bulunduğu için motor yağı ve yağ filtresi bakım aralığında değiştirilir. Motor daha az çalışsa da yağ zamanla eskidiği için süre aralığına da uyulmalıdır.',
+      },
+      {
+        q: 'Hibrit araçta hava filtresi farklı mı?',
+        a: 'Hayır, hava filtresi aracın motoruna göre seçilir. Hibrit versiyonların motor kodları farklı olduğu için sitede aracınızı seçerken hibrit motoru seçmeniz yeterlidir.',
+      },
+      {
+        q: 'Hibrit batarya filtresi nerede?',
+        a: 'Bazı hibrit modellerde batarya soğutma havası girişi arka koltuk çevresinde bir ızgara ya da filtreyle korunur. Aracınızda olup olmadığını ve yerini kullanım kılavuzundan öğrenebilirsiniz.',
+      },
+    ],
+  },
+  {
+    slug: 'fiat-doblo-filtre-rehberi',
+    title: 'Fiat Doblo Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Fiat Doblo Filtre Kodları | Oto Center Market',
+    summary:
+      'Fiat Doblo I, II ve yeni nesil Doblo için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.3 ve 1.6 Multijet, 1.9 JTD, 1.4 benzinli ve 1.5 BlueHDi.',
+    tag: 'Model rehberi',
+    readMinutes: 7,
+    relatedHref: '/otomobil/fiat',
+    relatedLabel: 'Fiat modellerine göz atın',
+    guncelleme: '2026-10-22',
+    ilgiliYazilar: ['fiat-egea-filtre-rehberi', 'dizel-yakit-filtresi-degisimi-hava-alma'],
+    intro: [
+      'Fiat Doblo’da filtre seçimi motora ve üretim dönemine göre belirgin şekilde değişir: 1.3 Multijet, 1.6 Multijet, 1.9 JTD ve 1.4 benzinli motorlar farklı yağ, hava ve yakıt filtresi kullanır. 2022 sonrası yeni nesil Doblo ise Stellantis grubunun 1.5 BlueHDi ve 1.2 PureTech motorlarını kullanır. Aşağıdaki tablolar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Fiat modelleri](/otomobil/fiat "Fiat yedek parça") arasından Doblo’yu ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Katalogda Doblo I (yaklaşık 2000–2010) ve Doblo II (yaklaşık 2010–2022) aynı model altında listelenir; bu yüzden motor seçimi özellikle önemlidir. Motor hacmi ve gücü ruhsatta yazar. JTD ve Multijet dizel, BlueHDi yeni nesil dizel, PureTech turbo benzinli motoru gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Özellikle 1.3 Multijet motorda birden fazla yağ filtresi kodu bulunduğu için eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Doblo (yeni nesil) filtre kodları',
+        paragraphs: [
+          'Doblo (yeni nesil) (yaklaşık 2022 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Doblo (yeni nesil) sayfasında](/otomobil/fiat/doblo-510-511 "Fiat Doblo (yeni nesil) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Fiat Doblo (yeni nesil) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 7032 z', 'OE 667/6', '1.5 BlueHDi 100 102 HP, 1.5 BlueHDi 130 131 HP'],
+            ['Yağ', 'W 7058', 'OP 540/1', '1.2 PureTech 110 110 HP'],
+            ['Hava', 'C 24 036', 'AP 196/9', '1.5 BlueHDi 100 102 HP, 1.5 BlueHDi 130 131 HP'],
+            ['Hava', 'C 36 007 KIT', 'AP 196/2', '1.2 PureTech 110 110 HP'],
+            ['Polen / kabin', 'CU 29 003-2, CUK 29 003-2, FP 29 003-2', 'K 1227-2x, K 1227A-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', '—', 'PE 816/6', '1.5 BlueHDi 100 102 HP, 1.5 BlueHDi 130 131 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Doblo I ve II filtre kodları',
+        paragraphs: [
+          'Doblo I ve II (yaklaşık 2000–2022) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Doblo I ve II sayfasında](/otomobil/fiat/doblo "Fiat Doblo I ve II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Fiat Doblo I ve II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 712/11 x', 'OE 682/2', '1.3 D Multijet 75 HP, 1.3 MTJD 90 HP, 1.6 D Multijet 95 HP, 1.6 D Multijet 120 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 2.0 JTD 135 HP'],
+            ['Yağ', 'HU 713/1 x', 'OE 670', '1.3 D Multijet 75 HP, 1.3 JTD 70 HP, 1.3 MTJD 90 HP, 1.3 Multijet 16V JTD 75 HP, 1.3 Multijet 16V JTD 85 HP, 1.4 16V 120 HP'],
+            ['Yağ', 'HU 8006 z', 'OE 682/3', '1.6 D Multijet 95 HP, 1.6 D Multijet 120 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 2.0 JTD 135 HP'],
+            ['Yağ', 'HU 712/7 x', 'OE 682', '1.3 D Multijet 75 HP, 1.3 JTD 70 HP, 1.3 MTJD 90 HP, 1.3 Multijet 16V JTD 75 HP, 1.3 Multijet 16V JTD 85 HP'],
+            ['Yağ', 'W 610/3', '—', '1.2 65 HP, 1.4 16V 95 HP, 1.4 8V 77 HP'],
+            ['Yağ', 'W 714/4', '—', '1.9 D 63 HP, 1.9 JTD 100 HP, 1.9 JTD 105 105 HP'],
+            ['Yağ', 'W 7003', 'OP 537/2', '1.9 JTD 100 HP, 1.9 JTD 105 105 HP, 1.9 JTD 120 120 HP'],
+            ['Yağ', 'HU 7041 z, HU 7042 z', '—', '1.3 D Multijet 80 HP, 1.3 D Multijet 95 HP'],
+            ['Yağ', '—', 'OP 537/1', '1.2 65 HP'],
+            ['Yağ', 'W 713/16', 'OP 545', '1.6 16V 103 HP'],
+            ['Hava', 'C 21 106', 'AP 098/3', '1.6 D Multijet 95 HP, 1.6 D Multijet 120 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 2.0 JTD 135 HP'],
+            ['Hava', 'C 3877/1', 'AP 092/7', '1.3 D Multijet 75 HP, 1.3 JTD 70 HP, 1.3 MTJD 90 HP, 1.3 Multijet 16V JTD 75 HP, 1.3 Multijet 16V JTD 85 HP'],
+            ['Hava', 'C 1189', 'AR 234/3', '1.6 16V 103 HP, 1.9 D 63 HP, 1.9 JTD 100 HP, 1.9 JTD 105 105 HP, 1.9 JTD 120 120 HP'],
+            ['Hava', '—', 'AP 078/1', '1.3 D Multijet 75 HP, 1.3 D Multijet 80 HP, 1.3 D Multijet 95 HP, 1.3 MTJD 90 HP'],
+            ['Hava', 'C 3275', 'AP 092/3', '1.4 16V 95 HP'],
+            ['Hava', 'C 2859', 'AP 022/2', '1.4 8V 77 HP'],
+            ['Polen / kabin', '—', 'K 1228', '1.3 D Multijet 75 HP, 1.3 D Multijet 80 HP, 1.3 D Multijet 95 HP, 1.3 MTJD 90 HP, 1.4 16V 95 HP, 1.4 16V 120 HP, 1.6 D Multijet 95 HP, 1.6 D Multijet 120 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 2.0 JTD 135 HP'],
+            ['Polen / kabin', 'CU 2335, CUK 2335 KIT, FP 2335 KIT', 'K 1101', '1.2 65 HP, 1.3 JTD 70 HP, 1.3 Multijet 16V JTD 75 HP, 1.3 Multijet 16V JTD 85 HP, 1.4 8V 77 HP, 1.6 16V 103 HP, 1.9 D 63 HP, 1.9 JTD 100 HP, 1.9 JTD 105 105 HP, 1.9 JTD 120 120 HP'],
+            ['Yakıt', 'PU 7005', 'PE 982/2', '1.3 D Multijet 75 HP, 1.3 D Multijet 80 HP, 1.3 D Multijet 95 HP, 1.3 MTJD 90 HP, 1.6 D Multijet 95 HP, 1.6 D Multijet 120 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 2.0 JTD 135 HP'],
+            ['Yakıt', '—', 'PP 966/3', '1.3 D Multijet 75 HP, 1.3 MTJD 90 HP, 1.6 JTD 90 HP, 1.6 JTD 100 HP, 1.6 JTD 105 HP, 1.9 JTD 120 120 HP, 2.0 JTD 135 HP'],
+            ['Yakıt', 'WK 853/20', 'PP 966/2', '1.3 D Multijet 75 HP, 1.3 MTJD 90 HP, 1.9 JTD 100 HP, 1.9 JTD 105 105 HP'],
+            ['Yakıt', 'PU 723 x', 'PE 982', '1.3 JTD 70 HP, 1.3 Multijet 16V JTD 75 HP, 1.3 Multijet 16V JTD 85 HP'],
+            ['Yakıt', 'WK 829/2', 'PP 966', '1.9 D 63 HP'],
+            ['Yakıt', '—', 'PP 968', '1.9 JTD 100 HP'],
+            ['Yakıt', 'WK 854/5', 'PP 968/1', '1.9 JTD 105 105 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Fiat Doblo 1.3 Multijet yağ filtresi kodu nedir?',
+        a: 'Katalogda Doblo 1.3 Multijet motorlar için üretim dönemine göre birden fazla kartuş yağ filtresi kayıtlıdır: MANN-FILTER HU 713/1 x (FILTRON OE 670), HU 712/11 x (OE 682/2) ve HU 712/7 x (OE 682). Doğru kodu eski filtrenin üzerinden ya da sitede motorunuzu seçerek kontrol edin.',
+      },
+      {
+        q: 'Fiat Doblo 1.6 Multijet yağ filtresi kodu nedir?',
+        a: 'Doblo 1.6 Multijet (95 ve 120 HP) motorlarda katalogda MANN-FILTER HU 8006 z (FILTRON OE 682/3) ve HU 712/11 x (OE 682/2) kayıtlıdır. Aynı motor için iki kod görülmesi üretim yılına bağlı olabilir.',
+      },
+      {
+        q: 'Doblo dizel yakıt filtresi kodu nedir?',
+        a: 'Doblo 1.3 ve 1.6 Multijet ile 2.0 JTD motorlarda katalogda MANN-FILTER PU 7005 ve FILTRON PE 982/2 kartuş yakıt filtresi kayıtlıdır. Eski 1.9 JTD motorlarda farklı kodlar kullanılır.',
+      },
+    ],
+  },
+  {
+    slug: 'skoda-octavia-filtre-rehberi',
+    title: 'Skoda Octavia Filtre Rehberi: Yağ, Hava, Polen, Yakıt ve Şanzıman Filtresi Kodları',
+    metaTitle: 'Skoda Octavia Filtre Kodları | Oto Center Market',
+    summary:
+      'Skoda Octavia II, III ve IV için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen, yakıt ve DSG şanzıman filtresi kodları. TSI, TDI, FSI ve RS motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 8,
+    relatedHref: '/otomobil/skoda',
+    relatedLabel: 'Skoda modellerine göz atın',
+    guncelleme: '2026-10-22',
+    ilgiliYazilar: ['volkswagen-golf-filtre-rehberi', 'sanzuman-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Skoda Octavia, Volkswagen grubunun motorlarını kullandığı için filtre kodlarının çoğu Golf, Leon ve A3 ile ortaktır. Filtre seçimi nesle ve motora göre değişir: aynı nesilde 1.0 ve 1.5 TSI benzinli ile 2.0 TDI dizel farklı yağ, hava ve yakıt filtresi kullanır. Aşağıdaki tablolar Octavia II, III ve IV için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Skoda modelleri](/otomobil/skoda "Skoda yedek parça") arasından Octavia neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Nesli ruhsattaki model yılından tahmin edebilirsiniz; nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki TSI turbo benzinli, TDI dizel, FSI direkt enjeksiyonlu benzinli motoru, e-TEC hafif hibrit, G-TEC doğalgazlı versiyonu gösterir.',
+          'DSG şanzımanlı Octavia’larda şanzıman yağı ve filtresi de bakım ister; ayrıntılar için [şanzıman filtresi yazımıza](/blog/sanzuman-filtresi-ne-zaman-degisir "Şanzıman filtresi ne zaman değişir") bakabilirsiniz. Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir; eski filtrenin kodunu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Octavia IV filtre kodları',
+        paragraphs: [
+          'Octavia IV (yaklaşık 2020 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Octavia IV sayfasında](/otomobil/skoda/octavia-iv "Skoda Octavia IV yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Skoda Octavia IV — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 TSI 110 HP, 1.0 TSI e-TEC 110 HP, 1.4 TSI 150 HP, 1.4 TSI IV 204 HP, 1.4 TSI IV RS 245 HP, 1.5 TSI G-TEC 131 HP, 1.5 TSi 150 HP, 1.5 TSi e-TEC 150 HP, 1.6 SRE 110 HP'],
+            ['Yağ', 'HU 5003 z', 'OE 688/6', '2.0 TDI 150 HP, 2.0 TDI 200 HP, 2.0 TDi 116 HP'],
+            ['Yağ', 'HU 6013 z', 'OE 688/5', '2.0 TFSI 190 HP, 2.0 TSI RS 245 HP'],
+            ['Yağ', 'HU 7020 z', 'OE 688/3', '2.0 TDI 143 HP'],
+            ['Hava', 'C 30 005', 'AP 139/5', '2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI 200 HP, 2.0 TDi 116 HP, 2.0 TFSI 190 HP, 2.0 TSI RS 245 HP'],
+            ['Hava', 'C 28 043', 'AP 183/6', '1.0 TSI 110 HP, 1.0 TSI e-TEC 110 HP, 1.5 TSI G-TEC 131 HP, 1.5 TSi 150 HP, 1.5 TSi e-TEC 150 HP'],
+            ['Hava', 'C 30 004', 'AP 139/6', '2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI 200 HP, 2.0 TDi 116 HP, 2.0 TFSI 190 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.4 TSI 150 HP, 1.4 TSI IV 204 HP, 1.4 TSI IV RS 245 HP'],
+            ['Hava', 'C 21 014', 'AP 139/7', '1.6 SRE 110 HP'],
+            ['Polen / kabin', 'CU 26 009, CUK 26 009, FP 26 009', 'K 1311, K 1311A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'PU 8028', 'PE 973/9, PE 993/2', '2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI 200 HP, 2.0 TDi 116 HP'],
+            ['Şanzıman', 'H 6003 z, H 6031 z', '—', 'Bu nesildeki tüm motorlar'],
+          ],
+        },
+      },
+      {
+        heading: 'Octavia III filtre kodları',
+        paragraphs: [
+          'Octavia III (yaklaşık 2013–2020) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Octavia III sayfasında](/otomobil/skoda/octavia-iii "Skoda Octavia III yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Skoda Octavia III — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 TSI 115 HP, 1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.2 TSI 110 HP, 1.4 TSI 122 HP, 1.4 TSI 140 HP, 1.4 TSI 150 HP, 1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.5 TSI G-TEC 131 HP, 1.6 MPI 110 HP'],
+            ['Yağ', 'HU 7020 z', 'OE 688/3', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 115 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI / RS 184 HP'],
+            ['Yağ', 'HU 6013 z', '—', '1.8 TSI 180 HP, 2.0 RS 220 HP, 2.0 RS 230 HP, 2.0 RS 245 HP, 2.0 TSI 190 HP'],
+            ['Hava', 'C 30 005', 'AP 139/5', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 115 HP, 1.8 TSI 180 HP, 2.0 RS 220 HP, 2.0 RS 230 HP, 2.0 RS 245 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI / RS 184 HP, 2.0 TSI 190 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.2 TSI 86 HP, 1.2 TSI 105 HP, 1.2 TSI 110 HP, 1.4 TSI 122 HP, 1.4 TSI 140 HP, 1.4 TSI 150 HP'],
+            ['Hava', 'C 28 043', '—', '1.5 TSI 131 HP, 1.5 TSI 150 HP, 1.5 TSI G-TEC 131 HP'],
+            ['Hava', '—', 'AP 062/2', '1.0 TSI 115 HP, 1.2 TSI 86 HP'],
+            ['Hava', '—', 'AP 183/6', '1.5 TSI G-TEC 131 HP'],
+            ['Hava', 'C 21 014', '—', '1.6 MPI 110 HP'],
+            ['Polen / kabin', 'CU 26 009, CUK 26 009, FP 26 009', 'K 1311, K 1311A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'PU 8028', 'PE 973/9, PE 993/2', '1.6 TDI 90 HP, 1.6 TDI 105 HP, 1.6 TDI 110 HP, 1.6 TDI 115 HP, 2.0 TDI 110 HP, 2.0 TDI 143 HP, 2.0 TDI 150 HP, 2.0 TDI / RS 184 HP'],
+            ['Şanzıman', 'H 6003 z, H 6031 z', '—', '1.5 TSI G-TEC 131 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Octavia II filtre kodları',
+        paragraphs: [
+          'Octavia II (yaklaşık 2004–2013) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Octavia II sayfasında](/otomobil/skoda/octavia-ii "Skoda Octavia II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Skoda Octavia II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 7008 z', 'OE 688', '1.6 TDI 105 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP, 2.0 TDI RS 170 HP'],
+            ['Yağ', 'W 719/45', 'OP 526/7', '1.8 TSI 152 HP, 1.8 TSI 160 HP, 2.0 RS 200 HP'],
+            ['Yağ', 'HU 719/7 x', 'OE 650/1', '1.9 TDI 105 HP, 2.0 TDI 140 HP, 2.0 TDI RS 170 HP'],
+            ['Yağ', 'W 712/94', 'OP 641/2', '1.2 TSI 105 HP, 1.4 TSI 122 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.4 75 HP, 1.4 80 HP'],
+            ['Yağ', 'HU 719/6 x', 'OE 671/3', '2.0 FSI 150 HP, 2.0 RS 200 HP'],
+            ['Yağ', 'W 712/93', 'OP 641/1', '1.4 TSI 122 HP'],
+            ['Yağ', 'W 719/30', 'OP 526/1', '1.6 102 HP'],
+            ['Yağ', 'HU 712/6 x', 'OE 650/2', '1.6 FSI 115 HP'],
+            ['Hava', 'C 35 154', 'AP 139/2', '1.6 TDI 105 HP, 1.8 TSI 152 HP, 1.8 TSI 160 HP, 1.9 TDI 105 HP, 2.0 RS 200 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP, 2.0 TDI RS 170 HP'],
+            ['Hava', 'C 14 130', 'AK 370/4', '1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.6 102 HP, 2.0 FSI 150 HP'],
+            ['Hava', 'C 2998/5 x', 'AP 149/3', '1.4 75 HP'],
+            ['Hava', 'C 3880', 'AP 183/3', '1.4 80 HP'],
+            ['Hava', 'C 3083/1', 'AP 149/7', '1.6 FSI 115 HP'],
+            ['Hava', 'C 41 110', 'AP 149/8', '2.0 RS 200 HP'],
+            ['Polen / kabin', 'CU 2939, CUK 2939, FP 2939', 'K 1111, K 1111A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 69', 'PP 836/2', '1.2 TSI 105 HP, 1.4 TSI 122 HP, 1.6 FSI 115 HP, 1.8 TSI 152 HP, 1.8 TSI 160 HP, 2.0 FSI 150 HP, 2.0 RS 200 HP'],
+            ['Yakıt', 'PU 825 x', 'PE 973/3', '1.6 TDI 105 HP, 1.9 TDI 105 HP, 2.0 TDI 110 HP, 2.0 TDI 140 HP, 2.0 TDI RS 170 HP'],
+            ['Yakıt', 'WK 69/2', 'PP 836/4', '1.4 75 HP, 1.4 80 HP, 1.6 102 HP'],
+            ['Yakıt', 'PU 936/1 x', 'PE 973/2', '1.9 TDI 105 HP, 2.0 TDI 140 HP, 2.0 TDI RS 170 HP'],
+            ['Yakıt', 'WK 59 x', '—', '1.4 75 HP, 1.6 102 HP'],
+            ['Yakıt', 'PU 936/2 x', '—', '1.9 TDI 105 HP, 2.0 TDI 140 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Skoda Octavia 3 1.6 TDI yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Octavia III 1.6 TDI ve 2.0 TDI motorlarda MANN-FILTER HU 7020 z ve FILTRON OE 688/3 kartuş yağ filtresi kullanılır.',
+      },
+      {
+        q: 'Octavia 1.0 TSI ve 1.5 TSI yağ filtresi aynı mı?',
+        a: 'Evet. Octavia III ve IV’te 1.0 TSI, 1.2 TSI, 1.4 TSI ve 1.5 TSI motorlar için katalogda aynı yağ filtresi kayıtlıdır: MANN-FILTER W 712/95 ve FILTRON OP 616/3.',
+      },
+      {
+        q: 'Octavia 3 ve Octavia 4 polen filtresi aynı mı?',
+        a: 'Katalogda iki nesil için de MANN-FILTER CU 26 009 (aktif karbonlu CUK 26 009, FreciousPlus FP 26 009) ve FILTRON K 1311 (aktif karbonlu K 1311A) kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
