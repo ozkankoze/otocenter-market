@@ -168,6 +168,18 @@ export function Footer({ menu }: { menu: MegaMenuData }) {
               {l.label}
             </Link>
           ))}
+          <span className="ml-auto">
+            Web tasarım:{' '}
+            <a
+              href="https://www.medya333.com/"
+              target="_blank"
+              rel="noopener"
+              title="Medya 333 web sitesine git"
+              className="font-medium transition-colors hover:text-white"
+            >
+              Medya 333
+            </a>
+          </span>
         </div>
         {/*
           Satıcı künyesi — 6563 sayılı Kanun ve Mesafeli Sözleşmeler Yönetmeliği
