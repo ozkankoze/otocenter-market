@@ -3176,6 +3176,308 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'yakit-tuketimi-neden-artar',
+    title: 'Yakıt Tüketimi Neden Artar? Filtreler ve Diğer Sebepler',
+    metaTitle: 'Yakıt Tüketimi Neden Artar? Sebepleri | Oto Center Market',
+    summary:
+      'Aracınız eskisinden fazla yakıyorsa sebep çoğu zaman bakımla ilgilidir: tıkalı hava filtresi, düşük lastik basıncı, eskimiş bujiler ya da arızalı sensörler. Yakıt tüketimini artıran sebepler ve kontrol listesi.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/hava-filtreleri',
+    relatedLabel: 'Hava filtrelerine göz atın',
+    guncelleme: '2026-10-26',
+    ilgiliYazilar: ['hava-filtresi-ne-zaman-degisir', 'yakit-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Yakıt tüketimindeki artışın en yaygın sebepleri düşük lastik basıncı, bakımı geçmiş hava filtresi ve bujiler, sürüş tarzı ve kısa mesafe kullanımıdır. Bunların yanında oksijen (lambda) sensörü, termostat ya da enjektör gibi parçalardaki arızalar da tüketimi belirgin şekilde artırabilir. Önce kolay kontrolleri yapmak, sorun sürerse arıza tespiti yaptırmak en verimli yoldur.',
+      'Hava filtresini kontrol etmek ve gerekirse değiştirmek en ucuz başlangıç noktalarından biridir. Aracınıza uygun filtreyi [hava filtreleri kategorisinde](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Önce kendiniz kontrol edebilecekleriniz',
+        paragraphs: [],
+        list: [
+          'Lastik basıncı: düşük basınç yuvarlanma direncini artırır. Basıncı lastikler soğukken ölçün ve araç üzerindeki etiketteki değere getirin.',
+          'Hava filtresi: tıkalı filtre motorun nefes almasını zorlaştırır; özellikle eski tip motorlarda tüketime yansır. Filtre kararmış ya da toz dolmuşsa değiştirin.',
+          'Fazla yük: bagajda ya da tavan rafında sürekli taşınan yük ve boş tavan bagajı tüketimi artırır.',
+          'Klima kullanımı: klima kompresörü motordan güç çeker; şehir içinde etkisi daha belirgindir.',
+          'Sürüş tarzı: sert hızlanma, geç vites değiştirme ve yüksek hız tüketimi doğrudan artırır.',
+          'Kısa mesafe: motor çalışma sıcaklığına ulaşmadan yapılan kısa yolculuklarda tüketim yüksek olur; kışın bu etki artar.',
+        ],
+      },
+      {
+        heading: 'Bakım ve arıza kaynaklı sebepler',
+        paragraphs: [],
+        list: [
+          'Eskimiş bujiler ya da ateşleme bobini: tekleme ve verimsiz yanma tüketimi artırır.',
+          'Oksijen (lambda) sensörü ya da hava akış (MAF) sensörü arızası: motor karışımı yanlış hesaplar.',
+          'Termostat arızası: motor çalışma sıcaklığına geç ulaşırsa yakıt sistemi zengin karışımla çalışır.',
+          'Enjektör sorunları: kaçıran ya da kirli enjektörler yakıtı düzgün püskürtmez.',
+          'Dizel araçlarda tıkalı yakıt filtresi ya da partikül filtresi (DPF): performans düşer, sistem daha sık rejenerasyon yapabilir.',
+          'Sürten frenler: kaliper takılırsa araç sürekli fren yapıyormuş gibi direnç oluşur; tekerlek bölgesinde aşırı ısınma görülebilir.',
+          'Rot-balans bozukluğu ve yanlış lastik: lastiklerin yola açılı basması direnci artırır.',
+        ],
+      },
+      {
+        heading: 'Filtrelerin tüketime etkisi',
+        paragraphs: [
+          'Hava filtresi tıkandığında motora giren hava azalır. Karbüratörlü ve eski enjeksiyonlu motorlarda bu doğrudan tüketim artışı olarak görülür; modern motorlarda ise elektronik sistem karışımı ayarladığı için daha çok güç kaybı ve tepkisizlik olarak hissedilir. Her iki durumda da filtreyi zamanında değiştirmek motorun verimli çalışmasına yardımcı olur.',
+          'Dizel araçlarda kirli ya da su dolmuş yakıt filtresi yakıt basıncını düşürür; motor zorlanır ve tüketim artabilir. Ayrıntılar için [yakıt filtresi yazımıza](/blog/yakit-filtresi-ne-zaman-degisir "Yakıt filtresi ne zaman değişir") bakabilirsiniz. Motor yağının da doğru viskozitede olması iç sürtünmeyi azaltır; bakım kitapçığınızdaki yağı kullanın.',
+        ],
+      },
+      {
+        heading: 'Tüketim ne zaman ciddi bir arızaya işaret eder?',
+        paragraphs: [
+          'Tüketim kısa sürede belirgin şekilde arttıysa ve buna motor arıza lambası, tekleme, egzozdan siyah duman ya da yakıt kokusu eşlik ediyorsa aracı bir servise arıza tespiti için götürün. Yakıt kokusu bir kaçağa işaret edebilir; bu durumda aracı kullanmayın.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Hava filtresi yakıt tüketimini artırır mı?',
+        a: 'Tıkalı hava filtresi eski tip motorlarda tüketimi artırabilir; modern motorlarda ise daha çok güç kaybı olarak hissedilir. Her iki durumda da filtreyi bakım aralığında değiştirmek önerilir.',
+      },
+      {
+        q: 'Kışın yakıt tüketimi neden artar?',
+        a: 'Motor çalışma sıcaklığına daha geç ulaşır, rölantide ısınma süresi uzar, lastik basıncı soğukta düşer ve ısıtma ile cam rezistansı gibi tüketiciler daha çok kullanılır. Bu yüzden kışın tüketimin bir miktar artması normaldir.',
+      },
+      {
+        q: 'Lastik basıncı yakıt tüketimini ne kadar etkiler?',
+        a: 'Düşük basınç lastiğin yuvarlanma direncini artırarak tüketimi yükseltir ve lastiğin daha hızlı aşınmasına yol açar. Basıncı ayda bir ve uzun yoldan önce kontrol etmek iyi bir alışkanlıktır.',
+      },
+    ],
+  },
+  {
+    slug: 'motor-yag-yakiyor-mu',
+    title: 'Motor Yağ Yakıyor mu? Yağ Eksilmesinin Sebepleri ve Belirtileri',
+    metaTitle: 'Motor Neden Yağ Yakar, Yağ Eksiltir? | Oto Center Market',
+    summary:
+      'Motorun yağ eksiltmesi her zaman arıza değildir; ancak eksilme belirgin şekilde arttıysa sebep yağ yakma ya da kaçak olabilir. Mavi duman, segman, supap lastiği, turbo ve PCV sistemiyle ilgili belirtiler.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-26',
+    ilgiliYazilar: ['yag-filtresi-sizdiriyor', 'turbo-motor-bakimi-yag-ve-filtre'],
+    intro: [
+      'Motorun iki bakım arasında bir miktar yağ eksiltmesi birçok motorda normal kabul edilir; üreticiler kabul edilebilir yağ tüketimini kullanım kılavuzunda belirtir. Eksilme belirgin şekilde arttıysa sebep ya yağın yanma odasında yanması (yağ yakma) ya da bir yerden dışarı kaçmasıdır. Egzozdan mavi duman, bujilerde yağlanma ve motor altında iz olmaması yağ yakmaya; motor altında ya da çevresinde yağ izi kaçağa işaret eder.',
+      'Yağ seviyesini düzenli kontrol etmek, eksilmeyi erken fark etmenin en kolay yoludur. Bakımda yağ ile birlikte motorunuza uygun [yağ filtresini](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") de değiştirin.',
+    ],
+    body: [
+      {
+        heading: 'Yağ yakma mı, yağ kaçağı mı?',
+        paragraphs: [],
+        table: {
+          caption: 'Yağ yakma ile yağ kaçağını ayırt etmeye yardımcı belirtiler',
+          head: ['Belirti', 'Olası sebep'],
+          rows: [
+            ['Egzozdan mavi-gri duman, özellikle ilk çalıştırmada ya da gaz verince', 'Yağ yakma'],
+            ['Park yerinde yağ lekesi, motor altında ıslaklık', 'Yağ kaçağı'],
+            ['Filtre, karter tapası ya da karter çevresinde yağ', 'Montaj ya da conta kaynaklı kaçak'],
+            ['Turbo çıkışında ya da intercooler hortumlarında yağ', 'Turbo kaynaklı yağ geçişi olabilir'],
+            ['Yağ eksiliyor ama duman ve iz yok', 'Az miktarda yağ yakma; ölçerek takip edin'],
+          ],
+        },
+      },
+      {
+        heading: 'Motor neden yağ yakar?',
+        paragraphs: [],
+        list: [
+          'Aşınmış ya da yapışmış segmanlar: yağ silindir duvarından yanma odasına geçer.',
+          'Sertleşmiş supap lastikleri (keçeleri): özellikle uzun bekleme ya da motor freninden sonra duman görülebilir.',
+          'Turbo yatak aşınması: yağ emme ya da egzoz tarafına geçer.',
+          'Karter havalandırma (PCV) sistemi arızası: karter basıncı artar, yağ buharı emme sistemine taşınır.',
+          'Yanlış viskozitede ya da aşırı doldurulmuş yağ: fazla yağ krank tarafından köpürtülerek havalandırma sistemine taşınabilir.',
+          'Yüksek kilometre: aşınma arttıkça yağ tüketimi de yükselir.',
+        ],
+      },
+      {
+        heading: 'Yağ tüketimini nasıl ölçersiniz?',
+        paragraphs: [],
+        steps: [
+          'Yağı üst seviyeye tamamlayın ve kilometreyi not edin.',
+          'Her seferinde araç düz zeminde ve motor birkaç dakika durmuşken çubuktan seviyeyi kontrol edin.',
+          'Belirli bir mesafe sonra (ör. 1.000 km) eksilen miktarı ölçerek tamamlayın.',
+          'Sonucu kullanım kılavuzundaki kabul edilebilir yağ tüketimiyle karşılaştırın. Değer aşılıyorsa servise kompresyon ve kaçak testi yaptırın.',
+        ],
+      },
+      {
+        heading: 'Yağ eksilirken bakımda nelere dikkat etmeli?',
+        paragraphs: [
+          'Bakım kitapçığındaki viskozite ve onaylı yağı kullanın; daha kalın yağa geçmek sorunu çözmez, yalnızca belirtileri bir süre gizleyebilir. Yağ ve yağ filtresini aralığında değiştirin; kirli yağ segman yapışmasını hızlandırabilir. Kaçak varsa önce kaynağı bulun; [yağ filtresi sızıntısı yazımızda](/blog/yag-filtresi-sizdiriyor "Yağ filtresi sızdırıyor") filtre kaynaklı kaçakları anlattık.',
+          'Yağ seviyesi minimumun altına düştüğünde yağ basıncı azalabilir. Kırmızı yağ lambası yanarsa aracı hemen durdurun.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Motorun yağ eksiltmesi normal mi?',
+        a: 'Bir miktar yağ tüketimi birçok motorda normaldir ve üretici kabul edilebilir değeri kullanım kılavuzunda belirtir. Eksilme bu değeri aşıyor ya da hızla artıyorsa sebebi araştırılmalıdır.',
+      },
+      {
+        q: 'Egzozdan mavi duman çıkması ne demek?',
+        a: 'Mavi-gri duman genellikle yağın yanma odasında yandığını gösterir. Segman, supap lastiği ya da turbo kaynaklı olabilir; servise kontrol ettirin.',
+      },
+      {
+        q: 'Yağ yakan motora kalın yağ koymak çözüm mü?',
+        a: 'Hayır. Bakım kitapçığındaki viskozitenin dışındaki yağ, motorun yağlanmasını olumsuz etkileyebilir ve sorunu çözmez. Önce yağ tüketiminin sebebini buldurmak gerekir.',
+      },
+    ],
+  },
+  {
+    slug: 'arac-klima-bakimi-nasil-yapilir',
+    title: 'Araç Klima Bakımı: Ne Zaman ve Nasıl Yapılır?',
+    metaTitle: 'Araç Klima Bakımı Nasıl Yapılır? | Oto Center Market',
+    summary:
+      'Araç klimasının iyi soğutması ve koku yapmaması için polen filtresi, gaz kontrolü, evaporatör temizliği ve tahliye hortumu kontrolü gerekir. Klima bakımında yapılanlar ve evde yapabilecekleriniz.',
+    tag: 'Konfor',
+    readMinutes: 5,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-10-26',
+    ilgiliYazilar: ['polen-filtresi-kac-km-de-degisir', 'polen-filtresi-nasil-degistirilir'],
+    intro: [
+      'Araç klima bakımı; polen filtresinin değiştirilmesini, klima sisteminin gaz basıncı ve sızdırmazlık kontrolünü, gerekiyorsa gaz dolumunu, evaporatör ve hava kanallarının temizlenmesini ve kondenser ile tahliye hortumunun kontrolünü kapsar. Genel uygulama klima sistemini yılda bir, yaz sezonundan önce kontrol ettirmektir. Klima zayıf soğutuyor ya da koku yapıyorsa bakımı beklemeden yaptırın.',
+      'Bakımın evde yapılabilecek en kolay kısmı polen filtresi değişimidir. Aracınıza uygun filtreyi [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Klima bakımında neler yapılır?',
+        paragraphs: [],
+        list: [
+          'Polen filtresi değişimi: tıkalı filtre hava akışını azaltır, koku ve buğulanmaya yol açar.',
+          'Gaz basıncı ve sızdırmazlık kontrolü: sistem zamanla az miktarda gaz kaybeder; ciddi eksilme kaçağa işaret eder.',
+          'Gaz dolumu: servis cihazıyla sistemin gazı boşaltılır, vakumlanır ve aracın etiketindeki tip ve miktarda gaz doldurulur.',
+          'Evaporatör ve kanal temizliği: küf ve bakteri kaynaklı kokuyu azaltır.',
+          'Kondenser kontrolü: ön tampon arkasındaki kondenserin önü yaprak ve böcekle tıkanırsa soğutma verimi düşer.',
+          'Tahliye hortumu kontrolü: tıkalı hortum suyun kutuda birikmesine ve kokuya yol açar.',
+        ],
+      },
+      {
+        heading: 'Klimanın bakım istediğini gösteren işaretler',
+        paragraphs: [],
+        list: [
+          'Klima eskisi kadar soğutmuyor ya da soğuması gecikiyor.',
+          'Fan yüksek kademede bile hava akışı zayıf.',
+          'Klimadan küf, nem ya da ekşi koku geliyor.',
+          'Camlar geç açılıyor ya da kabin sürekli nemli.',
+          'Klima çalışırken motor bölmesinden alışılmadık ses geliyor.',
+        ],
+      },
+      {
+        heading: 'Evde yapabilecekleriniz',
+        paragraphs: [],
+        steps: [
+          'Polen filtresini değiştirin; adımlar için [polen filtresi değişim rehberimize](/blog/polen-filtresi-nasil-degistirilir "Polen filtresi nasıl değiştirilir") bakın.',
+          'Ön cam altındaki hava girişini yaprak ve kirden temizleyin.',
+          'Ön tampon ızgarasından görünen kondenserin önündeki yaprak ve kirleri yumuşak bir fırçayla alın; petekleri bükmeyin.',
+          'Park etmeden birkaç dakika önce klima kompresörünü kapatıp yalnızca fanı çalıştırın; evaporatör kurur ve koku oluşumu azalır.',
+          'Klimayı kışın da ayda birkaç kez kısa süre çalıştırın; sistemdeki contaların yağlanmasına yardımcı olur. Birçok araç cam buğusunu alırken klimayı zaten devreye alır.',
+        ],
+      },
+      {
+        heading: 'Hangi işler servise bırakılmalı?',
+        paragraphs: [
+          'Klima gazı basınç altındadır ve çevreye zararlıdır; dolum, boşaltma ve kaçak tespiti yalnızca uygun cihazı olan servislerde yapılmalıdır. Aracınızda kullanılan gaz tipi ve miktarı genellikle motor bölmesindeki etikette yazar. Sprey ile yapılan gaz takviyeleri sistemdeki kaçağı çözmez; sorun devam eder.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Araç klima bakımı ne sıklıkla yapılmalı?',
+        a: 'Genel uygulama klima sistemini yılda bir, yaz sezonundan önce kontrol ettirmektir. Polen filtresi ise çoğu araçta 15.000–20.000 km’de ya da yılda bir değişir.',
+      },
+      {
+        q: 'Klima neden soğutmuyor?',
+        a: 'En sık sebepler gaz eksikliği ya da kaçak, tıkalı polen filtresi nedeniyle zayıf hava akışı, kirli kondenser ve kompresör veya elektrik arızasıdır. Polen filtresini kontrol ettikten sonra sorun sürerse servise gaz ve kaçak kontrolü yaptırın.',
+      },
+      {
+        q: 'Klima kokusu nasıl geçer?',
+        a: 'Önce polen filtresini değiştirin ve hava girişini temizleyin. Koku sürerse evaporatör ve kanal temizliği gerekir. Park etmeden önce kompresörü kapatıp fanı çalıştırmak kokunun tekrar oluşmasını azaltır.',
+      },
+    ],
+  },
+  {
+    slug: 'agir-vasita-filtre-bakimi',
+    title: 'Kamyon ve Otobüslerde Filtre Bakımı: Ağır Vasıtada Değişen Filtreler',
+    metaTitle: 'Ağır Vasıta Filtre Bakımı Rehberi | Oto Center Market',
+    summary:
+      'Kamyon, çekici ve otobüslerde periyodik bakımda değişen filtreler: yağ, yakıt ve ön filtre, hava, kabin, hava kurutucu, AdBlue ve hidrolik filtreler. Hangi filtre ne işe yarar, neye dikkat edilir?',
+    tag: 'Ağır vasıta',
+    readMinutes: 6,
+    relatedHref: '/agir-vasita',
+    relatedLabel: 'Ağır vasıta filtrelerine göz atın',
+    guncelleme: '2026-10-26',
+    ilgiliYazilar: ['hava-kurutucu-filtresi-nedir', 'adblue-filtresi-nedir'],
+    intro: [
+      'Kamyon, çekici ve otobüslerde periyodik bakımda motor yağ filtresi, yakıt filtresi ve ön filtre (su ayırıcı), hava filtresi ve emniyet elemanı, kabin filtresi, hava kurutucu kartuşu ve SCR sistemli araçlarda AdBlue filtresi değiştirilir. Bunlara ek olarak hidrolik, direksiyon ve şanzıman filtreleri üreticinin bakım planındaki aralıklarla yenilenir. Ağır vasıtada filtre aralıkları kilometrenin yanında çalışma saati ve kullanım koşuluna (şantiye, uzun yol, şehir içi) göre de belirlenir.',
+      'Aracınıza uygun filtreleri [ağır vasıta](/agir-vasita "Ağır vasıta filtreleri") bölümünden aracınızı seçerek bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Ağır vasıtada değişen filtreler',
+        paragraphs: [],
+        table: {
+          caption: 'Kamyon ve otobüslerde bakımda değişen başlıca filtreler',
+          head: ['Filtre', 'Görevi'],
+          rows: [
+            ['Motor yağ filtresi', 'Motor yağını temizler; büyük motorlarda birden fazla filtre ya da bypass filtresi olabilir'],
+            ['Yakıt ön filtresi / su ayırıcı', 'Yakıttaki suyu ve iri partikülleri ayırır'],
+            ['Yakıt ana filtresi', 'Enjeksiyon sistemini ince partiküllerden korur'],
+            ['Hava filtresi (ana eleman)', 'Motora giren havayı temizler'],
+            ['Hava filtresi emniyet elemanı', 'Ana eleman hasar görürse motoru korur; ana eleman değişiminde kontrol edilir'],
+            ['Kabin filtresi', 'Sürücü kabinine giren havayı temizler'],
+            ['Hava kurutucu kartuşu', 'Havalı fren sistemindeki nemi ve yağ buharını tutar'],
+            ['AdBlue filtresi', 'SCR sistemindeki AdBlue’yu dozaj pompasına gitmeden süzer'],
+            ['Hidrolik / direksiyon / şanzıman filtreleri', 'İlgili sistemin yağını temizler'],
+          ],
+        },
+      },
+      {
+        heading: 'Yakıt sistemi: ön filtre ve su',
+        paragraphs: [
+          'Ağır vasıtalarda yakıt sistemi genellikle iki kademelidir: suyu ve iri kiri ayıran ön filtre ile enjeksiyon sistemini koruyan ana filtre. Ön filtredeki suyu düzenli boşaltmak, özellikle kışın donma ve enjektör hasarı riskini azaltır. Filtre değişiminden sonra sistemin havasını almak gerekir; yöntemi [dizel yakıt filtresi yazımızda](/blog/dizel-yakit-filtresi-degisimi-hava-alma "Dizel yakıt filtresi değişimi ve hava alma") anlattık.',
+        ],
+      },
+      {
+        heading: 'Hava filtresi ve emniyet elemanı',
+        paragraphs: [
+          'Ağır vasıtalarda hava filtresi genellikle büyük bir ana eleman ve onun içindeki emniyet (güvenlik) elemanından oluşur. Ana eleman bakımda değişir; emniyet elemanı ise üreticinin belirttiği aralıkta ya da ana eleman hasarlıysa yenilenir. Tozlu şantiye ve tarım koşullarında hava filtresi çok daha çabuk dolar; birçok araçtaki kirlilik göstergesi değişim zamanını gösterir.',
+          'Hava filtresini basınçlı havayla üfleyerek temizlemek filtre kâğıdına zarar verebilir ve motora toz geçmesine yol açabilir. Üretici izin vermiyorsa filtreyi temizlemek yerine değiştirin.',
+        ],
+      },
+      {
+        heading: 'Havalı fren ve SCR sistemi',
+        paragraphs: [
+          'Hava kurutucu kartuşu fren sisteminin nemden korunması için kritiktir; tank tahliyesinden su geliyorsa kartuş dolmuş olabilir. Ayrıntılar için [hava kurutucu filtresi yazımıza](/blog/hava-kurutucu-filtresi-nedir "Hava kurutucu filtresi nedir") bakabilirsiniz. SCR sistemli araçlarda AdBlue filtresi tıkandığında sistem arıza verir ve motor gücü sınırlandırılabilir; [AdBlue filtresi yazımızda](/blog/adblue-filtresi-nedir "AdBlue filtresi nedir") belirtileri anlattık.',
+        ],
+      },
+      {
+        heading: 'Bakım planlaması',
+        paragraphs: [],
+        list: [
+          'Filtre aralıklarını üreticinin bakım planından, kullanım koşulunuza (uzun yol, şehir içi, şantiye) göre takip edin.',
+          'Filonuzdaki araçlar için filtre kodlarını bir kez listeleyin; her bakımda aynı seti hazır bulundurmak araç başında bekleme süresini kısaltır.',
+          'Sökülen filtrelerin durumunu not edin; aşırı kirlenen filtre motor ya da sistem sorununun ilk işareti olabilir.',
+          'Filtre değişim tarihini ve kilometresini bakım kaydına işleyin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Kamyonda hangi filtreler değişir?',
+        a: 'Periyodik bakımda motor yağ filtresi, yakıt ön ve ana filtresi, hava filtresi, kabin filtresi değişir. Hava kurutucu kartuşu, AdBlue filtresi ve hidrolik, direksiyon ya da şanzıman filtreleri ise üreticinin bakım planındaki aralıklarla yenilenir.',
+      },
+      {
+        q: 'Ağır vasıtada hava filtresi temizlenip kullanılır mı?',
+        a: 'Basınçlı havayla temizlemek filtre kâğıdına zarar verebilir ve motora toz geçmesine yol açabilir. Üretici açıkça izin vermiyorsa filtreyi temizlemek yerine değiştirmek daha güvenlidir.',
+      },
+      {
+        q: 'Emniyet elemanı her bakımda değişir mi?',
+        a: 'Genellikle hayır; emniyet elemanı üreticinin belirttiği daha uzun aralıkta ya da ana eleman hasar gördüğünde değiştirilir. Ana eleman değişiminde emniyet elemanının durumu kontrol edilmelidir.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
