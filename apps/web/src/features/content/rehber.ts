@@ -3478,6 +3478,311 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'egzozdan-siyah-beyaz-mavi-duman',
+    title: 'Egzozdan Siyah, Beyaz ya da Mavi Duman Çıkıyor: Ne Anlama Gelir?',
+    metaTitle: 'Egzozdan Siyah, Beyaz, Mavi Duman Ne Demek? | Oto Center Market',
+    summary:
+      'Egzoz dumanının rengi motorda neler olduğunu anlatır: siyah duman zengin karışıma, mavi duman yağ yakmaya, kalıcı yoğun beyaz duman ise soğutma suyunun yanmasına işaret edebilir. Sebepleri ve yapılması gerekenler.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/hava-filtreleri',
+    relatedLabel: 'Hava filtrelerine göz atın',
+    guncelleme: '2026-10-27',
+    ilgiliYazilar: ['motor-yag-yakiyor-mu', 'hava-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Egzozdan siyah duman çıkması genellikle motorun gereğinden fazla yakıtla (zengin karışımla) çalıştığını gösterir; tıkalı hava filtresi, enjektör sorunu ya da turbo besleme arızası sık sebeplerdir. Mavi-gri duman yağın yanma odasında yandığına işaret eder. Soğuk havada ilk çalıştırmada görülen ince beyaz buhar normaldir; ancak motor ısındıktan sonra da süren yoğun, tatlı kokulu beyaz duman soğutma suyunun yandığını gösterebilir ve ciddiye alınmalıdır.',
+      'Siyah dumanda kontrol edilecek ilk ve en ucuz parça hava filtresidir. Aracınıza uygun filtreyi [hava filtreleri kategorisinde](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Duman rengine göre olası sebepler',
+        paragraphs: [],
+        table: {
+          caption: 'Egzoz dumanı rengi ve olası sebepler',
+          head: ['Duman rengi', 'Olası sebepler', 'Ne kadar acil?'],
+          rows: [
+            ['Siyah', 'Tıkalı hava filtresi, enjektör arızası, turbo ya da emme hattında kaçak, hava akış sensörü, EGR sorunu', 'Kısa sürede kontrol ettirin'],
+            ['Mavi-gri', 'Yağ yakma: segman, supap lastiği, turbo yatakları, karter havalandırma sistemi', 'Yağ seviyesini takip edin, kontrol ettirin'],
+            ['İnce beyaz, kısa süreli', 'Soğukta egzozdaki nemin yoğuşması', 'Normal'],
+            ['Yoğun beyaz, kalıcı, tatlı kokulu', 'Soğutma suyunun yanması: silindir kapak contası, kapak ya da blok hasarı', 'Acil; aracı kullanmayın'],
+            ['Gri-beyaz (dizel, soğukta)', 'Tam yanmayan yakıt: kızdırma bujisi, enjektör ya da zamanlama', 'Kontrol ettirin'],
+          ],
+        },
+      },
+      {
+        heading: 'Siyah duman ve hava filtresi',
+        paragraphs: [
+          'Motorun düzgün çalışması için hava ile yakıt doğru oranda karışmalıdır. Hava filtresi tıkandığında motora giren hava azalır; özellikle eski tip motorlarda karışım zenginleşir ve egzozdan siyah duman çıkabilir. Modern motorlarda elektronik sistem karışımı dengelemeye çalışsa da ağır tıkanmada güç kaybı ve duman görülebilir.',
+          'Dizel motorlarda tam gaz hızlanırken kısa süreli az miktarda duman bazı eski araçlarda görülebilir; ancak sürekli ya da yoğun siyah duman normal değildir. Partikül filtresi (DPF) olan dizellerde egzozdan siyah duman görülmesi DPF’nin hasar gördüğüne işaret edebilir.',
+        ],
+      },
+      {
+        heading: 'Mavi duman ve yağ yakma',
+        paragraphs: [
+          'Mavi-gri duman, yağın silindire geçip yandığını gösterir ve genellikle yağ eksilmesiyle birlikte görülür. Sabah ilk çalıştırmada ya da uzun rölantiden sonra gaz verince görülen kısa süreli mavi duman çoğu zaman supap lastiklerinden; hızlanırken sürekli görülen duman ise segman ya da turbo kaynaklı olabilir. Ayrıntılar için [motor yağ yakma yazımıza](/blog/motor-yag-yakiyor-mu "Motor yağ yakıyor mu") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Beyaz duman: ne zaman normal, ne zaman tehlikeli?',
+        paragraphs: [
+          'Soğuk ve nemli havada motor ilk çalıştığında egzozdan çıkan ince beyaz buhar, egzoz sisteminde yoğuşan suyun buharlaşmasıdır ve motor ısındıkça kaybolur. Motor çalışma sıcaklığına geldikten sonra da yoğun beyaz duman devam ediyorsa, duman tatlımsı kokuyorsa ve soğutma suyu eksiliyorsa soğutma suyu yanma odasına giriyor olabilir. Bu durumda aracı kullanmaya devam etmek motora ağır hasar verebilir; servise çekiciyle götürmeyi düşünün.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Egzozdan siyah duman çıkması neyi gösterir?',
+        a: 'Genellikle motorun fazla yakıtla çalıştığını gösterir. Tıkalı hava filtresi, enjektör arızası, turbo veya emme hattında kaçak ve sensör arızaları sık sebeplerdir. İlk olarak hava filtresini kontrol edin.',
+      },
+      {
+        q: 'Sabahları egzozdan beyaz duman çıkması normal mi?',
+        a: 'Soğuk havada ilk çalıştırmada görülen ve motor ısındıkça kaybolan ince beyaz buhar normaldir. Motor ısındıktan sonra da süren yoğun beyaz duman ise soğutma suyunun yandığına işaret edebilir.',
+      },
+      {
+        q: 'Hava filtresi değişince siyah duman geçer mi?',
+        a: 'Sebep tıkalı hava filtresiyse filtre değişimiyle duman azalır ya da geçer. Geçmiyorsa enjektör, turbo veya sensör kaynaklı bir sorun olabilir; arıza tespiti yaptırın.',
+      },
+    ],
+  },
+  {
+    slug: 'motor-tekliyor-rolantide-titriyor',
+    title: 'Motor Tekliyor ve Rölantide Titriyor: Sebepleri ve Çözümleri',
+    metaTitle: 'Motor Tekliyor, Rölantide Titriyor: Sebepleri | Oto Center Market',
+    summary:
+      'Motorun teklemesi ve rölantide titremesi çoğu zaman buji, ateşleme bobini, hava kaçağı, kirli gaz kelebeği ya da yakıt beslemesiyle ilgilidir. Belirtilere göre olası sebepler ve kontrol sırası.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yakit-filtreleri',
+    relatedLabel: 'Yakıt filtrelerine göz atın',
+    guncelleme: '2026-10-27',
+    ilgiliYazilar: ['yakit-filtresi-ne-zaman-degisir', 'lpg-li-araclarda-bakim-ve-filtreler'],
+    intro: [
+      'Motorun teklemesi, bir ya da daha fazla silindirde yanmanın düzgün olmadığını gösterir. Benzinli motorlarda en sık sebepler eskimiş bujiler, arızalı ateşleme bobini, emme hattındaki hava kaçakları ve kirli gaz kelebeğidir. Dizel motorlarda ise enjektörler, yakıt filtresi ve yakıt beslemesi öne çıkar. Rölantide titreme ayrıca yıpranmış motor takozlarından da kaynaklanabilir.',
+      'Motor arıza lambası yanıp sönüyorsa ciddi bir tekleme var demektir; yanmamış yakıt katalitik konvertöre zarar verebilir. Bu durumda aracı zorlamadan servise götürün.',
+    ],
+    body: [
+      {
+        heading: 'Teklemenin sık görülen sebepleri',
+        paragraphs: [],
+        list: [
+          'Bujiler: aşınmış ya da kirlenmiş bujiler zayıf kıvılcım üretir. Değişim aralığı bakım kitapçığında yazar.',
+          'Ateşleme bobini ya da buji kabloları: bobin arızası genellikle tek bir silindirde tekleme yapar.',
+          'Hava kaçağı: çatlak vakum hortumu ya da emme manifoldu contası motorun ölçmediği havayı emmesine yol açar; rölanti dalgalanır.',
+          'Kirli gaz kelebeği ya da rölanti kontrol sistemi: rölanti düşer, motor titrer ya da stop eder.',
+          'Hava akış (MAF) sensörü: kirli ya da arızalı sensör karışımı bozar.',
+          'Yakıt beslemesi: tıkalı yakıt filtresi, zayıf yakıt pompası ya da kirli enjektörler yük altında teklemeye yol açar.',
+          'EGR valfi: açık kalan ya da kirlenen EGR valfi rölantide titremeye neden olabilir.',
+          'LPG’li araçlarda: LPG ayarı, gaz faz filtresi ve bujiler kontrol edilmelidir.',
+        ],
+      },
+      {
+        heading: 'Belirtiye göre ipuçları',
+        paragraphs: [],
+        table: {
+          caption: 'Tekleme belirtileri ve olası kaynaklar',
+          head: ['Belirti', 'Olası kaynak'],
+          rows: [
+            ['Soğukken tekliyor, ısınınca düzeliyor', 'Buji, bobin, nem; dizelde kızdırma bujisi'],
+            ['Yük altında ve hızlanırken tekliyor', 'Buji, bobin, yakıt basıncı, yakıt filtresi'],
+            ['Rölantide titriyor, yolda normal', 'Hava kaçağı, gaz kelebeği, EGR, motor takozu'],
+            ['Yalnızca LPG’de tekliyor', 'LPG ayarı, LPG filtresi, buji'],
+            ['Klima açılınca titreme artıyor', 'Rölanti kontrolü, motor takozları'],
+          ],
+        },
+      },
+      {
+        heading: 'Kontrol sırası',
+        paragraphs: [],
+        steps: [
+          'Arıza tespit cihazıyla hata kodlarını okutun; hangi silindirde tekleme olduğu çoğu zaman kayıtlıdır.',
+          'Bujilerin ve bobinlerin durumunu kontrol ettirin; bobin şüphesinde bobinin yeri değiştirilerek teklemenin silindirle birlikte yer değiştirip değiştirmediğine bakılır.',
+          'Emme hattında vakum ve hava kaçağı arayın.',
+          'Hava filtresinin durumuna bakın ve gaz kelebeğini temizletin.',
+          'Dizelde ya da yük altında teklemede yakıt filtresinin bakım aralığını kontrol edin; gerekiyorsa değiştirin.',
+          'Rölantide titreme sürüyorsa motor takozlarını kontrol ettirin.',
+        ],
+      },
+      {
+        heading: 'Filtrelerle ilişkisi',
+        paragraphs: [
+          'Tıkalı yakıt filtresi, motora giden yakıtın basıncını ve miktarını düşürür; belirti genellikle yük altında ya da yokuşta tekleme ve güç kaybıdır. Dizel araçlarda suyla dolmuş filtre de teklemeye yol açar. Hava filtresi tek başına nadiren teklemeye neden olur, ancak yanlış takılmış ya da yırtık bir filtrenin ardından MAF sensörünün kirlenmesi rölanti sorunlarına yol açabilir. Ayrıntılar için [yakıt filtresi yazımıza](/blog/yakit-filtresi-ne-zaman-degisir "Yakıt filtresi ne zaman değişir") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Motor tekliyorsa araç kullanılır mı?',
+        a: 'Hafif ve aralıklı teklemede kısa mesafe servise gidilebilir. Motor arıza lambası yanıp sönüyorsa ya da tekleme belirginse aracı zorlamayın; yanmamış yakıt katalitik konvertöre zarar verebilir.',
+      },
+      {
+        q: 'Yakıt filtresi teklemeye neden olur mu?',
+        a: 'Evet. Tıkalı ya da su dolmuş yakıt filtresi motora yeterli yakıt gitmesini engeller; belirti genellikle yük altında tekleme ve güç kaybıdır.',
+      },
+      {
+        q: 'Rölantide titreme neden olur?',
+        a: 'Hava kaçağı, kirli gaz kelebeği, EGR valfi, ateşleme sorunları ve yıpranmış motor takozları rölantide titremenin sık sebepleridir.',
+      },
+    ],
+  },
+  {
+    slug: 'arac-muayenesi-oncesi-kontrol-listesi',
+    title: 'Araç Muayenesi Öncesi Kontrol Listesi: Muayeneden Kalmamak İçin',
+    metaTitle: 'Araç Muayenesi Öncesi Kontrol Listesi | Oto Center Market',
+    summary:
+      'Araç muayenesinde sık kusur bulunan noktalar: farlar ve sinyaller, frenler, lastikler, egzoz emisyonu, yağ kaçağı, cam ve silecekler. Muayeneye gitmeden önce kendiniz kontrol edebileceğiniz liste.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-27',
+    ilgiliYazilar: ['uzun-yol-oncesi-arac-bakim-kontrol-listesi', 'egzozdan-siyah-beyaz-mavi-duman'],
+    intro: [
+      'Araç muayenesinde farlar ve sinyaller, fren performansı, lastikler, direksiyon ve süspansiyon, egzoz emisyonu, yağ ve sıvı kaçakları, camlar ve silecekler kontrol edilir. Muayeneye gitmeden önce yanmayan ampulleri değiştirmek, lastik diş derinliğini kontrol etmek, kaçakları gidermek ve bakımı geçmiş aracın yağ ve filtrelerini yenilemek, muayeneden kalma riskini azaltır.',
+      'Muayene periyotları, randevu ve güncel kusur listesi için muayene istasyonunun resmi kaynaklarını takip edin. Bu yazı genel bir hazırlık listesidir.',
+    ],
+    body: [
+      {
+        heading: 'Aydınlatma ve elektrik',
+        paragraphs: [],
+        list: [
+          'Kısa ve uzun farlar, sis farları, park lambaları, sinyaller, dörtlü flaşör, fren lambaları (üçüncü stop dahil), geri vites ve plaka lambası çalışmalı.',
+          'Far camları kırık ya da aşırı matlaşmış olmamalı; far ayarı karşı yönden gelen sürücüyü kamaştırmamalı.',
+          'Korna çalışmalı; gösterge panelinde arıza lambası (özellikle hava yastığı, ABS, motor) yanmamalı.',
+        ],
+      },
+      {
+        heading: 'Frenler, direksiyon ve süspansiyon',
+        paragraphs: [],
+        list: [
+          'Frenleme sırasında araç bir tarafa çekmemeli; el freni aracı tutmalı.',
+          'Fren hidroliği seviyesi yeterli olmalı, fren hortumlarında çatlak ya da kaçak bulunmamalı.',
+          'Direksiyonda aşırı boşluk, rotil ve rot başlarında boşluk olmamalı.',
+          'Amortisörlerde yağ kaçağı ve süspansiyon parçalarında kırık olmamalı.',
+        ],
+      },
+      {
+        heading: 'Lastikler ve gövde',
+        paragraphs: [],
+        list: [
+          'Lastik diş derinliği yasal sınırın üzerinde olmalı; aynı akstaki lastikler aynı ölçü ve tipte olmalı.',
+          'Lastiklerde yanak kesiği, şişlik ya da tel görünmemeli.',
+          'Ön camda görüşü engelleyen çatlak ya da kırık olmamalı; silecekler ve cam suyu çalışmalı.',
+          'Kapılar açılıp kapanmalı, aynalar sağlam olmalı; gövdede keskin çıkıntı ya da ciddi çürük bulunmamalı.',
+        ],
+      },
+      {
+        heading: 'Motor, egzoz ve emisyon',
+        paragraphs: [
+          'Muayenede egzoz emisyonu da ölçülür. Bakımı geçmiş bir araçta tıkalı hava filtresi, eski motor yağı ya da ateşleme sorunları emisyon değerlerini olumsuz etkileyebilir. Muayeneye bakımı yaklaşmış bir araçla gidecekseniz yağ, yağ filtresi ve hava filtresini önceden yenilemek iyi bir hazırlıktır. Egzozdan duman çıkıyorsa sebebini [egzoz dumanı yazımızdan](/blog/egzozdan-siyah-beyaz-mavi-duman "Egzozdan duman ne anlama gelir") kontrol edebilirsiniz.',
+        ],
+        list: [
+          'Motor ve şanzımanda belirgin yağ kaçağı olmamalı.',
+          'Egzoz sisteminde delik, gevşek bağlantı ya da aşırı ses olmamalı.',
+          'Muayeneye gitmeden önce motoru normal çalışma sıcaklığına getirin; soğuk motorla emisyon ölçümü olumsuz çıkabilir.',
+        ],
+      },
+      {
+        heading: 'Muayeneye götürmeniz gerekenler',
+        paragraphs: [],
+        list: [
+          'Ruhsat ve geçerli trafik sigortası.',
+          'Araçta bulunması zorunlu ekipmanlar: ilk yardım çantası, yangın söndürme cihazı ve reflektörler.',
+          'Araçta yapılmış tadilatlar varsa (ör. LPG) bunların belgeleri.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Muayeneden en sık hangi sebeplerle kalınır?',
+        a: 'Fren performansındaki dengesizlikler, yanmayan ya da ayarsız farlar, lastik kusurları, direksiyon ve süspansiyon boşlukları, yağ kaçakları ve egzoz emisyonu sık görülen kusurlar arasındadır.',
+      },
+      {
+        q: 'Muayeneden önce yağ değiştirmek gerekir mi?',
+        a: 'Zorunlu değildir, ancak bakımı geçmiş bir araçta eski yağ ve tıkalı hava filtresi emisyon ölçümünü olumsuz etkileyebilir. Bakım yaklaşmışsa muayeneden önce yaptırmak iyi bir hazırlıktır.',
+      },
+      {
+        q: 'Muayeneden kalan araç ne yapmalı?',
+        a: 'Raporda belirtilen kusurlar giderildikten sonra araç, tanınan süre içinde yeniden kontrole götürülür. Süre ve koşullar için muayene istasyonunun verdiği raporu esas alın.',
+      },
+    ],
+  },
+  {
+    slug: 'hafif-ticari-arac-bakimi',
+    title: 'Hafif Ticari Araç Bakımı: Doblo, Transit, Caddy ve Benzerlerinde Filtreler',
+    metaTitle: 'Hafif Ticari Araç Bakımı ve Filtreler | Oto Center Market',
+    summary:
+      'Hafif ticari araçlar yük, kısa mesafe ve uzun çalışma saatleri nedeniyle ağır kullanım koşullarında çalışır. Bakım aralığı, filtre seçimi ve filo bakımı için öneriler.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/otomobil',
+    relatedLabel: 'Aracınızı seçin',
+    guncelleme: '2026-10-27',
+    ilgiliYazilar: ['fiat-doblo-filtre-rehberi', 'dortlu-filtre-seti-nedir'],
+    intro: [
+      'Fiat Doblo, Ford Transit ve Transit Connect, Volkswagen Caddy, Renault Kangoo, Peugeot Partner ve Citroën Berlingo gibi hafif ticari araçlar çoğunlukla yüklü, dur-kalk trafikte ve kısa mesafelerde çalışır. Araç üreticileri bu tür kullanımı genellikle “ağır kullanım koşulu” olarak tanımlar ve bakım aralığının kısaltılmasını önerir. Yağ, yağ filtresi, hava, polen ve dizel yakıt filtresini aksatmadan değiştirmek, aracın yolda kalma riskini azaltır.',
+      'Aracınıza uygun filtreleri [araç seçimi](/otomobil "Otomobil ve hafif ticari araçlar") üzerinden marka, model ve motorunuzu seçerek bulabilirsiniz; hafif ticari araçlar otomobillerle aynı katalogda yer alır.',
+    ],
+    body: [
+      {
+        heading: 'Hafif ticari araç neden daha sık bakım ister?',
+        paragraphs: [],
+        list: [
+          'Yük: dolu araç motoru, frenleri ve süspansiyonu daha çok zorlar.',
+          'Dur-kalk ve kısa mesafe: motor yağı her zaman çalışma sıcaklığına ulaşmaz; yağda nem ve yakıt kalıntısı birikir.',
+          'Uzun rölanti: teslimat sırasında rölantide bekleme, kilometre artmadan motor saatini artırır.',
+          'Tozlu ortam: şantiye ve sanayi bölgelerinde hava ve polen filtresi daha hızlı dolar.',
+          'Dizel motor: yakıt filtresindeki su ve kir, enjeksiyon sistemini doğrudan etkiler.',
+        ],
+      },
+      {
+        heading: 'Hangi filtreler, ne sıklıkla?',
+        paragraphs: [
+          'Kesin aralıklar aracınızın bakım kitapçığında yazar; ağır kullanım için verilen aralığı esas alın. Genel olarak yağ filtresi her yağ değişiminde, hava ve polen filtresi her bakımda kontrol edilip gerektiğinde, dizel yakıt filtresi ise üreticinin belirttiği aralıkta değişir. Hepsini birlikte yenilemek için [4’lü filtre seti yazımıza](/blog/dortlu-filtre-seti-nedir "4’lü filtre seti nedir") bakabilirsiniz.',
+        ],
+        table: {
+          caption: 'Hafif ticari araçlarda filtrelerle ilgili pratik öneriler',
+          head: ['Filtre', 'Öneri'],
+          rows: [
+            ['Yağ filtresi', 'Her yağ değişiminde; ağır kullanımda kısaltılmış aralığı uygulayın'],
+            ['Hava filtresi', 'Tozlu ortamda her bakımda kontrol edin'],
+            ['Polen filtresi', 'Sürücü günün büyük kısmını araçta geçiriyorsa yılda bir değiştirin'],
+            ['Dizel yakıt filtresi', 'Bakım aralığında değiştirin, su uyarısında boşaltın'],
+          ],
+        },
+      },
+      {
+        heading: 'Filo sahipleri için öneriler',
+        paragraphs: [],
+        list: [
+          'Her aracın plaka, şasi numarası, motor kodu ve filtre kodlarını tek bir listede tutun.',
+          'Aynı model ve motora sahip araçlar için filtre setlerini toplu tedarik ederek bakım günü bekleme süresini kısaltın.',
+          'Bakım tarihlerini kilometreye ek olarak süreye göre de takip edin; az kullanılan araçlarda yağ zamanla eskir.',
+          'Sürücülerden gösterge uyarılarını, güç kaybını ve olağan dışı sesleri hemen bildirmelerini isteyin.',
+        ],
+      },
+      {
+        heading: 'Doğru filtreyi seçmek',
+        paragraphs: [
+          'Hafif ticari araçlarda aynı model adı altında farklı motorlar ve üretim dönemleri bulunur; örneğin Doblo’nun farklı nesillerinde birbirinden farklı filtreler kullanılır. Bu yüzden filtreyi model adına göre değil, motora göre seçin. Örnek bir model rehberi için [Fiat Doblo filtre rehberimize](/blog/fiat-doblo-filtre-rehberi "Fiat Doblo filtre rehberi") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Hafif ticari araçta bakım kaç km’de yapılır?',
+        a: 'Aralık araç üreticisine ve motora göre değişir; bakım kitapçığında yazar. Yüklü, dur-kalk ve kısa mesafe kullanım çoğu üreticinin ağır kullanım tanımına girer ve daha kısa bakım aralığı önerilir.',
+      },
+      {
+        q: 'Ticari araçta polen filtresi gerekli mi?',
+        a: 'Evet. Sürücü günün büyük kısmını araçta geçirdiği için polen filtresi hem klima ve havalandırma performansı hem de sürücünün soluduğu hava için önemlidir.',
+      },
+      {
+        q: 'Filo araçları için toplu filtre alınabilir mi?',
+        a: 'Evet. Araçlarınızın motor bilgilerini çıkardıktan sonra aynı filtreyi kullanan araçlar için toplu sipariş verebilirsiniz; bayilik ve toptan satış sayfamızdan bilgi alabilirsiniz.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
