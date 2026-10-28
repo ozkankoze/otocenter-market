@@ -3783,6 +3783,289 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'dpf-partikul-filtresi-nedir',
+    title: 'DPF (Dizel Partikül Filtresi) Nedir? Neden Tıkanır, Nasıl Korunur?',
+    metaTitle: 'DPF Nedir, Neden Tıkanır? Dizel Partikül Filtresi | Oto Center Market',
+    summary:
+      'Dizel partikül filtresi egzozdaki isi tutar ve belirli aralıklarla yakarak temizlenir. Kısa mesafe kullanım, uygun olmayan motor yağı ve bakımı aksatılmış filtreler DPF’nin tıkanmasını hızlandırır.',
+    tag: 'Rehber',
+    readMinutes: 6,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-28',
+    ilgiliYazilar: ['motor-yagi-5w30-5w40-ne-demek', 'egzozdan-siyah-beyaz-mavi-duman'],
+    intro: [
+      'DPF (dizel partikül filtresi), dizel motorun egzozundaki is (kurum) parçacıklarını tutan, egzoz hattına yerleştirilmiş bir filtredir. Biriken is, filtre yeterince ısındığında yakılarak temizlenir; bu işleme rejenerasyon denir. Araç sürekli kısa mesafede kullanılırsa rejenerasyon tamamlanamaz ve DPF tıkanır. Tıkanma; gösterge panelinde DPF uyarısı, güç kaybı ve sık rejenerasyon olarak kendini gösterir.',
+      'DPF’yi korumanın temel yolları, aracı zaman zaman uzun ve sabit hızda kullanmak, üreticinin istediği düşük kül içerikli (Low SAPS) motor yağını kullanmak ve hava, yakıt ve yağ filtresi bakımını aksatmamaktır.',
+    ],
+    body: [
+      {
+        heading: 'DPF nasıl çalışır?',
+        paragraphs: [
+          'DPF’nin içi, egzoz gazının gözenekli duvarlardan geçmek zorunda kaldığı petek yapıdadır. Gaz geçerken is parçacıkları duvarlarda kalır. Filtre doldukça egzoz karşı basıncı artar; araç bunu sensörlerle ölçer ve rejenerasyon başlatır.',
+        ],
+        list: [
+          'Pasif rejenerasyon: otoyolda uzun süre sabit hızda giderken egzoz sıcaklığı yükselir ve is kendiliğinden yanar.',
+          'Aktif rejenerasyon: motor kontrol ünitesi egzoz sıcaklığını artırmak için yakıt püskürtmesini değiştirir. Bu sırada rölanti yükselebilir, fan çalışabilir, tüketim kısa süre artabilir ve hafif yanık kokusu hissedilebilir.',
+          'Servis rejenerasyonu: uyarı yandıktan sonra da temizlenemeyen filtrede serviste arıza tespit cihazıyla başlatılır.',
+        ],
+      },
+      {
+        heading: 'DPF neden tıkanır?',
+        paragraphs: [],
+        list: [
+          'Sürekli kısa mesafe ve şehir içi kullanım: egzoz rejenerasyon sıcaklığına ulaşamaz ya da işlem yarıda kesilir.',
+          'Uygun olmayan motor yağı: yüksek kül içerikli yağın yanmasıyla oluşan kül, rejenerasyonla temizlenmez ve kalıcı olarak birikir.',
+          'Yağ yakma: turbo ya da segman kaynaklı yağ yakma DPF’de kül birikimini hızlandırır.',
+          'Tıkalı hava filtresi ve enjektör sorunları: fazla is üretimine yol açar.',
+          'Arızalı sensörler ya da EGR valfi: rejenerasyonun doğru zamanda başlamasını engeller.',
+        ],
+      },
+      {
+        heading: 'DPF uyarısı yanınca ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Uyarı ilk yandığında, kullanım kılavuzunda tarif edilen şekilde aracı belirli bir süre sabit hızla otoyolda ya da açık yolda sürün; çoğu araçta bu, rejenerasyonun tamamlanmasını sağlar.',
+          'Rejenerasyon sırasında (yüksek rölanti, çalışan fan) motoru mümkünse kapatmayın.',
+          'Uyarı sönmüyorsa, güç düşüşü varsa ya da motor arıza lambası yanıyorsa servise götürün; servis rejenerasyonu ya da arıza tespiti gerekebilir.',
+          'Uyarıyı uzun süre göz ardı etmek, filtrenin temizlenemeyecek kadar dolmasına ve pahalı bir değişime yol açabilir.',
+        ],
+      },
+      {
+        heading: 'DPF’yi korumak için bakım önerileri',
+        paragraphs: [
+          'DPF’li araçlarda motor yağı seçimi özellikle önemlidir. Bakım kitapçığında belirtilen, genellikle ACEA C sınıfı düşük kül içerikli yağı kullanın; ayrıntılar için [motor yağı yazımıza](/blog/motor-yagi-5w30-5w40-ne-demek "Motor yağı seçimi") bakabilirsiniz. Yağ ve yağ filtresini, hava filtresini ve dizel yakıt filtresini bakım aralığında değiştirmek, motorun daha temiz yanmasına ve daha az is üretmesine yardımcı olur.',
+          'DPF’nin sökülmesi ya da devre dışı bırakılması emisyon kurallarına aykırıdır ve muayenede egzoz emisyonu ölçümünde sorun yaratabilir. Tıkanan filtre için temizleme ya da değişim seçeneklerini yetkili bir serviste değerlendirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'DPF ne kadar sürede tıkanır?',
+        a: 'Kullanıma bağlıdır. Düzenli olarak uzun yol yapan araçlarda DPF uzun süre sorunsuz çalışır; sürekli kısa mesafede kullanılan araçlarda ise rejenerasyon tamamlanamadığı için çok daha erken tıkanabilir.',
+      },
+      {
+        q: 'DPF’li araçta hangi motor yağı kullanılmalı?',
+        a: 'Bakım kitapçığında belirtilen, genellikle ACEA C sınıfı düşük kül içerikli (Low SAPS) ve üretici onaylı yağ kullanılmalıdır. Uygun olmayan yağ DPF’de kalıcı kül birikimini hızlandırır.',
+      },
+      {
+        q: 'Rejenerasyon sırasında motor kapatılırsa ne olur?',
+        a: 'İşlem yarıda kalır ve bir sonraki sürüşte yeniden başlar. Bu sık tekrarlanırsa filtrede is birikir ve DPF uyarısı yanabilir. Mümkünse rejenerasyonun tamamlanmasını bekleyin.',
+      },
+    ],
+  },
+  {
+    slug: 'spor-hava-filtresi-gercekten-guc-kazandirir-mi',
+    title: 'Spor (Performans) Hava Filtresi Gerçekten Güç Kazandırır mı?',
+    metaTitle: 'Spor Hava Filtresi Güç Kazandırır mı? | Oto Center Market',
+    summary:
+      'Yıkanabilir pamuklu ve açık tip (konik) spor hava filtreleri ile standart kâğıt hava filtresinin farkları: güç, ses, filtreleme, bakım ve dikkat edilmesi gereken riskler.',
+    tag: 'Karşılaştırma',
+    readMinutes: 5,
+    relatedHref: '/filtreler/hava-filtreleri',
+    relatedLabel: 'Hava filtrelerine göz atın',
+    guncelleme: '2026-10-28',
+    ilgiliYazilar: ['hava-filtresi-ne-zaman-degisir', 'turbo-motor-bakimi-yag-ve-filtre'],
+    intro: [
+      'Standart (seri üretim) motorlu bir günlük araçta spor hava filtresinin sağladığı güç artışı genellikle küçüktür ve çoğu sürücü tarafından ölçülebilir bir fark olarak hissedilmez; en belirgin değişiklik çoğu zaman emme sesindedir. Motorun hava ihtiyacı, temiz ve doğru ölçüde bir kâğıt filtreyle zaten karşılanır. Spor filtrelerin asıl avantajı yıkanıp tekrar kullanılabilmeleridir; buna karşılık yanlış bakımda sensör kirlenmesi ve ince toz geçişi gibi riskler taşırlar.',
+      'Aracınıza uygun ölçüde, üretici özelliklerini karşılayan kâğıt hava filtrelerini [hava filtreleri kategorisinde](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Spor hava filtresi türleri',
+        paragraphs: [],
+        list: [
+          'Panel tip yıkanabilir filtre: orijinal filtre kutusuna, standart filtrenin yerine takılır. Genellikle yağlanmış pamuklu gaze ya da sentetik malzemeden yapılır.',
+          'Açık tip (konik) filtre: orijinal filtre kutusu sökülerek emme hattına doğrudan takılır. Motor bölmesindeki sıcak havayı emdiği için önlem alınmazsa performans beklenenin tersine düşebilir.',
+        ],
+      },
+      {
+        heading: 'Kâğıt filtre ile karşılaştırma',
+        paragraphs: [],
+        table: {
+          caption: 'Standart kâğıt hava filtresi ile yıkanabilir spor filtrenin genel karşılaştırması',
+          head: ['Özellik', 'Standart kâğıt filtre', 'Yıkanabilir spor filtre'],
+          rows: [
+            ['Hava geçirgenliği', 'Motorun ihtiyacına göre tasarlanır', 'Genellikle daha yüksek'],
+            ['İnce toz tutma', 'Yüksek', 'Malzemeye ve bakıma göre değişir'],
+            ['Bakım', 'Değiştirilir', 'Temizlenip yeniden yağlanır'],
+            ['Sensör riski', 'Yok', 'Fazla yağlanırsa hava akış sensörü kirlenebilir'],
+            ['Ses', 'Sessiz', 'Daha belirgin emme sesi (özellikle açık tipte)'],
+            ['Maliyet', 'Düşük, periyodik', 'Başta yüksek, uzun ömürlü'],
+          ],
+        },
+      },
+      {
+        heading: 'Güç artışı neden küçük kalır?',
+        paragraphs: [
+          'Motorun ne kadar hava çekebileceğini filtreden çok emme hattı, turbo, gaz kelebeği ve motor yazılımı belirler. Temiz ve doğru ölçüdeki bir kâğıt filtre, seri motorun ihtiyacını karşılayacak hava geçirgenliğine sahiptir. Bu yüzden spor filtre tek başına takıldığında fark sınırlı kalır; belirgin artışlar genellikle emme, egzoz ve yazılım değişiklikleriyle birlikte görülür. Öte yandan tıkanmış bir kâğıt filtreyi yenisiyle değiştirmek, kaybedilen performansı geri kazandırır.',
+        ],
+      },
+      {
+        heading: 'Spor filtre kullanacaksanız dikkat edin',
+        paragraphs: [],
+        list: [
+          'Temizleme ve yağlamayı üreticinin talimatına göre yapın; fazla yağ hava akış (MAF) sensörünü kirletip rölanti ve performans sorunlarına yol açabilir.',
+          'Açık tip filtrelerde motorun sıcak havasını emmesini önleyen bir ısı kalkanı ya da soğuk hava girişi kullanın.',
+          'Tozlu yolda ve şantiyede filtreyi daha sık kontrol edin.',
+          'Garanti süresindeki araçlarda değişiklik yapmadan önce garanti koşullarını kontrol edin.',
+          'Muayenede gürültü ve emisyon açısından sorun yaratmayacağından emin olun.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Spor hava filtresi yakıt tasarrufu sağlar mı?',
+        a: 'Seri motorlu bir araçta belirgin bir tasarruf beklenmemelidir. Modern motorlar karışımı sensörlerle ayarladığı için tüketimi daha çok sürüş tarzı ve aracın genel bakımı belirler.',
+      },
+      {
+        q: 'Spor hava filtresi motora zarar verir mi?',
+        a: 'Doğru takılıp düzgün bakılan bir filtre genellikle sorun yaratmaz. Ancak fazla yağlama hava akış sensörünü kirletebilir, kalitesiz ya da yırtık filtre ince tozun motora geçmesine neden olabilir.',
+      },
+      {
+        q: 'Spor hava filtresi ne sıklıkla temizlenir?',
+        a: 'Temizlik aralığını filtre üreticisi belirler ve kullanım koşuluna göre değişir. Tozlu ortamda daha sık kontrol ve temizlik gerekir.',
+      },
+    ],
+  },
+  {
+    slug: 'uzun-sure-bekleyen-arac-bakimi',
+    title: 'Uzun Süre Kullanılmayan Araç: Bekletme Öncesi ve Sonrası Bakım',
+    metaTitle: 'Uzun Süre Bekleyen Araç Bakımı | Oto Center Market',
+    summary:
+      'Haftalarca ya da aylarca kullanılmayacak araçta akü, lastikler, yakıt, motor yağı ve filtreler için yapılması gerekenler. Uzun beklemeden sonra yola çıkmadan önce kontrol listesi.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-28',
+    ilgiliYazilar: ['kis-oncesi-arac-bakimi', 'hava-filtresi-ne-zaman-degisir'],
+    intro: [
+      'Uzun süre kullanılmayacak bir araçta en sık görülen sorunlar akünün boşalması, lastiklerin hava kaybetmesi, fren disklerinin paslanması ve kemirgenlerin kablo ya da filtrelere zarar vermesidir. Motor yağı kullanılmasa da zamanla eskir. Bekletmeden önce aküyü korumaya almak, lastik basıncını artırmak ve depoyu doldurmak; bekleme sonrasında ise sıvıları, frenleri ve hava filtresini kontrol etmek sorunların çoğunu önler.',
+      'Uzun beklemenin ardından bakım zamanı geldiyse yağ ve filtreleri yenilemek iyi bir başlangıçtır. Aracınıza uygun filtreleri [filtreler kategorisinde](/filtreler "Filtreleri görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Bekletmeden önce',
+        paragraphs: [],
+        list: [
+          'Akü: araç birkaç haftadan uzun bekleyecekse akünün eksi kutup başını sökün ya da akü koruma şarj cihazı kullanın. Kutup başını sökmeden önce radyo kodu gibi ayarların kaybolup kaybolmayacağını kontrol edin.',
+          'Lastikler: basıncı üreticinin önerdiği değere ya da biraz üzerine getirin; mümkünse aracı arada bir hareket ettirerek lastiklerin aynı noktada yük taşımasını önleyin.',
+          'Yakıt: depoyu doldurun; boş depoda yoğuşma ve paslanma riski artar.',
+          'Motor yağı: değişim zamanı yaklaşmışsa bekletmeden önce değiştirin; eski yağdaki asidik kalıntılar beklerken motora zarar verebilir.',
+          'El freni: uzun beklemede balatalar disk ya da kampanaya yapışabilir. Düz zeminde, tekerlek takozuyla aracı viteste bırakmak bir seçenektir; aracınızın kılavuzundaki öneriye uyun.',
+          'Temizlik ve kemirgenler: aracı yıkayıp kurulayın, içini temizleyin ve yiyecek bırakmayın. Kemirgen riski olan yerlerde önlem alın.',
+        ],
+      },
+      {
+        heading: 'Uzun beklemeden sonra yola çıkmadan önce',
+        paragraphs: [],
+        steps: [
+          'Motor bölmesinde kemirgen izi, kemirilmiş kablo ya da hortum, hava filtresi kutusunda yuva ya da yaprak olup olmadığına bakın.',
+          'Hava filtresini çıkarıp kontrol edin; hasarlı ya da kirlenmişse değiştirin.',
+          'Motor yağı, soğutma sıvısı, fren hidroliği ve cam suyu seviyelerini kontrol edin; araç altında sıvı izi olup olmadığına bakın.',
+          'Lastik basınçlarını ölçün ve lastiklerde çatlak ya da şişlik olup olmadığını kontrol edin.',
+          'Aküyü bağlayın ya da şarj edin, motoru çalıştırıp gösterge uyarılarını kontrol edin.',
+          'İlk metrelerde frenleri düşük hızda deneyin; disklerdeki yüzey pası birkaç frenlemede temizlenir. Fren sertse ya da araç bir tarafa çekiyorsa servise gösterin.',
+          'Kabinde rutubet ya da küf kokusu varsa polen filtresini değiştirin.',
+        ],
+      },
+      {
+        heading: 'Yağ ve filtreler: kilometre değil süre',
+        paragraphs: [
+          'Çoğu üretici motor yağı için kilometrenin yanında bir süre sınırı da verir. Araç az kullanılsa da yağ zamanla oksitlenir ve içinde nem birikir. Uzun süre beklemiş bir araçta, son değişimden bu yana bakım kitapçığındaki süre dolduysa yağı ve yağ filtresini kilometreye bakmadan değiştirin. Polen filtresi ise bekleme sırasında nem ve küf tutabilir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Araç ne kadar süre çalıştırılmadan bekleyebilir?',
+        a: 'Akünün durumuna ve araçtaki elektrik tüketicilerine bağlıdır; birçok araçta akü birkaç hafta içinde zayıflayabilir. Daha uzun bekleyecek araçlarda akü koruma şarj cihazı kullanmak ya da kutup başını sökmek önerilir.',
+      },
+      {
+        q: 'Bekleyen aracı ara ara rölantide çalıştırmak yeterli mi?',
+        a: 'Kısa süreli rölanti aküyü tam şarj etmez ve motor yağının ısınıp nemden arınmasına yetmez. Mümkünse aracı ara ara 20–30 dakika sürmek daha faydalıdır.',
+      },
+      {
+        q: 'Uzun süre bekleyen araçta yağ değiştirmek gerekir mi?',
+        a: 'Son yağ değişiminden bu yana bakım kitapçığındaki süre dolduysa kilometre az olsa da yağ ve yağ filtresi değiştirilmelidir. Yağ kullanılmasa da zamanla eskir.',
+      },
+    ],
+  },
+  {
+    slug: 'ikinci-el-arac-alirken-bakim-kontrolu',
+    title: 'İkinci El Araç Alırken Bakım Geçmişi ve Filtreler Nasıl Kontrol Edilir?',
+    metaTitle: 'İkinci El Araç Alırken Bakım Kontrolü | Oto Center Market',
+    summary:
+      'İkinci el araç alırken bakım kayıtları, motor yağı, filtreler, soğuk çalıştırma ve egzoz dumanı üzerinden aracın nasıl kullanıldığını anlamak için kontrol listesi.',
+    tag: 'Rehber',
+    readMinutes: 6,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-28',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'egzozdan-siyah-beyaz-mavi-duman'],
+    intro: [
+      'İkinci el araç alırken bakım geçmişi, aracın nasıl kullanıldığını gösteren en değerli bilgidir. Servis faturaları ya da bakım kayıtları, yağ ve filtrelerin düzenli değişip değişmediğini, kilometrenin tutarlı olup olmadığını gösterir. Bunlara ek olarak motor soğukken çalıştırma, yağ kapağı ve yağ çubuğu kontrolü, hava filtresinin durumu ve egzoz dumanı birkaç dakikada önemli ipuçları verir. Kesin karar için bağımsız bir ekspertiz raporu almak en güvenli yoldur.',
+      'Aracı aldıktan sonra bakım geçmişinden emin değilseniz yağ ve dört filtreyi yenileyerek temiz bir başlangıç yapabilirsiniz; ayrıntılar için [4’lü filtre seti yazımıza](/blog/dortlu-filtre-seti-nedir "4’lü filtre seti nedir") bakabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Bakım kayıtlarında nelere bakılır?',
+        paragraphs: [],
+        list: [
+          'Yağ ve filtre değişimlerinin bakım kitapçığındaki aralıklarla yapılıp yapılmadığı.',
+          'Kayıtlardaki kilometrelerin birbiriyle ve göstergeyle tutarlı olup olmadığı.',
+          'Triger kayışı ya da zinciri, şanzıman yağı, fren hidroliği gibi büyük bakımların zamanında yapılıp yapılmadığı.',
+          'Faturalarda kullanılan parça ve yağ bilgileri.',
+          'Hasar ve kilometre geçmişinin resmi sorgulama hizmetleriyle kontrol edilmesi.',
+        ],
+      },
+      {
+        heading: 'Motor bölmesinde birkaç dakikalık kontrol',
+        paragraphs: [],
+        steps: [
+          'Motorun soğuk olduğundan emin olun; satıcının aracı önceden ısıtıp ısıtmadığını sorun. Soğuk çalıştırma birçok sorunu ortaya çıkarır.',
+          'Yağ çubuğunu çekin: seviye uygun olmalı; yağın aşırı koyu, kalın ya da yanık kokulu olması bakımın aksadığını gösterebilir.',
+          'Yağ doldurma kapağının altına bakın: açık kahve-beyaz köpüklü (mayonez kıvamında) birikinti kısa mesafe kullanımına ya da soğutma suyunun yağa karışmasına işaret edebilir.',
+          'Hava filtresi kutusunu açabiliyorsanız filtreye bakın: aşırı kirli filtre bakımın aksatıldığını düşündürür.',
+          'Genleşme kabındaki soğutma sıvısının rengine ve seviyesine bakın; yağlı görünüm iyi bir işaret değildir.',
+          'Motor, şanzıman ve araç altında yağ kaçağı izi arayın.',
+        ],
+      },
+      {
+        heading: 'Çalıştırma ve test sürüşü',
+        paragraphs: [],
+        list: [
+          'Soğuk çalıştırmada motor kolay çalışmalı; vuruntu, tıkırtı ya da uzun süren sesler olmamalı.',
+          'Gösterge panelindeki uyarı lambaları kontağı açınca yanıp, motor çalışınca sönmeli.',
+          'Egzozdan sürekli mavi, siyah ya da yoğun beyaz duman çıkmamalı; renklerin ne anlama geldiğini [egzoz dumanı yazımızda](/blog/egzozdan-siyah-beyaz-mavi-duman "Egzoz dumanı rengi") anlattık.',
+          'Test sürüşünde vites geçişleri, frenler ve direksiyon düzgün olmalı; motor çekişinde düzensizlik olmamalı.',
+          'Klimanın soğuttuğunu ve fan havasının güçlü olduğunu kontrol edin.',
+        ],
+      },
+      {
+        heading: 'Aldıktan sonra ilk bakım',
+        paragraphs: [
+          'Bakım geçmişi eksik ya da belirsizse, aracı aldıktan sonra motor yağı, yağ filtresi, hava filtresi, polen filtresi ve dizel araçlarda yakıt filtresini yenilemek iyi bir başlangıçtır. Böylece bir sonraki bakımın zamanını kendi kaydınıza göre takip edebilirsiniz. Aracınıza uygun filtreleri sitede marka, model ve motorunuzu seçerek bulabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Bakım kaydı olmayan ikinci el araç alınır mı?',
+        a: 'Alınabilir, ancak risk daha yüksektir. Bu durumda bağımsız bir ekspertiz raporu almak ve aracı aldıktan sonra yağ ve filtreleri hemen yenilemek önerilir.',
+      },
+      {
+        q: 'Yağ kapağının altında beyaz köpük ne demek?',
+        a: 'Sık kısa mesafe kullanımda motorda yoğuşan nemden kaynaklanabilir; özellikle kışın görülür. Ancak soğutma suyu eksilmesi ve egzozdan beyaz duman da varsa silindir kapak contası sorunu olabilir; kontrol ettirin.',
+      },
+      {
+        q: 'İkinci el araç aldıktan sonra hangi filtreler değişmeli?',
+        a: 'Bakım geçmişinden emin değilseniz motor yağı ile birlikte yağ, hava ve polen filtresini; dizel araçlarda ayrıca yakıt filtresini değiştirmek iyi bir başlangıçtır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
