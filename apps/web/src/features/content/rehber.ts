@@ -4066,6 +4066,315 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'antifriz-ne-zaman-degisir',
+    title: 'Antifriz Ne Zaman Değişir? Renkleri, Türleri ve Karıştırılır mı?',
+    metaTitle: 'Antifriz Ne Zaman Değişir, Karıştırılır mı? | Oto Center Market',
+    summary:
+      'Antifriz motoru hem donmaya hem aşırı ısınmaya ve korozyona karşı korur. Değişim aralığı antifriz tipine göre değişir; renk tek başına doğru seçim için yeterli değildir. Türler, karışım oranı ve dikkat edilecekler.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-29',
+    ilgiliYazilar: ['kis-oncesi-arac-bakimi', 'egzozdan-siyah-beyaz-mavi-duman'],
+    intro: [
+      'Antifriz (soğutma sıvısı konsantresi) değişim aralığı türüne ve araç üreticisine göre değişir: eski tip inorganik antifrizler daha kısa aralıklarla değiştirilirken, uzun ömürlü organik (OAT) ve hibrit tipler çok daha uzun süre kullanılabilir. Kesin aralık bakım kitapçığında yazar. Kış öncesinde sıvının kaç dereceye kadar koruduğunu ölçtürmek, değişim gerekip gerekmediğini anlamanın en kolay yoludur.',
+      'Antifriz seçiminde renk yerine aracınızın istediği normu esas alın. Farklı tipleri karıştırmak koruma özelliklerini zayıflatabilir; emin değilseniz tamamlama yerine sistemin tamamen boşaltılıp doğru sıvıyla doldurulması daha güvenlidir.',
+    ],
+    body: [
+      {
+        heading: 'Antifriz ne işe yarar?',
+        paragraphs: [],
+        list: [
+          'Donmayı önler: suyun donma noktasını düşürerek motor bloğunun ve radyatörün çatlamasını engeller.',
+          'Kaynamayı geciktirir: kaynama noktasını yükselterek sıcak havada ve yük altında motoru korur.',
+          'Korozyonu önler: içindeki katkılar radyatör, su pompası ve motor içindeki kanalları paslanmaya karşı korur.',
+          'Contaları ve su pompasını yağlar.',
+        ],
+      },
+      {
+        heading: 'Antifriz türleri',
+        paragraphs: [
+          'Antifrizler katkı paketine göre ayrılır. Üreticiler bu türleri farklı renklerle boyar; ancak renkler markadan markaya değiştiği için renk tek başına türü göstermez.',
+        ],
+        table: {
+          caption: 'Yaygın antifriz türleri (genel bilgi)',
+          head: ['Tür', 'Özellik', 'Değişim'],
+          rows: [
+            ['IAT (inorganik)', 'Eski tip; silikat ve fosfat içerir', 'Kısa aralıklarla'],
+            ['OAT (organik asit)', 'Uzun ömürlü; birçok modern araçta kullanılır', 'Uzun aralıklarla'],
+            ['HOAT / Si-OAT (hibrit)', 'Organik katkı ile az miktarda silikat birleşimi', 'Uzun aralıklarla'],
+          ],
+        },
+      },
+      {
+        heading: 'Antifriz karıştırılır mı?',
+        paragraphs: [
+          'Aynı norm ve türdeki antifrizler birbiriyle karıştırılabilir. Farklı türleri karıştırmak ise katkıların birbirini etkisiz hale getirmesine, korozyon korumasının azalmasına ve bazı durumlarda tortu oluşmasına yol açabilir. Acil durumda kısa süreli tamamlama için temiz su kullanılabilir; ancak bu donma korumasını düşürür ve en kısa sürede doğru oranla düzeltilmelidir.',
+        ],
+      },
+      {
+        heading: 'Karışım oranı ve dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Konsantre antifriz genellikle yarı yarıya saf (deiyonize) suyla karıştırılır; bu oran çoğu iklim için yeterli korumayı sağlar. Ürün etiketindeki tabloyu esas alın.',
+          'Konsantreyi saf olarak kullanmayın ve önerilen oranın çok üzerine çıkmayın; aşırı konsantre hem donma korumasını hem de ısı transferini kötüleştirebilir.',
+          'Musluk suyu yerine saf su kullanın; sert sudaki mineraller kireç oluşturabilir.',
+          'Genleşme kabının kapağını motor sıcakken açmayın.',
+          'Antifriz zehirlidir ve tatlı tadı nedeniyle evcil hayvanlar için tehlikelidir; dökülen sıvıyı hemen temizleyin, atığı kanalizasyona dökmeyin.',
+        ],
+      },
+      {
+        heading: 'Soğutma sıvısı eksiliyorsa',
+        paragraphs: [
+          'Soğutma sistemi kapalı bir devredir; sıvının sürekli eksilmesi normal değildir. Radyatör, hortumlar ve su pompası çevresinde ıslaklık ya da beyaz-yeşil kristalleşme izi kaçağa işaret eder. Kaçak görünmüyor, ama egzozdan yoğun beyaz duman çıkıyorsa sıvı yanma odasına geçiyor olabilir; bu durumu [egzoz dumanı yazımızda](/blog/egzozdan-siyah-beyaz-mavi-duman "Egzoz dumanı rengi ne anlama gelir") anlattık.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Antifriz kaç yılda bir değişir?',
+        a: 'Antifriz türüne ve araç üreticisine göre değişir. Eski tip antifrizler daha kısa, uzun ömürlü organik antifrizler çok daha uzun aralıklarla değiştirilir. Kesin aralık bakım kitapçığında yazar.',
+      },
+      {
+        q: 'Farklı renk antifrizler karıştırılır mı?',
+        a: 'Renk türü göstermez; önemli olan normdur. Aynı norm ve türdeki antifrizler karıştırılabilir. Farklı türleri karıştırmak korozyon korumasını azaltabilir, bu yüzden önerilmez.',
+      },
+      {
+        q: 'Antifriz yerine su konulur mu?',
+        a: 'Acil durumda kısa süreli tamamlama için su eklenebilir, ancak donma ve korozyon koruması azalır. En kısa sürede doğru antifriz ve oranla düzeltilmelidir.',
+      },
+    ],
+  },
+  {
+    slug: 'fren-hidroligi-ne-zaman-degisir',
+    title: 'Fren Hidroliği Ne Zaman Değişir? DOT 3, DOT 4 ve DOT 5.1 Farkı',
+    metaTitle: 'Fren Hidroliği Ne Zaman Değişir? DOT Farkları | Oto Center Market',
+    summary:
+      'Fren hidroliği zamanla nem çeker ve kaynama noktası düşer; bu yüzden kilometreden çok süreye göre değişir. DOT türleri, değişim aralığı, seviye düşmesinin anlamı ve dikkat edilecekler.',
+    tag: 'Bakım',
+    readMinutes: 4,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-29',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'arac-muayenesi-oncesi-kontrol-listesi'],
+    intro: [
+      'Fren hidroliği çoğu araç üreticisinin bakım planında kilometreye değil süreye bağlı olarak, genellikle iki yılda bir değiştirilir. Bunun sebebi, glikol bazlı fren hidroliğinin havadaki nemi zamanla emmesidir: içindeki su oranı arttıkça kaynama noktası düşer ve yoğun frenlemede frenlerin zayıflama riski artar. Kesin aralık için aracınızın bakım kitapçığına bakın.',
+      'Fren hidroliğindeki nem oranı servislerde ölçüm cihazıyla kolayca kontrol edilebilir. Periyodik bakımda filtrelerle birlikte hidrolik durumunu da kontrol ettirmek iyi bir alışkanlıktır.',
+    ],
+    body: [
+      {
+        heading: 'Fren hidroliği neden değişir?',
+        paragraphs: [
+          'Fren pedalına bastığınızda hidrolik, basıncı kaliperlere iletir. Yoğun frenlemede (uzun yokuş inişi, yüklü araç) fren sistemi çok ısınır. Nem oranı yükselmiş hidrolik bu sıcaklıkta kaynayıp buhar kabarcıkları oluşturabilir; buhar sıkışabildiği için pedal boşa gider ve fren gücü azalır. Ayrıca sistemdeki su, fren borularının ve kaliperlerin iç kısmında korozyona yol açar.',
+        ],
+      },
+      {
+        heading: 'DOT türleri',
+        paragraphs: [],
+        table: {
+          caption: 'Yaygın fren hidroliği türleri (genel bilgi)',
+          head: ['Tür', 'Baz', 'Not'],
+          rows: [
+            ['DOT 3', 'Glikol', 'Eski araçlarda; kaynama noktası daha düşük'],
+            ['DOT 4', 'Glikol', 'Günümüz binek araçlarının çoğunda'],
+            ['DOT 5.1', 'Glikol', 'Daha yüksek kaynama noktası'],
+            ['DOT 5', 'Silikon', 'Glikol bazlılarla karıştırılmaz'],
+          ],
+        },
+      },
+      {
+        heading: 'Seviye düşüyorsa ne anlama gelir?',
+        paragraphs: [
+          'Fren balataları aşındıkça kaliper pistonları dışarı çıkar ve depodaki hidrolik seviyesi yavaşça düşer; bu normaldir. Seviye kısa sürede belirgin şekilde düştüyse ya da pedal yumuşadıysa sistemde kaçak olabilir. Bu durumda aracı kullanmadan önce kontrol ettirin. Seviyeyi yalnızca tamamlamak, kaçağı ya da aşınmış balataları gizleyebilir.',
+        ],
+      },
+      {
+        heading: 'Dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Aracınızın istediği türü kullanın; tür depo kapağında ya da bakım kitapçığında yazar.',
+          'Glikol bazlı hidrolikler (DOT 3, 4, 5.1) genellikle birbirine karışabilir, ancak silikon bazlı DOT 5 karıştırılmaz.',
+          'Açılmış hidrolik şişesi havadan nem çeker; ağzı açık bekletilmiş hidroliği kullanmayın.',
+          'Fren hidroliği boyaya zarar verir; dökülürse hemen bol suyla temizleyin.',
+          'Değişim ve hava alma işlemi, ABS’li araçlarda bazen servis cihazı gerektirir; işin servise yaptırılması önerilir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Fren hidroliği kaç km’de değişir?',
+        a: 'Fren hidroliği çoğu üreticide kilometreye değil süreye göre, genellikle iki yılda bir değiştirilir. Kesin aralık aracınızın bakım kitapçığında yazar.',
+      },
+      {
+        q: 'DOT 4 yerine DOT 3 kullanılır mı?',
+        a: 'Önerilmez. Araç DOT 4 istiyorsa daha düşük kaynama noktasına sahip DOT 3 kullanmak fren güvenliğini azaltabilir. Aracınızın istediği türü kullanın.',
+      },
+      {
+        q: 'Fren hidroliği değişmezse ne olur?',
+        a: 'İçindeki nem oranı artar, kaynama noktası düşer ve yoğun frenlemede fren gücü azalabilir. Ayrıca fren sisteminin iç parçalarında korozyon oluşabilir.',
+      },
+    ],
+  },
+  {
+    slug: 'aku-neden-biter-omru-ne-kadar',
+    title: 'Akü Neden Biter? Akü Ömrü, Zayıf Akü Belirtileri ve Bakımı',
+    metaTitle: 'Akü Neden Biter, Ömrü Ne Kadar? | Oto Center Market',
+    summary:
+      'Akü kısa mesafe kullanım, uzun bekleme, aşırı sıcak ve soğuk ile kapalı devre tüketiciler yüzünden biter. Zayıf akü belirtileri, voltaj kontrolü, start-stop araçlarda akü seçimi ve takviye yaparken dikkat edilecekler.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-29',
+    ilgiliYazilar: ['kis-oncesi-arac-bakimi', 'uzun-sure-bekleyen-arac-bakimi'],
+    intro: [
+      'Aküyü en çok yıpratan şeyler sürekli kısa mesafe kullanım, aracın uzun süre çalıştırılmadan beklemesi, yaz sıcakları ve araçta kapalıyken akım çeken tüketicilerdir. Kışın ise soğuk, akünün verebildiği gücü düşürür ve zaten yıpranmış bir akü ilk soğuk sabahta aracı çalıştıramayabilir. Akünün ömrü kullanım ve iklime bağlıdır; birkaç yaşını geçen ve marşta zorlanan bir aküyü test ettirmek iyi bir önlemdir.',
+      'Akü testini kıştan önce yaptırmak, yolda kalma riskini azaltır. Kış hazırlığının diğer adımları için [kış öncesi bakım yazımıza](/blog/kis-oncesi-arac-bakimi "Kış öncesi araç bakımı") bakabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Zayıf akünün belirtileri',
+        paragraphs: [],
+        list: [
+          'Marş motoru ağır ve yavaş dönüyor, özellikle soğuk sabahlarda.',
+          'Kontak açılınca gösterge ışıkları sönükleşiyor ya da titriyor.',
+          'Start-stop sistemi devreye girmiyor ya da sık sık kapalı kalıyor.',
+          'Gösterge panelinde akü veya şarj uyarısı yanıyor.',
+          'Akü kutusunda şişme, sızıntı ya da kutup başlarında yoğun oksitlenme var.',
+        ],
+      },
+      {
+        heading: 'Akü neden biter?',
+        paragraphs: [],
+        list: [
+          'Kısa mesafe kullanım: marşta harcanan enerji kısa yolda geri doldurulamaz.',
+          'Uzun bekleme: alarm, kumanda alıcısı ve elektronik üniteler araç kapalıyken de az da olsa akım çeker.',
+          'Unutulan tüketiciler: açık kalan far, iç aydınlatma ya da sonradan takılan elektronik cihazlar.',
+          'Sıcak: yaz sıcakları akünün içindeki kimyasal yıpranmayı hızlandırır; arıza çoğu zaman ardından gelen ilk soğukta ortaya çıkar.',
+          'Şarj sistemi arızası: alternatör ya da konjektör sorunu aküyü yeterince şarj etmez.',
+        ],
+      },
+      {
+        heading: 'Akü voltajı nasıl kontrol edilir?',
+        paragraphs: [
+          'Bir multimetreyle, motor kapalıyken ve araç birkaç saat dinlendikten sonra akü kutupları arasında ölçüm yapılabilir. Tam dolu bir kurşun asit akü yaklaşık 12,6 volt civarında ölçülür; değer belirgin şekilde düşükse akü boşalmış ya da yıpranmış olabilir. Voltaj tek başına akünün sağlığını göstermez; servislerdeki akü test cihazları akünün marş gücünü de ölçer.',
+        ],
+      },
+      {
+        heading: 'Start-stop araçlarda akü seçimi',
+        paragraphs: [
+          'Start-stop sistemli araçlar sık çalıştırma için tasarlanmış EFB ya da AGM tipi akü kullanır. Bu araçlara standart akü takmak, akünün hızla yıpranmasına ve start-stop sisteminin çalışmamasına yol açabilir. Bazı araçlarda yeni akünün araç sistemine tanıtılması (kodlanması) gerekir. Akü değiştirirken aracınızdakiyle aynı tip ve kapasiteyi seçin.',
+        ],
+      },
+      {
+        heading: 'Takviye yaparken',
+        paragraphs: [],
+        steps: [
+          'İki aracı birbirine değdirmeden yaklaştırın, ikisinin de kontağını kapatın.',
+          'Kırmızı kabloyu önce boş akünün artı (+) kutbuna, sonra dolu akünün artı kutbuna bağlayın.',
+          'Siyah kabloyu dolu akünün eksi (–) kutbuna, diğer ucunu ise boş aküden uzakta, araçtaki boyasız metal bir şase noktasına bağlayın.',
+          'Önce yardım eden aracı çalıştırın, birkaç dakika sonra diğer aracı çalıştırın.',
+          'Kabloları bağlama sırasının tersiyle sökün. Aracınızın kılavuzunda farklı bir takviye noktası belirtilmişse onu kullanın.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Akü ömrü ne kadardır?',
+        a: 'Kullanım, iklim ve akü tipine göre değişir. Sık kısa mesafe kullanım ve sıcak iklim ömrü kısaltır. Birkaç yaşını geçen ve marşta zorlanan aküyü test ettirmek iyi bir önlemdir.',
+      },
+      {
+        q: 'Akü kışın neden biter?',
+        a: 'Soğukta akünün verebildiği güç düşerken motoru çalıştırmak için gereken güç artar. Yaz sıcaklarında yıpranmış bir akü bu yüzden çoğu zaman ilk soğuk sabahta yetersiz kalır.',
+      },
+      {
+        q: 'Start-stop araca normal akü takılır mı?',
+        a: 'Önerilmez. Start-stop araçlar EFB ya da AGM tipi akü ister; normal akü hızla yıpranır ve sistem düzgün çalışmayabilir. Bazı araçlarda yeni akünün sisteme tanıtılması da gerekir.',
+      },
+    ],
+  },
+  {
+    slug: 'buji-ne-zaman-degisir',
+    title: 'Buji Ne Zaman Değişir? Bozuk Buji Belirtileri ve Buji Türleri',
+    metaTitle: 'Buji Ne Zaman Değişir? Belirtileri | Oto Center Market',
+    summary:
+      'Buji değişim aralığı buji türüne göre değişir: nikel bujiler daha kısa, platin ve iridyum bujiler çok daha uzun ömürlüdür. Bozuk bujinin belirtileri, LPG’li araçlarda buji ve değişimde dikkat edilecekler.',
+    tag: 'Bakım',
+    readMinutes: 4,
+    relatedHref: '/filtreler/hava-filtreleri',
+    relatedLabel: 'Hava filtrelerine göz atın',
+    guncelleme: '2026-10-29',
+    ilgiliYazilar: ['motor-tekliyor-rolantide-titriyor', 'lpg-li-araclarda-bakim-ve-filtreler'],
+    intro: [
+      'Buji değişim aralığı buji türüne ve motora göre değişir: klasik nikel elektrotlu bujiler daha kısa aralıklarla, platin ve iridyum elektrotlu uzun ömürlü bujiler ise çok daha uzun aralıklarla değiştirilir. Kesin aralık aracınızın bakım kitapçığında yazar. Tekleme, zor çalışma, güç kaybı ve artan yakıt tüketimi bujilerin değişim zamanının geldiğini gösterebilir.',
+      'Bujiler yalnızca benzinli (ve LPG’li) motorlarda bulunur. Dizel motorlarda yakıt sıkıştırmayla tutuştuğu için buji yerine, soğuk çalıştırmaya yardım eden kızdırma bujileri vardır.',
+    ],
+    body: [
+      {
+        heading: 'Bozuk bujinin belirtileri',
+        paragraphs: [],
+        list: [
+          'Motor tekliyor ya da rölantide titriyor.',
+          'Araç zor çalışıyor, özellikle soğuk ve nemli havada.',
+          'Hızlanmada güç kaybı ve gecikme var.',
+          'Yakıt tüketimi arttı.',
+          'Motor arıza lambası yanıyor ya da yanıp sönüyor.',
+        ],
+      },
+      {
+        heading: 'Buji türleri',
+        paragraphs: [],
+        table: {
+          caption: 'Yaygın buji türleri (genel bilgi)',
+          head: ['Tür', 'Özellik', 'Ömür'],
+          rows: [
+            ['Nikel (standart)', 'Ekonomik, eski ve basit motorlarda yaygın', 'Daha kısa'],
+            ['Platin', 'Elektrot aşınmaya daha dayanıklı', 'Uzun'],
+            ['İridyum', 'İnce elektrot, kararlı kıvılcım', 'En uzun'],
+          ],
+        },
+      },
+      {
+        heading: 'LPG’li araçlarda buji',
+        paragraphs: [
+          'LPG’li motorlarda karışımı ateşlemek için daha yüksek voltaj gerekir; bu da bujilerin ve ateşleme bobinlerinin daha çabuk yıpranmasına yol açabilir. LPG’li araçlarda bujileri benzinli araca göre daha sık kontrol ettirmek ve LPG’de teklemeyi ciddiye almak önerilir. LPG sisteminin diğer bakım noktaları için [LPG’li araç bakımı yazımıza](/blog/lpg-li-araclarda-bakim-ve-filtreler "LPG’li araç bakımı") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Değişimde dikkat edilecekler',
+        paragraphs: [],
+        list: [
+          'Aracınızın motoruna uygun buji kodunu kullanın; ısı değeri ve diş boyu motora göre belirlenir.',
+          'Bujileri motor soğukken sökün; alüminyum silindir kapağındaki dişler sıcakken zarar görebilir.',
+          'Buji boşluğu (elektrot aralığı) üreticinin değerinde olmalıdır; birçok buji ayarlı gelir, uzun ömürlü bujilerde elektrota dokunulmamalıdır.',
+          'Bujiyi önce elle, sonra belirtilen torkla sıkın; aşırı sıkmak dişlere ve bujiye zarar verir.',
+          'Tek bir silindirde sürekli tekleme varsa sorun buji yerine ateşleme bobininde olabilir.',
+        ],
+      },
+      {
+        heading: 'Buji ve hava filtresi',
+        paragraphs: [
+          'Ateşleme sisteminin düzgün çalışması, motorun doğru oranda hava ve yakıt almasına bağlıdır. Buji değişimiyle aynı bakımda hava filtresini de kontrol etmek, motorun verimli çalışması için iyi bir alışkanlıktır. Aracınıza uygun hava filtresini [hava filtreleri kategorisinde](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") bulabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Buji kaç km’de bir değişir?',
+        a: 'Buji türüne ve motora göre değişir. Nikel bujiler daha kısa, platin ve iridyum bujiler çok daha uzun aralıklarla değişir. Kesin aralık aracınızın bakım kitapçığında yazar.',
+      },
+      {
+        q: 'Buji değişmezse ne olur?',
+        a: 'Aşınmış buji zayıf kıvılcım üretir; tekleme, zor çalışma, güç kaybı ve yakıt tüketiminde artış görülebilir. Uzun süre tekleyen motorda yanmamış yakıt katalitik konvertöre zarar verebilir.',
+      },
+      {
+        q: 'Dizel araçlarda buji var mı?',
+        a: 'Dizel motorlarda ateşleme bujisi yoktur; yakıt sıkıştırma ısısıyla tutuşur. Bunun yerine soğuk çalıştırmaya yardım eden kızdırma bujileri bulunur.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
