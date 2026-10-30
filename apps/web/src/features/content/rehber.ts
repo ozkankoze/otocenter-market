@@ -4375,6 +4375,303 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'motor-yagi-kac-km-de-degisir',
+    title: 'Motor Yağı Kaç Km’de Değişir? Kilometre mi, Süre mi?',
+    metaTitle: 'Motor Yağı Kaç Km’de Değişir? | Oto Center Market',
+    summary:
+      'Motor yağı değişim aralığı aracın üreticisine, motora, kullanılan yağa ve kullanım koşuluna göre değişir. Kilometre ve süre sınırı, ağır kullanım, uzun ömürlü bakım programları ve yağ filtresinin rolü.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-30',
+    ilgiliYazilar: ['yag-filtresi-ne-zaman-degisir', 'motor-yagi-5w30-5w40-ne-demek'],
+    intro: [
+      'Motor yağı, aracın bakım kitapçığında belirtilen kilometre ya da süre dolduğunda, hangisi önce gelirse değiştirilir. Birçok binek araçta bu aralık yaklaşık 10.000–15.000 km ya da yılda bir olarak verilir; bazı üreticilerin uzun ömürlü (longlife) bakım programlarında, onaylı yağ kullanılması şartıyla aralık daha uzundur. Şehir içi dur-kalk, kısa mesafe, tozlu yol ve yüklü kullanım gibi ağır koşullarda aralığı kısaltmak önerilir.',
+      'Motor yağı her değiştiğinde yağ filtresi de değiştirilir. Aracınıza uygun filtreyi [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Değişim aralığını neler belirler?',
+        paragraphs: [],
+        list: [
+          'Araç üreticisi ve motor: turbo, direkt enjeksiyon ve dizel motorlar yağa farklı yük bindirir.',
+          'Kullanılan yağ: uzun aralıklar yalnızca üreticinin onayladığı yağla geçerlidir.',
+          'Kullanım koşulu: kısa mesafe, dur-kalk, tozlu ortam, yük ve römork ağır kullanım sayılır.',
+          'Servis göstergesi: birçok modern araç yağ değişim zamanını sürüş koşullarına göre hesaplar ve gösterge panelinde bildirir.',
+        ],
+      },
+      {
+        heading: 'Neden süre sınırı da var?',
+        paragraphs: [
+          'Motor yağı az kullanılsa da zamanla oksitlenir, katkıları zayıflar ve içinde nem birikir. Özellikle kısa mesafede kullanılan araçlarda motor yağı yeterince ısınamadığı için yakıt ve su kalıntıları buharlaşamaz. Bu yüzden yılda az kilometre yapan araçlarda yağı süreye göre değiştirmek gerekir. Uzun süre bekleyen araçlar için [bu yazımıza](/blog/uzun-sure-bekleyen-arac-bakimi "Uzun süre bekleyen araç bakımı") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Ağır kullanım koşulları',
+        paragraphs: [
+          'Araç üreticilerinin çoğu aşağıdaki koşulları “ağır kullanım” olarak tanımlar ve bu durumda daha kısa bakım aralığı önerir:',
+        ],
+        list: [
+          'Çoğunlukla motor ısınmadan biten kısa yolculuklar.',
+          'Yoğun şehir içi trafik ve uzun rölanti.',
+          'Tozlu ya da toprak yollarda kullanım.',
+          'Sürekli yüklü kullanım, römork ya da karavan çekme.',
+          'Taksi, teslimat ve filo kullanımı.',
+          'Çok sıcak ya da çok soğuk iklim.',
+        ],
+      },
+      {
+        heading: 'Yağı değiştirmeden önce kontrol edin',
+        paragraphs: [],
+        steps: [
+          'Bakım kitapçığından viskoziteyi ve üretici onayını öğrenin; ayrıntılar için [motor yağı seçimi yazımıza](/blog/motor-yagi-5w30-5w40-ne-demek "Motor yağı seçimi") bakın.',
+          'Motorunuza uygun yağ filtresini kodundan doğrulayın.',
+          'Karter tapası contasını yenileyin.',
+          'Değişimden sonra kilometreyi ve tarihi not edin ya da servis göstergesini sıfırlatın.',
+        ],
+      },
+      {
+        heading: 'Yağ seviyesini düzenli kontrol edin',
+        paragraphs: [
+          'Değişim aralığı ne olursa olsun, yağ seviyesini ayda bir ve uzun yoldan önce kontrol etmek iyi bir alışkanlıktır. Birçok motor iki bakım arasında bir miktar yağ eksiltir. Eksilme belirgin şekilde artarsa sebebini [motor yağ yakma yazımızda](/blog/motor-yag-yakiyor-mu "Motor yağ yakıyor mu") anlattık.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Motor yağı kaç km’de bir değişmeli?',
+        a: 'Aracınızın bakım kitapçığındaki kilometre ya da süre dolduğunda, hangisi önce gelirse. Birçok binek araçta bu aralık yaklaşık 10.000–15.000 km ya da yılda birdir; ağır kullanımda aralık kısaltılmalıdır.',
+      },
+      {
+        q: 'Az kullanılan araçta yağ değişimi gerekir mi?',
+        a: 'Evet. Motor yağı kullanılmasa da zamanla eskir. Kilometre dolmasa bile bakım kitapçığındaki süre dolduğunda yağ ve yağ filtresi değiştirilmelidir.',
+      },
+      {
+        q: 'Uzun ömürlü (longlife) yağ ne demek?',
+        a: 'Bazı üreticilerin daha uzun bakım aralığına izin veren bakım programlarıdır. Bu aralıklar yalnızca üreticinin onayladığı yağ kullanıldığında ve uygun kullanım koşullarında geçerlidir.',
+      },
+    ],
+  },
+  {
+    slug: 'sasi-numarasi-ve-motor-kodu-ile-dogru-parca',
+    title: 'Şasi Numarası ve Motor Kodu ile Doğru Filtreyi Bulmak',
+    metaTitle: 'Şasi Numarası ve Motor Kodu ile Parça Bulma | Oto Center Market',
+    summary:
+      'Aynı modelin farklı motorları farklı filtre kullanabilir. Şasi numarasının (VIN) neyi anlattığı, motor kodunun nerede yazdığı ve doğru filtreyi seçmek için hangi bilgilerin gerektiği.',
+    tag: 'Rehber',
+    readMinutes: 5,
+    relatedHref: '/otomobil',
+    relatedLabel: 'Aracınızı seçin',
+    guncelleme: '2026-10-30',
+    ilgiliYazilar: ['oem-numarasi-ile-parca-bulma', 'yag-filtresi-uyumlu-mu-nasil-anlasilir'],
+    intro: [
+      'Doğru filtreyi bulmak için en güvenilir bilgiler aracınızın şasi numarası (VIN), motor hacmi ve gücü, motor kodu ve üretim yılıdır. Aynı model adı altında farklı motorlar, hatta aynı motorun farklı üretim dönemleri farklı filtre kullanabilir. Bu yüzden filtreyi model adına göre değil, motora göre seçmek gerekir.',
+      'Sitemizde [araç seçimi](/otomobil "Otomobil ve hafif ticari araçlar") ile marka, model ve motorunuzu seçtiğinizde yalnızca o motora uyumlu ürünler listelenir. Emin olamadığınız durumlarda siparişten önce şasi numaranızla bize sorabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Şasi numarası (VIN) nedir?',
+        paragraphs: [
+          'Şasi numarası, araca üretimde verilen 17 karakterlik benzersiz kimlik numarasıdır. Ruhsatta yazar; araç üzerinde ise genellikle ön camın alt köşesinden görülebilen bir plakada ve kaporta üzerinde damgalı olarak bulunur.',
+        ],
+        table: {
+          caption: 'Şasi numarasının genel yapısı',
+          head: ['Karakter', 'Anlamı'],
+          rows: [
+            ['1–3', 'Üretici kodu (hangi üreticinin ürettiği)'],
+            ['4–9', 'Araç tanımı: model, gövde ve motor bilgileri; içeriği üreticiye göre değişir'],
+            ['10', 'Birçok üreticide model yılı'],
+            ['11', 'Birçok üreticide üretim fabrikası'],
+            ['12–17', 'Seri (üretim sıra) numarası'],
+          ],
+        },
+      },
+      {
+        heading: 'Motor kodu nerede yazar?',
+        paragraphs: [],
+        list: [
+          'Motor bloğu üzerinde damgalı ya da etiketli olarak.',
+          'Bazı araçlarda bagaj ya da yedek lastik bölmesindeki, kapı kenarındaki ya da bakım kitapçığındaki araç veri etiketinde.',
+          'Servis kayıtlarında ve faturalarda.',
+          'Ruhsattaki motor numarası alanında; bazı markalarda bu numaranın başındaki harfler motor kodunu gösterir.',
+        ],
+      },
+      {
+        heading: 'Hangi bilgiler yeterli?',
+        paragraphs: [
+          'Çoğu durumda marka, model, kasa ya da nesil, motor hacmi ve beygir gücü doğru filtreyi bulmak için yeterlidir. Aynı motor için birden fazla filtre kodu görüyorsanız, filtre üretim yılına ya da motor versiyonuna göre değişiyor olabilir; bu durumda şasi numarası ya da motor kodu ayrımı kesinleştirir.',
+          'Elinizdeki en pratik bilgi çoğu zaman eski filtrenin üzerindeki koddur. Bu kodu sitedeki arama kutusuna yazabilirsiniz; OEM numaralarıyla arama için [OEM numarası yazımıza](/blog/oem-numarasi-ile-parca-bulma "OEM numarasıyla parça bulma") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Sık yapılan hatalar',
+        paragraphs: [],
+        list: [
+          'Yalnızca model adına göre seçmek: aynı modelin benzinli ve dizel versiyonları farklı filtre kullanır.',
+          'Ruhsattaki model yılına kesin güvenmek: nesil geçiş yıllarında iki nesil bir arada satılmış olabilir.',
+          'Beygir gücünü dikkate almamak: aynı hacimdeki motorun farklı güç versiyonları farklı filtre kullanabilir.',
+          'Dış ölçüsü benziyor diye filtre seçmek: bağlantı dişi, conta ve iç valfler farklı olabilir; ayrıntılar için [filtre uyumluluğu yazımıza](/blog/yag-filtresi-uyumlu-mu-nasil-anlasilir "Yağ filtresi uyumlu mu") bakın.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Şasi numarası nerede yazar?',
+        a: 'Ruhsatta yazar. Araç üzerinde genellikle ön camın alt köşesinden görülen plakada ve kaporta üzerinde damgalı olarak bulunur.',
+      },
+      {
+        q: 'Şasi numarasından model yılı anlaşılır mı?',
+        a: 'Birçok üreticide şasi numarasının 10. karakteri model yılını gösterir; ancak bu kullanım her üreticide ve her pazarda zorunlu değildir. Kesin bilgi için ruhsatı esas alın.',
+      },
+      {
+        q: 'Motor kodunu bilmeden doğru filtre bulunur mu?',
+        a: 'Çoğu durumda evet; marka, model, nesil, motor hacmi ve beygir gücü yeterlidir. Aynı motor için birden fazla kod görünüyorsa eski filtrenin kodunu kontrol etmek ya da şasi numarasıyla sormak en güvenli yoldur.',
+      },
+    ],
+  },
+  {
+    slug: 'yag-filtresi-uyumlu-mu-nasil-anlasilir',
+    title: 'Yağ Filtresi Aracıma Uyar mı? Ölçüsü Aynı Olan Filtre Takılır mı?',
+    metaTitle: 'Yağ Filtresi Uyumlu mu, Nasıl Anlaşılır? | Oto Center Market',
+    summary:
+      'Dışarıdan aynı görünen iki yağ filtresi aynı motora uymayabilir. Bağlantı dişi, conta çapı, yükseklik, bypass ve geri akış valfi gibi uyumluluğu belirleyen özellikler ve doğru filtreyi seçmenin yolu.',
+    tag: 'Rehber',
+    readMinutes: 4,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-10-30',
+    ilgiliYazilar: ['yag-filtresi-sizdiriyor', 'yag-lambasi-yaniyor-ne-yapmali'],
+    intro: [
+      'Yağ filtresinin aracınıza uyması için yalnızca dış ölçünün değil; bağlantı dişinin, conta çapının, yüksekliğin ve içindeki bypass ile geri akış valflerinin de motorunuza uygun olması gerekir. Dışarıdan aynı görünen iki filtre farklı basınçta açılan bypass valfine sahip olabilir ya da contası tam oturmayabilir. Bu yüzden filtreyi “benziyor” diye değil, motorunuz için listelenen koduyla seçmek gerekir.',
+      'Sitemizde aracınızın motorunu seçtiğinizde yalnızca o motora uyumlu yağ filtreleri listelenir. Tüm ürünleri [yağ filtreleri kategorisinde](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") görebilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Uyumluluğu belirleyen özellikler',
+        paragraphs: [],
+        table: {
+          caption: 'Yağ filtresinde uyumluluğu belirleyen başlıca özellikler',
+          head: ['Özellik', 'Neden önemli?'],
+          rows: [
+            ['Bağlantı dişi (spin-on)', 'Diş çapı ve adımı farklıysa filtre takılamaz ya da düzgün oturmaz'],
+            ['Conta çapı', 'Conta, motordaki oturma yüzeyine tam basmazsa yağ kaçırır'],
+            ['Yükseklik ve dış çap', 'Motor bölmesinde yer darsa uzun filtre sığmayabilir ya da başka parçaya değebilir'],
+            ['Bypass valfi açma basıncı', 'Motora uygun değilse filtre tıkanmadan bypass açabilir ya da gerektiğinde açılmayabilir'],
+            ['Geri akış valfi', 'Motor durduğunda yağın filtreden boşalmasını önler; eksikliği ilk çalıştırmada yağsız kalmaya yol açabilir'],
+            ['Kartuş ölçüsü ve O-ring', 'Kartuş filtrede yuvaya tam oturmalı, O-ring doğru ölçüde olmalı'],
+          ],
+        },
+      },
+      {
+        heading: 'Yanlış filtre takılırsa ne olur?',
+        paragraphs: [],
+        list: [
+          'Filtre çevresinden yağ kaçağı; ayrıntılar için [yağ filtresi sızıntısı yazımıza](/blog/yag-filtresi-sizdiriyor "Yağ filtresi sızdırıyor") bakın.',
+          'İlk çalıştırmada yağ lambasının geç sönmesi ve kısa süreli yağsız çalışma.',
+          'Bypass valfinin erken açılmasıyla filtrelenmemiş yağın motora gitmesi.',
+          'Filtrenin motor bölmesindeki bir parçaya sürtmesi ya da hasar görmesi.',
+        ],
+      },
+      {
+        heading: 'Doğru filtreyi nasıl seçersiniz?',
+        paragraphs: [],
+        steps: [
+          'Sitede aracınızın markasını, modelini ve motorunu seçin; listelenen yağ filtrelerinden birini seçin.',
+          'Elinizde eski filtre varsa üzerindeki kodu arama kutusuna yazın.',
+          'Aynı motor için birden fazla kod görüyorsanız üretim yılına ya da motor versiyonuna bakın; emin değilseniz siparişten önce şasi numaranızla sorun.',
+          'Ürün sayfasındaki uyumlu araç listesinde aracınızın motorunu ve beygir gücünü kontrol edin.',
+        ],
+      },
+      {
+        heading: 'Çapraz (muadil) kodlar',
+        paragraphs: [
+          'Farklı markaların aynı motor için ürettiği filtreler, ölçü ve valf özellikleri birbirine karşılık gelecek şekilde tasarlanır. Örneğin sitemizde aynı motor için MANN-FILTER ve FILTRON ürünleri birlikte listelenir. Bu karşılıklar katalog verisine dayanır; yalnızca görsel benzerliğe dayanarak muadil seçmek doğru değildir.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Dişi aynı olan yağ filtresi takılır mı?',
+        a: 'Diş aynı olsa bile conta çapı, yükseklik ve içindeki valfler farklı olabilir. Takılabilmesi uygun olduğu anlamına gelmez; filtreyi motorunuz için listelenen koduna göre seçin.',
+      },
+      {
+        q: 'Yağ filtresinin aracıma uyduğunu nasıl anlarım?',
+        a: 'Sitede aracınızın motorunu seçerek listelenen filtreyi alın ya da eski filtrenin kodunu arayın. Ürün sayfasındaki uyumlu araç listesinde motorunuzu ve beygir gücünü kontrol edin.',
+      },
+      {
+        q: 'Yanlış yağ filtresi motora zarar verir mi?',
+        a: 'Verebilir. Uygun olmayan bypass ya da geri akış valfi, motorun kısa süre yağsız kalmasına ya da filtrelenmemiş yağın dolaşmasına yol açabilir; conta uyumsuzluğu ise yağ kaçağına neden olur.',
+      },
+    ],
+  },
+  {
+    slug: 'karter-havalandirma-pcv-nedir',
+    title: 'Karter Havalandırma (PCV) Sistemi Nedir? Arıza Belirtileri',
+    metaTitle: 'Karter Havalandırma (PCV) Nedir, Belirtileri | Oto Center Market',
+    summary:
+      'Karter havalandırma sistemi motor içindeki gazları yağdan ayırarak emme tarafına geri gönderir. Tıkandığında yağ kaçağı, yağ yakma ve rölanti sorunları görülebilir. Belirtiler ve bakım.',
+    tag: 'Arıza',
+    readMinutes: 4,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-10-30',
+    ilgiliYazilar: ['motor-yag-yakiyor-mu', 'motor-tekliyor-rolantide-titriyor'],
+    intro: [
+      'Karter havalandırma (PCV) sistemi, yanma sırasında pistonların yanından kartere sızan gazları (blow-by gazları) yağ buharından ayırıp yeniden yanması için emme tarafına gönderir. Sistemde bir yağ ayırıcı ve çoğu benzinli motorda bir valf ya da membran, bazı dizel ve ağır vasıta motorlarında ise değiştirilebilir bir karter havalandırma filtresi bulunur. Sistem tıkandığında ya da membran yırtıldığında yağ kaçağı, yağ yakma, rölanti düzensizliği ve ıslık sesi gibi belirtiler görülebilir.',
+      'Değiştirilebilir karter havalandırma filtresi olan motorlarda filtre, üreticinin bakım planındaki aralıkta yenilenir.',
+    ],
+    body: [
+      {
+        heading: 'Sistem neden önemli?',
+        paragraphs: [
+          'Motor çalışırken karterde biriken gazlar tahliye edilmezse karter basıncı yükselir. Artan basınç yağı keçelerden ve contalardan dışarı iter, motor yağının daha çabuk kirlenmesine ve nemlenmesine yol açar. Karter havalandırma sistemi bu gazları kontrollü biçimde emme tarafına göndererek hem motoru korur hem de gazların doğrudan atmosfere çıkmasını önler.',
+        ],
+      },
+      {
+        heading: 'Arıza belirtileri',
+        paragraphs: [],
+        list: [
+          'Keçe ve contalardan, özellikle krank keçelerinden yeni başlayan yağ kaçağı.',
+          'Yağ tüketiminde artış ve emme hattında ya da turbo hortumlarında yağ birikmesi.',
+          'Rölantide düzensizlik ya da motor arıza lambası (fakir karışım arıza kodları).',
+          'Motor çalışırken yağ doldurma kapağının zor açılması ya da çevresinden ıslık sesi gelmesi.',
+          'Yağ doldurma kapağı altında açık renkli, köpüklü birikinti (özellikle kısa mesafe kullanımda).',
+        ],
+      },
+      {
+        heading: 'Neden arızalanır?',
+        paragraphs: [],
+        list: [
+          'Membranın zamanla sertleşmesi ya da yırtılması.',
+          'Kısa mesafe kullanımda yağ buharı ve nemin sistemde birikip tortu oluşturması.',
+          'Bakımı aksatılmış yağın sistemde çamurlaşması.',
+          'Kışın, sistemdeki nemin donarak kanalları tıkaması.',
+        ],
+      },
+      {
+        heading: 'Bakım ve kontrol',
+        paragraphs: [
+          'Karter havalandırma sistemindeki sorunlar çoğu zaman yağ yakma ya da tekleme gibi başka arızalarla karışır. Bu yüzden belirtiler görüldüğünde servis, karter basıncını ve sistemin hortum, valf ve membranlarını kontrol ederek kaynağı ayırt eder. Değiştirilebilir filtresi olan motorlarda filtreyi bakım aralığında yenilemek ve motor yağını zamanında değiştirmek sistemin ömrünü uzatır. Yağ tüketimiyle ilgili belirtiler için [motor yağ yakma yazımıza](/blog/motor-yag-yakiyor-mu "Motor yağ yakıyor mu") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'PCV valfi arızalanırsa ne olur?',
+        a: 'Karter basıncı artabilir ya da emme tarafına fazla hava gidebilir. Bunun sonucunda yağ kaçağı, yağ tüketiminde artış, rölanti düzensizliği ve motor arıza lambası görülebilir.',
+      },
+      {
+        q: 'Karter havalandırma filtresi her araçta var mı?',
+        a: 'Hayır. Birçok benzinli motorda değiştirilebilir bir filtre yerine bir valf ya da membranlı yağ ayırıcı bulunur. Değiştirilebilir filtre daha çok bazı dizel ve ağır vasıta motorlarında görülür.',
+      },
+      {
+        q: 'Yağ kapağı motor çalışırken neden zor açılır?',
+        a: 'Karter havalandırma sisteminde membran yırtılması ya da valf arızası nedeniyle karterde aşırı vakum oluşmuş olabilir. Bu durumda sistemi kontrol ettirin.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
