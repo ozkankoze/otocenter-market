@@ -4672,6 +4672,352 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'aracta-alerji-polen-sezonu',
+    title: 'Araçta Alerji ve Polen: Kabin Havasını Temiz Tutmanın Yolları',
+    metaTitle: 'Araçta Alerji ve Polen: Kabin Filtresi Seçimi | Oto Center Market',
+    summary:
+      'Polen ve toz alerjisi olan sürücüler için araçta kabin havasını temiz tutmanın yolları: doğru polen filtresi seçimi, havalandırma ayarları, iç temizlik ve filtre değişim zamanı.',
+    tag: 'Konfor',
+    readMinutes: 5,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-11-02',
+    ilgiliYazilar: ['aktif-karbonlu-polen-filtresi-farki', 'polen-filtresi-nasil-degistirilir'],
+    intro: [
+      'Araçta alerji belirtilerini azaltmanın en etkili yolu, kabine giren havayı süzen polen (kabin) filtresini zamanında değiştirmek ve alerjiye uygun bir filtre tipi seçmektir. Standart polen filtresi toz ve poleni tutar; aktif karbonlu filtre buna koku ve gaz tutma özelliği ekler; biyofonksiyonel katmanlı filtreler (MANN-FILTER’ın FreciousPlus serisi gibi) ise alerjen ve bakterilere karşı ek bir katman içerir. Polen mevsiminde iç hava sirkülasyonunu doğru kullanmak ve kabini düzenli temizlemek de fark yaratır.',
+      'Aracınıza uyan polen filtrelerini [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Hangi polen filtresi alerjiye daha uygun?',
+        paragraphs: [],
+        table: {
+          caption: 'Polen filtresi tipleri ve alerji açısından farkları (genel bilgi)',
+          head: ['Tip', 'Tuttuğu', 'Örnek kod yapısı'],
+          rows: [
+            ['Standart', 'Toz, polen, partikül', 'MANN-FILTER CU, FILTRON K'],
+            ['Aktif karbonlu', 'Partiküle ek olarak koku ve bazı gazlar', 'MANN-FILTER CUK, FILTRON K … A'],
+            ['Biyofonksiyonel (FreciousPlus)', 'Aktif karbona ek olarak alerjen ve bakterilere karşı katman', 'MANN-FILTER FP'],
+          ],
+        },
+      },
+      {
+        heading: 'Polen mevsiminde araçta yapılacaklar',
+        paragraphs: [],
+        list: [
+          'Polen filtresini mevsim başlamadan önce değiştirin; eski filtre tuttuğu poleni ve nemi kabine geri verebilir.',
+          'Yoğun polenli ya da tozlu bölgelerden geçerken havalandırmayı iç hava sirkülasyonuna alın; uzun süre kapalı kullanmayın, camlar buğulanabilir ve kabin havası ağırlaşır.',
+          'Pencereleri ve sunroof’u açık sürmek yerine filtrelenmiş havalandırmayı kullanın.',
+          'Ön cam altındaki hava girişini yaprak ve kirden temizleyin.',
+          'Koltukları, paspasları ve torpidoyu düzenli süpürün; kabinde biriken polen ve toz her sürüşte havaya karışır.',
+          'Klimada küf kokusu varsa klima sisteminin temizlenmesini sağlayın; ayrıntılar için [klima bakımı yazımıza](/blog/arac-klima-bakimi-nasil-yapilir "Araç klima bakımı") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Filtre ne zaman değişmeli?',
+        paragraphs: [
+          'Polen filtresi çoğu araçta 15.000–20.000 km’de ya da yılda bir değişir. Alerjisi olan sürücüler için en pratik yöntem, filtreyi her yıl polen mevsimi başlamadan önce yenilemektir. Şehir içinde yoğun trafikte çok vakit geçiriyorsanız aktif karbonlu ya da biyofonksiyonel tip tercih edebilirsiniz. Değişimi çoğu araçta kendiniz yapabilirsiniz; adımlar için [polen filtresi değişim rehberimize](/blog/polen-filtresi-nasil-degistirilir "Polen filtresi nasıl değiştirilir") bakın.',
+        ],
+      },
+      {
+        heading: 'Filtre seçerken dikkat',
+        paragraphs: [
+          'Standart, aktif karbonlu ve biyofonksiyonel filtreler genellikle aynı ölçüdedir ve aynı araca takılabilir. Önemli olan filtrenin aracınızın modeline uygun koda sahip olmasıdır. Aracınızı sitede seçtiğinizde uygun polen filtrelerinin farklı tipleri birlikte listelenir; tip farkları için [aktif karbonlu polen filtresi yazımıza](/blog/aktif-karbonlu-polen-filtresi-farki "Aktif karbonlu polen filtresi farkı") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Alerjisi olan sürücü için hangi polen filtresi daha iyi?',
+        a: 'Aktif karbonlu ya da biyofonksiyonel katmanlı filtreler, standart filtreye göre daha fazla koruma sağlar. Filtre tipinden çok, filtrenin zamanında değiştirilmesi de önemlidir.',
+      },
+      {
+        q: 'Polen mevsiminde iç hava sirkülasyonu açık mı kalmalı?',
+        a: 'Yoğun polenli bölgelerden geçerken kısa süreli kullanmak faydalıdır. Uzun süre kapalı kullanımda camlar buğulanabilir ve kabin havası ağırlaşabilir; bu yüzden aralıklı kullanmak daha doğrudur.',
+      },
+      {
+        q: 'FreciousPlus filtre normal polen filtresinin yerine takılır mı?',
+        a: 'Genellikle evet; FreciousPlus (FP) filtreler aynı aracın standart ve aktif karbonlu filtreleriyle aynı ölçüdedir. Aracınız için listelenen kodu kontrol etmeniz yeterlidir.',
+      },
+    ],
+  },
+  {
+    slug: 'kotu-yakit-aldim-belirtileri',
+    title: 'Kötü ya da Kirli Yakıt Aldım: Belirtiler ve Yapılması Gerekenler',
+    metaTitle: 'Kirli Yakıt Belirtileri ve Yapılacaklar | Oto Center Market',
+    summary:
+      'Kirli, sulu ya da yanlış yakıt alındığında görülen belirtiler: tekleme, güç kaybı, zor çalışma ve dizelde su uyarısı. Yakıt filtresinin rolü ve yanlış yakıt (benzinliye motorin ya da tersi) durumunda yapılması gerekenler.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yakit-filtreleri',
+    relatedLabel: 'Yakıt filtrelerine göz atın',
+    guncelleme: '2026-11-02',
+    ilgiliYazilar: ['yakit-filtresi-ne-zaman-degisir', 'dizel-yakit-filtresi-degisimi-hava-alma'],
+    intro: [
+      'Kirli ya da su karışmış yakıt alındıktan sonra genellikle tekleme, güç kaybı, rölantide titreme, zor çalışma ve dizel araçlarda gösterge panelinde su uyarısı görülür. Belirtiler hafifse yakıt filtresi kiri tutmuş olabilir ve filtre değişimiyle sorun giderilebilir; belirtiler ağırsa deponun boşaltılıp temizlenmesi gerekebilir. Yanlış yakıt (benzinli araca motorin ya da dizel araca benzin) aldıysanız motoru çalıştırmamak en önemli adımdır.',
+      'Yakıt filtresi, kirli yakıta karşı motorun ilk savunma hattıdır. Aracınıza uyan filtreyi [yakıt filtreleri kategorisinde](/filtreler/yakit-filtreleri "Yakıt filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Kirli ya da sulu yakıtın belirtileri',
+        paragraphs: [],
+        list: [
+          'Yakıt aldıktan kısa süre sonra başlayan tekleme ve güç kaybı.',
+          'Rölantide titreme, yokuşta ya da hızlanırken motorun “boğulması”.',
+          'Aracın zor çalışması ya da çalıştıktan sonra stop etmesi.',
+          'Dizel araçlarda gösterge panelinde yakıtta su uyarısı.',
+          'Motor arıza lambasının yanması.',
+        ],
+      },
+      {
+        heading: 'Ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Belirtiler başladıysa aracı zorlamayın; kısa mesafede güvenli bir yerde durun.',
+          'Yakıt fişini saklayın; istasyon, tarih ve pompa bilgisi gerekebilir.',
+          'Dizel araçta su uyarısı yandıysa yakıt filtresinin suyunu boşaltın ya da boşalttırın.',
+          'Belirtiler sürüyorsa yakıt filtresini değiştirin; tıkanmış filtre kiri tutmuş olabilir.',
+          'Ağır belirtilerde ya da filtre değişimi sonrası sorun sürerse deponun boşaltılıp temizlenmesi için servise başvurun.',
+        ],
+      },
+      {
+        heading: 'Yanlış yakıt aldıysanız',
+        paragraphs: [
+          'Benzinli araca motorin ya da dizel araca benzin konulduğunu fark ettiyseniz kontağı açmayın ve motoru çalıştırmayın. Birçok araçta kontağı açmak bile yakıt pompasını çalıştırarak yanlış yakıtı sisteme gönderir. Aracı çekiciyle servise götürün; depo boşaltılıp sistem temizlenir. Özellikle dizel araçlarda benzin, yakıt pompasının ve enjektörlerin yağlanmasını bozarak ağır hasara yol açabilir.',
+          'Yanlış yakıtla sürüşe başladıysanız güvenli bir yerde hemen durun ve motoru kapatın. Bu durumda yakıt filtresi de değiştirilmelidir.',
+        ],
+      },
+      {
+        heading: 'Yakıt filtresinin rolü',
+        paragraphs: [
+          'Yakıt filtresi, yakıttaki kir ve pası, dizel araçlarda ise suyu ayırarak enjeksiyon sistemini korur. Kirli yakıt alındığında filtre bu kiri tutar ve kısa sürede tıkanabilir; bu yüzden olaydan sonra filtrenin değiştirilmesi önerilir. Dizel filtrenin değişimi ve hava alma adımları için [dizel yakıt filtresi yazımıza](/blog/dizel-yakit-filtresi-degisimi-hava-alma "Dizel yakıt filtresi değişimi ve hava alma") bakabilirsiniz. Benzinli araçların çoğunda filtre depodaki pompa modülünün içindedir ve değişimi servis işidir.',
+        ],
+      },
+      {
+        heading: 'Kirli yakıt riskini azaltmak için',
+        paragraphs: [],
+        list: [
+          'Güvendiğiniz ve yoğun kullanılan istasyonlardan yakıt alın.',
+          'İstasyona yakıt tankeri boşaltma yapılırken yakıt almaktan kaçının; tank dibindeki tortu karışabilir.',
+          'Depoyu sürekli rezervde kullanmayın; dipteki tortu ve su sisteme daha kolay geçer.',
+          'Yakıt filtresini bakım aralığında değiştirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Kirli yakıt aldığımı nasıl anlarım?',
+        a: 'Yakıt aldıktan kısa süre sonra başlayan tekleme, güç kaybı, zor çalışma ve dizel araçlarda su uyarısı kirli ya da sulu yakıta işaret edebilir.',
+      },
+      {
+        q: 'Kirli yakıttan sonra yakıt filtresi değişmeli mi?',
+        a: 'Evet, önerilir. Filtre kiri tuttuğu için kısa sürede tıkanabilir. Belirtiler filtre değişiminden sonra da sürerse deponun temizlenmesi gerekebilir.',
+      },
+      {
+        q: 'Benzinli araca motorin konursa ne yapmalı?',
+        a: 'Kontağı açmayın ve motoru çalıştırmayın. Aracı çekiciyle servise götürüp deponun boşaltılmasını sağlayın. Yola çıktıysanız hemen güvenli bir yerde durup motoru kapatın.',
+      },
+    ],
+  },
+  {
+    slug: 'volkswagen-polo-filtre-rehberi',
+    title: 'Volkswagen Polo Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'VW Polo Filtre Kodları | Oto Center Market',
+    summary:
+      'Volkswagen Polo IV, Polo V ve Polo VI için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. TSI, TDI ve benzinli motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 8,
+    relatedHref: '/otomobil/volkswagen',
+    relatedLabel: 'Volkswagen modellerine göz atın',
+    guncelleme: '2026-11-02',
+    ilgiliYazilar: ['volkswagen-golf-filtre-rehberi', 'skoda-octavia-filtre-rehberi'],
+    intro: [
+      'Volkswagen Polo’da filtre seçimi nesle ve motora göre değişir: aynı nesilde 1.0 TSI, 1.2 TSI ve 1.6 TDI motorlar farklı yağ, hava ve yakıt filtresi kullanır. Polo VI, Skoda Kamiq, Scala ve Seat Ibiza ile aynı altyapıyı paylaştığı için kodların bir kısmı bu modellerle ortaktır. Aşağıdaki tablolar Polo IV, V ve VI için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Volkswagen modelleri](/otomobil/volkswagen "Volkswagen yedek parça") arasından Polo neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Polo IV yaklaşık 2001–2009, Polo V yaklaşık 2009–2017, Polo VI yaklaşık 2017 sonrası üretilmiştir; nesil geçiş yıllarında iki nesil bir süre birlikte satılmıştır. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki TSI turbo benzinli, TDI dizel, FSI direkt enjeksiyonlu benzinli motoru gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Polo VI filtre kodları',
+        paragraphs: [
+          'Polo VI (yaklaşık 2017 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Polo VI sayfasında](/otomobil/volkswagen/polo-vi-aw "Volkswagen Polo VI yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Volkswagen Polo VI — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 TSI 95 HP, 1.0 TSI 110 HP, 1.0 TSI 116 HP, 1.5 TSI 150 HP'],
+            ['Yağ', 'HU 7020 z', 'OE 688/3', '1.6 TDI 80 HP, 1.6 TDI 95 HP'],
+            ['Yağ', 'HU 6013 z', '—', '2.0 GTI 200 HP, 2.0 GTI 207 HP'],
+            ['Yağ', '—', 'OE 688/5', '2.0 GTI 207 HP'],
+            ['Hava', 'C 30 005', 'AP 139/5', '1.6 TDI 80 HP, 1.6 TDI 95 HP, 2.0 GTI 200 HP, 2.0 GTI 207 HP'],
+            ['Hava', 'C 28 043', '—', '1.0 TSI 110 HP, 1.5 TSI 150 HP'],
+            ['Hava', '—', 'AP 062/2', '1.0 TSI 95 HP, 1.0 TSI 116 HP'],
+            ['Hava', '—', 'AP 183/6', '1.0 TSI 110 HP'],
+            ['Polen / kabin', 'CU 26 021, CUK 26 021', 'K 1388', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', '—', 'K 1388A', '1.0 TSI 110 HP, 2.0 GTI 207 HP'],
+            ['Yakıt', 'PU 8028', 'PE 973/9', '1.6 TDI 80 HP, 1.6 TDI 95 HP'],
+            ['Şanzıman', 'H 6003 z', '—', '1.0 TSI 110 HP, 2.0 GTI 207 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Polo V filtre kodları',
+        paragraphs: [
+          'Polo V (yaklaşık 2009–2017) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Polo V sayfasında](/otomobil/volkswagen/polo-v "Volkswagen Polo V yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Volkswagen Polo V — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 712/95', 'OP 616/3', '1.0 60 HP, 1.0 75 HP, 1.0 TSI 95 HP, 1.0 TSI 110 HP, 1.2 TSI 90 HP, 1.2 TSI 110 HP, 1.4 Blue GT 140 HP, 1.4 TSI 125 HP, 1.4 TSI 150 HP, 1.6 90 HP, 1.6 110 HP'],
+            ['Yağ', 'W 712/94', 'OP 641/2', '1.2 TSI 90 HP, 1.2 TSI 105 HP, 1.4 GTI 180 HP, 1.6 86 HP, 1.6 105 HP'],
+            ['Yağ', 'W 7062', '—', '1.4 TDI 75 HP, 1.4 TDI 90 HP, 1.4 TDI 105 HP'],
+            ['Yağ', 'HU 7008 z', 'OE 688', '1.6 TDI 75 HP, 1.6 TDI 90 HP, 1.6 TDI 105 HP'],
+            ['Yağ', 'HU 710 x', 'OE 671', '1.2 60 HP, 1.2 70 HP'],
+            ['Yağ', 'HU 7017 z', 'OE 688/1', '1.2 TDI, TDI BlueMotion 75 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.4 16V 85 HP'],
+            ['Yağ', 'HU 6013 z', '—', '1.8 GTI 192 HP'],
+            ['Hava', 'C 15 008', 'AK 370/2', '1.2 TDI, TDI BlueMotion 75 HP, 1.2 TSI 90 HP, 1.2 TSI 105 HP, 1.4 GTI 180 HP, 1.6 TDI 75 HP, 1.6 TDI 90 HP, 1.6 TDI 105 HP'],
+            ['Hava', 'C 27 009', 'AP 062/1', '1.2 TSI 90 HP, 1.2 TSI 110 HP, 1.4 Blue GT 140 HP, 1.4 TSI 125 HP, 1.4 TSI 150 HP'],
+            ['Hava', 'C 3880', 'AP 183/3', '1.4 16V 85 HP, 1.6 86 HP, 1.6 105 HP'],
+            ['Hava', 'C 35 011', 'AP 183/5', '1.4 TDI 75 HP, 1.4 TDI 90 HP, 1.4 TDI 105 HP'],
+            ['Hava', 'C 29 015', 'AP 183/4', '1.0 60 HP, 1.0 75 HP'],
+            ['Hava', '—', 'AP 062/2', '1.0 TSI 95 HP, 1.0 TSI 110 HP'],
+            ['Hava', 'C 2295/2', 'AP 189', '1.2 60 HP, 1.2 70 HP'],
+            ['Hava', 'C 21 014', '—', '1.6 90 HP, 1.6 110 HP'],
+            ['Hava', 'C 29 029', 'AP 183/9', '1.8 GTI 192 HP'],
+            ['Polen / kabin', 'CU 26 010, CUK 26 010, FP 26 010', 'K 1313A', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 2545, CUK 2545', 'K 1079, K 1079A', '1.2 60 HP, 1.2 70 HP, 1.2 TDI, TDI BlueMotion 75 HP, 1.2 TSI 105 HP, 1.4 16V 85 HP, 1.4 TSI 125 HP, 1.6 86 HP, 1.6 90 HP, 1.6 105 HP, 1.6 110 HP, 1.6 TDI 75 HP, 1.6 TDI 90 HP, 1.6 TDI 105 HP'],
+            ['Yakıt', 'WK 69', 'PP 836/2', '1.0 TSI 95 HP, 1.0 TSI 110 HP, 1.2 TSI 90 HP, 1.2 TSI 105 HP, 1.2 TSI 110 HP, 1.4 Blue GT 140 HP, 1.4 GTI 180 HP, 1.4 TSI 125 HP, 1.4 TSI 150 HP, 1.8 GTI 192 HP'],
+            ['Yakıt', 'WK 69/2', 'PP 836/4', '1.0 60 HP, 1.0 75 HP, 1.2 60 HP, 1.2 70 HP, 1.4 16V 85 HP, 1.6 86 HP, 1.6 90 HP, 1.6 105 HP, 1.6 110 HP'],
+            ['Yakıt', 'WK 8029/1', 'PP 986/4', '1.2 TDI, TDI BlueMotion 75 HP, 1.4 TDI 75 HP, 1.4 TDI 90 HP, 1.4 TDI 105 HP'],
+            ['Yakıt', 'WK 823/2', 'PP 986', '1.6 TDI 75 HP, 1.6 TDI 90 HP, 1.6 TDI 105 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Polo IV filtre kodları',
+        paragraphs: [
+          'Polo IV (yaklaşık 2001–2009) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Polo IV sayfasında](/otomobil/volkswagen/polo-iv-9n "Volkswagen Polo IV yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Volkswagen Polo IV — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 719/7 x', 'OE 650/1', '1.4 TDI 70 HP, 1.4 TDI 75 HP, 1.4 TDI 80 HP, 1.9 TDI 100 HP, 1.9 TDI 130 HP'],
+            ['Yağ', 'HU 710 x', 'OE 671', '1.2 55 HP, 1.2 60 HP, 1.2 12V 65 HP, 1.2 12V 70 HP'],
+            ['Yağ', 'W 712/52', 'OP 641', '1.4 16V 75 HP, 1.4 16V 80 HP, 1.4 16V 100 HP, 1.6 100 HP'],
+            ['Yağ', 'HU 712/6 x', 'OE 650/2', '1.4 16V FSI 85 HP, 1.6 16V 105 HP'],
+            ['Yağ', 'W 719/30', 'OP 526/1', '1.8 GTI 150 HP'],
+            ['Hava', 'C 2295/3, C 2295/4', 'AP 189/1, AP 189/2', '1.4 TDI 70 HP, 1.4 TDI 75 HP, 1.4 TDI 80 HP, 1.8 GTI 150 HP, 1.9 TDI 100 HP, 1.9 TDI 130 HP'],
+            ['Hava', 'C 2295/2', 'AP 189', '1.2 55 HP, 1.2 60 HP, 1.2 12V 70 HP'],
+            ['Hava', 'C 2998/5 x', 'AP 149/3', '1.4 16V 75 HP, 1.4 16V 100 HP, 1.6 100 HP'],
+            ['Hava', 'C 3880', 'AP 183/3', '1.4 16V 80 HP, 1.6 16V 105 HP'],
+            ['Hava', 'C 3093/1', 'AP 149/4', '1.2 12V 65 HP'],
+            ['Hava', 'C 3575', 'AP 183/1', '1.2 55 HP'],
+            ['Hava', 'C 3083', 'AP 149/6', '1.4 16V FSI 85 HP'],
+            ['Hava', 'C 4287/2', '—', '1.6 100 HP'],
+            ['Polen / kabin', 'CU 2545, CUK 2545, FP 26 010', 'K 1079, K 1079A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 512', 'PP 905', '1.2 55 HP, 1.2 60 HP, 1.2 12V 65 HP, 1.2 12V 70 HP, 1.4 16V 75 HP, 1.4 16V 80 HP, 1.4 16V 100 HP, 1.4 16V FSI 85 HP, 1.6 100 HP, 1.6 16V 105 HP, 1.8 GTI 150 HP'],
+            ['Yakıt', 'WK 69/1, WK 69/2', 'PP 836/3, PP 836/4', '1.2 55 HP, 1.2 60 HP, 1.2 12V 65 HP, 1.2 12V 70 HP, 1.4 16V 75 HP, 1.4 16V 80 HP, 1.4 16V 100 HP, 1.6 100 HP, 1.6 16V 105 HP, 1.8 GTI 150 HP'],
+            ['Yakıt', 'WK 59 x', '—', '1.2 55 HP, 1.2 12V 65 HP, 1.4 16V 75 HP, 1.4 16V 100 HP, 1.6 100 HP'],
+            ['Yakıt', '—', 'PP 839/5', '1.4 TDI 75 HP, 1.9 TDI 100 HP, 1.9 TDI 130 HP'],
+            ['Yakıt', 'WK 823/2', 'PP 986', '1.4 TDI 70 HP, 1.4 TDI 80 HP'],
+            ['Yakıt', 'WK 823/3 x', 'PP 986/1', '1.9 TDI 100 HP, 1.9 TDI 130 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'VW Polo 1.0 TSI yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Polo V ve Polo VI’nın 1.0 TSI motorlarında MANN-FILTER W 712/95 ve FILTRON OP 616/3 yağ filtresi kullanılır. Kesin seçim için motorunuzu sitede seçerek doğrulayın.',
+      },
+      {
+        q: 'Polo 5 1.6 TDI yağ filtresi kodu nedir?',
+        a: 'Polo V 1.6 TDI motorlarda katalogda MANN-FILTER HU 7008 z ve FILTRON OE 688 kartuş yağ filtresi kayıtlıdır. Polo VI 1.6 TDI’da ise MANN-FILTER HU 7020 z ve FILTRON OE 688/3 görünür.',
+      },
+      {
+        q: 'Polo 6 polen filtresi bütün motorlarda aynı mı?',
+        a: 'Evet. Katalogda Polo VI’nın tüm motorları için MANN-FILTER CU 26 021 (aktif karbonlu CUK 26 021) ve FILTRON K 1388 kayıtlıdır. Aynı ölçü Skoda Kamiq, Scala ve Seat Ibiza VI’da da kullanılır.',
+      },
+    ],
+  },
+  {
+    slug: 'mazda-3-filtre-rehberi',
+    title: 'Mazda 3 Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Mazda 3 Filtre Kodları | Oto Center Market',
+    summary:
+      'Mazda 3 için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.4 ve 1.6 benzinli, 1.6 CD dizel, 1.5 Skyactiv-G ve Skyactiv-D motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 5,
+    relatedHref: '/otomobil/mazda',
+    relatedLabel: 'Mazda modellerine göz atın',
+    guncelleme: '2026-11-02',
+    ilgiliYazilar: ['toyota-corolla-filtre-rehberi', 'hyundai-i20-filtre-rehberi'],
+    intro: [
+      'Mazda 3’te filtre seçimi motor ailesine göre belirgin şekilde değişir: ilk nesillerdeki 1.4 ve 1.6 benzinli ile 1.6 CD dizel motorlar bir grup filtre, 2013 sonrası Skyactiv motorlar ise farklı hava, polen ve yakıt filtreleri kullanır. Yağ filtresi ise benzinli motorların çoğunda ortaktır. Aşağıdaki tablo katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablo hızlı başvuru içindir. Kesin seçim için [Mazda modelleri](/otomobil/mazda "Mazda yedek parça") arasından Mazda 3’ü ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Katalogda Mazda 3’ün nesilleri tek model altında listelenir; bu yüzden motor seçimi belirleyicidir. Motor adında Skyactiv geçiyorsa araç yaklaşık 2013 sonrası nesildendir: Skyactiv-G benzinli, Skyactiv-D dizel motoru gösterir. Skyactiv ibaresi olmayan 1.4 ve 1.6 benzinli ile 1.6 CD (MZ-CD) dizel motorlar ilk nesillere aittir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Mazda 3 filtre kodları',
+        paragraphs: [
+          'Mazda 3 (tüm nesiller) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Mazda 3 sayfasında](/otomobil/mazda/3 "Mazda Mazda 3 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Mazda Mazda 3 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 67/1', 'OP 595', '1.4 80 HP, 1.4 85 HP, 1.5 Skyactiv-G 100 101 HP, 1.5 Skyactiv-G 120 120 HP, 1.6 105 HP, 1.6 Skyactiv-G 105 105 HP'],
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.6 CD 109 HP, 1.6 CD Turbodiesel 109 HP, 1.6 MZ-CD 115 HP'],
+            ['Hava', 'C 3220', 'AP 113/3', '1.4 80 HP, 1.4 85 HP, 1.6 105 HP'],
+            ['Hava', '—', 'AP 113/8', '1.5 Skyactiv-D 105 105 HP, 1.5 Skyactiv-G 100 101 HP, 1.5 Skyactiv-G 120 120 HP'],
+            ['Hava', 'C 16 134/2', 'AK 372/1', '1.6 CD 109 HP, 1.6 MZ-CD 115 HP'],
+            ['Hava', 'C 23 018', '—', '1.5 Skyactiv-G 100 101 HP'],
+            ['Hava', 'C 27 105', 'AP 074/5', '1.6 CD Turbodiesel 109 HP'],
+            ['Polen / kabin', 'CU 22 001-2', 'K 1212-2x', '1.4 80 HP, 1.4 85 HP, 1.6 105 HP, 1.6 CD Turbodiesel 109 HP'],
+            ['Polen / kabin', 'CU 24 009', 'K 1316', '1.5 Skyactiv-D 105 105 HP, 1.5 Skyactiv-G 100 101 HP, 1.5 Skyactiv-G 120 120 HP, 1.6 Skyactiv-G 105 105 HP'],
+            ['Polen / kabin', 'CU 26 008-2', 'K 1312-2x', '1.6 105 HP, 1.6 CD 109 HP, 1.6 MZ-CD 115 HP'],
+            ['Yakıt', 'WK 614/46', 'PP 865/5', '1.4 80 HP, 1.4 85 HP, 1.6 105 HP'],
+            ['Yakıt', 'WK 939/13', 'PP 838/8', '1.6 CD 109 HP, 1.6 CD Turbodiesel 109 HP'],
+            ['Yakıt', 'WK 8052 z', '—', '1.5 Skyactiv-D 105 105 HP'],
+            ['Yakıt', 'WK 939/2', '—', '1.6 CD Turbodiesel 109 HP'],
+            ['Yakıt', 'WK 9046 z', 'PP 838/9', '1.6 MZ-CD 115 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Mazda 3 1.5 Skyactiv-G yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Mazda 3 1.5 Skyactiv-G (100 ve 120 HP) motorlarda MANN-FILTER W 67/1 ve FILTRON OP 595 yağ filtresi kullanılır. Aynı filtre ilk nesillerin 1.4 ve 1.6 benzinli motorlarında da kayıtlıdır.',
+      },
+      {
+        q: 'Mazda 3 1.5 benzinli hava filtresi kodu nedir?',
+        a: 'Mazda 3 1.5 Skyactiv-G motorlarda katalogda FILTRON AP 113/8 hava filtresi kayıtlıdır; 100 HP versiyon için ayrıca MANN-FILTER C 23 018 görünür.',
+      },
+      {
+        q: 'Skyactiv motorlu Mazda 3’te polen filtresi kodu nedir?',
+        a: 'Katalogda Skyactiv motorlu Mazda 3 için MANN-FILTER CU 24 009 ve FILTRON K 1316 polen filtresi kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
