@@ -5018,6 +5018,306 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'dizel-arac-soguk-havada-calismiyor',
+    title: 'Dizel Araç Soğuk Havada Çalışmıyor: Sebepleri ve Çözümleri',
+    metaTitle: 'Dizel Araç Kışın Çalışmıyor: Sebepleri | Oto Center Market',
+    summary:
+      'Dizel araçların soğuk sabahlarda zor çalışmasının en sık sebepleri zayıf akü, arızalı kızdırma bujileri, suyla dolmuş ya da tıkanmış yakıt filtresi ve donmaya başlayan motorindir. Belirtiler ve yapılması gerekenler.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/yakit-filtreleri',
+    relatedLabel: 'Yakıt filtrelerine göz atın',
+    guncelleme: '2026-11-03',
+    ilgiliYazilar: ['kis-oncesi-arac-bakimi', 'dizel-yakit-filtresi-degisimi-hava-alma'],
+    intro: [
+      'Dizel motor, yakıtı kıvılcımla değil sıkıştırmanın ısısıyla tutuşturur; soğuk havada bu ısıyı sağlamak zorlaşır. Bu yüzden kışın dizel aracın zor çalışmasının en sık sebepleri zayıf akü, arızalı kızdırma bujileri, suyla dolmuş ya da tıkanmış yakıt filtresi ve çok soğukta motorinde oluşan parafin kristalleridir. Kıştan önce akünün test edilmesi, kızdırma bujilerinin kontrolü ve bakımı yaklaşan yakıt filtresinin değiştirilmesi sorunların çoğunu önler.',
+      'Aracınıza uygun dizel yakıt filtresini [yakıt filtreleri kategorisinde](/filtreler/yakit-filtreleri "Yakıt filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Sık görülen sebepler',
+        paragraphs: [],
+        table: {
+          caption: 'Dizel aracın soğukta zor çalışmasının sık sebepleri',
+          head: ['Sebep', 'Tipik belirti'],
+          rows: [
+            ['Zayıf akü', 'Marş motoru ağır ve yavaş dönüyor'],
+            ['Kızdırma bujisi arızası', 'Marş normal dönüyor ama motor tutmuyor ya da uzun marştan sonra tekleyerek çalışıyor; beyaz-gri duman'],
+            ['Su dolmuş yakıt filtresi', 'Su uyarısı, tekleme, çalıştıktan sonra stop etme'],
+            ['Tıkanmış yakıt filtresi', 'Zor çalışma, güç kaybı, yük altında tekleme'],
+            ['Motorinde parafinlenme', 'Çok soğuk gecelerden sonra motorun hiç çalışmaması ya da çalışıp stop etmesi'],
+            ['Yakıt hattında hava', 'Filtre değişiminden sonra uzun marş, düzensiz çalışma'],
+          ],
+        },
+      },
+      {
+        heading: 'Kızdırma bujileri neden önemli?',
+        paragraphs: [
+          'Kızdırma bujileri, motor soğukken yanma odasını ısıtarak ilk tutuşmayı kolaylaştırır. Gösterge panelindeki spiral (kızdırma) lambası kontak açıldığında yanar; lamba sönmeden marşa basmak, özellikle soğukta çalıştırmayı zorlaştırır. Bujilerden biri ya da kızdırma rölesi arızalıysa motor soğukken tekleyerek çalışır ve egzozdan beyaz-gri duman çıkabilir.',
+        ],
+      },
+      {
+        heading: 'Yakıt filtresi ve motorin',
+        paragraphs: [
+          'Dizel yakıt filtresi, yakıttaki suyu ayırır ve enjeksiyon sistemini korur. Filtrede biriken su soğukta donarak yakıt akışını kesebilir; tıkalı bir filtre ise soğukta koyulaşan motorinin geçişini daha da zorlaştırır. Çok düşük sıcaklıklarda motorinde parafin kristalleri oluşur ve bunlar ilk olarak filtrede birikir.',
+          'Kış aylarında istasyonlarda soğuğa dayanıklı motorin satılır; ancak sonbaharda alınıp depoda bekleyen yakıt bu özellikte olmayabilir. Bakım aralığı yaklaşan yakıt filtresini kıştan önce değiştirmek ve su ayırıcıyı boşaltmak iyi bir önlemdir. Değişim ve hava alma adımları için [dizel yakıt filtresi yazımıza](/blog/dizel-yakit-filtresi-degisimi-hava-alma "Dizel yakıt filtresi değişimi ve hava alma") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Araç çalışmıyorsa ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Kontağı açın ve kızdırma lambasının sönmesini bekleyin; ardından marşa basın. Gerekirse bunu birkaç kez tekrarlayın.',
+          'Marşa her seferinde en fazla 10 saniye basın, aralarda bekleyin; aküyü tüketmemeye çalışın.',
+          'Marş ağır dönüyorsa akü zayıftır; takviye ya da akü şarjı gerekir.',
+          'Su uyarısı yanıyorsa yakıt filtresindeki suyu boşaltın.',
+          'Gece çok soğuk geçtiyse ve araç hiç çalışmıyorsa motorin parafinlenmiş olabilir; aracı mümkünse ılık bir ortama alın ve servise başvurun.',
+          'Motoru, depoya ya da yakıt hatlarına açık alevle ısı vermeyin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Dizel araç neden kışın zor çalışır?',
+        a: 'Dizel motor yakıtı sıkıştırma ısısıyla tutuşturur; soğukta bu ısıyı sağlamak zorlaşır. Zayıf akü, arızalı kızdırma bujileri, su dolmuş ya da tıkalı yakıt filtresi ve motorinde parafinlenme sık sebeplerdir.',
+      },
+      {
+        q: 'Yakıt filtresi dizel aracın çalışmamasına sebep olur mu?',
+        a: 'Evet. Suyla dolmuş filtrede su donabilir, tıkalı filtre de soğukta koyulaşan motorinin geçişini engelleyebilir. Bakım aralığı yaklaşan filtreyi kıştan önce değiştirmek önerilir.',
+      },
+      {
+        q: 'Kızdırma lambası sönmeden marşa basılır mı?',
+        a: 'Soğuk havada önerilmez. Kızdırma lambasının sönmesini beklemek, bujilerin yanma odasını ısıtmasına zaman tanır ve çalıştırmayı kolaylaştırır.',
+      },
+    ],
+  },
+  {
+    slug: 'arac-bakiminda-sik-yapilan-hatalar',
+    title: 'Araç Bakımında Sık Yapılan 10 Hata',
+    metaTitle: 'Araç Bakımında Sık Yapılan Hatalar | Oto Center Market',
+    summary:
+      'Yalnızca yağ değiştirip filtreyi bırakmak, yanlış viskozitede yağ kullanmak, hava filtresini üfleyip tekrar takmak, süre sınırını unutmak ve daha fazlası. Araç bakımında motorun ömrünü kısaltan yaygın hatalar.',
+    tag: 'Bakım',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-11-03',
+    ilgiliYazilar: ['periyodik-bakimda-hangi-filtreler-degisir', 'motor-yagi-kac-km-de-degisir'],
+    intro: [
+      'Araç bakımında en sık yapılan hatalar, yağı değiştirip yağ filtresini bırakmak, bakım kitapçığına uymayan yağ kullanmak, hava filtresini üfleyerek yeniden takmak, yalnızca kilometreye bakıp süre sınırını unutmak ve gösterge uyarılarını ertelemektir. Bu hatalar çoğu zaman hemen sorun çıkarmaz; ama motorun ve turbonun aşınmasını hızlandırarak ileride pahalı onarımlara yol açabilir.',
+      'Aşağıdaki listeyi bir sonraki bakımınızda kontrol listesi olarak kullanabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Yağ ve filtrelerle ilgili hatalar',
+        paragraphs: [],
+        list: [
+          'Yağı değiştirip yağ filtresini bırakmak: eski filtredeki kir yeni yağı kısa sürede kirletir. Ayrıntılar için [yağ filtresi yazımıza](/blog/yag-filtresi-ne-zaman-degisir "Yağ filtresi ne zaman değişir") bakın.',
+          'Bakım kitapçığına uymayan yağ kullanmak: viskozitenin yanında üretici onayı da önemlidir.',
+          'Yağı fazla doldurmak: fazla yağ köpürebilir ve karter havalandırma sistemine taşınabilir.',
+          'Karter tapası contasını yenilememek: kaçağa yol açabilir.',
+          'Hava filtresini basınçlı havayla üfleyip tekrar takmak: filtre kâğıdı zarar görür, ince toz motora geçebilir.',
+          'Polen filtresini hiç değiştirmemek: klima performansı düşer, kabinde koku ve buğulanma artar.',
+        ],
+      },
+      {
+        heading: 'Planlama ve parça seçimiyle ilgili hatalar',
+        paragraphs: [],
+        list: [
+          'Yalnızca kilometreye bakmak: az kullanılan araçta yağ zamanla eskir; süre sınırı da takip edilmelidir. Ayrıntılar için [motor yağı değişim aralığı yazımıza](/blog/motor-yagi-kac-km-de-degisir "Motor yağı kaç km’de değişir") bakın.',
+          'Filtreyi model adına göre seçmek: aynı modelin farklı motorları farklı filtre kullanır; filtreyi motora göre seçin.',
+          'Kaynağı belirsiz, piyasanın çok altında fiyatlı filtre almak: sahte ya da kalitesiz ürün riski yüksektir.',
+          'Gösterge uyarılarını ertelemek: yağ basıncı, motor arıza ya da DPF uyarısı göz ardı edildiğinde küçük sorunlar büyür.',
+        ],
+      },
+      {
+        heading: 'Doğru bakım için pratik öneriler',
+        paragraphs: [],
+        steps: [
+          'Bakım kitapçığındaki aralıkları ve kullanım koşulunuza (ağır ya da normal) uyan değeri esas alın.',
+          'Her bakımda yağ filtresini değiştirin; hava ve polen filtresini kontrol edin.',
+          'Filtreleri aracınızın motoruna göre kodundan doğrulayın.',
+          'Bakım tarihlerini, kilometreyi ve takılan parçaları not edin; ikinci el satışta da değer katar.',
+          'Gösterge uyarılarını ve olağan dışı sesleri ertelemeden kontrol ettirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Yağ değişiminde filtre değiştirmek şart mı?',
+        a: 'Evet. Eski filtrede biriken kir yeni yağı kısa sürede kirletir. Yağ filtresi her yağ değişiminde değiştirilmelidir.',
+      },
+      {
+        q: 'Hava filtresi üflenip tekrar kullanılabilir mi?',
+        a: 'Önerilmez. Basınçlı hava filtre kâğıdına zarar verebilir ve gözle görülmeyen deliklerden ince toz motora geçebilir. Kirlenen hava filtresi yenisiyle değiştirilmelidir.',
+      },
+      {
+        q: 'Bakımda hangi filtreler kontrol edilmeli?',
+        a: 'Her bakımda yağ filtresi değişir; hava ve polen filtresi kontrol edilip gerektiğinde değiştirilir. Dizel araçlarda yakıt filtresi bakım aralığında değişir.',
+      },
+    ],
+  },
+  {
+    slug: 'peugeot-301-citroen-c-elysee-filtre-rehberi',
+    title: 'Peugeot 301 ve Citroën C-Elysée Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Peugeot 301 ve C-Elysée Filtre Kodları | Oto Center Market',
+    summary:
+      'Peugeot 301 ve Citroën C-Elysée için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.2 VTi, 1.6 VTi, 1.6 HDi ve BlueHDi motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 6,
+    relatedHref: '/otomobil/peugeot',
+    relatedLabel: 'Peugeot modellerine göz atın',
+    guncelleme: '2026-11-03',
+    ilgiliYazilar: ['dacia-duster-filtre-rehberi', 'fiat-egea-filtre-rehberi'],
+    intro: [
+      'Peugeot 301 ve Citroën C-Elysée aynı altyapıyı ve aynı motorları paylaşan kardeş modellerdir; bu yüzden filtre kodlarının büyük kısmı ikisinde ortaktır. Filtre seçimi motora göre değişir: 1.2 VTi benzinli, 1.6 HDi ve 1.6 BlueHDi dizel motorlar farklı yağ, hava ve yakıt filtresi kullanır. Polen filtresi ise tüm motorlarda aynıdır. Aşağıdaki tablolar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Peugeot modelleri](/otomobil/peugeot "Peugeot yedek parça") ya da [Citroën modelleri](/otomobil/citroen "Citroën yedek parça") arasından aracınızı ve motorunuzu seçin.',
+    ],
+    body: [
+      {
+        heading: 'Motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Motor hacmi ve gücü ruhsatta yazar. Motor adındaki VTi benzinli, HDi dizel, BlueHDi ise yeni nesil (AdBlue sistemli olabilen) dizel motoru gösterir. Katalogda 1.6 BlueHDi motor Peugeot 301’de “1.6 BlueHDi 100”, C-Elysée’de “1.6 HDi 100” adıyla yer alabilir; ikisi de 99 HP’lik aynı motor grubudur.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Peugeot 301 filtre kodları',
+        paragraphs: [
+          'Peugeot 301 (yaklaşık 2012 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Peugeot 301 sayfasında](/otomobil/peugeot/301 "Peugeot 301 yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Peugeot 301 — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7058', '—', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Yağ', 'HU 7033 z', '—', '1.6 BlueHDi 100 99 HP'],
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.6 HDi 92 HP'],
+            ['Hava', 'C 24 026', 'AP 196/6', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Hava', 'C 24 017', '—', '1.6 BlueHDi 100 99 HP'],
+            ['Hava', 'C 3585', 'AP 196', '1.6 HDi 92 HP'],
+            ['Polen / kabin', '—', 'K 1339-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6031', '—', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Yakıt', '—', 'PE 816/9', '1.6 BlueHDi 100 99 HP'],
+            ['Yakıt', 'WK 9034 z', 'PP 974/6', '1.6 HDi 92 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'C-Elysée filtre kodları',
+        paragraphs: [
+          'C-Elysée (yaklaşık 2012 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [C-Elysée sayfasında](/otomobil/citroen/c-elysee "Citroën C-Elysée yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Citroën C-Elysée — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 7058', '—', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Yağ', 'HU 7033 z', '—', '1.6 HDi 100 99 HP'],
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.6 HDi 92 HP'],
+            ['Yağ', 'HU 711/51 x', 'OE 673', '1.6 VTi 115 HP'],
+            ['Hava', 'C 24 026', 'AP 196/6', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Hava', 'C 24 017', '—', '1.6 HDi 100 99 HP'],
+            ['Hava', 'C 3585', 'AP 196', '1.6 HDi 92 HP'],
+            ['Hava', 'C 3485/2', 'AP 130/8', '1.6 VTi 115 HP'],
+            ['Polen / kabin', '—', 'K 1339-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 6031', '—', '1.2 VTi 72 HP, 1.2 VTi 82 HP'],
+            ['Yakıt', '—', 'PE 816/9', '1.6 HDi 100 99 HP'],
+            ['Yakıt', 'WK 9034 z', 'PP 974/6', '1.6 HDi 92 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Peugeot 301 1.6 HDi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Peugeot 301 ve C-Elysée 1.6 HDi 92 HP motorlarda MANN-FILTER HU 716/2 x ve FILTRON OE 667/1 kartuş yağ filtresi kullanılır. 99 HP’lik BlueHDi motorda ise MANN-FILTER HU 7033 z kayıtlıdır.',
+      },
+      {
+        q: 'Peugeot 301 1.2 VTi yağ filtresi kodu nedir?',
+        a: 'Peugeot 301 ve C-Elysée 1.2 VTi (72 ve 82 HP) motorlarda katalogda MANN-FILTER W 7058 yağ filtresi kayıtlıdır.',
+      },
+      {
+        q: 'Peugeot 301 ve C-Elysée polen filtresi aynı mı?',
+        a: 'Evet. Katalogda iki modelin de tüm motorları için FILTRON K 1339-2x polen filtresi kayıtlıdır.',
+      },
+    ],
+  },
+  {
+    slug: 'hyundai-accent-blue-era-filtre-rehberi',
+    title: 'Hyundai Accent Blue ve Accent Era Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Hyundai Accent Blue ve Era Filtre Kodları | Oto Center Market',
+    summary:
+      'Hyundai Accent Blue (Accent IV) ve Accent Era (Accent III) için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.4 ve 1.6 benzinli, 1.5 ve 1.6 CRDi dizel.',
+    tag: 'Model rehberi',
+    readMinutes: 5,
+    relatedHref: '/otomobil/hyundai',
+    relatedLabel: 'Hyundai modellerine göz atın',
+    guncelleme: '2026-11-03',
+    ilgiliYazilar: ['hyundai-i20-filtre-rehberi', 'toyota-corolla-filtre-rehberi'],
+    intro: [
+      'Hyundai Accent Blue ve Accent Era’da benzinli motorlar aynı yağ filtresini kullanırken dizel motorlar farklı kartuş yağ filtresi ve yakıt filtresi kullanır. Hava filtresi ise nesle göre değişir. Aşağıdaki tablolar Accent IV (Accent Blue) ve Accent III (Accent Era) için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Hyundai modelleri](/otomobil/hyundai "Hyundai yedek parça") arasından aracınızı ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Hangi nesil hangisi?',
+        paragraphs: [
+          'Türkiye’de Accent Era olarak satılan model katalogda Accent III, Accent Blue olarak satılan model ise Accent IV (RB) adıyla yer alır. Motor hacmi ve gücü ruhsatta yazar; CRDi dizel motoru gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Accent Blue (Accent IV) filtre kodları',
+        paragraphs: [
+          'Accent Blue (Accent IV) (yaklaşık 2011–2018) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Accent Blue (Accent IV) sayfasında](/otomobil/hyundai/accent-iv-rb "Hyundai Accent Blue (Accent IV) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Hyundai Accent Blue (Accent IV) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 811/80', 'OP 617', '1.4 101 HP, 1.6 125 HP'],
+            ['Yağ', 'HU 7001 x', 'OE 674/5', '1.6 CRDi 128 HP'],
+            ['Hava', 'C 25 016', 'AP 122/8', '1.4 101 HP, 1.6 125 HP, 1.6 CRDi 128 HP'],
+            ['Polen / kabin', 'CU 2336, CUK 2336', 'K 1232', '1.4 101 HP, 1.6 125 HP, 1.6 CRDi 128 HP'],
+            ['Yakıt', 'WK 8019', 'PP 979/2', '1.6 CRDi 128 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Accent Era (Accent III) filtre kodları',
+        paragraphs: [
+          'Accent Era (Accent III) (yaklaşık 2005–2011) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Accent Era (Accent III) sayfasında](/otomobil/hyundai/accent-iii "Hyundai Accent Era (Accent III) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Hyundai Accent Era (Accent III) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 811/80', 'OP 617', '1.4 97 HP, 1.6 112 HP'],
+            ['Yağ', 'HU 712/10 x', 'OE 674/2', '1.5 CRDi 110 HP'],
+            ['Hava', 'C 2775', 'AP 108/6', '1.4 97 HP, 1.6 112 HP'],
+            ['Hava', 'C 2628', 'AP 122/6', '1.5 CRDi 110 HP'],
+            ['Yakıt', 'WK 824/2, WK 824/3', 'PP 979/3, PP 979/4', '1.5 CRDi 110 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Accent Blue 1.4 yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Accent Blue 1.4 ve 1.6 benzinli motorlarda MANN-FILTER W 811/80 ve FILTRON OP 617 yağ filtresi kullanılır. Aynı filtre Accent Era’nın benzinli motorlarında da kayıtlıdır.',
+      },
+      {
+        q: 'Accent Blue 1.6 CRDi yağ filtresi kodu nedir?',
+        a: 'Accent Blue 1.6 CRDi motorda katalogda MANN-FILTER HU 7001 x ve FILTRON OE 674/5 kartuş yağ filtresi kayıtlıdır.',
+      },
+      {
+        q: 'Accent Blue polen filtresi kodu nedir?',
+        a: 'Katalogda Accent Blue için MANN-FILTER CU 2336 (aktif karbonlu CUK 2336) ve FILTRON K 1232 polen filtresi kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
