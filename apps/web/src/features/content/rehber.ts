@@ -5318,6 +5318,339 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'motor-yagi-rengi-ne-anlatir',
+    title: 'Motor Yağı Rengi Ne Anlatır? Siyah, Süt Rengi ve Köpüklü Yağ',
+    metaTitle: 'Motor Yağı Rengi Ne Anlatır? | Oto Center Market',
+    summary:
+      'Motor yağının rengi ve kıvamı motorun durumu hakkında ipucu verir: yağın koyulaşması çoğu zaman normaldir, ancak süt kahve rengi, köpüklü, metal parçacıklı ya da yakıt kokulu yağ bir soruna işaret edebilir.',
+    tag: 'Rehber',
+    readMinutes: 4,
+    relatedHref: '/filtreler/yag-filtreleri',
+    relatedLabel: 'Yağ filtrelerine göz atın',
+    guncelleme: '2026-11-04',
+    ilgiliYazilar: ['motor-yagi-kac-km-de-degisir', 'motor-yag-yakiyor-mu'],
+    intro: [
+      'Yeni motor yağı genellikle açık kehribar rengindedir ve kullanıldıkça koyulaşır. Yağın koyulaşması, motor içindeki kiri ve yanma kalıntılarını taşıdığını gösterir ve çoğu zaman normaldir; özellikle dizel motorlarda yağ kısa sürede siyahlaşır. Buna karşılık süt kahve rengi ya da köpüklü yağ, içinde metal parçacıkları görülen yağ veya yakıt kokan inceltilmiş yağ bir soruna işaret edebilir ve kontrol gerektirir.',
+      'Yağın rengi değişim zamanını tek başına göstermez; değişim için bakım kitapçığındaki kilometre ve süre esas alınır. Yağ değişiminde motorunuza uygun [yağ filtresini](/filtreler/yag-filtreleri "Yağ filtrelerini görüntüle") de yenileyin.',
+    ],
+    body: [
+      {
+        heading: 'Renge ve görünüşe göre olası anlamlar',
+        paragraphs: [],
+        table: {
+          caption: 'Motor yağının görünüşü ve olası anlamları (genel bilgi)',
+          head: ['Görünüş', 'Olası anlamı'],
+          rows: [
+            ['Açık kehribar, berrak', 'Yeni ya da yeni değişmiş yağ'],
+            ['Koyu kahve ya da siyah', 'Kullanılmış yağ; dizel motorlarda kısa sürede görülmesi normaldir'],
+            ['Süt kahve rengi, kremsi ya da köpüklü', 'Yağa su veya soğutma sıvısı karışmış olabilir; kısa mesafe kullanımda yoğuşma da benzer görüntü yapar'],
+            ['Parlak metal parçacıkları', 'Motor içinde aşınma olabilir'],
+            ['İnce, akışkan ve yakıt kokulu', 'Yağa yakıt karışmış olabilir'],
+            ['Çok kalın, çamurumsu', 'Değişim aralığı çok aşılmış ya da kısa mesafe kullanımda çamurlaşma'],
+          ],
+        },
+      },
+      {
+        heading: 'Yağ nasıl kontrol edilir?',
+        paragraphs: [],
+        steps: [
+          'Aracı düz zemine park edin, motoru kapatıp birkaç dakika bekleyin.',
+          'Yağ çubuğunu çekip silin, yeniden takıp tekrar çekin.',
+          'Seviyenin min ile max işaretleri arasında olduğunu kontrol edin.',
+          'Çubuktaki yağı beyaz bir kâğıt havluya damlatıp rengine, kıvamına ve içinde parçacık olup olmadığına bakın.',
+          'Yağın kokusuna dikkat edin: belirgin yakıt ya da yanık kokusu normal değildir.',
+        ],
+      },
+      {
+        heading: 'Süt kahve rengi yağ: ne zaman endişelenmeli?',
+        paragraphs: [
+          'Yağ doldurma kapağının altında görülen az miktarda açık renkli, kremsi birikinti, özellikle kışın ve kısa mesafe kullanımda motor içinde yoğuşan nemden kaynaklanabilir. Ancak yağ çubuğundaki yağın tamamı süt kahve rengine dönmüşse, soğutma sıvısı eksiliyorsa ve egzozdan yoğun beyaz duman çıkıyorsa soğutma sıvısı yağa karışıyor olabilir. Bu durumda aracı kullanmadan servise kontrol ettirin; belirtiler için [egzoz dumanı yazımıza](/blog/egzozdan-siyah-beyaz-mavi-duman "Egzoz dumanı rengi") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Yağa yakıt karışması',
+        paragraphs: [
+          'Sık kısa mesafe kullanım, uzun rölanti ve dizel araçlarda yarıda kalan partikül filtresi rejenerasyonları, yağa az miktarda yakıt karışmasına yol açabilir. Yakıt yağı inceltir ve yağlama özelliğini zayıflatır. Yağ seviyesi kendiliğinden yükseliyorsa ya da yağ belirgin şekilde yakıt kokuyorsa yağ ve filtre değişimini öne alın ve sebebini kontrol ettirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Motor yağının siyahlaşması normal mi?',
+        a: 'Çoğu zaman evet. Yağ, motor içindeki kiri ve yanma kalıntılarını taşıdığı için koyulaşır; dizel motorlarda kısa sürede siyahlaşması normaldir. Değişim zamanı renge göre değil, bakım kitapçığındaki aralığa göre belirlenir.',
+      },
+      {
+        q: 'Yağ kapağının altında beyaz köpük ne demek?',
+        a: 'Kısa mesafe kullanımda ve kışın motor içinde yoğuşan nemden kaynaklanabilir. Soğutma sıvısı eksiliyor ve egzozdan yoğun beyaz duman çıkıyorsa silindir kapak contası gibi ciddi bir sorun olabilir; kontrol ettirin.',
+      },
+      {
+        q: 'Yağ rengine bakarak değişim zamanı anlaşılır mı?',
+        a: 'Hayır. Yağın katkıları renk değişmeden de zayıflayabilir. Değişim için bakım kitapçığındaki kilometre ve süre sınırını esas alın.',
+      },
+    ],
+  },
+  {
+    slug: 'arabada-benzin-yanik-tatli-koku',
+    title: 'Arabada Benzin, Yanık ya da Tatlı Koku: Sebepleri ve Ne Kadar Tehlikeli?',
+    metaTitle: 'Arabada Benzin, Yanık, Tatlı Koku Sebepleri | Oto Center Market',
+    summary:
+      'Araçta hissedilen kokular arızaların erken işaretidir: benzin ya da mazot kokusu yakıt kaçağına, tatlı koku antifriz kaçağına, yanık kokusu yağ ya da elektrik sorununa, küf kokusu ise klima ve polen filtresine işaret edebilir.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/polen-kabin-filtreleri',
+    relatedLabel: 'Polen / kabin filtrelerine göz atın',
+    guncelleme: '2026-11-04',
+    ilgiliYazilar: ['polen-filtresi-kac-km-de-degisir', 'antifriz-ne-zaman-degisir'],
+    intro: [
+      'Araçta hissedilen kokular çoğu zaman bir arızanın ilk işaretidir. Benzin ya da mazot kokusu yakıt kaçağına, tatlımsı koku antifriz kaçağına, yanık yağ kokusu motor üzerine damlayan yağa, yanık plastik kokusu elektrik sorununa, çürük yumurta kokusu katalitik konvertör ya da aküye, küf kokusu ise klima sistemi ve polen filtresine işaret edebilir. Yakıt kokusu, yanık plastik kokusu ve kabinde egzoz kokusu ciddiye alınmalı ve ertelenmeden kontrol ettirilmelidir.',
+      'Kabindeki küf ve nem kokusunun en sık sebebi eski polen filtresidir. Aracınıza uyan filtreyi [polen / kabin filtreleri kategorisinde](/filtreler/polen-kabin-filtreleri "Polen filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Kokuya göre olası sebepler',
+        paragraphs: [],
+        table: {
+          caption: 'Araçtaki kokular ve olası sebepleri (genel bilgi)',
+          head: ['Koku', 'Olası sebep', 'Ne yapmalı?'],
+          rows: [
+            ['Benzin ya da mazot', 'Yakıt hortumu, enjektör, filtre bağlantısı ya da depo kapağında kaçak', 'Aracı kullanmayın, açık alevden uzak tutun, kontrol ettirin'],
+            ['Tatlımsı, şurup gibi', 'Soğutma sıvısı (antifriz) kaçağı; kabinde hissediliyorsa kalorifer peteği', 'Soğutma sıvısı seviyesini kontrol edin, servise gösterin'],
+            ['Yanık yağ', 'Egzoz manifoldu ya da sıcak motor parçasına damlayan yağ', 'Yağ kaçağını buldurun'],
+            ['Yanık plastik ya da elektrik', 'Kablo, sigorta ya da elektrikli parçada aşırı ısınma', 'Durun, motoru kapatın, kontrol ettirin'],
+            ['Çürük yumurta', 'Katalitik konvertör sorunu ya da akünün aşırı şarjı', 'Kontrol ettirin'],
+            ['Küf, nem', 'Eski polen filtresi, klima evaporatöründe küf, tıkalı tahliye hortumu', 'Polen filtresini değiştirin, klima temizliği yaptırın'],
+            ['Yanık balata ya da debriyaj', 'Takılan fren, el freni açık sürüş ya da kaçıran debriyaj', 'Frenleri ve debriyajı kontrol ettirin'],
+          ],
+        },
+      },
+      {
+        heading: 'Benzin ya da mazot kokusu',
+        paragraphs: [
+          'Yakıt aldıktan hemen sonra kısa süreli koku normal olabilir. Ancak koku sürüyorsa, araç altında yakıt damlıyorsa ya da kabinde belirgin yakıt kokusu varsa yakıt sisteminde kaçak olabilir. Yakıt filtresi bağlantıları, filtre değişiminden sonra yanlış takılmış contalar, yakıt hortumları ve enjektörler sık kaçak noktalarıdır. Yakıt kaçağı yangın riski taşır; aracı kullanmayın ve kontrol ettirin. Filtre değişimi sonrası kaçak için [dizel yakıt filtresi yazımıza](/blog/dizel-yakit-filtresi-degisimi-hava-alma "Dizel yakıt filtresi değişimi") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Kabinde egzoz kokusu',
+        paragraphs: [
+          'Kabinde egzoz kokusu hissetmek tehlikelidir; egzoz gazındaki karbonmonoksit kokusuzdur ve fark edilmeden zehirlenmeye yol açabilir. Egzoz sisteminde delik, bagaj ya da kapı contalarında kaçak bu duruma sebep olabilir. Pencereleri açın, aracı en kısa sürede kontrol ettirin ve özellikle araç dururken motoru uzun süre kapalı alanda çalıştırmayın.',
+        ],
+      },
+      {
+        heading: 'Küf kokusu ve polen filtresi',
+        paragraphs: [
+          'Klimayı açınca gelen küf ve nem kokusunun en sık sebebi, nem ve kir tutmuş eski polen filtresi ile klima evaporatöründe oluşan küftür. Önce polen filtresini değiştirin ve ön cam altındaki hava girişini temizleyin; koku sürerse klima sistemini temizletin. Ayrıntılar için [polen filtresi ve klima kokusu yazımıza](/blog/polen-filtresi-kac-km-de-degisir "Polen filtresi kaç km’de değişir") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Arabada benzin kokusu tehlikeli mi?',
+        a: 'Yakıt aldıktan sonraki kısa süreli koku dışında sürekli benzin kokusu yakıt kaçağına işaret edebilir ve yangın riski taşır. Aracı kullanmadan kontrol ettirin.',
+      },
+      {
+        q: 'Arabada tatlı koku neden olur?',
+        a: 'Tatlımsı koku genellikle soğutma sıvısı (antifriz) kaçağından kaynaklanır. Koku kabinde hissediliyor ve camlar buğulanıyorsa kalorifer peteğinde kaçak olabilir.',
+      },
+      {
+        q: 'Klimadan gelen kötü koku nasıl geçer?',
+        a: 'Önce polen filtresini değiştirin ve hava girişini temizleyin. Koku devam ederse klima evaporatörünün ve kanallarının temizlenmesi gerekir.',
+      },
+    ],
+  },
+  {
+    slug: 'nissan-qashqai-filtre-rehberi',
+    title: 'Nissan Qashqai Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Nissan Qashqai Filtre Kodları | Oto Center Market',
+    summary:
+      'Nissan Qashqai J10, J11 ve J12 için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.5 ve 1.6 dCi, 1.2 ve 1.3 DIG-T, mild hibrit motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 6,
+    relatedHref: '/otomobil/nissan',
+    relatedLabel: 'Nissan modellerine göz atın',
+    guncelleme: '2026-11-04',
+    ilgiliYazilar: ['dacia-duster-filtre-rehberi', 'renault-clio-megane-filtre-rehberi'],
+    intro: [
+      'Nissan Qashqai, Renault ile ortak geliştirilen motorlar kullandığı için filtre kodlarının bir kısmı Renault ve Dacia modelleriyle aynıdır; örneğin 1.5 dCi dizel ve 1.3 DIG-T benzinli motorların yağ filtreleri ortaktır. Filtre seçimi nesle ve motora göre değişir. Polen filtresi ise her nesilde tüm motorlarda ortaktır. Aşağıdaki tablolar katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Nissan modelleri](/otomobil/nissan "Nissan yedek parça") arasından Qashqai neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Qashqai I (J10) yaklaşık 2007–2013, Qashqai II (J11) yaklaşık 2013–2021, Qashqai III (J12) yaklaşık 2021 sonrası üretilmiştir. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki dCi dizel, DIG-T turbo benzinli motoru, Mild-Hybrid hafif hibrit versiyonu gösterir.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Qashqai III (J12) filtre kodları',
+        paragraphs: [
+          'Qashqai III (J12) (yaklaşık 2021 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Qashqai III (J12) sayfasında](/otomobil/nissan/qashqai-iii-j12 "Nissan Qashqai III (J12) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Nissan Qashqai III (J12) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 10 002 z', 'OE 666/3', '1.3 i DIG-T Mild-Hybrid 140 HP, 1.3 i DIG-T Mild-Hybrid 158 HP'],
+            ['Yağ', 'W 67/1', 'OP 595', '1.5 VC-T 190 HP'],
+            ['Hava', '—', 'AP 124/7', '1.3 i DIG-T Mild-Hybrid 140 HP'],
+            ['Polen / kabin', '—', 'K 1414', '1.3 i DIG-T Mild-Hybrid 140 HP, 1.3 i DIG-T Mild-Hybrid 158 HP, 1.5 VC-T 190 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Qashqai II (J11) filtre kodları',
+        paragraphs: [
+          'Qashqai II (J11) (yaklaşık 2013–2021) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Qashqai II (J11) sayfasında](/otomobil/nissan/qashqai-ii "Nissan Qashqai II (J11) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Nissan Qashqai II (J11) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 10 002 z', '—', '1.2 115 HP, 1.3 DIG-T 140 HP, 1.3 DIG-T 160 HP'],
+            ['Yağ', 'W 7032', 'OP 643/5', '1.5 dCi 110 HP, 1.5 dCi 115 HP'],
+            ['Yağ', 'W 67/1', 'OP 595', '1.6 DIG-T 163 HP, 2.0 144 HP'],
+            ['Yağ', 'HU 6011 z', 'OE 666/2', '1.6 dCi 130 HP'],
+            ['Hava', 'C 25 040', 'AP 124/2', '1.2 115 HP, 1.5 dCi 110 HP, 1.5 dCi 115 HP, 1.6 DIG-T 163 HP, 1.6 dCi 130 HP, 2.0 144 HP'],
+            ['Polen / kabin', 'CU 25 003, CUK 25 003, FP 25 003', 'K 1355, K 1367A', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 9054', '—', '1.5 dCi 110 HP, 1.6 dCi 130 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Qashqai I (J10) filtre kodları',
+        paragraphs: [
+          'Qashqai I (J10) (yaklaşık 2007–2013) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Qashqai I (J10) sayfasında](/otomobil/nissan/qashqai "Nissan Qashqai I (J10) yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Nissan Qashqai I (J10) — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'W 75/3, W 79', 'OP 643/3, OP 643/4', '1.5 dCi 106 HP, 1.5 dCi DPF 103 HP'],
+            ['Yağ', 'W 67/1', 'OP 595', '1.6 114 HP, 2.0 141 HP'],
+            ['Yağ', 'HU 618 x', '—', '1.6 dCi 131 HP, 2.0 dCi 150 HP'],
+            ['Hava', '—', 'AP 185/5', '1.6 114 HP, 1.6 dCi 131 HP, 2.0 141 HP, 2.0 dCi 150 HP'],
+            ['Hava', 'C 2420', 'AP 124/1', '1.5 dCi 106 HP, 1.5 dCi DPF 103 HP'],
+            ['Hava', 'C 2433/2', '—', '2.0 141 HP'],
+            ['Polen / kabin', 'CU 1936, CUK 1936, FP 1936', 'K 1255', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 9025, WK 920/7', 'PP 857/3, PP 857/5', '1.5 dCi 106 HP, 1.5 dCi DPF 103 HP, 2.0 dCi 150 HP'],
+            ['Yakıt', 'WK 9026', '—', '1.5 dCi 106 HP, 1.5 dCi DPF 103 HP'],
+            ['Yakıt', '—', 'PP 857/4', '1.5 dCi DPF 103 HP'],
+            ['Yakıt', 'WK 9039', '—', '1.6 dCi 131 HP'],
+            ['Yakıt', 'WK 9027', 'PP 857/2', '2.0 dCi 150 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Nissan Qashqai 1.5 dCi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Qashqai II (J11) 1.5 dCi motorlarda MANN-FILTER W 7032 ve FILTRON OP 643/5 kullanılır. Qashqai I (J10) 1.5 dCi’de ise MANN-FILTER W 75/3 ya da W 79 ve FILTRON OP 643/3 ya da OP 643/4 kayıtlıdır; eski filtrenin kodunu kontrol edin.',
+      },
+      {
+        q: 'Qashqai 1.3 DIG-T yağ filtresi kodu nedir?',
+        a: 'Qashqai II ve III’ün 1.3 DIG-T (mild hibrit dahil) motorlarında katalogda MANN-FILTER HU 10 002 z kayıtlıdır; Qashqai III için FILTRON karşılığı OE 666/3’tür.',
+      },
+      {
+        q: 'Qashqai J11 polen filtresi kodu nedir?',
+        a: 'Katalogda Qashqai II (J11)’nin tüm motorları için MANN-FILTER CU 25 003 (aktif karbonlu CUK 25 003, FreciousPlus FP 25 003) ile FILTRON K 1355 ve aktif karbonlu K 1367A kayıtlıdır.',
+      },
+    ],
+  },
+  {
+    slug: 'peugeot-3008-filtre-rehberi',
+    title: 'Peugeot 3008 Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Peugeot 3008 Filtre Kodları | Oto Center Market',
+    summary:
+      'Peugeot 3008 I ve 3008 II için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. PureTech, THP, HDi, BlueHDi ve hibrit motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 7,
+    relatedHref: '/otomobil/peugeot',
+    relatedLabel: 'Peugeot modellerine göz atın',
+    guncelleme: '2026-11-04',
+    ilgiliYazilar: ['peugeot-301-citroen-c-elysee-filtre-rehberi', 'dpf-partikul-filtresi-nedir'],
+    intro: [
+      'Peugeot 3008’de filtre seçimi motora göre belirgin şekilde değişir: 1.2 PureTech, 1.6 THP benzinli, 1.5 ve 1.6 BlueHDi ile 2.0 HDi dizel ve hibrit versiyonlar farklı yağ, hava ve yakıt filtresi kullanır. Polen filtresi ise iki nesilde de tüm motorlarda aynıdır. Aşağıdaki tablolar 3008 I ve 3008 II için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Peugeot modelleri](/otomobil/peugeot "Peugeot yedek parça") arasından 3008 neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          '3008 I yaklaşık 2009–2016, 3008 II yaklaşık 2016 sonrası üretilmiştir. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki PureTech ve THP turbo benzinli, HDi ve BlueHDi dizel, FAP partikül filtreli motoru, Hybrid ise şarj edilebilir hibrit versiyonu gösterir. Partikül filtreli dizellerde doğru motor yağı seçimi için [DPF yazımıza](/blog/dpf-partikul-filtresi-nedir "DPF nedir") bakabilirsiniz.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: '3008 II filtre kodları',
+        paragraphs: [
+          '3008 II (yaklaşık 2016 ve sonrası) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [3008 II sayfasında](/otomobil/peugeot/3008-ii "Peugeot 3008 II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Peugeot 3008 II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 711/51 x', 'OE 673', '1.6 Hybrid 299 HP, 1.6 Hybrid 180 179 HP, 1.6 Hybrid4 224 HP, 1.6 THP 150 HP, 1.6 THP 165 HP'],
+            ['Yağ', 'W 7058', '—', '1.2 PureTech 131 HP, 2.0 BlueHDi FAP 136 HP, 2.0 BlueHDi FAP 150 HP, 2.0 BlueHDi FAP 180 HP'],
+            ['Yağ', 'HU 7033 z', '—', '1.6 BlueHDi FAP 100 HP, 1.6 BlueHDi FAP 115 116 HP, 1.6 BlueHDi FAP 120 HP'],
+            ['Yağ', 'HU 7032 z', '—', '1.5 BlueHDi 130 131 HP'],
+            ['Hava', 'C 36 003', 'AP 196/4', '1.6 Hybrid 299 HP, 1.6 Hybrid 180 179 HP, 1.6 Hybrid4 224 HP, 1.6 THP 150 HP, 1.6 THP 165 HP'],
+            ['Hava', 'C 24 017', '—', '1.6 BlueHDi FAP 100 HP, 1.6 BlueHDi FAP 115 116 HP, 1.6 BlueHDi FAP 120 HP'],
+            ['Hava', 'C 29 110', '—', '2.0 BlueHDi FAP 136 HP, 2.0 BlueHDi FAP 150 HP, 2.0 BlueHDi FAP 180 HP'],
+            ['Hava', 'C 36 007 KIT', '—', '1.2 PureTech 131 HP'],
+            ['Hava', 'C 24 036', '—', '1.5 BlueHDi 130 131 HP'],
+            ['Polen / kabin', 'CU 29 003-2, CUK 29 003-2, FP 29 003-2', 'K 1227-2x, K 1227A-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', '—', 'PE 816/9', '1.6 BlueHDi FAP 100 HP, 1.6 BlueHDi FAP 115 116 HP, 1.6 BlueHDi FAP 120 HP, 2.0 BlueHDi FAP 136 HP, 2.0 BlueHDi FAP 150 HP, 2.0 BlueHDi FAP 180 HP'],
+          ],
+        },
+      },
+      {
+        heading: '3008 I filtre kodları',
+        paragraphs: [
+          '3008 I (yaklaşık 2009–2016) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [3008 I sayfasında](/otomobil/peugeot/3008 "Peugeot 3008 I yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Peugeot 3008 I — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 711/51 x', 'OE 673', '1.6 THP 150 HP, 1.6 THP 155 HP, 1.6 THP 165 HP, 1.6 VTI 120 HP, 2.0 HDi 165 HP, 2.0 HDi, BlueHDi 150 HP'],
+            ['Yağ', 'W 7058', '—', '1.2 e-THP 130 131 HP, 2.0 HDi 165 HP, 2.0 HDi, BlueHDi 150 HP'],
+            ['Yağ', 'HU 716/2 x', 'OE 667/1', '1.6 HDi 109 HP, 1.6 HDi 115 FAP, BlueHDi 115 HP, 1.6 HDi FAP 112 HP'],
+            ['Yağ', 'HU 7033 z', '—', '1.6 BlueHDi 120 HP, 1.6 HDi 115 FAP, BlueHDi 115 HP'],
+            ['Hava', 'C 36 003', 'AP 196/4', '1.6 THP 150 HP, 1.6 THP 155 HP, 1.6 THP 165 HP'],
+            ['Hava', 'C 24 017', '—', '1.6 BlueHDi 120 HP, 1.6 HDi 115 FAP, BlueHDi 115 HP'],
+            ['Hava', 'C 3585', 'AP 196', '1.6 HDi 115 FAP, BlueHDi 115 HP, 1.6 HDi FAP 112 HP'],
+            ['Hava', 'C 36 002', '—', '1.6 THP 150 HP, 1.6 THP 155 HP'],
+            ['Hava', 'C 28 160/1', 'AP 058/7', '2.0 HDi 165 HP, 2.0 HDi, BlueHDi 150 HP'],
+            ['Hava', 'C 36 007 KIT', '—', '1.2 e-THP 130 131 HP'],
+            ['Hava', 'C 3282', 'AP 130/9', '1.6 HDi 109 HP'],
+            ['Hava', 'C 5082/2', '—', '1.6 VTI 120 HP'],
+            ['Polen / kabin', 'CU 29 003-2, CUK 29 003-2, FP 29 003-2', 'K 1227-2x, K 1227A-2x', 'Bu nesildeki tüm motorlar'],
+            ['Yakıt', 'WK 612/2', 'PP 859', '1.6 THP 150 HP, 1.6 THP 155 HP, 1.6 THP 165 HP, 1.6 VTI 120 HP'],
+            ['Yakıt', '—', 'PE 816/9', '1.6 BlueHDi 120 HP, 1.6 HDi 115 FAP, BlueHDi 115 HP, 2.0 HDi, BlueHDi 150 HP'],
+            ['Yakıt', 'WK 9034 z', 'PP 974/6', '1.6 HDi 115 FAP, BlueHDi 115 HP, 1.6 HDi FAP 112 HP'],
+            ['Yakıt', 'PU 927 x', 'PE 816/8', '2.0 HDi 165 HP, 2.0 HDi, BlueHDi 150 HP'],
+            ['Yakıt', 'WK 6031', '—', '1.2 e-THP 130 131 HP'],
+            ['Yakıt', 'WK 939/2', '—', '1.6 HDi 109 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Peugeot 3008 1.5 BlueHDi yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre 3008 II 1.5 BlueHDi 130 motorda MANN-FILTER HU 7032 z kartuş yağ filtresi kullanılır. 1.6 BlueHDi motorlarda ise MANN-FILTER HU 7033 z kayıtlıdır.',
+      },
+      {
+        q: 'Peugeot 3008 1.2 PureTech yağ filtresi kodu nedir?',
+        a: '3008 II 1.2 PureTech 130 motorda katalogda MANN-FILTER W 7058 yağ filtresi kayıtlıdır.',
+      },
+      {
+        q: '3008 I ve 3008 II polen filtresi aynı mı?',
+        a: 'Evet. Katalogda iki nesil için de MANN-FILTER CU 29 003-2 (aktif karbonlu CUK 29 003-2, FreciousPlus FP 29 003-2) ve FILTRON K 1227-2x (aktif karbonlu K 1227A-2x) kayıtlıdır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
