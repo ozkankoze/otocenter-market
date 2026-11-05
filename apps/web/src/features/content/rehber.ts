@@ -5651,6 +5651,303 @@ export const REHBER_YAZILARI: RehberYazisi[] = [
       },
     ],
   },
+  {
+    slug: 'motor-hararet-yapiyor-ne-yapmali',
+    title: 'Motor Hararet Yapıyor: Sebepleri ve Yolda Ne Yapmalısınız?',
+    metaTitle: 'Motor Hararet Yapıyor, Ne Yapmalı? | Oto Center Market',
+    summary:
+      'Motorun hararet yapmasının en sık sebepleri soğutma sıvısı eksikliği ya da kaçağı, arızalı termostat, çalışmayan fan, tıkalı radyatör ve su pompası arızasıdır. Hararet göstergesi yükselince yolda yapılması ve yapılmaması gerekenler.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler',
+    relatedLabel: 'Tüm filtreleri görün',
+    guncelleme: '2026-11-05',
+    ilgiliYazilar: ['antifriz-ne-zaman-degisir', 'egzozdan-siyah-beyaz-mavi-duman'],
+    intro: [
+      'Motor hararet yaptığında (soğutma suyu sıcaklık göstergesi kırmızıya yaklaştığında ya da uyarı lambası yandığında) güvenli bir yerde durup motoru kapatmak gerekir; aşırı ısınmış motorla sürmeye devam etmek silindir kapağının eğilmesine ve conta yanmasına yol açabilir. Hararetin en sık sebepleri soğutma sıvısı eksikliği ya da kaçağı, açılmayan termostat, çalışmayan radyatör fanı, tıkalı ya da kirli radyatör ve arızalı su pompasıdır.',
+      'Soğutma sistemi bakımının temeli, doğru tipte antifrizin doğru oranda ve seviyede olmasıdır; ayrıntılar için [antifriz yazımıza](/blog/antifriz-ne-zaman-degisir "Antifriz ne zaman değişir") bakabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Hararetin sık görülen sebepleri',
+        paragraphs: [],
+        table: {
+          caption: 'Motorun hararet yapmasının sık sebepleri ve tipik belirtileri',
+          head: ['Sebep', 'Tipik belirti'],
+          rows: [
+            ['Soğutma sıvısı eksikliği ya da kaçak', 'Genleşme kabında seviye düşük, araç altında renkli sıvı izi, tatlı koku'],
+            ['Termostat açılmıyor', 'Motor kısa sürede ısınıyor, radyatörün üst hortumu soğuk kalıyor'],
+            ['Radyatör fanı çalışmıyor', 'Trafikte ve rölantide ısınma, yolda hızlanınca soğuma'],
+            ['Tıkalı ya da kirli radyatör', 'Uzun yolda ve yokuşta yavaş yavaş artan sıcaklık'],
+            ['Su pompası arızası', 'Pompa çevresinde sızıntı, ses, sürekli yüksek sıcaklık'],
+            ['Silindir kapak contası', 'Soğutma sıvısı eksilmesi, egzozdan yoğun beyaz duman, genleşme kabında kabarcık'],
+            ['Sistemde hava kalması', 'Sıvı değişiminden sonra dalgalanan sıcaklık, kaloriferin soğuk üflemesi'],
+          ],
+        },
+      },
+      {
+        heading: 'Hararet göstergesi yükselince ne yapmalı?',
+        paragraphs: [],
+        steps: [
+          'Klimayı kapatın ve kaloriferi en sıcak ayarda, fanı en yüksek kademede açın; bu, motorun ısısının bir kısmını kabine aktarır.',
+          'Güvenli bir yerde durun ve motoru kapatın.',
+          'Kaputu açın ama radyatör ya da genleşme kabının kapağını motor sıcakken kesinlikle açmayın; basınçlı sıcak sıvı yanığa yol açabilir.',
+          'Motorun soğumasını bekleyin, ardından genleşme kabındaki seviyeyi kontrol edin.',
+          'Seviye düşükse uygun antifrizle, yoksa geçici olarak temiz suyla tamamlayın; sıcak motora soğuk su dökmeyin.',
+          'Araç altında ve hortumlarda kaçak arayın. Sıvı hızla eksiliyorsa ya da gösterge kısa sürede yine yükseliyorsa aracı çekiciyle servise götürün.',
+        ],
+      },
+      {
+        heading: 'Hararet yapmış motorda neler kontrol edilmeli?',
+        paragraphs: [
+          'Hararetten sonra soğutma sisteminin basınç testi, termostat ve fan kontrolü yapılmalıdır. Uzun süre aşırı ısınmış motorlarda silindir kapak contası ve silindir kapağının da kontrol edilmesi gerekir. Motor yağının rengi de ipucu verir: yağ süt kahve rengine döndüyse soğutma sıvısı yağa karışıyor olabilir; ayrıntılar için [motor yağı rengi yazımıza](/blog/motor-yagi-rengi-ne-anlatir "Motor yağı rengi") bakabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Hararetin önüne geçmek için',
+        paragraphs: [],
+        list: [
+          'Soğutma sıvısı seviyesini ayda bir, motor soğukken kontrol edin.',
+          'Antifrizi türüne uygun aralıkta değiştirin, kıştan önce koruma derecesini ölçtürün.',
+          'Radyatörün ve klima kondenserinin önünü yaprak, böcek ve kirden temiz tutun.',
+          'Hortumlarda çatlak, şişme ve kelepçelerde gevşeklik olup olmadığına bakım sırasında baktırın.',
+          'Gösterge normalden yüksek seyretmeye başladığında ertelemeden kontrol ettirin.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Motor hararet yaparsa ne olur?',
+        a: 'Aşırı ısınma silindir kapağının eğilmesine, silindir kapak contasının yanmasına ve motorun ağır hasar görmesine yol açabilir. Gösterge yükseldiğinde güvenli bir yerde durup motoru kapatmak gerekir.',
+      },
+      {
+        q: 'Hararet yapan araca su konur mu?',
+        a: 'Motor soğuduktan sonra acil durumda temiz su eklenebilir; ancak sıcak motora soğuk su dökülmemeli ve radyatör kapağı motor sıcakken açılmamalıdır. En kısa sürede doğru antifriz oranına getirilmelidir.',
+      },
+      {
+        q: 'Hararet yaparken kaloriferi açmak işe yarar mı?',
+        a: 'Evet, geçici olarak yardımcı olur. Kalorifer motorun ısısının bir kısmını kabine aktarır. Ancak bu yalnızca güvenli bir yere ulaşana kadar alınan bir önlemdir; sorunun sebebi bulunmalıdır.',
+      },
+    ],
+  },
+  {
+    slug: 'arac-cekmiyor-guc-kaybi-sebepleri',
+    title: 'Araç Çekmiyor, Güç Kaybı Var: Sebepleri ve Kontrol Listesi',
+    metaTitle: 'Araç Çekmiyor, Güç Kaybı Sebepleri | Oto Center Market',
+    summary:
+      'Aracın çekişinin düşmesi tıkalı hava ya da yakıt filtresi, turbo hortumunda kaçak, tıkalı partikül filtresi, EGR, buji ve sensör arızaları ya da kaçıran debriyajdan kaynaklanabilir. Belirtiye göre sebepler ve kontrol sırası.',
+    tag: 'Arıza',
+    readMinutes: 5,
+    relatedHref: '/filtreler/hava-filtreleri',
+    relatedLabel: 'Hava filtrelerine göz atın',
+    guncelleme: '2026-11-05',
+    ilgiliYazilar: ['hava-filtresi-ne-zaman-degisir', 'dpf-partikul-filtresi-nedir'],
+    intro: [
+      'Aracın eskisi kadar çekmemesinin en sık sebepleri, motora yeterli hava ya da yakıt gitmemesi (tıkalı hava veya yakıt filtresi), turbo besleme hattındaki kaçaklar, tıkanmış partikül filtresi ya da EGR valfi, ateşleme sorunları ve sensör arızalarıdır. Gösterge panelinde motor arıza lambası yanıyorsa ve güç belirgin şekilde düştüyse araç kendini korumak için “acil durum moduna” geçmiş olabilir. Önce kolay ve ucuz kontrollerden, yani filtrelerden başlamak mantıklıdır.',
+      'Hava filtresi kontrolü birkaç dakika sürer ve çoğu araçta kendiniz yapabilirsiniz. Aracınıza uygun filtreyi [hava filtreleri kategorisinde](/filtreler/hava-filtreleri "Hava filtrelerini görüntüle") bulabilirsiniz.',
+    ],
+    body: [
+      {
+        heading: 'Belirtiye göre olası sebepler',
+        paragraphs: [],
+        table: {
+          caption: 'Güç kaybı belirtileri ve olası kaynakları',
+          head: ['Belirti', 'Olası kaynak'],
+          rows: [
+            ['Genel güç kaybı, yakıt tüketimi artışı', 'Tıkalı hava filtresi, hava akış sensörü'],
+            ['Yokuşta ve yük altında güç kaybı, tekleme', 'Tıkalı yakıt filtresi, yakıt pompası, enjektörler'],
+            ['Turbo devreye girmiyor, ıslık sesi', 'Turbo hortumunda çatlak ya da gevşek kelepçe, turbo arızası'],
+            ['Arıza lambası ve ani güç düşüşü (dizel)', 'Tıkalı partikül filtresi (DPF), EGR, basınç sensörü'],
+            ['Tekleme ve titreme ile birlikte güç kaybı', 'Buji, ateşleme bobini'],
+            ['Devir yükseliyor ama araç hızlanmıyor', 'Kaçıran debriyaj'],
+            ['Egzozdan zayıf ses, motor boğuluyor', 'Tıkanmış katalitik konvertör'],
+          ],
+        },
+      },
+      {
+        heading: 'Acil durum (limp) modu nedir?',
+        paragraphs: [
+          'Motor kontrol ünitesi ciddi bir arıza algıladığında motoru korumak için gücü ve devri sınırlayabilir; buna acil durum ya da “limp” modu denir. Bu modda araç genellikle yavaş hızlanır, belirli bir devrin üzerine çıkmaz ve motor arıza lambası yanar. Araç kısa mesafe hareket edebilir, ancak arıza kodlarının okunması ve sebebin giderilmesi gerekir.',
+        ],
+      },
+      {
+        heading: 'Kontrol sırası',
+        paragraphs: [],
+        steps: [
+          'Arıza tespit cihazıyla hata kodlarını okutun; çoğu zaman sorunun bölgesini doğrudan gösterir.',
+          'Hava filtresini kontrol edin; kararmış ya da tozla dolmuşsa değiştirin.',
+          'Yakıt filtresinin bakım aralığını kontrol edin; dizel araçlarda su uyarısı varsa suyu boşaltın.',
+          'Turbo hortumlarını ve kelepçelerini çatlak, yağlanma ve gevşeklik için kontrol ettirin.',
+          'Dizel araçlarda DPF uyarısı varsa [DPF yazımızdaki](/blog/dpf-partikul-filtresi-nedir "DPF nedir") adımları izleyin.',
+          'Tekleme varsa buji ve bobinleri, devir yükselip hız artmıyorsa debriyajı kontrol ettirin.',
+        ],
+      },
+      {
+        heading: 'Filtrelerin güce etkisi',
+        paragraphs: [
+          'Motorun gücü, yeterli hava ve yakıtın doğru oranda yanmasına bağlıdır. Tıkalı bir hava filtresi motorun nefes almasını zorlaştırır; tıkalı bir yakıt filtresi ise özellikle yük altında yakıt basıncını düşürür. Her ikisi de ucuz ve kolay kontrol edilebilir parçalar olduğu için güç kaybında ilk bakılacak yerlerdendir. Yakıt tarafındaki belirtiler için [yakıt filtresi yazımıza](/blog/yakit-filtresi-ne-zaman-degisir "Yakıt filtresi ne zaman değişir") bakabilirsiniz.',
+        ],
+      },
+    ],
+    sss: [
+      {
+        q: 'Arabam neden çekmiyor?',
+        a: 'En sık sebepler tıkalı hava ya da yakıt filtresi, turbo hattında kaçak, tıkalı partikül filtresi veya EGR, ateşleme sorunları ve sensör arızalarıdır. Arıza kodlarını okutmak sebebi bulmanın en hızlı yoludur.',
+      },
+      {
+        q: 'Hava filtresi araç çekişini etkiler mi?',
+        a: 'Evet. Tıkalı hava filtresi motora giren havayı azaltır ve özellikle hızlanmada güç kaybına yol açabilir. Filtreyi kontrol etmek güç kaybında ilk adımlardan biridir.',
+      },
+      {
+        q: 'Araç acil durum moduna neden geçer?',
+        a: 'Motor kontrol ünitesi turbo basıncı, partikül filtresi, sensör ya da ateşleme gibi alanlarda ciddi bir arıza algıladığında motoru korumak için gücü sınırlar. Arıza kodları okunarak sebep bulunmalıdır.',
+      },
+    ],
+  },
+  {
+    slug: 'fiat-linea-filtre-rehberi',
+    title: 'Fiat Linea Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Fiat Linea Filtre Kodları | Oto Center Market',
+    summary:
+      'Fiat Linea için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.3 Multijet, 1.6 Multijet, 1.4 ve 1.6 benzinli motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 4,
+    relatedHref: '/otomobil/fiat',
+    relatedLabel: 'Fiat modellerine göz atın',
+    guncelleme: '2026-11-05',
+    ilgiliYazilar: ['fiat-egea-filtre-rehberi', 'fiat-doblo-filtre-rehberi'],
+    intro: [
+      'Fiat Linea’da filtre seçimi motora göre değişir: 1.3 Multijet ve 1.6 Multijet dizel motorlar kartuş tipi yağ filtresi kullanırken 1.4 benzinli motor komple (spin-on) yağ filtresi kullanır. Linea, Doblo ve Egea ile aynı Fiat motor ailesini paylaştığı için kodların bir kısmı bu modellerle ortaktır. Aşağıdaki tablo katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablo hızlı başvuru içindir. Kesin seçim için [Fiat modelleri](/otomobil/fiat "Fiat yedek parça") arasından Linea’yı ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Motor hacmi ve gücü ruhsatta yazar. Motor adındaki JTD ve M-Jet (Multijet) dizel, MPI ve 8V atmosferik benzinli motoru gösterir. 1.3 Multijet motorda üretim dönemine göre birden fazla yağ filtresi kodu bulunduğu için eski filtrenin üzerindeki kodu kontrol etmeniz önerilir.',
+          'Emin olamadığınız durumlarda siparişten önce şasi numaranızla bize sorabilirsiniz.',
+        ],
+      },
+      {
+        heading: 'Linea filtre kodları',
+        paragraphs: [
+          'Linea (yaklaşık 2007–2015) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Linea sayfasında](/otomobil/fiat/linea-110 "Fiat Linea yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Fiat Linea — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 712/7 x, HU 713/1 x', 'OE 670, OE 682', '1.3 JTD 90 HP'],
+            ['Yağ', 'W 610/3', '—', '1.4 8V 77 HP'],
+            ['Yağ', 'HU 712/11 x', 'OE 682/2', '1.6 M-Jet 16V 105 HP'],
+            ['Yağ', 'HU 816/2 x', 'OE 672', '1.6 MPI 16V 110 HP'],
+            ['Hava', 'C 3877/1', 'AP 092/7', '1.3 JTD 90 HP'],
+            ['Hava', 'C 2859', 'AP 022/2', '1.4 8V 77 HP'],
+            ['Hava', 'C 21 106', 'AP 098/3', '1.6 M-Jet 16V 105 HP'],
+            ['Polen / kabin', '—', 'K 1228', '1.4 8V 77 HP, 1.6 M-Jet 16V 105 HP, 1.6 MPI 16V 110 HP'],
+            ['Yakıt', '—', 'PP 966/3', '1.3 JTD 90 HP, 1.6 M-Jet 16V 105 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Fiat Linea 1.3 Multijet yağ filtresi kodu nedir?',
+        a: 'Katalogda Linea 1.3 Multijet 90 HP için üretim dönemine göre MANN-FILTER HU 712/7 x ya da HU 713/1 x, FILTRON tarafında OE 682 ya da OE 670 kayıtlıdır. Doğru kodu eski filtrenin üzerinden kontrol edin.',
+      },
+      {
+        q: 'Fiat Linea 1.6 Multijet yağ filtresi kodu nedir?',
+        a: 'Linea 1.6 Multijet 105 HP motorda katalogda MANN-FILTER HU 712/11 x ve FILTRON OE 682/2 kartuş yağ filtresi kayıtlıdır.',
+      },
+      {
+        q: 'Fiat Linea polen filtresi Egea ile aynı mı?',
+        a: 'Katalogda Linea için FILTRON K 1228 polen filtresi kayıtlıdır; aynı kod Fiat Egea’nın bazı motorlarında da kullanılır.',
+      },
+    ],
+  },
+  {
+    slug: 'toyota-auris-filtre-rehberi',
+    title: 'Toyota Auris Filtre Rehberi: Yağ, Hava, Polen ve Yakıt Filtresi Kodları',
+    metaTitle: 'Toyota Auris Filtre Kodları | Oto Center Market',
+    summary:
+      'Toyota Auris I (E150) ve Auris II (E180) için motor bazında MANN-FILTER ve FILTRON yağ, hava, polen ve yakıt filtresi kodları. 1.33, 1.4, 1.6 benzinli, 1.2 turbo ve D-4D dizel motorlar.',
+    tag: 'Model rehberi',
+    readMinutes: 5,
+    relatedHref: '/otomobil/toyota',
+    relatedLabel: 'Toyota modellerine göz atın',
+    guncelleme: '2026-11-05',
+    ilgiliYazilar: ['toyota-corolla-filtre-rehberi', 'hibrit-arac-bakimi-ve-filtreler'],
+    intro: [
+      'Toyota Auris, Corolla ile aynı motor ailesini kullandığı için filtre kodlarının çoğu Corolla E15 ve E18 ile ortaktır. Filtre seçimi motora göre değişir: 1.33 ve 1.6 benzinli motorlar kartuş tipi, 1.2 turbo ve 1.4 benzinli motorlar ise komple (spin-on) yağ filtresi kullanır. Aşağıdaki tablolar Auris I ve Auris II için katalogdaki uyumluluk verisinden hazırlandı; her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır.',
+      'Tablolar hızlı başvuru içindir. Kesin seçim için [Toyota modelleri](/otomobil/toyota "Toyota yedek parça") arasından Auris neslinizi ve motorunuzu seçin; yalnızca o motora uyumlu ürünler listelenir.',
+    ],
+    body: [
+      {
+        heading: 'Neslinizi ve motorunuzu nasıl anlarsınız?',
+        paragraphs: [
+          'Auris I (E150) yaklaşık 2006–2012, Auris II (E180) yaklaşık 2012–2018 üretilmiştir. Motor hacmi ve gücü ruhsatta yazar. Motor adındaki VVT ve VVT-i benzinli, D-4D dizel motoru gösterir. Auris’in hibrit versiyonları için Corolla ile ortak kodlara [Corolla filtre rehberimizden](/blog/toyota-corolla-filtre-rehberi "Toyota Corolla filtre rehberi") bakabilirsiniz.',
+          'Aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Bu durumda eski filtrenin üzerindeki kodu kontrol edin ya da siparişten önce şasi numaranızla bize sorun.',
+        ],
+      },
+      {
+        heading: 'Auris II filtre kodları',
+        paragraphs: [
+          'Auris II (yaklaşık 2012–2018) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Auris II sayfasında](/otomobil/toyota/auris-ii-e180 "Toyota Auris II yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Auris II — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 6006 z', 'OE 685/2', '1.33 VVT 99 HP, 1.6 132 HP'],
+            ['Yağ', 'W 68/3', 'OP 572', '1.2 116 HP'],
+            ['Yağ', 'HU 7019 z', 'OE 685/1', '1.4 D-4D 90 HP'],
+            ['Yağ', 'HU 6004 x', 'OE 672/4', '1.6 D4-D 111 HP'],
+            ['Hava', '—', 'AP 160/1', '1.2 116 HP, 1.33 VVT 99 HP, 1.6 132 HP'],
+            ['Hava', 'C 24 005', '—', '1.2 116 HP, 1.33 VVT 99 HP'],
+            ['Hava', 'C 27 013', '—', '1.4 D-4D 90 HP'],
+            ['Hava', 'C 26 010', 'AP 143/4', '1.6 D4-D 111 HP'],
+            ['Polen / kabin', 'CUK 1919, FP 1919', '—', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 1919', '—', '1.2 116 HP, 1.33 VVT 99 HP'],
+            ['Polen / kabin', '—', 'K 1210', '1.6 D4-D 111 HP'],
+          ],
+        },
+      },
+      {
+        heading: 'Auris I filtre kodları',
+        paragraphs: [
+          'Auris I (yaklaşık 2006–2012) için katalogdaki MANN-FILTER ve FILTRON karşılıkları aşağıda. Her satırda filtrenin uyduğu motorlar beygir gücüyle birlikte yazılıdır; aynı motor için birden fazla kod görüyorsanız filtre üretim yılına göre değişiyor olabilir. Motorunuzu seçerek size uyan ürünleri [Auris I sayfasında](/otomobil/toyota/auris-i-e150 "Toyota Auris I yedek parça") görebilirsiniz.',
+        ],
+        table: {
+          caption: 'Toyota Auris I — filtre türüne göre MANN-FILTER ve FILTRON kodları',
+          head: ['Filtre', 'MANN-FILTER', 'FILTRON', 'Uyumlu motorlar'],
+          rows: [
+            ['Yağ', 'HU 6006 z', 'OE 685/2', '1.33 VVT 101 HP, 1.6 132 HP'],
+            ['Yağ', 'W 68/3', 'OP 572', '1.4 16V 97 HP, 1.6 VVT-i 124 HP'],
+            ['Yağ', 'HU 7019 z, W 712/83', 'OE 685/1, OP 618', '1.4 D-4D 90 HP'],
+            ['Hava', 'C 24 005', 'AP 160/1', '1.33 VVT 101 HP, 1.4 16V 97 HP, 1.6 132 HP, 1.6 VVT-i 124 HP'],
+            ['Hava', 'C 27 013', '—', '1.4 D-4D 90 HP'],
+            ['Polen / kabin', 'CUK 1919, FP 1919', '—', 'Bu nesildeki tüm motorlar'],
+            ['Polen / kabin', 'CU 1919', '—', '1.33 VVT 101 HP, 1.4 16V 97 HP, 1.6 132 HP, 1.6 VVT-i 124 HP'],
+            ['Yakıt', 'WK 8028 z', 'PP 855/1', '1.4 D-4D 90 HP'],
+          ],
+        },
+      },
+    ],
+    sss: [
+      {
+        q: 'Toyota Auris 1.33 yağ filtresi kodu nedir?',
+        a: 'Katalogdaki uyumluluk verisine göre Auris I ve II’nin 1.33 VVT ve 1.6 benzinli motorlarında MANN-FILTER HU 6006 z ve FILTRON OE 685/2 kartuş yağ filtresi kullanılır.',
+      },
+      {
+        q: 'Toyota Auris 1.4 D-4D yağ filtresi kodu nedir?',
+        a: 'Auris 1.4 D-4D motorda katalogda MANN-FILTER HU 7019 z ve FILTRON OE 685/1 kayıtlıdır; Auris I’de ayrıca MANN-FILTER W 712/83 ve FILTRON OP 618 görünür. Doğru kodu eski filtrenin üzerinden kontrol edin.',
+      },
+      {
+        q: 'Auris polen filtresi Corolla ile aynı mı?',
+        a: 'Evet. Katalogda Auris I ve II için kayıtlı MANN-FILTER CU 1919, CUK 1919 ve FP 1919 polen filtreleri, Corolla E15 ve E18’de de kullanılır.',
+      },
+    ],
+  },
 ]
 
 export function rehberBul(slug: string): RehberYazisi | null {
