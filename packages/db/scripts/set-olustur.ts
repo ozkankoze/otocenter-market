@@ -23,7 +23,7 @@
 import { loadEnv } from './env'
 loadEnv()
 
-import { readFileSync } from 'node:fs'
+import { existsSync, readFileSync } from 'node:fs'
 import { sql } from 'kysely'
 import { db, closeDb } from '../src/index'
 import { slugify } from '../src/normalize'
@@ -268,9 +268,18 @@ async function main(): Promise<void> {
         `.execute(trx)
       }
 
-      // Görseller: bileşenlerin ana görselleri, sırayla
+      // Görseller: önce setin kolaj kapağı (apps/web/public/urun/set/<SKU>.webp
+      // varsa), ardından bileşenlerin ana görselleri, sırayla
       await sql`DELETE FROM product_image WHERE product_id = ${productId}`.execute(trx)
       let sira = 0
+      const kapak = `/urun/set/${h.sku}.webp`
+      if (existsSync(fromRepo(`apps/web/public${kapak}`))) {
+        await trx
+          .insertInto('product_image')
+          .values({ product_id: productId, url: kapak, alt: s.ad.slice(0, 200), sort_order: 0, is_primary: true })
+          .execute()
+        sira++
+      }
       for (const b of h.bilesenler) {
         const img = await sql<{ url: string }>`
           SELECT url FROM product_image
