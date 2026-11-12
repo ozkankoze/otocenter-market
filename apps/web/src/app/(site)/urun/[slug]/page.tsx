@@ -17,6 +17,7 @@ import {
   getCompatibleVehicles,
   getEquivalentProducts,
   getProductDetail,
+  getSetIcerik,
 } from '@/server/product-queries'
 import { cn, formatPrice, productTitle } from '@/lib/utils'
 
@@ -57,11 +58,13 @@ export default async function ProductPage({ params, searchParams }: Props) {
 
   const brandFilter = typeof sp.arac_marka === 'string' ? sp.arac_marka : undefined
 
-  const [vehicles, equivalents, engineCodes] = await Promise.all([
+  const [vehicles, equivalents, engineCodes, setIcerik] = await Promise.all([
     getCompatibleVehicles(product.id, { limit: 25, brandSlug: brandFilter }),
     getEquivalentProducts(product.id, engineId, 4),
     engineId ? getEngineCodes(engineId) : Promise.resolve([]),
+    getSetIcerik(product.id),
   ])
+  const setToplam = setIcerik.reduce((t, b) => t + b.price, 0)
 
   const crumbs: Crumb[] = [
     { label: 'Ana Sayfa', href: '/' },
@@ -207,6 +210,44 @@ export default async function ProductPage({ params, searchParams }: Props) {
 
           {product.shortDescription ? (
             <p className="mt-3 text-sm text-ink-600">{product.shortDescription}</p>
+          ) : null}
+
+          {setIcerik.length > 0 ? (
+            <div
+              className="mt-4 rounded-lg border border-ink-100 bg-white p-4"
+              data-testid="set-icerik"
+            >
+              <p className="mb-2 text-[13px] font-semibold text-ink-900">
+                Set içeriği ({setIcerik.length} ürün)
+              </p>
+              <ul className="divide-y divide-ink-50">
+                {setIcerik.map((b) => (
+                  <li key={b.slug} className="flex items-center gap-3 py-2">
+                    {b.imageUrl ? (
+                      <Image
+                        src={b.imageUrl}
+                        alt=""
+                        width={80}
+                        height={80}
+                        className="h-10 w-10 shrink-0 rounded border border-ink-50 object-contain"
+                      />
+                    ) : null}
+                    <Link
+                      href={`/urun/${b.slug}`}
+                      prefetch={false}
+                      className="min-w-0 flex-1 text-[13px] text-ink-800 hover:text-brand-600 hover:underline"
+                    >
+                      <span className="block text-[11.5px] text-ink-400">{b.categoryName}</span>
+                      <span className="ocm-code">{b.productCode ?? b.name}</span>
+                    </Link>
+                    <span className="text-[13px] text-ink-600">{formatPrice(b.price)}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-2 text-[12px] text-ink-500">
+                Ayrı ayrı toplam {formatPrice(setToplam)} — set olarak daha uygun.
+              </p>
+            </div>
           ) : null}
 
           <div className="mt-5">

@@ -25,6 +25,16 @@ export type CategorySeed = {
 export const CATEGORIES: CategorySeed[] = [
   { code: 'FILTRELER', name: 'Filtreler', slug: 'filtreler', icon: 'filter', sortOrder: 10 },
   {
+    code: 'SET_URUNLER',
+    parent: 'FILTRELER',
+    name: 'Set Ürünler',
+    slug: 'set-urunler',
+    icon: 'package',
+    sortOrder: 10,
+    seoIntro:
+      'Filtre setleri, aracınızın periyodik bakımında değişen yağ, hava, yakıt ve polen filtrelerini tek pakette toplar. Setler ayrı ayrı almaya göre daha uygundur.',
+  },
+  {
     code: 'HAVA_FILTRESI',
     parent: 'FILTRELER',
     name: 'Hava Filtreleri',
@@ -557,4 +567,10 @@ export const DATA_SOURCES = [
   { code: 'SUPPLIER_A', name: 'Tedarikçi Listesi A', kind: 'SUPPLIER' as const, trustLevel: 60 },
   { code: 'CSV_V1', name: 'Kendi CSV İçe Aktarımımız', kind: 'CSV' as const, trustLevel: 50 },
   { code: 'DERIVED', name: 'Çapraz Referanstan Türetme', kind: 'DERIVED' as const, trustLevel: 30 },
+  {
+    code: 'SET_TURETILMIS',
+    name: 'Filtre setleri (bileşenlerin ortak uyumluluğu)',
+    kind: 'DERIVED' as const,
+    trustLevel: 60,
+  },
 ]

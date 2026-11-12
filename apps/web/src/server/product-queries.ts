@@ -415,3 +415,51 @@ export async function getEquivalentProducts(
     }
   })
 }
+
+export type SetBileseni = {
+  slug: string
+  name: string
+  productCode: string | null
+  brandName: string
+  categoryName: string
+  price: number
+  imageUrl: string | null
+}
+
+/**
+ * Set ürünün içeriği. Set olmayan ürün için boş dizi döner (sayfa bloğu çizilmez).
+ */
+export async function getSetIcerik(productId: number): Promise<SetBileseni[]> {
+  const res = await sql<{
+    slug: string
+    name: string
+    product_code: string | null
+    brand_name: string
+    category_name: string
+    price_net: number | null
+    tax_rate: number | null
+    image_url: string | null
+  }>`
+    SELECT p.slug, p.name, p.product_code, b.name AS brand_name, c.name AS category_name,
+           pr.price_net, pr.tax_rate,
+           (SELECT url FROM product_image i WHERE i.product_id = p.id
+              ORDER BY i.is_primary DESC, i.sort_order LIMIT 1) AS image_url
+    FROM product_set_item si
+    JOIN product p ON p.id = si.component_product_id
+    JOIN product_brand b ON b.id = p.brand_id
+    JOIN category c ON c.id = p.category_id
+    LEFT JOIN product_variant v ON v.product_id = p.id AND v.is_default
+    LEFT JOIN price pr ON pr.variant_id = v.id AND pr.customer_group = 'RETAIL'
+    WHERE si.set_product_id = ${productId}::bigint
+    ORDER BY si.sort_order
+  `.execute(db)
+  return res.rows.map((r) => ({
+    slug: r.slug,
+    name: r.name,
+    productCode: r.product_code,
+    brandName: r.brand_name,
+    categoryName: r.category_name,
+    price: r.price_net ? Math.round(r.price_net * (1 + (r.tax_rate ?? 20) / 100) * 100) / 100 : 0,
+    imageUrl: r.image_url,
+  }))
+}
