@@ -19,7 +19,12 @@ import {
   getCategoryCardsCached,
   getFeaturedProductsCached,
   getProducts,
+  getSetProductCountCached,
+  getSetProductsCached,
 } from '@/server/catalog-queries'
+import { ProductCard } from '@/components/product/product-card'
+import { Check, Package } from 'lucide-react'
+import type { ProductCardData } from '@/features/catalog/product-types'
 import { getSellingBrandsCached } from '@/server/brand-queries'
 import { formatCount } from '@/lib/utils'
 
@@ -63,7 +68,7 @@ export default async function HomePage() {
   const selection = await readSelectedVehicle()
   const engineId = selection?.engineId ?? null
 
-  const [types, stats, categories, products, brands, summary, engineCodes] = await Promise.all([
+  const [types, stats, categories, products, brands, summary, engineCodes, setCount, aracSetleri] = await Promise.all([
     getVehicleTypes(),
     getCatalogStatsCached(),
     /*
@@ -79,7 +84,19 @@ export default async function HomePage() {
     getSellingBrandsCached(),
     engineId ? getCompatibilitySummary(engineId) : Promise.resolve([]),
     engineId ? getEngineCodes(engineId) : Promise.resolve([]),
+    getSetProductCountCached(),
+    engineId
+      ? getProducts({ engineId, limit: 4, categoryCode: 'SET_URUNLER' })
+      : Promise.resolve([] as ProductCardData[]),
   ])
+  /*
+   * Set vitrini: araç seçiliyse ÖNCE o araca uyan setler; uyan set yoksa
+   * genel vitrin (4'lü setler önce). Uyumsuz set asla "aracınıza uygun" diye
+   * gösterilmez — yalnızca compatibility === 'compatible' olanlar alınır.
+   */
+  const uyanSetler = aracSetleri.filter((p) => p.compatibility === 'compatible')
+  const setler = uyanSetler.length > 0 ? uyanSetler : await getSetProductsCached(4)
+  const setlerAracaOzel = uyanSetler.length > 0
 
   return (
     <>
@@ -107,6 +124,17 @@ export default async function HomePage() {
           ) : null}
         </div>
       </div>
+
+      {/* Set Ürünler — ana sayfada öne çıkarılan vitrin */}
+      {setCount > 0 && setler.length > 0 ? (
+        <SetVitrini
+          count={setCount}
+          products={setler}
+          hasVehicle={Boolean(selection)}
+          aracaOzel={setlerAracaOzel}
+          aracAdi={selection ? `${selection.brandName} ${selection.modelName}` : null}
+        />
+      ) : null}
 
       {/* Kategoriler */}
       <section className="py-12 md:py-16">
@@ -227,6 +255,76 @@ export default async function HomePage() {
         </div>
       </section>
     </>
+  )
+}
+
+const SET_HREF = '/filtreler/set-urunler'
+
+function SetVitrini({
+  count,
+  products,
+  hasVehicle,
+  aracaOzel,
+  aracAdi,
+}: {
+  count: number
+  products: ProductCardData[]
+  hasVehicle: boolean
+  aracaOzel: boolean
+  aracAdi: string | null
+}) {
+  return (
+    <section className="pt-12 md:pt-16" data-testid="set-vitrini">
+      <div className="ocm-container">
+        <div className="relative overflow-hidden rounded-xl bg-brand-900 p-5 text-white md:p-7">
+          <span className="ocm-grid-pattern absolute inset-0 opacity-60" aria-hidden="true" />
+          <div className="relative grid gap-6 lg:grid-cols-[300px_1fr] lg:items-center">
+            <div>
+              <span className="inline-flex items-center gap-1.5 rounded-sm bg-accent-600 px-2 py-1 text-[11.5px] font-bold tracking-wide text-white uppercase">
+                <Package size={13} aria-hidden="true" />
+                Yeni · Set Ürünler
+              </span>
+              <h2 className="mt-3 text-[22px] leading-tight font-semibold text-white md:text-[26px]">
+                {aracaOzel && aracAdi ? `${aracAdi} için filtre setleri` : 'Periyodik bakım tek pakette'}
+              </h2>
+              <p className="mt-2 text-sm text-white/70">
+                Aracınızın yağ, hava, yakıt ve polen filtresi tek sette. Ayrı ayrı almaya göre{' '}
+                <b className="text-white">%5 daha uygun</b>.
+              </p>
+              <ul className="mt-4 space-y-1.5 text-[13px] text-white/80">
+                {[
+                  'Orijinal MANN-FILTER filtreler',
+                  'MANN-FILTER uygulama listesine göre hazırlandı',
+                  'Motor seviyesinde uyumluluk kontrolü',
+                ].map((t) => (
+                  <li key={t} className="flex items-center gap-2">
+                    <Check size={14} className="text-accent-600" aria-hidden="true" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+              <Link
+                href={SET_HREF}
+                prefetch={false}
+                title="Tüm filtre setlerini görüntüle"
+                className="mt-5 inline-flex h-10 items-center rounded-md bg-white px-4 text-sm font-semibold text-brand-800 transition hover:bg-brand-50"
+                data-testid="set-vitrini-cta"
+              >
+                {formatCount(count)} setin tümünü gör →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 text-ink-900 xl:grid-cols-4">
+              {/* Mobilde 2 kart: vitrin ekranı uzatmasın, gerisi "tümünü gör"de */}
+              {products.slice(0, 4).map((p, i) => (
+                <div key={p.id} className={i >= 2 ? 'hidden xl:block' : undefined}>
+                  <ProductCard product={p} hasVehicle={hasVehicle} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

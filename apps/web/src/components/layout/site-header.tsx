@@ -44,6 +44,9 @@ function navLinks(menu: MegaMenuData): Array<{ label: string; href: string }> {
   ]
 }
 
+/** Set ürünler kategorisi (Filtreler › Set Ürünler). */
+const SET_URUNLER_HREF = '/filtreler/set-urunler'
+
 /** Üst şerit — hepsi gerçek sayfalara gider. */
 const UTILITY_LINKS = [
   { label: 'Kurumsal & Bayilik', href: '/bayilik-toptan' },
@@ -265,6 +268,21 @@ export function SiteHeader({
                 <Menu size={15} strokeWidth={2.2} aria-hidden="true" />
                 Kategoriler
               </button>
+
+              {/* Set Ürünler — kategorilerin hemen sağında, öne çıkarılmış */}
+              <Link
+                href={SET_URUNLER_HREF}
+                prefetch={false}
+                title="Filtre setleri: yağ, hava, yakıt ve polen filtresi tek pakette"
+                className="inline-flex h-8 shrink-0 items-center gap-1.5 rounded-md border border-accent-600/30 bg-accent-100 px-3 text-[13px] font-semibold text-accent-700 transition hover:brightness-95"
+                data-testid="nav-set-urunler"
+              >
+                <Package size={15} strokeWidth={2.2} aria-hidden="true" />
+                Set Ürünler
+                <span className="rounded-sm bg-accent-600 px-1.5 py-px text-[10.5px] font-bold text-white">
+                  %5
+                </span>
+              </Link>
 
               <ul className="flex items-center gap-6 text-[13.5px] font-medium">
                 {navLinks(menu).map((link) => (
@@ -615,6 +633,21 @@ export function SiteHeader({
             <Car size={16} aria-hidden="true" />
             {selection ? 'Aracı Değiştir' : 'Aracımı Seç'}
           </Button>
+        </div>
+
+        <div className="border-b border-ink-50 px-4 py-3">
+          <Link
+            href={SET_URUNLER_HREF}
+            prefetch={false}
+            className="flex items-center gap-2.5 rounded-md border border-accent-600/30 bg-accent-100 px-3 py-2.5 text-sm font-semibold text-accent-700"
+            onClick={() => setDrawerOpen(false)}
+          >
+            <Package size={16} aria-hidden="true" />
+            Set Ürünler
+            <span className="ml-auto rounded-sm bg-accent-600 px-1.5 py-px text-[11px] font-bold text-white">
+              %5 daha uygun
+            </span>
+          </Link>
         </div>
 
         {menu.groups.map((group) => (

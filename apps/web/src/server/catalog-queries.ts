@@ -99,8 +99,10 @@ export async function getProducts(options: {
   engineId?: number | null
   limit?: number
   featuredOnly?: boolean
+  /** Yalnızca bu kategori koduna ait ürünler (ör. 'SET_URUNLER'). */
+  categoryCode?: string | null
 }): Promise<ProductCardData[]> {
-  const { engineId = null, limit = 8, featuredOnly = false } = options
+  const { engineId = null, limit = 8, featuredOnly = false, categoryCode = null } = options
 
   const rows = await sql<{
     id: number
@@ -154,6 +156,7 @@ export async function getProducts(options: {
           AND pc.engine_id = ${engineId}::bigint
     WHERE p.status = 'ACTIVE'
       AND (${featuredOnly}::boolean = false OR p.is_featured)
+      AND (${categoryCode}::text IS NULL OR c.code = ${categoryCode}::text)
       AND (${engineId}::bigint IS NULL
            OR pc.status IN ('VERIFIED','SOURCED','CONFLICTED','INCOMPATIBLE'))
     ORDER BY
@@ -371,6 +374,30 @@ export async function getMenuTree(): Promise<
 export const getCategoryCardsCached = unstable_cache(
   () => getCategoryCards(null),
   ['ocm-kategori-kartlari'],
+  { revalidate: 300, tags: ['katalog'] },
+)
+
+/**
+ * Ana sayfa vitrini için filtre setleri (araç seçilmemiş ziyaretçi).
+ * Sıralama getProducts'ın varsayılanı: sort_weight artan → 4'lü setler önce.
+ */
+export const getSetProductsCached = unstable_cache(
+  (limit: number) => getProducts({ engineId: null, limit, categoryCode: 'SET_URUNLER' }),
+  ['ocm-set-urunler-vitrin'],
+  { revalidate: 300, tags: ['katalog'] },
+)
+
+/** Satıştaki set ürün sayısı — vitrin başlığında gösterilir. */
+export const getSetProductCountCached = unstable_cache(
+  async (): Promise<number> => {
+    const r = await sql<{ n: number }>`
+      SELECT count(*)::int AS n FROM product p
+      JOIN category c ON c.id = p.category_id
+      WHERE c.code = 'SET_URUNLER' AND p.status = 'ACTIVE'
+    `.execute(db)
+    return r.rows[0]?.n ?? 0
+  },
+  ['ocm-set-urun-sayisi'],
   { revalidate: 300, tags: ['katalog'] },
 )
 
