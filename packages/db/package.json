@@ -31,7 +31,8 @@
     "urun-gorsel-yertutucu": "tsx scripts/urun-gorsel-yertutucu.ts",
     "fiyat-zam": "tsx scripts/fiyat-zam.ts",
     "set-olustur": "tsx scripts/set-olustur.ts",
-    "stok-dagit": "tsx scripts/stok-dagit.ts"
+    "stok-dagit": "tsx scripts/stok-dagit.ts",
+    "ek-urun-ekle": "tsx scripts/ek-urun-ekle.ts"
   },
   "dependencies": {
     "kysely": "^0.29.5",

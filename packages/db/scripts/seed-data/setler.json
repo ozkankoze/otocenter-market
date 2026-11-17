@@ -186,6 +186,30 @@
   ]
  },
  {
+  "ad": "2'li Filtre Seti - Jaguar XK8 4.2",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 713/29"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 31 130"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Jaguar",
+    "seri": "XK8 (X100)",
+    "model": "4.2",
+    "motor_kodu": "AJ34",
+    "hp": 298,
+    "yil_ilk": "08/02",
+    "yil_son": "03/06"
+   }
+  ]
+ },
+ {
   "ad": "2'li Filtre Seti - Mini Mini Cooper I 1.6 S JCWT",
   "icerik": [
    {
@@ -1146,6 +1170,34 @@
     "hp": 99,
     "yil_ilk": "10/99",
     "yil_son": "11/01"
+   }
+  ]
+ },
+ {
+  "ad": "3'lü Filtre Seti - Hyundai Matrix 1.6",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 811/80"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2421"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2356"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Hyundai",
+    "seri": "Matrix",
+    "model": "1.6",
+    "motor_kodu": "",
+    "hp": 103,
+    "yil_ilk": "03/01",
+    "yil_son": "08/10"
    }
   ]
  },
@@ -3593,6 +3645,43 @@
   ]
  },
  {
+  "ad": "3'lü Filtre Seti - Skoda Superb III 2.0 TSI",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 6002 z"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 005"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 009"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Skoda",
+    "seri": "Superb III (3V)",
+    "model": "2.0 TSI",
+    "motor_kodu": "CHHB",
+    "hp": 220,
+    "yil_ilk": "05/15",
+    "yil_son": ""
+   },
+   {
+    "marka": "Skoda",
+    "seri": "Superb III (3V)",
+    "model": "2.0 TSI",
+    "motor_kodu": "CJXA",
+    "hp": 280,
+    "yil_ilk": "05/15",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "3'lü Filtre Seti - Toyota Auris I, Auris II, Avensis III, Corolla XI, Verso 1.33 VVT, 1.6, 1.6 16V",
   "icerik": [
    {
@@ -3813,6 +3902,71 @@
   ]
  },
  {
+  "ad": "3'lü Filtre Seti - Toyota Avensis II 1.6 16V, 1.8 16V",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 68/3"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2620"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2035"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Toyota",
+    "seri": "Avensis II (T25)",
+    "model": "1.6 16V",
+    "motor_kodu": "3ZZ-FE",
+    "hp": 110,
+    "yil_ilk": "04/03",
+    "yil_son": "11/08"
+   },
+   {
+    "marka": "Toyota",
+    "seri": "Avensis II (T25)",
+    "model": "1.8 16V",
+    "motor_kodu": "1ZZ-FE",
+    "hp": 129,
+    "yil_ilk": "03/03",
+    "yil_son": "11/08"
+   }
+  ]
+ },
+ {
+  "ad": "3'lü Filtre Seti - Toyota Avensis II 2.0 16V",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 610/9"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2620"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2035"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Toyota",
+    "seri": "Avensis II (T25)",
+    "model": "2.0 16V",
+    "motor_kodu": "1AZ-FSE",
+    "hp": 147,
+    "yil_ilk": "03/03",
+    "yil_son": "11/08"
+   }
+  ]
+ },
+ {
   "ad": "3'lü Filtre Seti - Toyota Corolla IX, Corolla IX Verso 1.4, 1.6, 1.8 16V",
   "icerik": [
    {
@@ -3892,6 +4046,43 @@
     "hp": 152,
     "yil_ilk": "03/06",
     "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "3'lü Filtre Seti - Toyota Yaris II 1.0 12V, 1.3 16V",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 68/3"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2610"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 1919"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Toyota",
+    "seri": "Yaris II (XP9)",
+    "model": "1.0 12V",
+    "motor_kodu": "1KR-FE",
+    "hp": 69,
+    "yil_ilk": "01/06",
+    "yil_son": "08/11"
+   },
+   {
+    "marka": "Toyota",
+    "seri": "Yaris II (XP9)",
+    "model": "1.3 16V",
+    "motor_kodu": "2SZ-FE",
+    "hp": 87,
+    "yil_ilk": "01/06",
+    "yil_son": "03/09"
    }
   ]
  },
@@ -4258,6 +4449,47 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - BMW 1 116i, 118i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 7003 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 24 025"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 25 001"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "1 (F20/F21)",
+    "model": "116i",
+    "motor_kodu": "N13B16",
+    "hp": 136,
+    "yil_ilk": "09/11",
+    "yil_son": ""
+   },
+   {
+    "marka": "BMW",
+    "seri": "1 (F20/F21)",
+    "model": "118i",
+    "motor_kodu": "N13B16",
+    "hp": 170,
+    "yil_ilk": "09/11",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - BMW 1 120 d",
   "icerik": [
    {
@@ -4286,6 +4518,47 @@
     "hp": 163,
     "yil_ilk": "09/04",
     "yil_son": "09/12"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - BMW 3 316i, 320i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 815/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 1361"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 8430"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "3 (E90/E91/E92/E93)",
+    "model": "316i",
+    "motor_kodu": "N45 B16/B16A, N45N B16A",
+    "hp": 116,
+    "yil_ilk": "02/06",
+    "yil_son": ""
+   },
+   {
+    "marka": "BMW",
+    "seri": "3 (E90/E91/E92/E93)",
+    "model": "320i",
+    "motor_kodu": "",
+    "hp": 150,
+    "yil_ilk": "11/06",
+    "yil_son": "06/07"
    }
   ]
  },
@@ -4518,6 +4791,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - BMW 3 335i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 816 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 36 004"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 8430"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "3 (E90/E91/E92/E93)",
+    "model": "335i",
+    "motor_kodu": "N54 B30A, N55 B30A",
+    "hp": 306,
+    "yil_ilk": "09/06",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - BMW 3, 4, 1, 2 320 d, 320 d ED, 420 d",
   "icerik": [
    {
@@ -4627,6 +4932,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - BMW 4 428i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 816 z KIT"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 24 025"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 25 001"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "4 (F32/F33/F36/F82)",
+    "model": "428i",
+    "motor_kodu": "N20B20A, N26B20A",
+    "hp": 245,
+    "yil_ilk": "07/13",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - BMW 5 520 d, 520 d Edition Fleet",
   "icerik": [
    {
@@ -4655,6 +4992,47 @@
     "hp": 163,
     "yil_ilk": "09/05",
     "yil_son": "12/10"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - BMW 5 520i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 8002 x KIT"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 27 125"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 2533-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "5 (F10/F11/F18)",
+    "model": "520i",
+    "motor_kodu": "N20 B20A",
+    "hp": 163,
+    "yil_ilk": "09/11",
+    "yil_son": ""
+   },
+   {
+    "marka": "BMW",
+    "seri": "5 (F10/F11/F18)",
+    "model": "520i",
+    "motor_kodu": "",
+    "hp": 184,
+    "yil_ilk": "09/11",
+    "yil_son": ""
    }
   ]
  },
@@ -5065,6 +5443,38 @@
     "hp": 286,
     "yil_ilk": "01/96",
     "yil_son": "10/01"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - BMW 7 740i",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 816 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 28 125"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 2533-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "BMW",
+    "seri": "7 (F01/F02/F03/F04)",
+    "model": "740i",
+    "motor_kodu": "N54 B30A",
+    "hp": 326,
+    "yil_ilk": "10/08",
+    "yil_son": ""
    }
   ]
  },
@@ -5548,6 +5958,74 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Citroën C4 1.6 HDi 110 / Peugeot 307, 308 1.6 HDI 110, 1.6 HDI 90, 1.6 HDi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3282"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2940"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Citroën",
+    "seri": "C4",
+    "model": "1.6 HDi 110",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "10/04",
+    "yil_son": "12/10"
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "307",
+    "model": "1.6 HDI 110",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "02/04",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "307",
+    "model": "1.6 HDI 90",
+    "motor_kodu": "DV6ATED4",
+    "hp": 90,
+    "yil_ilk": "09/05",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "308",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6ATED4",
+    "hp": 109,
+    "yil_ilk": "09/07",
+    "yil_son": "02/10"
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "308",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6TED4",
+    "hp": 90,
+    "yil_ilk": "09/07",
+    "yil_son": "02/10"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Citroën C4 II 1.6 HDi 110, 1.6 HDi 90 / Peugeot 308 1.6 HDi 110 FAP, 1.6 HDi 90 FAP",
   "icerik": [
    {
@@ -5648,6 +6126,74 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Citroën C4 Picasso / Grand C4 Picasso 1.6 HDi 110 / Peugeot 3008, Partner II, 5008 1.6 HDi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3282"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 29 003-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Citroën",
+    "seri": "C4 Picasso / Grand C4 Picasso",
+    "model": "1.6 HDi 110",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "10/06",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "3008",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "06/09",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "Partner II",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6ATED4",
+    "hp": 90,
+    "yil_ilk": "04/08",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "Partner II",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "04/08",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "5008",
+    "model": "1.6 HDi",
+    "motor_kodu": "DV6TED4 (H9Z)",
+    "hp": 110,
+    "yil_ilk": "09/09",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Citroën C4 Picasso / Grand C4 Picasso 1.6 HDi 110 FAP / Peugeot 3008, Partner II, 5008 1.6 HDi 115 FAP, 1.6 HDi FAP, 1.6 HDi",
   "icerik": [
    {
@@ -5725,6 +6271,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Citroën C5 1.6 HDi 110",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2567"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 3240"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Citroën",
+    "seri": "C5",
+    "model": "1.6 HDi 110",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "11/04",
+    "yil_son": "05/08"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Citroën C5 II 1.6 HDi 110 FAP, 1.6 HDi 115 FAP",
   "icerik": [
    {
@@ -5761,6 +6339,47 @@
     "motor_kodu": "DV6C",
     "hp": 114,
     "yil_ilk": "01/12",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Citroën C5 II 1.6 HDi FAP / Peugeot 407 + 407 Coupé 1.6 HDi 16V",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2567"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 2742"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Citroën",
+    "seri": "C5 II",
+    "model": "1.6 HDi FAP",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "04/08",
+    "yil_son": ""
+   },
+   {
+    "marka": "Peugeot",
+    "seri": "407 + 407 Coupé",
+    "model": "1.6 HDi 16V",
+    "motor_kodu": "DV6TED4",
+    "hp": 109,
+    "yil_ilk": "06/04",
     "yil_son": ""
    }
   ]
@@ -5994,6 +6613,65 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Hyundai Accent II 1.3, 1.5i, 1.6i 16V",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 811/80"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2562"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 55/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2506-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Hyundai",
+    "seri": "Accent II (LC)",
+    "model": "1.3",
+    "motor_kodu": "",
+    "hp": 75,
+    "yil_ilk": "01/00",
+    "yil_son": "04/03"
+   },
+   {
+    "marka": "Hyundai",
+    "seri": "Accent II (LC)",
+    "model": "1.3",
+    "motor_kodu": "",
+    "hp": 86,
+    "yil_ilk": "01/00",
+    "yil_son": "03/03"
+   },
+   {
+    "marka": "Hyundai",
+    "seri": "Accent II (LC)",
+    "model": "1.5i",
+    "motor_kodu": "",
+    "hp": 90,
+    "yil_ilk": "01/00",
+    "yil_son": "04/03"
+   },
+   {
+    "marka": "Hyundai",
+    "seri": "Accent II (LC)",
+    "model": "1.6i 16V",
+    "motor_kodu": "",
+    "hp": 105,
+    "yil_ilk": "07/03",
+    "yil_son": "06/06"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Hyundai Elantra II / Elantra TAGAZ 1.6 D",
   "icerik": [
    {
@@ -6022,6 +6700,70 @@
     "hp": 116,
     "yil_ilk": "05/06",
     "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Hyundai Getz 1.5 CRDi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 714 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2519"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 818/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2506-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Hyundai",
+    "seri": "Getz",
+    "model": "1.5 CRDi",
+    "motor_kodu": "",
+    "hp": 82,
+    "yil_ilk": "03/03",
+    "yil_son": "11/05"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Hyundai Getz 1.5 CRDi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 712/10 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2519"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 824/2"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2506-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Hyundai",
+    "seri": "Getz",
+    "model": "1.5 CRDi",
+    "motor_kodu": "",
+    "hp": 88,
+    "yil_ilk": "10/05",
+    "yil_son": "06/09"
    }
   ]
  },
@@ -6195,6 +6937,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Jaguar S-Type 2.5 V6",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 719/36"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 115"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 512/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 003"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Jaguar",
+    "seri": "S-Type (CCX)",
+    "model": "2.5 V6",
+    "motor_kodu": "AJ-V6",
+    "hp": 201,
+    "yil_ilk": "03/02",
+    "yil_son": "02/08"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Jaguar S-Type 2.7 V6 Diesel",
   "icerik": [
    {
@@ -6222,6 +6996,38 @@
     "motor_kodu": "AJD-V6",
     "hp": 207,
     "yil_ilk": "06/04",
+    "yil_son": "02/08"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Jaguar S-Type 3.0 V6",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 719/36"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3270"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 512/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 003"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Jaguar",
+    "seri": "S-Type (CCX)",
+    "model": "3.0 V6",
+    "motor_kodu": "AJ-V6",
+    "hp": 238,
+    "yil_ilk": "01/99",
     "yil_son": "02/08"
    }
   ]
@@ -6391,6 +7197,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Jaguar XF 3.0 V6",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 719/36"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 115"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 512/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 2030"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Jaguar",
+    "seri": "XF",
+    "model": "3.0 V6",
+    "motor_kodu": "AJ-V6",
+    "hp": 238,
+    "yil_ilk": "03/08",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Mercedes-Benz A-Klasse A 140, A 160, A 190",
   "icerik": [
    {
@@ -6505,6 +7343,47 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz C-Klasse C 180, C 200",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 727/1 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 195/2"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 830/3"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2897"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "C-Klasse (W202/S202)",
+    "model": "C 180",
+    "motor_kodu": "M 111.921",
+    "hp": 122,
+    "yil_ilk": "03/93",
+    "yil_son": "10/00"
+   },
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "C-Klasse (W202/S202)",
+    "model": "C 200",
+    "motor_kodu": "M 111.945/941",
+    "hp": 136,
+    "yil_ilk": "01/94",
+    "yil_son": "10/00"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Mercedes-Benz C-Klasse C 200 Kompressor",
   "icerik": [
    {
@@ -6597,6 +7476,38 @@
     "hp": 150,
     "yil_ilk": "02/04",
     "yil_son": "06/11"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz C-Klasse C 250 TD",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 951 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 195/2"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 817/3 x"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2897"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "C-Klasse (W202/S202)",
+    "model": "C 250 TD",
+    "motor_kodu": "OM 605.960",
+    "hp": 150,
+    "yil_ilk": "10/95",
+    "yil_son": "04/01"
    }
   ]
  },
@@ -6788,6 +7699,79 @@
     "hp": 170,
     "yil_ilk": "06/06",
     "yil_son": "12/09"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz E-Klasse E 200 D",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 951 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 34 175"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 817/3 x"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2745-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "E-Klasse (W/S210)",
+    "model": "E 200 D",
+    "motor_kodu": "OM 604.917",
+    "hp": 88,
+    "yil_ilk": "01/96",
+    "yil_son": "04/02"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz E-Klasse E 200, E 200 Kompressor",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 727/1 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 34 175"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 831"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2745-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "E-Klasse (W/S210)",
+    "model": "E 200",
+    "motor_kodu": "M 111.942",
+    "hp": 136,
+    "yil_ilk": "06/95",
+    "yil_son": "07/00"
+   },
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "E-Klasse (W/S210)",
+    "model": "E 200 Kompressor",
+    "motor_kodu": "M 111",
+    "hp": 186,
+    "yil_ilk": "06/97",
+    "yil_son": "06/00"
    }
   ]
  },
@@ -7111,6 +8095,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz SLK SLK 200",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 727/1 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 24 106"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 831"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2897"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "SLK (R170)",
+    "model": "SLK 200",
+    "motor_kodu": "M 111.946",
+    "hp": 136,
+    "yil_ilk": "09/96",
+    "yil_son": "04/00"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Mercedes-Benz Sprinter I 208 CDI, 213 CDI, 308 CDI",
   "icerik": [
    {
@@ -7184,6 +8200,65 @@
     "hp": 129,
     "yil_ilk": "04/00",
     "yil_son": "05/06"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Mercedes-Benz Sprinter I 208 D, 308 D, 312 D",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 951 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 32 338"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 817/3 x"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 3858"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "Sprinter I (901/902/903/904)",
+    "model": "208 D",
+    "motor_kodu": "OM 601.943",
+    "hp": 80,
+    "yil_ilk": "02/95",
+    "yil_son": "06/00"
+   },
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "Sprinter I (901/902/903/904)",
+    "model": "308 D",
+    "motor_kodu": "OM 601.943",
+    "hp": 82,
+    "yil_ilk": "11/96",
+    "yil_son": "06/00"
+   },
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "Sprinter I (901/902/903/904)",
+    "model": "312 D",
+    "motor_kodu": "OM 602.980DE LA",
+    "hp": 122,
+    "yil_ilk": "02/95",
+    "yil_son": "06/00"
+   },
+   {
+    "marka": "Mercedes-Benz",
+    "seri": "Sprinter I (901/902/903/904)",
+    "model": "412 D",
+    "motor_kodu": "OM 602.980DE LA",
+    "hp": 120,
+    "yil_ilk": "02/95",
+    "yil_son": "06/00"
    }
   ]
  },
@@ -7552,6 +8627,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Mini Mini III 2.0 (Cooper S)",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 6015 z KIT"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 22 018"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 515"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 23 005-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Mini",
+    "seri": "Mini III (F54, F55, F56, F57)",
+    "model": "2.0 (Cooper S)",
+    "motor_kodu": "B46A20A, B48A20A",
+    "hp": 192,
+    "yil_ilk": "02/14",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Mini Mini One I 1.4 Diesel",
   "icerik": [
    {
@@ -7711,6 +8818,38 @@
     "motor_kodu": "",
     "hp": 86,
     "yil_ilk": "03/06",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Nissan Note 1.5 dCi 90",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 79"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 2485/2"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/7"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 1829"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Nissan",
+    "seri": "Note (E11)",
+    "model": "1.5 dCi 90",
+    "motor_kodu": "K9K",
+    "hp": 90,
+    "yil_ilk": "09/10",
     "yil_son": ""
    }
   ]
@@ -8092,6 +9231,38 @@
     "seri": "207",
     "model": "1.4 16V",
     "motor_kodu": "ET3J4",
+    "hp": 90,
+    "yil_ilk": "02/06",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Peugeot 207 1.6 HDI 90",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3282"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 21 000-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Peugeot",
+    "seri": "207",
+    "model": "1.6 HDI 90",
+    "motor_kodu": "9HX (DV6ATED4)",
     "hp": 90,
     "yil_ilk": "02/06",
     "yil_son": ""
@@ -8751,6 +9922,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Peugeot Partner 1.6 HDI 90",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 716/2 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3282"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 939/2 z"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2225"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Peugeot",
+    "seri": "Partner (Ranch)",
+    "model": "1.6 HDI 90",
+    "motor_kodu": "DV6ATED4",
+    "hp": 90,
+    "yil_ilk": "07/05",
+    "yil_son": "05/08"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Peugeot Partner II 1.6 HDi, 1.6 BlueHDi 75",
   "icerik": [
    {
@@ -8875,6 +10078,38 @@
     "hp": 68,
     "yil_ilk": "08/04",
     "yil_son": "12/07"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Renault Clio II / Clio II Campus / Clio Symbol 1.6",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 75/3"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3173"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 6002"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2945"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Renault",
+    "seri": "Clio II / Clio II Campus / Clio Symbol",
+    "model": "1.6",
+    "motor_kodu": "K7M744/745",
+    "hp": 90,
+    "yil_ilk": "09/98",
+    "yil_son": "02/00"
    }
   ]
  },
@@ -9339,6 +10574,70 @@
     "motor_kodu": "K9K 780",
     "hp": 110,
     "yil_ilk": "10/07",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Renault Latitude 1.5 dCi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 79"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 25 109/1"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 9022"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 013-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Renault",
+    "seri": "Latitude",
+    "model": "1.5 dCi",
+    "motor_kodu": "K9K 782",
+    "hp": 110,
+    "yil_ilk": "07/10",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Renault Latitude 2.0 dCi",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 618 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 38 001"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 9022"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 013-2"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Renault",
+    "seri": "Latitude",
+    "model": "2.0 dCi",
+    "motor_kodu": "M9R",
+    "hp": 173,
+    "yil_ilk": "02/11",
     "yil_son": ""
    }
   ]
@@ -10868,6 +12167,74 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Skoda Octavia III, Superb III 1.6 TDI, 2.0 TDI / Seat Leon III 1.6 TDI",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 7020 z"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 30 005"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "PU 8028"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 26 009"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Skoda",
+    "seri": "Octavia III",
+    "model": "1.6 TDI",
+    "motor_kodu": "CLHA",
+    "hp": 105,
+    "yil_ilk": "01/13",
+    "yil_son": ""
+   },
+   {
+    "marka": "Skoda",
+    "seri": "Octavia III",
+    "model": "2.0 TDI",
+    "motor_kodu": "CKFC, CYKA",
+    "hp": 150,
+    "yil_ilk": "01/13",
+    "yil_son": ""
+   },
+   {
+    "marka": "Seat",
+    "seri": "Leon III",
+    "model": "1.6 TDI",
+    "motor_kodu": "CLHA",
+    "hp": 105,
+    "yil_ilk": "11/12",
+    "yil_son": ""
+   },
+   {
+    "marka": "Skoda",
+    "seri": "Superb III (3V)",
+    "model": "1.6 TDI",
+    "motor_kodu": "DCXA",
+    "hp": 120,
+    "yil_ilk": "05/15",
+    "yil_son": ""
+   },
+   {
+    "marka": "Skoda",
+    "seri": "Superb III (3V)",
+    "model": "2.0 TDI",
+    "motor_kodu": "CRLB",
+    "hp": 150,
+    "yil_ilk": "05/15",
+    "yil_son": ""
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Skoda Rapid 1.2 MPI",
   "icerik": [
    {
@@ -11105,6 +12472,38 @@
     "hp": 90,
     "yil_ilk": "04/07",
     "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Toyota Avensis II 2.0 D-4D/D-CAT",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "WP 1026"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 3230"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 828 x"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 2035"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Toyota",
+    "seri": "Avensis II (T25)",
+    "model": "2.0 D-4D/D-CAT",
+    "motor_kodu": "1CD-FTV",
+    "hp": 116,
+    "yil_ilk": "03/03",
+    "yil_son": "07/05"
    }
   ]
  },
@@ -11815,6 +13214,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Volkswagen LT 28 II 2.3",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "HU 727/1 x"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 32 338"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 831"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CUK 3858"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Volkswagen",
+    "seri": "LT 28 II",
+    "model": "2.3",
+    "motor_kodu": "AGL",
+    "hp": 143,
+    "yil_ilk": "05/96",
+    "yil_son": "05/06"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Volkswagen LT 28 II 2.5 SDI, 2.5 TDI",
   "icerik": [
    {
@@ -12053,6 +13484,38 @@
     "hp": 150,
     "yil_ilk": "11/00",
     "yil_son": "09/05"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Volkswagen Passat 1.9 TDI",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 940/44"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 26 168"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 845/1"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 3955"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Volkswagen",
+    "seri": "Passat (3B2/3B5)",
+    "model": "1.9 TDI",
+    "motor_kodu": "AFN, AVG",
+    "hp": 110,
+    "yil_ilk": "10/96",
+    "yil_son": "12/00"
    }
   ]
  },
@@ -12386,6 +13849,38 @@
   ]
  },
  {
+  "ad": "4'lü Filtre Seti - Volkswagen Transporter/Bus 1.9 TD",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 1130/1"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 29 198"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 842/4"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 1738"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "1.9 TD",
+    "motor_kodu": "ABL",
+    "hp": 68,
+    "yil_ilk": "10/92",
+    "yil_son": "06/03"
+   }
+  ]
+ },
+ {
   "ad": "4'lü Filtre Seti - Volkswagen Transporter/Bus 1.9 TDI",
   "icerik": [
    {
@@ -12496,6 +13991,106 @@
     "hp": 140,
     "yil_ilk": "09/09",
     "yil_son": ""
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Volkswagen Transporter/Bus 2.4 SD, 2.5 TDI",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 950/4"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 29 198"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 842/4"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 1738"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.4 SD",
+    "motor_kodu": "AJA",
+    "hp": 75,
+    "yil_ilk": "04/97",
+    "yil_son": "06/03"
+   },
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.5 TDI",
+    "motor_kodu": "AHY",
+    "hp": 150,
+    "yil_ilk": "05/98",
+    "yil_son": "06/03"
+   },
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.5 TDI",
+    "motor_kodu": "ACV, AUF, AYC, AXL",
+    "hp": 102,
+    "yil_ilk": "09/95",
+    "yil_son": "06/03"
+   },
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.5 TDI",
+    "motor_kodu": "AJT, AYY",
+    "hp": 88,
+    "yil_ilk": "05/98",
+    "yil_son": "06/03"
+   }
+  ]
+ },
+ {
+  "ad": "4'lü Filtre Seti - Volkswagen Transporter/Bus 2.5",
+  "icerik": [
+   {
+    "tur": "Yağ filtresi",
+    "kod": "W 950/4"
+   },
+   {
+    "tur": "Hava filtresi",
+    "kod": "C 29 198"
+   },
+   {
+    "tur": "Yakıt filtresi",
+    "kod": "WK 830/7"
+   },
+   {
+    "tur": "Polen filtresi",
+    "kod": "CU 1738"
+   }
+  ],
+  "araclar": [
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.5",
+    "motor_kodu": "AAF/ACU/AEN",
+    "hp": 110,
+    "yil_ilk": "10/90",
+    "yil_son": "06/03"
+   },
+   {
+    "marka": "Volkswagen",
+    "seri": "Transporter/Bus (T4)",
+    "model": "2.5",
+    "motor_kodu": "AET/AEU",
+    "hp": 115,
+    "yil_ilk": "08/96",
+    "yil_son": "06/03"
    }
   ]
  },

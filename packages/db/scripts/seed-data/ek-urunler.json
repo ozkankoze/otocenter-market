@@ -1,0 +1,458 @@
+{
+ "urunler": [
+  {
+   "kod": "WK 939/2 z",
+   "urun_kodu": "WK939/2z",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 1135.49,
+   "alis": 557.26,
+   "uyum": [
+    {
+     "marka": "Citroen",
+     "model": "C4",
+     "motor": "1.6 HDi 110 80kw 109hp"
+    },
+    {
+     "marka": "Citroen",
+     "model": "C4 Picasso",
+     "motor": "1.6 HDi 110 80kw 109hp"
+    },
+    {
+     "marka": "Citroen",
+     "model": "C5",
+     "motor": "1.6 HDi 110 80kw 109hp"
+    },
+    {
+     "marka": "Citroen",
+     "model": "C5 II",
+     "motor": "1.6 HDi FAP 80kw 109hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "207",
+     "motor": "1.6 HDi 90 66kw 90hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "307",
+     "motor": "1.6 HDI 110 80kw 109hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "307",
+     "motor": "1.6 HDI 90 66kw 90hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "308",
+     "motor": "1.6 HDi 66kw 90hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "308",
+     "motor": "1.6 HDi 80kw 109hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "3008",
+     "motor": "1.6 HDi 80kw 109hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "5008",
+     "motor": "1.6 HDi 81kw 110hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "Partner II",
+     "motor": "1.6 HDi 66kw 90hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "Partner II",
+     "motor": "1.6 HDi 80kw 109hp"
+    },
+    {
+     "marka": "Peugeot",
+     "model": "407 + 407 Coupé",
+     "motor": "1.6 HDi 16V 80kw 109hp"
+    }
+   ]
+  },
+  {
+   "kod": "WK 515",
+   "urun_kodu": "WK515",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 1585.69,
+   "alis": 828.52,
+   "uyum": [
+    {
+     "marka": "BMW",
+     "model": "3 (E90/E91/E92/E93)",
+     "motor": "320i 110kw 150hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "3 (E90/E91/E92/E93)",
+     "motor": "316i 85kw 116hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "5 (F10/F11/F18)",
+     "motor": "520i 135kw 184hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "5 (F10/F11/F18)",
+     "motor": "520i 120kw 163hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "1 (F20/F21)",
+     "motor": "116i 100kw 136hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "1 (F20/F21)",
+     "motor": "118i 125kw 170hp"
+    },
+    {
+     "marka": "BMW",
+     "model": "4 (F32/F33/F36/F82)",
+     "motor": "428i 180kw 245hp"
+    },
+    {
+     "marka": "Mini",
+     "model": "Mini III",
+     "motor": "1.5 (Cooper) 100kw 136hp"
+    },
+    {
+     "marka": "Mini",
+     "model": "Mini III",
+     "motor": "2.0 (Cooper S) 141kw 192hp"
+    }
+   ]
+  },
+  {
+   "kod": "HU 951 x",
+   "urun_kodu": "HU951x",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 588.06,
+   "alis": 288.6,
+   "uyum": []
+  },
+  {
+   "kod": "WK 817/3 x",
+   "urun_kodu": "WK817/3x",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 805.16,
+   "alis": 395.15,
+   "uyum": []
+  },
+  {
+   "kod": "CU 2506-2",
+   "urun_kodu": "CU2506-2",
+   "kategori": "POLEN_FILTRESI",
+   "fiyat": 1034.92,
+   "alis": 540.75,
+   "uyum": [
+    {
+     "marka": "Hyundai",
+     "model": "Accent II",
+     "motor": "1.3 55kw 75hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Accent II",
+     "motor": "1.3 63kw 86hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Accent II",
+     "motor": "1.5i 66kw 90hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Accent II",
+     "motor": "1.5 CRDi 60kw 82hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Accent II",
+     "motor": "1.6i 16V 77kw 105hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Getz",
+     "motor": "1.5 CRDi 60kw 82hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Getz",
+     "motor": "1.5 CRDi 65kw 88hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Getz",
+     "motor": "1.3 60kw 82hp"
+    },
+    {
+     "marka": "Hyundai",
+     "model": "Getz",
+     "motor": "1.4 71kw 97hp"
+    }
+   ]
+  },
+  {
+   "kod": "W 950/4",
+   "urun_kodu": "W950/4",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 1176.78,
+   "alis": 614.87,
+   "uyum": []
+  },
+  {
+   "kod": "WK 842/4",
+   "urun_kodu": "WK842/4",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 921.04,
+   "alis": 452.02,
+   "uyum": []
+  },
+  {
+   "kod": "WK 831",
+   "urun_kodu": "WK831",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 1427.85,
+   "alis": 700.74,
+   "uyum": []
+  },
+  {
+   "kod": "CU 2035",
+   "urun_kodu": "CU2035",
+   "kategori": "POLEN_FILTRESI",
+   "fiyat": 604.04,
+   "alis": 296.44,
+   "uyum": [
+    {
+     "marka": "Toyota",
+     "model": "Avensis II (T25)",
+     "motor": "1.6 16V 81kw 110hp"
+    },
+    {
+     "marka": "Toyota",
+     "model": "Avensis II (T25)",
+     "motor": "1.8 16V 95kw 129hp"
+    },
+    {
+     "marka": "Toyota",
+     "model": "Avensis II (T25)",
+     "motor": "2.0 16V 108kw 147hp"
+    }
+   ]
+  },
+  {
+   "kod": "WK 512/1",
+   "urun_kodu": "WK512/1",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 814.49,
+   "alis": 425.57,
+   "uyum": [
+    {
+     "marka": "Jaguar",
+     "model": "S-Type (CCX)",
+     "motor": "3.0 V6 175kw 238hp"
+    },
+    {
+     "marka": "Jaguar",
+     "model": "S-Type (CCX)",
+     "motor": "2.5 V6 147kw 201hp"
+    }
+   ]
+  },
+  {
+   "kod": "C 2610",
+   "urun_kodu": "C2610",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 709.93,
+   "alis": 348.41,
+   "uyum": [
+    {
+     "marka": "Toyota",
+     "model": "Yaris II (XP9)",
+     "motor": "1.0 12V 51kw 69hp"
+    },
+    {
+     "marka": "Toyota",
+     "model": "Yaris II (XP9)",
+     "motor": "1.3 16V 64kw 87hp"
+    }
+   ]
+  },
+  {
+   "kod": "WK 830/3",
+   "urun_kodu": "WK830/3",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 1110.85,
+   "alis": 545.16,
+   "uyum": []
+  },
+  {
+   "kod": "W 933/1",
+   "urun_kodu": "W933/1",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 749.22,
+   "alis": 367.69,
+   "uyum": []
+  },
+  {
+   "kod": "CUK 26 013-2",
+   "urun_kodu": "CUK26013-2",
+   "kategori": "POLEN_FILTRESI",
+   "fiyat": 1665.6,
+   "alis": 817.42,
+   "uyum": [
+    {
+     "marka": "Renault",
+     "model": "Latitude",
+     "motor": "1.5 dCi 81kw 110hp"
+    },
+    {
+     "marka": "Renault",
+     "model": "Latitude",
+     "motor": "2.0 dCi 127kw 173hp"
+    }
+   ]
+  },
+  {
+   "kod": "HU 6002 z",
+   "urun_kodu": "HU6002z",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 506.81,
+   "alis": 264.81,
+   "uyum": [
+    {
+     "marka": "Skoda",
+     "model": "Superb III (3V)",
+     "motor": "2.0 TSI 162kw 220hp"
+    },
+    {
+     "marka": "Skoda",
+     "model": "Superb III (3V)",
+     "motor": "2.0 TSI 206kw 280hp"
+    }
+   ]
+  },
+  {
+   "kod": "C 36 004",
+   "urun_kodu": "C36004",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 1278.67,
+   "alis": 627.53,
+   "uyum": []
+  },
+  {
+   "kod": "HU 926/4 x",
+   "urun_kodu": "HU926/4x",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 905.73,
+   "alis": 444.5,
+   "uyum": []
+  },
+  {
+   "kod": "C 28 125",
+   "urun_kodu": "C28125",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 1593.01,
+   "alis": 781.79,
+   "uyum": []
+  },
+  {
+   "kod": "C 2421",
+   "urun_kodu": "C2421",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 747.89,
+   "alis": 390.77,
+   "uyum": []
+  },
+  {
+   "kod": "C 31 130",
+   "urun_kodu": "C31130",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 1744.85,
+   "alis": 856.31,
+   "uyum": []
+  },
+  {
+   "kod": "WK 939/7",
+   "urun_kodu": "WK939/7",
+   "kategori": "YAKIT_FILTRESI",
+   "fiyat": 1630.97,
+   "alis": 858.18,
+   "uyum": [
+    {
+     "marka": "Nissan",
+     "model": "Note (E11)",
+     "motor": "1.5 dCi 90 66kw 90hp"
+    }
+   ]
+  },
+  {
+   "kod": "C 3173",
+   "urun_kodu": "C3173",
+   "kategori": "HAVA_FILTRESI",
+   "fiyat": 585.39,
+   "alis": 305.87,
+   "uyum": []
+  },
+  {
+   "kod": "W 940/44",
+   "urun_kodu": "W940/44",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 622.69,
+   "alis": 305.59,
+   "uyum": []
+  },
+  {
+   "kod": "W 1130/1",
+   "urun_kodu": "W1130/1",
+   "kategori": "YAG_FILTRESI",
+   "fiyat": 1349.27,
+   "alis": 704.99,
+   "uyum": []
+  }
+ ],
+ "mevcut_urune_uyum": [
+  {
+   "urun_kodu": "PU8028",
+   "not": "PU 8021 yerine yeni kod",
+   "uyum": [
+    {
+     "marka": "Skoda",
+     "model": "Superb III (3V)",
+     "motor": "2.0 TDI 110 kW 150 HP"
+    },
+    {
+     "marka": "Seat",
+     "model": "Leon III",
+     "motor": "1.6 TDI 77kw 105hp"
+    },
+    {
+     "marka": "Skoda",
+     "model": "Octavia III",
+     "motor": "2.0 TDI 110kw 150hp"
+    },
+    {
+     "marka": "Skoda",
+     "model": "Octavia III",
+     "motor": "1.6 TDI 77kw 105hp"
+    },
+    {
+     "marka": "Skoda",
+     "model": "Superb III (3V)",
+     "motor": "1.6 TDI 88kw 120hp"
+    }
+   ]
+  }
+ ]
+}

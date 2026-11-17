@@ -34,7 +34,8 @@
     "db:urun-gorsel-yertutucu": "npm run urun-gorsel-yertutucu --workspace=@ocm/db",
     "db:fiyat-zam": "npm run fiyat-zam --workspace=@ocm/db --",
     "db:set-olustur": "npm run set-olustur --workspace=@ocm/db --",
-    "db:stok-dagit": "npm run stok-dagit --workspace=@ocm/db --"
+    "db:stok-dagit": "npm run stok-dagit --workspace=@ocm/db --",
+    "db:ek-urun-ekle": "npm run ek-urun-ekle --workspace=@ocm/db --"
   },
   "devDependencies": {
     "prettier": "^3.4.2",
